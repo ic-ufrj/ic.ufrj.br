@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>{{ block "title" . }}{{ .Title }}{{ end }}</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<h1><a href="{{ "/" | relURL }}">{{ .Site.Title }}</a></h1>
+{{ block "main" . }}{{ end }}
+</body>
+</html>
+

@@ -1,0 +1,5 @@
+baseURL = 'http://example.org/'
+languageCode = 'pt-br'
+title = 'Site do IC'
+theme = 'temaic'
+
