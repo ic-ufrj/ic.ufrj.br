@@ -1,13 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html lang="{{ .Site.LanguageCode }}">
 <head>
   <meta charset="UTF-8">
   <title>{{ block "title" . }}{{ .Title }}{{ end }}</title>
-  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
+
+<!-- BARRA BRASIL -->
+<div id="barra-brasil" style="background:#7F7F7F; height: 20px; padding:0 0 0 10px;display:block;">
+  <ul id="menu-barra-temp" style="list-style:none;">
+    <li style="display:inline; float:left;padding-right:10px; margin-right:10px; border-right:1px solid #EDEDED">
+	<a href="http://brasil.gov.br" style="font-family:sans,sans-serif; text-decoration:none; color:white;">Portal do Governo Brasileiro</a>
+    </li>
+</ul>
+</div>
+
+
 <h1><a href="{{ "/" | relURL }}">{{ .Site.Title }}</a></h1>
-{{ block "main" . }}{{ end }}
+
+
+<main>
+  {{ block "main" . }}{{ end }}
+</main>
+
+<!-- BARRA BRASIL -->
+<script defer="defer" src="//barrabrasil.capes.gov.br/2.0/barra_2.0.js" type="text/javascript"></script>
+
 </body>
 </html>
 
