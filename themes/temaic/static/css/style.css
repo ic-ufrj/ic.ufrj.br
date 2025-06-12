@@ -3,6 +3,7 @@
    License: none (public domain)
 */
 
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -23,7 +24,6 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
-/* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
@@ -63,7 +63,7 @@ header a:hover {
 	text-decoration: underline;
 }
 
-#links-header {
+#links-header ul {
 	width: 100vw;
 	height: 5vh;
 	display: flex;
@@ -83,21 +83,15 @@ header a:hover {
 	font-size: 120%;
 }
 
-#header-ic-home {
-	height: 60%;
+#main-header > a {
 	display: flex;
 	align-items: center;
 	gap: 2vw;
 }
 
-#header-ic-home img {
-	height: 100%;
-}
-
-#header-elements {
+#main-header ul {
 	display: flex;
 	gap: 2vw;
 }
-
 
 
