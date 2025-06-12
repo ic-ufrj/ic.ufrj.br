@@ -48,4 +48,56 @@ table {
 }
 
 
+body {
+	font-size: 18px;
+	font-family: Arial;
+}
+
+header * {
+	color: inherit;
+	text-decoration: inherit;
+	text-transform: uppercase;
+}
+
+header a:hover {
+	text-decoration: underline;
+}
+
+#links-header {
+	width: 100vw;
+	height: 5vh;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	position: absolute;
+	gap: 2vw;
+	right: 2vw;
+}
+
+#main-header {
+	width: 100vw;
+	height: 15vh;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	font-size: 120%;
+}
+
+#header-ic-home {
+	height: 60%;
+	display: flex;
+	align-items: center;
+	gap: 2vw;
+}
+
+#header-ic-home img {
+	height: 100%;
+}
+
+#header-elements {
+	display: flex;
+	gap: 2vw;
+}
+
+
 
