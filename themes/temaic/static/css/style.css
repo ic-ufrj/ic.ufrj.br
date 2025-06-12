@@ -48,6 +48,10 @@ table {
 }
 
 
+* {
+	box-sizing: border-box;
+}
+
 body {
 	font-size: 18px;
 	font-family: Arial;
@@ -65,33 +69,34 @@ header a:hover {
 
 #links-header ul {
 	width: 100vw;
-	height: 5vh;
+	height: 40px;
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
 	position: absolute;
-	gap: 2vw;
-	right: 2vw;
+	gap: 20px;
+	right: 100px;
 }
 
 #main-header {
 	width: 100vw;
-	height: 15vh;
+	height: 120px;
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: space-between;
 	align-items: center;
 	font-size: 120%;
+	padding: 0px 100px 0px 100px;
 }
 
 #main-header > a {
 	display: flex;
 	align-items: center;
-	gap: 2vw;
+	gap: 30px;
 }
 
 #main-header ul {
 	display: flex;
-	gap: 2vw;
+	gap: 30px;
 }
 
 
