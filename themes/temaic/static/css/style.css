@@ -107,11 +107,41 @@ header a:hover {
 }
 
 #main-header > ul > li > ul {
-	display: none;
+	visibility: hidden;
+	position: absolute;
+	top: 120px;
+	left: 0px;
+
+	width: 100vw;
+	height: 500px;
+	background-color: #dddddd;
+	display: flex;
+
+	transition: 0s visibility;
+	transition-delay: 500ms;
 }
 
 #main-header > ul > li:hover > ul {
+	visibility: visible;
+	transition-delay: 200ms;
+}
+
+#main-header > ul > li > ul > li {
+	width: 25vw;
+	padding: 30px;
+}
+
+#main-header > ul > li > ul > li > span {
 	display: block;
+	height: 30px;
+	font-size: 110%;
+}
+
+#main-header > ul > li > ul > li > ul {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	padding-left: 20px;
 }
 
 
