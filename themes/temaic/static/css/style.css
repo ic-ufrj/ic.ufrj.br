@@ -48,26 +48,29 @@ table {
 }
 
 
+
+
+
 * {
 	box-sizing: border-box;
 }
 
 body {
-	font-size: 18px;
+	font-size: 17px;
 	font-family: Arial;
 }
 
 header * {
 	color: inherit;
 	text-decoration: inherit;
-	text-transform: uppercase;
+	/* text-transform: uppercase; */
 }
 
 header a:hover {
 	text-decoration: underline;
 }
 
-#links-header ul {
+#links-header > ul {
 	width: 100vw;
 	height: 40px;
 	display: flex;
@@ -84,7 +87,6 @@ header a:hover {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	font-size: 120%;
 	padding: 0px 100px 0px 100px;
 }
 
@@ -92,11 +94,26 @@ header a:hover {
 	display: flex;
 	align-items: center;
 	gap: 30px;
+	font-size: 110%;
 }
 
-#main-header ul {
+#main-header > ul {
 	display: flex;
 	gap: 30px;
 }
+
+#main-header > ul > li > span {
+	font-size: 110%;
+}
+
+#main-header > ul > li > ul {
+	display: none;
+}
+
+#main-header > ul > li:hover > ul {
+	display: block;
+}
+
+
 
 
