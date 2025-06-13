@@ -51,8 +51,12 @@ table {
 
 :root {
 	--cor-fundo: #FFFFFF;
+	--cor-fundo-menu: #FAFAFA;
 	--cor-texto: #000000;
 	--cor-bordas: #DDDDDD;
+
+	--menu-padding: 100px;
+	--menu-total-height: 120px;
 }
 
 * {
@@ -75,12 +79,14 @@ header * {
 	text-decoration: inherit;
 }
 
-/* Seta tudo dentro do header para usar Montserrat como fonte */
 header {
+	/* Seta tudo dentro do header para usar Montserrat como fonte */
 	font-family: "Montserrat", sans-serif;
 	font-optical-sizing: auto;
 	font-weight: 400;
 	font-style: normal;
+
+	user-select: none;
 }
 
 header a, header span {
@@ -99,14 +105,14 @@ header a:hover {
 	 * não faça o menu principal se deslocar para baixo. Já o right se
 	 * comporta de forma semelhante a um padding-right */
 	position: absolute;
-	right: 100px;
+	right: var(--menu-padding);
 	
 	width: 100vw;
-	height: 40px;
+
+	padding: 13px 0px;
 
 	display: flex;
 	justify-content: flex-end;
-	align-items: center;
 	gap: 20px;
 }
 
@@ -115,12 +121,12 @@ header a:hover {
  * embaixo, porém ela não é exibida durante a maior parte do tempo */
 #main-header {
 	width: 100vw;
-	height: 120px;
+	height: var(--menu-total-height);
 
 	display: flex;
 	justify-content: space-between;
 
-	padding: 0px 100px 0px 100px;
+	padding: 0px var(--menu-padding) 0px var(--menu-padding);
 }
 
 /* Se refere ao conjunto da logo do IC e do texto
@@ -133,7 +139,8 @@ header a:hover {
 
 	gap: 30px;
 
-	font-weight: 400;
+	font-weight: 300;
+	line-height: 23px;
 }
 
 /* Se refere às categorias O INSTITUTO, ENSINO, etc. Porém, também pode afetar
@@ -149,7 +156,7 @@ header a:hover {
 
 	height: 120px;
 
-	padding: 0px 15px 0px 15px;
+	padding: 0px 1em;
 	
 	display: flex;
 	align-items: center;
@@ -164,15 +171,17 @@ header a:hover {
 	/* Faz com que ele fique posicionado lá embaixo */
 	/* FIXME: não hardcodar */
 	position: absolute;
-	top: 120px;
+	top: var(--menu-total-height);
 	left: 0px;
 
 	width: 100vw;
-	height: 400px;
 
-	background-color: var(--cor-fundo);
+	background-color: var(--cor-fundo-menu);
+
+	padding: 20px;
 
 	display: flex;
+	flex-wrap: wrap;
 	gap: 50px;
 	justify-content: center;
 	
@@ -191,7 +200,7 @@ header a:hover {
 
 /* Se refere às subcategorias do menu escondido */
 #main-header > ul > li > ul > li {
-	width: 20vw;
+	width: 250px;
 	border: 1px solid var(--cor-bordas);
 	padding: 20px;
 	border-radius: 10px;
@@ -213,6 +222,58 @@ header a:hover {
 	line-height: 20px;
 }
 
+@media print {
+	header {
+		display: none;
+	}
+}
+
+/* Sempre verificar se os breakpoints repetem */
+
+@media screen and (min-width: 700px) and (max-width: 1150px) {
+	#main-header > a > p {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 900px) {
+	:root {
+		--menu-padding: 10px;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	:root {
+		--menu-total-height: 300px;
+	}
+
+	#links-header > ul {
+		font-size: 11px;
+	}
+
+	#main-header {
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-evenly;
+	}
+
+	#main-header > a {
+		height: 40px;
+	}
+
+	#main-header > ul {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	#main-header > ul > li > span {
+		height: 30px;
+	}
+
+	#main-header > ul > li > ul {
+		
+	}
+}
 
 
 
