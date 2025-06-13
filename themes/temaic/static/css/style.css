@@ -146,8 +146,7 @@ header a:hover {
 
 	height: 120px;
 
-	padding-left: 15px;
-	padding-right: 15px;
+	padding: 0px 15px 0px 15px;
 	
 	display: flex;
 	align-items: center;
@@ -171,15 +170,16 @@ header a:hover {
 
 	display: flex;
 	
-	/* FIXME: tirar esse delay */
 	transition: 0s visibility;
-	transition-delay: 500ms;
+	/* Delay para parar de exibir o menu escondido */
+	transition-delay: 120ms;
 }
 
 /* Se refere aos menus escondidos enquanto a categoria tem foco */
 #main-header > ul > li:hover > ul {
 	visibility: visible;
-	transition-delay: 200ms;
+	/* Delay para começar a exibir o menu escondido */
+	transition-delay: 120ms;
 }
 
 /* Se refere às subcategorias do menu escondido */
