@@ -50,7 +50,8 @@ table {
 
 
 :root {
-	--cor-fundo: #ffffff;
+	--cor-fundo: #FFFFFF;
+	--cor-texto: #000000;
 }
 
 * {
@@ -62,6 +63,7 @@ body {
 	font-size: 17px;
 	font-family: Arial;
 	background-color: var(--cor-fundo);
+	color: var(--cor-texto);
 }
 
 /* Tudo que faz parte do header */
@@ -156,6 +158,7 @@ header a:hover {
 #main-header > ul > li > ul {
 	/* Esconde o menu */
 	visibility: hidden;
+	color: var(--cor-fundo);
 
 	/* Faz com que ele fique posicionado lá embaixo */
 	/* FIXME: não hardcodar */
@@ -170,14 +173,15 @@ header a:hover {
 
 	display: flex;
 	
-	transition: 0s visibility;
-	/* Delay para parar de exibir o menu escondido */
-	transition-delay: 120ms;
+	transition: visibility 0s linear 120ms,
+	            color 200ms ease 0ms;
 }
 
 /* Se refere aos menus escondidos enquanto a categoria tem foco */
 #main-header > ul > li:hover > ul {
 	visibility: visible;
+	color: var(--cor-texto);
+
 	/* Delay para começar a exibir o menu escondido */
 	transition-delay: 120ms;
 }
