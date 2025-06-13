@@ -116,7 +116,6 @@ header a:hover {
 
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
 
 	padding: 0px 100px 0px 100px;
 }
@@ -126,6 +125,9 @@ header a:hover {
 #main-header > a {
 	display: flex;
 	align-items: center;
+
+	height: 120px;
+
 	gap: 30px;
 
 	font-weight: 400;
@@ -135,13 +137,20 @@ header a:hover {
  * o menu escondido */
 #main-header > ul {
 	display: flex;
-	gap: 30px;
 }
 
 /* Se refere aos textos O INSTITUTO, ENSINO, etc */
 #main-header > ul > li > span {
 	font-weight: 600;
 	text-transform: uppercase;
+
+	height: 120px;
+
+	padding-left: 15px;
+	padding-right: 15px;
+	
+	display: flex;
+	align-items: center;
 }
 
 /* Se refere aos menus escondidos (há um para cada categoria) */
