@@ -54,6 +54,7 @@ table {
 }
 
 * {
+	/* Usado para o padding não quebrar tudo */
 	box-sizing: border-box;
 }
 
@@ -63,11 +64,15 @@ body {
 	background-color: var(--cor-fundo);
 }
 
+/* Tudo que faz parte do header */
 header * {
+	/* Faz com que os links não fiquem azuis e sublinhados como normalmente
+	 * ficam no HTML padrão */
 	color: inherit;
 	text-decoration: inherit;
 }
 
+/* Seta tudo dentro do header para usar Montserrat como fonte */
 header {
 	font-family: "Montserrat", sans-serif;
 	font-optical-sizing: auto;
@@ -76,82 +81,112 @@ header {
 }
 
 header a, header span {
+	/* Faz o ponteiro ficar daquele jeito de quando passa por um link */
 	cursor: pointer;
 }
 
 header a:hover {
+	/* Faz os links ficarem sublinhados ao passar o mouse por cima */
 	text-decoration: underline;
 }
 
+/* Se refere ao flexbox contendo os links externos no topo direito da página */
 #links-header > ul {
+	/* Faz com que ele fique "dentro" do menu principal, ou seja, que ele
+	 * não faça o menu principal se deslocar para baixo. Já o right se
+	 * comporta de forma semelhante a um padding-right */
+	position: absolute;
+	right: 100px;
+	
 	width: 100vw;
 	height: 40px;
+
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
-	position: absolute;
 	gap: 20px;
-	right: 100px;
 }
 
+/* Se refere ao menu principal no topo da página, com a logo do IC e as
+ * categorias de menu. Inclui também a parte escondida do menu que abre
+ * embaixo, porém ela não é exibida durante a maior parte do tempo */
 #main-header {
 	width: 100vw;
 	height: 120px;
+
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+
 	padding: 0px 100px 0px 100px;
 }
 
+/* Se refere ao conjunto da logo do IC e do texto
+ * "Instituto de Computação UFRJ" */
 #main-header > a {
 	display: flex;
 	align-items: center;
 	gap: 30px;
+
 	font-weight: 400;
 }
 
-
+/* Se refere às categorias O INSTITUTO, ENSINO, etc. Porém, também pode afetar
+ * o menu escondido */
 #main-header > ul {
 	display: flex;
 	gap: 30px;
 }
 
+/* Se refere aos textos O INSTITUTO, ENSINO, etc */
 #main-header > ul > li > span {
 	font-weight: 600;
 	text-transform: uppercase;
 }
 
+/* Se refere aos menus escondidos (há um para cada categoria) */
 #main-header > ul > li > ul {
+	/* Esconde o menu */
 	visibility: hidden;
+
+	/* Faz com que ele fique posicionado lá embaixo */
+	/* FIXME: não hardcodar */
 	position: absolute;
 	top: 120px;
 	left: 0px;
 
 	width: 100vw;
 	height: 500px;
-	background-color: var(--cor-fundo);
-	display: flex;
 
+	background-color: var(--cor-fundo);
+
+	display: flex;
+	
+	/* FIXME: tirar esse delay */
 	transition: 0s visibility;
 	transition-delay: 500ms;
 }
 
+/* Se refere aos menus escondidos enquanto a categoria tem foco */
 #main-header > ul > li:hover > ul {
 	visibility: visible;
 	transition-delay: 200ms;
 }
 
+/* Se refere às subcategorias do menu escondido */
 #main-header > ul > li > ul > li {
 	width: 25vw;
 	padding: 30px;
 }
 
+/* Se refere aos títulos das subcategorias do menu escondido */
 #main-header > ul > li > ul > li > span {
 	display: block;
 	height: 30px;
 	font-size: 110%;
 }
 
+/* Se refere à lista de links contida dentro de cada subcategoria de menu */
 #main-header > ul > li > ul > li > ul {
 	display: flex;
 	flex-direction: column;
