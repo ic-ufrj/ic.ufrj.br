@@ -52,6 +52,7 @@ table {
 :root {
 	--cor-fundo: #FFFFFF;
 	--cor-texto: #000000;
+	--cor-bordas: #DDDDDD;
 }
 
 * {
@@ -167,11 +168,13 @@ header a:hover {
 	left: 0px;
 
 	width: 100vw;
-	height: 500px;
+	height: 400px;
 
 	background-color: var(--cor-fundo);
 
 	display: flex;
+	gap: 50px;
+	justify-content: center;
 	
 	transition: visibility 0s linear 120ms,
 	            color 200ms ease 0ms;
@@ -188,23 +191,26 @@ header a:hover {
 
 /* Se refere às subcategorias do menu escondido */
 #main-header > ul > li > ul > li {
-	width: 25vw;
-	padding: 30px;
+	width: 20vw;
+	border: 1px solid var(--cor-bordas);
+	padding: 20px;
+	border-radius: 10px;
 }
 
 /* Se refere aos títulos das subcategorias do menu escondido */
 #main-header > ul > li > ul > li > span {
 	display: block;
-	height: 30px;
-	font-size: 110%;
+	margin-bottom: 30px;
+
+	font-weight: 600;
 }
 
 /* Se refere à lista de links contida dentro de cada subcategoria de menu */
 #main-header > ul > li > ul > li > ul {
 	display: flex;
 	flex-direction: column;
-	gap: 10px;
-	padding-left: 20px;
+	gap: 15px;
+	line-height: 20px;
 }
 
 
