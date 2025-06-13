@@ -49,7 +49,9 @@ table {
 
 
 
-
+:root {
+	--cor-fundo: #ffffff;
+}
 
 * {
 	box-sizing: border-box;
@@ -58,12 +60,23 @@ table {
 body {
 	font-size: 17px;
 	font-family: Arial;
+	background-color: var(--cor-fundo);
 }
 
 header * {
 	color: inherit;
 	text-decoration: inherit;
-	/* text-transform: uppercase; */
+}
+
+header {
+	font-family: "Montserrat", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+}
+
+header a, header span {
+	cursor: pointer;
 }
 
 header a:hover {
@@ -94,8 +107,9 @@ header a:hover {
 	display: flex;
 	align-items: center;
 	gap: 30px;
-	font-size: 110%;
+	font-weight: 400;
 }
+
 
 #main-header > ul {
 	display: flex;
@@ -103,7 +117,8 @@ header a:hover {
 }
 
 #main-header > ul > li > span {
-	font-size: 110%;
+	font-weight: 600;
+	text-transform: uppercase;
 }
 
 #main-header > ul > li > ul {
@@ -114,7 +129,7 @@ header a:hover {
 
 	width: 100vw;
 	height: 500px;
-	background-color: #dddddd;
+	background-color: var(--cor-fundo);
 	display: flex;
 
 	transition: 0s visibility;
