@@ -5,3 +5,4 @@
 - [ ] Adicionar algumas propriedades ARIA
 - [ ] Configurar melhor o NGINX da montagem
 - [ ] Acessibilidade básica com `aria-label`, etc.
+- [ ] Menu mais bem elaborado para dispositivos móveis
