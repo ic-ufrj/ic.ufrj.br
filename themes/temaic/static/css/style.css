@@ -57,6 +57,7 @@ table {
 	--cor-fundo-menu: var(--cor-ic1);
 	--cor-fundo-menu-cima: var(--cor-ic2);
 	--cor-texto: #000000;
+	--cor-texto-branco: #ffffff;
 
 	--menu-padding: 100px;
 	--menu-total-height: 120px;
@@ -117,6 +118,8 @@ header a:hover {
 	display: flex;
 	justify-content: flex-end;
 	gap: 20px;
+
+	color: var(--cor-texto-branco);
 }
 
 /* Se refere ao menu principal no topo da página, com a logo do IC e as
@@ -131,6 +134,7 @@ header a:hover {
 
 	padding: 0px var(--menu-padding) 0px var(--menu-padding);
 
+	color: var(--cor-texto-branco);
 	background-color: var(--cor-fundo-menu-cima);
 }
 
@@ -181,6 +185,7 @@ header a:hover {
 	width: 100vw;
 
 	background-color: var(--cor-fundo-menu);
+	color: var(--cor-texto);
 
 	padding: 20px;
 
