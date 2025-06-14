@@ -200,7 +200,8 @@ header a:hover {
 }
 
 /* Se refere aos menus escondidos enquanto a categoria tem foco */
-#main-header > ul > li:hover > ul {
+#main-header > ul > li:hover > ul,
+#main-header > ul > li:focus-within > ul {
 	clip-path: inset(0 0 0 0);
 }
 
