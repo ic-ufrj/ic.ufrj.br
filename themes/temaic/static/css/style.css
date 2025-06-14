@@ -251,7 +251,7 @@ header a:hover {
 
 @media screen and (max-width: 700px) {
 	:root {
-		--menu-total-height: 300px;
+		--menu-total-height: 250px;
 	}
 
 	#links-header > ul {
@@ -264,13 +264,10 @@ header a:hover {
 		justify-content: space-evenly;
 	}
 
-	#main-header > a {
-		height: 40px;
-	}
-
 	#main-header > ul {
-		flex-direction: column;
 		align-items: center;
+		flex-wrap: wrap;
+		justify-content: space-between;
 	}
 
 	#main-header > ul > li > span {
