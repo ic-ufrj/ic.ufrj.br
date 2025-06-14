@@ -50,10 +50,13 @@ table {
 
 
 :root {
+	--cor-ic1: #344563FF;
+	--cor-ic2: #667da6FF;
+
 	--cor-fundo: #FFFFFF;
-	--cor-fundo-menu: #FAFAFA;
+	--cor-fundo-menu: var(--cor-ic1);
+	--cor-fundo-menu-cima: var(--cor-ic2);
 	--cor-texto: #000000;
-	--cor-bordas: #DDDDDD;
 
 	--menu-padding: 100px;
 	--menu-total-height: 120px;
@@ -127,6 +130,8 @@ header a:hover {
 	justify-content: space-between;
 
 	padding: 0px var(--menu-padding) 0px var(--menu-padding);
+
+	background-color: var(--cor-fundo-menu-cima);
 }
 
 /* Se refere ao conjunto da logo do IC e do texto
@@ -166,7 +171,6 @@ header a:hover {
 #main-header > ul > li > ul {
 	/* Esconde o menu */
 	visibility: hidden;
-	color: var(--cor-fundo);
 
 	/* Faz com que ele fique posicionado lá embaixo */
 	/* FIXME: não hardcodar */
@@ -185,14 +189,12 @@ header a:hover {
 	gap: 50px;
 	justify-content: center;
 	
-	transition: visibility 0s linear 120ms,
-	            color 200ms ease 0ms;
+	transition: visibility 0s linear 120ms;
 }
 
 /* Se refere aos menus escondidos enquanto a categoria tem foco */
 #main-header > ul > li:hover > ul {
 	visibility: visible;
-	color: var(--cor-texto);
 
 	/* Delay para começar a exibir o menu escondido */
 	transition-delay: 120ms;
@@ -200,8 +202,8 @@ header a:hover {
 
 /* Se refere às subcategorias do menu escondido */
 #main-header > ul > li > ul > li {
+	background-color: var(--cor-fundo);
 	width: 250px;
-	border: 1px solid var(--cor-bordas);
 	padding: 20px;
 	border-radius: 10px;
 }
