@@ -120,6 +120,8 @@ header a:hover {
 	gap: 20px;
 
 	color: var(--cor-texto-branco);
+
+	font-weight: 300;
 }
 
 /* Se refere ao menu principal no topo da página, com a logo do IC e as
@@ -174,7 +176,7 @@ header a:hover {
 /* Se refere aos menus escondidos (há um para cada categoria) */
 #main-header > ul > li > ul {
 	/* Esconde o menu */
-	visibility: hidden;
+	clip-path: inset(0 0 100% 0);
 
 	/* Faz com que ele fique posicionado lá embaixo */
 	/* FIXME: não hardcodar */
@@ -194,15 +196,12 @@ header a:hover {
 	gap: 50px;
 	justify-content: center;
 	
-	transition: visibility 0s linear 120ms;
+	transition: clip-path 200ms ease-out;
 }
 
 /* Se refere aos menus escondidos enquanto a categoria tem foco */
 #main-header > ul > li:hover > ul {
-	visibility: visible;
-
-	/* Delay para começar a exibir o menu escondido */
-	transition-delay: 120ms;
+	clip-path: inset(0 0 0 0);
 }
 
 /* Se refere às subcategorias do menu escondido */
@@ -272,10 +271,6 @@ header a:hover {
 
 	#main-header > ul > li > span {
 		height: 30px;
-	}
-
-	#main-header > ul > li > ul {
-		
 	}
 }
 
