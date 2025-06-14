@@ -66,6 +66,8 @@ table {
 * {
 	/* Usado para o padding não quebrar tudo */
 	box-sizing: border-box;
+	/* Não colorir links */
+	color: inherit;
 }
 
 body {
@@ -74,6 +76,7 @@ body {
 	background-color: var(--cor-fundo);
 	color: var(--cor-texto);
 }
+
 
 /* Tudo que faz parte do header */
 header * {
@@ -229,12 +232,6 @@ header a:hover {
 	line-height: 20px;
 }
 
-@media print {
-	header {
-		display: none;
-	}
-}
-
 /* Sempre verificar se os breakpoints repetem */
 
 @media screen and (min-width: 700px) and (max-width: 1150px) {
@@ -274,6 +271,50 @@ header a:hover {
 		height: 30px;
 	}
 }
+
+
+footer {
+	font-family: "Montserrat", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+
+	color: var(--cor-texto-branco);
+}
+
+footer > div {
+	width: 100vw;
+	padding: 20px var(--menu-padding);
+
+	display: flex;
+	gap: 40px;
+}
+
+footer .superior {
+	background-color: var(--cor-fundo-menu-cima);
+}
+
+footer .superior span {
+	display: block;
+	height: 20px;
+	font-weight: 600;
+}
+
+footer .superior p {
+	padding: 10px 0px;
+	line-height: 22px;
+}
+
+footer .inferior {
+	background-color: var(--cor-fundo-menu);
+}
+
+footer .inferior .social {
+	display: flex;
+	gap: 10px;
+}
+
+
 
 
 
