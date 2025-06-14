@@ -284,14 +284,20 @@ footer {
 
 footer > div {
 	width: 100vw;
-	padding: 20px var(--menu-padding);
+	padding: 0 var(--menu-padding);
 
 	display: flex;
-	gap: 40px;
+	flex-wrap: wrap;
 }
 
 footer .superior {
 	background-color: var(--cor-fundo-menu-cima);
+
+	justify-content: space-between;
+}
+
+footer .superior > div {
+	padding: 20px;
 }
 
 footer .superior span {
@@ -307,6 +313,10 @@ footer .superior p {
 
 footer .inferior {
 	background-color: var(--cor-fundo-menu);
+}
+
+footer .inferior > * {
+	padding: 20px;
 }
 
 footer .inferior .social {
