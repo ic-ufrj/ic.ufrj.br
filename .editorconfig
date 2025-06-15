@@ -7,7 +7,7 @@ insert_final_newline = true
 [*.css]
 indent_style = tab
 
-[*.html]
+[*.{html, md, yaml, toml, json}]
 indent_style = space
 indent_size = 2
 

@@ -1,0 +1,8 @@
+baseURL: "https://ic.atr.rio.br"
+languageCode: pt-br
+title: "Site do IC"
+theme: temaic
+
+taxonomies:
+  author: authors
+

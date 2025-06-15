@@ -1,19 +1,17 @@
+{{ define "title" }}Lista de Autores{{ end }}
 
 {{ define "main" }}
-  <h1>{{ .Title }}</h1>
-  <article>
-    {{ .Content }}
-  </article>
+  <h1>Lista de Autores</h1>
   <ul class="authors">
-    {{ range .Params.Authors }}
-      {{ $author := index site.Data.authors . }}
+    {{ range .Pages }}
+      {{ $author := index site.Data.authors ( .Page.Title | urlize ) }}
       <li>
         <img src="{{ $author.avatar | relURL }}" alt="Foto do {{ $author.name }}" width="80px">
         <span>{{ $author.name }}</span>
         <p>
           {{ $author.bio }}
         </p>
-        <a href="{{ printf "/authors/%s" . | relURL }}">Ver outras postagens</a>
+        <a href="{{ print "/authors/" ( .Title | urlize ) | relURL }}">Ver postagens</a>
       </li>
     {{ end }}
   </ul>

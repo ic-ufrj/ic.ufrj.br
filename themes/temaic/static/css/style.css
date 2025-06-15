@@ -325,6 +325,32 @@ footer .inferior .social {
 }
 
 
+article, main > ul {
+	width: auto;
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 40px 20px;
+}
+
+main > h1, main > h2, main > h3, main > h4, main > h5, main > h6 {
+	font-family: "Montserrat", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 600;
+	font-style: normal;
+}
+
+main > h1 {
+	display: flex;
+	height: 100px;
+	text-transform: uppercase;
+	font-weight: 800;
+	font-size: 30px;
+	align-items: center;
+	justify-content: center;
+	color: var(--cor-texto-branco);
+	background-color: #770000;
+}
+
 
 
 
