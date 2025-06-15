@@ -347,7 +347,6 @@ article {
 	background-color: var(--cor-fundo);
 	margin-top: 40px;
 	border-radius: 10px;
-	min-height: 50vh;
 }
 
 article h1, article h2, article h3, article h4, article h5, article h6 {
