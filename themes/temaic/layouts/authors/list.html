@@ -20,7 +20,7 @@
       <p>
         {{ $author.bio }}
       </p>
-      <a href="{{ print "/authors/" ( .Title | urlize ) | relURL }}">Ver postagens</a>
+      <a href="{{ "/authors/" | relURL }}">Ver outros autores</a>
     </li>
   </ul>
 {{ end }}

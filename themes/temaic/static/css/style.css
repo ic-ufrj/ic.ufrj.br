@@ -325,31 +325,107 @@ footer .inferior .social {
 }
 
 
+main {
+	background-color: var(--cor-fundo-menu);
+}
+
 article, main > ul {
 	width: auto;
 	max-width: 800px;
 	margin: 0 auto;
-	padding: 40px 20px;
+	padding: 20px;
 }
 
-main > h1, main > h2, main > h3, main > h4, main > h5, main > h6 {
+main h1, main h2, main h3, main h4, main h5, main h6 {
 	font-family: "Montserrat", sans-serif;
 	font-optical-sizing: auto;
 	font-weight: 600;
 	font-style: normal;
 }
 
+article {
+	background-color: var(--cor-fundo);
+	margin-top: 40px;
+	border-radius: 10px;
+	min-height: 50vh;
+}
+
+article h1, article h2, article h3, article h4, article h5, article h6 {
+	margin: 10px 0;
+}
+article h1 { font-size: 160%; }
+article h2 { font-size: 150%; }
+article h3 { font-size: 140%; }
+article h4 { font-size: 130%; }
+article h5 { font-size: 120%; }
+article h6 { font-size: 110%; }
+
+article p {
+	margin: 15px 0;
+}
+
+
+
 main > h1 {
 	display: flex;
 	height: 100px;
+
 	text-transform: uppercase;
 	font-weight: 800;
-	font-size: 30px;
+	font-size: 25px;
+
 	align-items: center;
 	justify-content: center;
+
 	color: var(--cor-texto-branco);
-	background-color: #770000;
+	background: url("/img/masshead.jpg");
+	background-size: cover;
+	background-position: center center;
+
+	text-shadow: 0px 0px 20px black,
+		0px 0px 20px black,
+		0px 0px 20px black,
+		0px 0px 20px black,
+		0px 0px 20px black;
 }
+
+.authors {
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	align-items: center;
+
+	font-family: "Montserrat", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+}
+
+.authors > li {
+	display: flex;
+	flex-direction: column;
+	width: 80%;
+	gap: 10px;
+
+	background-color: var(--cor-fundo);
+	padding: 20px;
+	margin: 10px 0;
+	border-radius: 10px;
+}
+
+.authors span {
+	font-weight: 600;
+	font-size: 120%;
+}
+
+.authors img {
+	border-radius: 10px;
+}
+
+
+
+
+
 
 
 
