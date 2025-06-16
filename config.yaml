@@ -1,8 +1,18 @@
 baseURL: "https://ic.atr.rio.br"
-languageCode: pt-br
 title: "Site do IC"
 theme: temaic
 
 taxonomies:
   author: authors
+
+defaultContentLanguage: "pt-BR"
+defaultContentLanguageInSubdir: false
+languages:
+  pt-BR:
+    languageName: "Português"
+    weight: 1
+  en:
+    languageName: "English"
+    weight: 2
+
 

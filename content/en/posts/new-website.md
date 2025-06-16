@@ -1,13 +1,14 @@
 ---
-title: "Novo Site do IC"
+title: "New website for the Institute of Computing"
+translationKey: "novo-site"
 date: 2025-06-14T20:47:53-03:00
 draft: false
 authors:
-    - arthurbo
+    - supervisao_lci
     - gabriel
 ---
 
-# Em breve teremos um novo site
+# Soon
 
  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quis ligula euismod, lacinia mauris et, tempor lorem. In elementum odio convallis nibh fermentum feugiat. Vestibulum elit ligula, tincidunt eget lectus nec, fringilla interdum sapien. Vivamus vulputate quam et risus fringilla gravida. Quisque nulla ipsum, lacinia ac quam a, imperdiet scelerisque risus. Pellentesque eleifend pharetra aliquam. Nam quis urna ut velit congue iaculis. Mauris lorem justo, ullamcorper id bibendum ultricies, consectetur id turpis. Fusce at mi facilisis, venenatis ligula semper, feugiat nibh. Sed eu ex ac turpis elementum eleifend. Sed viverra ligula sit amet urna placerat elementum.
 
