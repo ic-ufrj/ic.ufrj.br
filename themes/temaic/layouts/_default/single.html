@@ -5,15 +5,15 @@
     {{ .Content }}
   </article>
   <ul class="authors">
-    {{ range .Params.Authors }}
+    {{ range .Params.Autores }}
       {{ $author := index site.Data.authors . }}
       <li>
-        <img src="{{ $author.avatar | relURL }}" alt="Foto do {{ $author.name }}" width="80px">
+        <img src="{{ $author.avatar }}" alt="{{ i18n "foto_de_perfil" }}" width="80px">
         <span>{{ $author.name }}</span>
         <p>
-          {{ $author.bio }}
+          {{ index $author.bio site.Language.Lang }}
         </p>
-        <a href="{{ printf "/authors/%s" . | relURL }}">Ver outras postagens</a>
+	<a href="{{ printf "/autores/%s" . | relLangURL }}">{{ i18n "ver_outras_postagens" }}</a>
       </li>
     {{ end }}
   </ul>

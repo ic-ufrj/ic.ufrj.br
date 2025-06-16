@@ -3,16 +3,20 @@ title: "Site do IC"
 theme: temaic
 
 taxonomies:
-  author: authors
+  author: autores
 
-defaultContentLanguage: "pt-BR"
+defaultContentLanguage: pt
 defaultContentLanguageInSubdir: false
 languages:
-  pt-BR:
-    languageName: "Português"
+  pt:
+    languageName: Português
+    languageCode: "pt-BR"
+    contentDir: content/pt
     weight: 1
   en:
-    languageName: "English"
+    languageName: English
+    languageCode: en
+    contentDir: content/en
     weight: 2
 
 
