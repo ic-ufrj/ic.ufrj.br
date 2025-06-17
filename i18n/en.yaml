@@ -13,5 +13,18 @@
 - id: lista_de_autores
   translation: "List of Authors"
 
+- id: localizacao
+  translation: "Address"
 
+- id: endereco_correspondencia
+  translation: "Address for Mail"
+
+- id: contato
+  translation: "Contact Us"
+
+- id: mais_informacoes_contato
+  translation: "More information"
+
+- id: todos_direitos_reservados_ic
+  translation: "© All rights reserved - Instituto de Computação / UFRJ"
 
