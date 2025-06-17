@@ -1,6 +1,6 @@
 <div class="superior">
   <div>
-    <span>Localização</span>
+    <span>{{ i18n "localizacao" }}</span>
     <p>
       Centro de Ciências Matemáticas e da Natureza
       <br>Avenida Athos da Silveira Ramos, 274
@@ -12,7 +12,7 @@
     </p>
   </div>
   <div>
-    <span>Endereço para Correspondência</span>
+    <span>{{ i18n "endereco_correspondencia" }}</span>
     <p>
       Instituto de Computação
       <br>Universidade Federal do Rio de Janeiro
@@ -22,25 +22,23 @@
     </p>
   </div>
   <div>
-    <span>Contato</span>
+    <span>{{ i18n "contato" }}</span>
     <p>
       Tel.: +55 21 3938-3338
       <br>Tel.: +55 21 3938-3393
       <br>Tel.: +55 21 3938-9516
     </p>
     <p>
-      <a href="{{ "/info/contato" | relURL }}">Mais informações de Contato</a>
+      <a href="{{ i18n "link_mais_informacoes_contato" }}">{{ i18n "mais_informacoes_contato" }}</a>
     </p>
   </div>
 </div>
 
 <div class="inferior">
-  <span class="copyright">
-    © Todos os direitos reservados - Instituto de Computação / UFRJ
-  </span>
+  <span class="copyright">{{ i18n "todos_direitos_reservados_ic" }}</span>
   <ul class="social">
-    <li><a href="https://youtube.com/">Símbolo do youtube</a></li>
-    <li><a href="https://youtube.com/">Símbolo do github</a></li>
+    <li><a href="https://www.youtube.com/@institutodecomputacao-ufrj2797" target="_blank" rel="noreferrer"><i class="bi bi-youtube"></i></a></li>
+    <li><a href="https://github.com/ic-ufrj" target="_blank" rel="noreferrer"><i class="bi bi-github"></i></a></li>
   </ul>
 </div>
 

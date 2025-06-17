@@ -1,0 +1,55 @@
+- name: O Instituto
+  children:
+    - children:
+      - name: História
+        url: /artigos/historia/
+      - name: "Missão, Visão e Valores"
+      - name: Espaço Físico
+      - name: Estrutura Administrativa
+      - name: Identidade Visual
+      - name: Localização
+      - name: Contato
+    - name: Pessoas
+      children:
+        - name: Docentes
+        - name: Corpo Técnico
+        - name: Lista de Autores do Site
+          url: /autores/
+
+- name: Ensino
+  children:
+    - name: Ciência da Computação
+      children:
+        - name: Grade Curricular
+    - name: BCMT
+      children:
+        - name: Ênfase em Análise de Dados
+    - name: Graduação em Geral
+      children:
+        - name: Disciplinas de Formação
+        - name: Calendário Acadêmico
+    - name: Pós-Graduação
+      children:
+        - name: PPGI
+
+- name: Oportunidades
+  children:
+    - name: Pesquisa
+      children:
+        - name: Grupos de Pesquisa
+        - name: Projetos em Andamento
+        - name: Iniciação Científica
+        - name: Editais
+    - name: Extensão
+      children:
+        - name: Projetos de Extensão
+    - children:
+        - name: Vagas
+        - name: Concursos
+
+- name: Usuário
+  children:
+    - children:
+      - name: Cadastro de Alunos
+
+

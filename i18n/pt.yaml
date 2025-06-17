@@ -1,0 +1,34 @@
+- id: foto_de_perfil
+  translation: "Foto de perfil"
+
+- id: ver_outras_postagens
+  translation: "Ver outras postagens"
+
+- id: ver_mais_autores
+  translation: "Ver mais autores"
+
+- id: ver_postagens
+  translation: "Ver postagens"
+
+- id: lista_de_autores
+  translation: "Lista de Autores"
+
+- id: localizacao
+  translation: "Localização"
+
+- id: endereco_correspondencia
+  translation: "Endereço para Correspondência"
+
+- id: contato
+  translation: "Contato"
+
+- id: mais_informacoes_contato
+  translation: "Mais informações de contato"
+
+- id: link_mais_informacoes_contato
+  translation: "/artigos/contato/"
+
+- id: todos_direitos_reservados_ic
+  translation: "© Todos os direitos reservados - Instituto de Computação / UFRJ"
+
+

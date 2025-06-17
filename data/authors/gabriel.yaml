@@ -1,5 +1,7 @@
 name: "Gabriel P. da Silva"
-bio: "Professor do Instituto de Computação da UFRJ"
-avatar: "author_img/gabriel.png"
+bio:
+  pt: "Professor do Instituto de Computação da UFRJ"
+  en: "Professor at Instituto de Computação da UFRJ"
+avatar: "/author_img/gabriel.png"
 
 
