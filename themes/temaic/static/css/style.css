@@ -127,6 +127,13 @@ header a:hover {
 	font-weight: 300;
 }
 
+#links-header .linguagem {
+	font-weight: 600;
+	border: solid 1px var(--cor-texto-branco);
+	padding: 2px;
+	border-radius: 5px;
+}
+
 /* Se refere ao menu principal no topo da página, com a logo do IC e as
  * categorias de menu. Inclui também a parte escondida do menu que abre
  * embaixo, porém ela não é exibida durante a maior parte do tempo */

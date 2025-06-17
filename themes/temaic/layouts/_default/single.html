@@ -2,11 +2,6 @@
 {{ define "main" }}
   <h1>{{ .Title }}</h1>
   <article>
-    <ul>
-{{ range .Translations }}
-<li><a href="{{ .RelPermalink }}">{{ .Language.LanguageName }}, {{ .Language.LanguageCode }}</a></li>
-{{ end }}
-    </ul>
     {{ .Content }}
   </article>
   <ul class="authors">

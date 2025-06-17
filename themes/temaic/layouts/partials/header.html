@@ -5,6 +5,9 @@
         {{ .Name }}<i class="bi bi-arrow-up-right"></i>
       </a></li>
     {{ end }}
+    {{ range .Translations }}
+      <li><a href="{{ .RelPermalink }}" class="linguagem">{{ .Language.LanguageCode | upper }}</a></li>
+    {{ end }}
   </ul>
 </nav>
 
