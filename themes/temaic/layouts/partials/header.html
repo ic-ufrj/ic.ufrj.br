@@ -1,10 +1,10 @@
 <nav id="links-header">
   <ul>
-    <li><a href="https://ufrj.br/">UFRJ<i class="bi bi-arrow-up-right"></i></a></li>
-    <li><a href="https://ccmn.ufrj.br/">CCMN<i class="bi bi-arrow-up-right"></i></a></li>
-    <li><a href="https://ppgi.ufrj.br/">PPGI<i class="bi bi-arrow-up-right"></i></a></li>
-    <li><a href="https://ouvidoria.ufrj.br/">Ouvidoria UFRJ<i class="bi bi-arrow-up-right"></i></a></li>
-    <li><a href="https://intranet.ufrj.br/">Intranet<i class="bi bi-arrow-up-right"></i></a></li>
+    {{ range .Site.Menus.links }}
+      <li><a href="{{ .URL }}" target="_blank" rel="noreferrer">
+        {{ .Name }}<i class="bi bi-arrow-up-right"></i>
+      </a></li>
+    {{ end }}
   </ul>
 </nav>
 
