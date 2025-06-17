@@ -25,6 +25,9 @@
 - id: mais_informacoes_contato
   translation: "Mais informações de contato"
 
+- id: link_mais_informacoes_contato
+  translation: "/artigos/contato/"
+
 - id: todos_direitos_reservados_ic
   translation: "© Todos os direitos reservados - Instituto de Computação / UFRJ"
 
