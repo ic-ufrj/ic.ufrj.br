@@ -8,6 +8,7 @@
   </ul>
 </nav>
 
+
 <nav id="main-header">
   <a href="{{ "/" | relLangURL }}">
     <img src="{{ "/svg/logo-ic-branca.svg" | relURL }}" alt="Logo do IC" width="80px">
@@ -15,96 +16,26 @@
   </a>
 
   <ul>
-    <li>
-      <span>O Instituto</span>
-      <ul>
-        <li>
-          <ul>
-            <li><a href="{{ "/historia" | relURL }}">História</a></li>
-            <li><a>Missão, Visão e Valores</a></li>
-            <li><a>Espaço Físico</a></li>
-            <li><a>Estrutura Administrativa</a></li>
-            <li><a>Identidade Visual</a></li>
-            <li><a>Localização</a></li>
-            <li><a>Contato</a></li>
-          </ul>
-        </li>
-        <li>
-          <span>Pessoas</span>
-          <ul>
-            <li><a>Docentes</a></li>
-            <li><a>Corpo Técnico</a></li>
-            <li><a href="{{ "/authors" | relURL }}">Lista de Autores do Site</a></li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-    <li>
-      <span>Ensino</span>
-      <ul>
-        <li>
-          <span>Ciência da Computação</span>
-          <ul>
-            <li><a>Grade Curricular</a></li>
-          </ul>
-        </li>
-        <li>
-          <span>BCMT</span>
-          <ul>
-            <li><a>Ênfase em Análise de Dados</a></li>
-          </ul>
-        </li>
-        <li>
-          <span>Graduação em Geral</span>
-          <ul>
-            <li><a>Disciplinas de Formação</a></li>
-            <li><a>Calendário Acadêmico</a></li>
-          </ul>
-        </li>
-        <li>
-          <span>Pós-Graduação</span>
-          <ul>
-            <li><a>PPGI</a></li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-    <li>
-      <span>Oportunidades</span>
-      <ul>
-        <li>
-          <span>Pesquisa</span>
-          <ul>
-            <li><a>Grupos de Pesquisa</a></li>
-            <li><a>Projetos em Andamento</a></li>
-            <li><a>Iniciação Científica</a></li>
-            <li><a>Editais</a></li>
-          </ul>
-        </li>
-        <li>
-          <span>Extensão</span>
-          <ul>
-            <li><a>Projetos de Extensão</a></li>
-          </ul>
-        </li>
-        <li>
-          <ul>
-            <li><a>Vagas</a></li>
-            <li><a>Concursos</a></li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-    <li>
-      <span>Usuário</span>
-      <ul>
-        <li>
-          <ul>
-            <li><a>Cadastro de Alunos</a></li>
-          </ul>
-        </li>
-      </ul>
-    </li>
+    {{ $menu := index site.Data.menus (printf "principal.%s" .Site.Language.Lang) }}
+    {{ range $menu }}
+      <li>
+        <span>{{ .name }}</span>
+        <ul>
+          {{ range .children }}
+            <li>
+              {{ if .name }}
+                <span>{{ .name }}</span>
+              {{ end }}
+              <ul>
+                {{ range .children }}
+                  <li><a href="{{ .url }}">{{ .name }}</a></li>
+                {{ end }}          
+              </ul>
+            </li>
+          {{ end }}
+        </ul>
+      </li>
+    {{ end }}
   </ul>
 </nav>
 
