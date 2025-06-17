@@ -1,2 +1,64 @@
-[]
+- name: The Institute
+  children:
+    - children:
+      - name: História
+        url: /en/artigos/history/
+      # - name: "Missão, Visão e Valores"
+      # - name: Espaço Físico
+      # - name: Estrutura Administrativa
+      # - name: Identidade Visual
+      - name: Address
+        url: /en/artigos/address/
+      - name: Contact Us
+        url: /en/artigos/contact/
+    - name: People
+      children:
+        - name: Faculty
+          url: /en/artigos/faculty/
+        - name: Support Staff
+          url: /en/artigos/support-staff/
+        - name: List of Post Authors
+          url: /en/autores/
+
+- name: Education
+  children:
+    - name: Computer Science
+      children:
+        - name: Introduction
+          url: /en/artigos/computer-science-introduction/
+      # - name: BCMT
+      # children:
+      # - name: Ênfase em Análise de Dados
+    - name: Other Bachelors
+      children:
+        - name: Academic Calendar
+          url: /en/artigos/academic-calendar/
+    - name: Graduate Program
+      children:
+        - name: PPGI
+          url: /en/artigos/ppgi/
+
+- name: Opportunities
+  children:
+    - name: Research
+      children:
+        # - name: Grupos de Pesquisa
+        - name: Projects
+          url: /en/artigos/research_projects/
+        # - name: Iniciação Científica
+        # - name: Editais
+      # - name: Extensão
+      # children:
+      # - name: Projetos de Extensão
+    - children:
+        # - name: Vagas
+        - name: Selection
+          url: /en/artigos/selection/
+
+- name: User
+  children:
+    - children:
+      - name: Registration of Students
+        url: https://dcc.ufrj.br/
+
 
