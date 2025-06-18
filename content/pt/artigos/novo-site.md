@@ -19,3 +19,113 @@ Donec magna libero, lobortis eget dui vel, ultricies accumsan turpis. Vestibulum
 
 In nec ante ut orci congue egestas vel in nulla. Phasellus dictum venenatis leo nec tempor. Mauris gravida dolor mauris, ac tempus erat iaculis id. Vestibulum faucibus felis eget est sagittis, sit amet mattis mi gravida. Ut bibendum mi pellentesque pretium accumsan. Ut placerat posuere aliquam. Sed ultricies gravida mauris nec convallis. Vivamus sollicitudin gravida erat, a elementum dolor dictum quis. Proin varius augue at venenatis facilisis. Pellentesque at ante rutrum, pulvinar lorem in, congue arcu. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mollis leo sed nisl pellentesque, sit amet laoreet ex gravida. 
 
+### Headings
+
+# h1 Heading
+
+## h2 Heading
+
+### h3 Heading
+
+#### h4 Heading
+
+##### h5 Heading
+
+###### h6 Heading
+
+### Links
+
+[Link text](/)
+
+[Link with title](/blog 'My blog!')
+
+### Images
+
+![Markdown logo](/uploads/Markdown-Logo.webp)
+![Syki Logo](/logo512.png 'My logo')
+
+### Lists
+
+#### Unordered
+
+-   Lorem ipsum dolor sit amet
+-   Lorem ipsum dolor sit amet
+    -   Lorem ipsum dolor sit amet
+        -   Lorem ipsum dolor sit amet
+        -   Lorem ipsum dolor sit amet
+        -   Lorem ipsum dolor sit amet
+-   Lorem ipsum dolor sit amet
+
+#### Ordered
+
+1. Lorem ipsum dolor sit amet
+2. Lorem ipsum dolor sit amet
+3. Lorem ipsum dolor sit amet
+
+Start numbering with offset:
+
+57. Lorem ipsum dolor sit amet
+1. Lorem ipsum dolor sit amet
+
+#### Checkboxes
+
+-   [ ] Lorem ipsum dolor sit amet
+-   [x] Lorem ipsum dolor sit amet
+-   [ ] Lorem ipsum dolor sit amet
+
+### Emphasis
+
+**Bold text**
+
+_Italic text_
+
+~~Strikethrough~~
+
+### Horizontal Rule
+
+---
+
+### Blockquotes
+
+> Blockquotes
+>
+> > Nested blockquotes
+> >
+> > > Nested blockquotes
+
+### Code
+
+Inline `code`
+
+```
+Sample text here...
+```
+
+Syntax highlighting
+
+```js
+var foo = function (bar) {
+    return bar++
+}
+
+console.log(foo(5))
+```
+
+### Tables
+
+| Heading1 | Heading2                   |
+| -------- | -------------------------- |
+| row1     | Lorem ipsum dolor sit amet |
+| row2     | Lorem ipsum dolor sit amet |
+| row3     | Lorem ipsum dolor sit amet |
+
+Right aligned columns
+
+| Heading1 |                   Heading2 |
+| -------: | -------------------------: |
+|     row1 | Lorem ipsum dolor sit amet |
+|     row2 | Lorem ipsum dolor sit amet |
+|     row3 | Lorem ipsum dolor sit amet |
+
+
+
