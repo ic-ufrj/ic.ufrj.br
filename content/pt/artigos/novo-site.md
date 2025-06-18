@@ -67,6 +67,15 @@ Start numbering with offset:
 57. Lorem ipsum dolor sit amet
 1. Lorem ipsum dolor sit amet
 
+a:
+
+1. abs
+    1. outra parte
+    2. sla
+        1. amon
+        2. s
+    3. a
+
 #### Checkboxes
 
 -   [ ] Lorem ipsum dolor sit amet
