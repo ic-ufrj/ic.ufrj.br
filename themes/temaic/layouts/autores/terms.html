@@ -1,7 +1,7 @@
 {{ define "title" }}{{ i18n "lista_de_autores" }}{{ end }}
 
 {{ define "main" }}
-  <h1>{{ i18n "lista_de_autores" }}</h1>
+  <div class="masshead"><h1>{{ i18n "lista_de_autores" }}</h1></div>
   <ul class="authors">
     {{ range .Pages }}
       {{ $author := index site.Data.authors ( .Page.Title | urlize ) }}

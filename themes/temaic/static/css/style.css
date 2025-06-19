@@ -396,11 +396,11 @@ article h6 { font-size: 110%; }
 
 article p {
 	text-align: justify;
-	text-indent: 40px;
 }
 
 article p + p {
 	margin-top: 15px;
+	text-indent: 40px;
 }
 
 article ul, article ol {

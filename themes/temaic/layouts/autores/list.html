@@ -5,8 +5,9 @@
 
 {{ define "main" }}
   {{ $author := index site.Data.authors (.Title | urlize) }}
-  <h1>{{ $author.name }}</h1>
+  <div class="masshead"><h1>{{ $author.name }}</h1></div>
   <article>
+    <p>Postagens de {{ $author.name }}:</p>
     <ul>
       {{ range .Pages }}
         <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
