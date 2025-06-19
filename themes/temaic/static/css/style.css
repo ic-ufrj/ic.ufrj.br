@@ -468,27 +468,27 @@ article input[type="checkbox"]:checked {
 
 
 
-main > h1 {
+.masshead {
 	display: flex;
 	height: 100px;
-
-	text-transform: uppercase;
-	font-weight: 800;
-	font-size: 25px;
 
 	align-items: center;
 	justify-content: center;
 
-	color: var(--cor-texto-branco);
 	background: url("/img/masshead.jpg");
 	background-size: cover;
 	background-position: center center;
+}
 
-	text-shadow: 0px 0px 20px black,
-		0px 0px 20px black,
-		0px 0px 20px black,
-		0px 0px 20px black,
-		0px 0px 20px black;
+.masshead h1 {
+	color: var(--cor-texto-branco);
+	background-color: rgba(0, 0, 0, 0.7);
+	padding: 15px;
+	border-radius: 10px;
+
+	text-transform: uppercase;
+	font-weight: 800;
+	font-size: 25px;
 }
 
 .authors {
