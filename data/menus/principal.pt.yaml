@@ -1,6 +1,8 @@
 - name: O Instituto
   children:
     - children:
+      - name: Apresentação
+        url: /artigos/apresentacao/
       - name: História
         url: /artigos/historia/
       - name: "Missão, Visão e Valores"
