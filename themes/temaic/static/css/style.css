@@ -356,9 +356,29 @@ article {
 	border-radius: 10px;
 }
 
-article h1, article h2, article h3, article h4, article h5, article h6 {
+article * {
 	margin: 10px 0;
 }
+
+article .highlight * {
+	margin: 0;
+}
+
+article .highlight > pre {
+	padding: 10px;
+	border-radius: 10px;
+}
+
+article h1, article h2, article h3, article h4, article h5, article h6 {
+	margin: 20px 0;
+}
+
+article h1 a, article h2 a, article h3 a, article h4 a, article h5 a,
+article h6 a {
+	color: var(--cor-ic2);
+	font-size: 70%;
+}
+
 article h1 { font-size: 160%; }
 article h2 { font-size: 150%; }
 article h3 { font-size: 140%; }
@@ -367,8 +387,29 @@ article h5 { font-size: 120%; }
 article h6 { font-size: 110%; }
 
 article p {
-	margin: 15px 0;
+	text-align: justify;
+	text-indent: 40px;
 }
+
+article p + p {
+	margin-top: 15px;
+}
+
+article ul, article ol {
+	list-style: initial;
+	margin-left: 25px;
+}
+
+article ul li::marker, article ol li::marker {
+	color: var(--cor-ic2);
+}
+
+article ul { list-style: disc; }
+article ul ul { list-style-type: circle; }
+article ul ul ul { list-style-type: square; }
+article ol { list-style: decimal; }
+article ol ol { list-style: upper-roman; }
+article ol ol ol {list-style: lower-latin; }
 
 
 

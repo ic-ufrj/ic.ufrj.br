@@ -49,4 +49,8 @@ languages:
           url: https://ppgi.ufrj.br/
           weight: 3
 
+markup:
+  highlight:
+    style: nord
+
 
