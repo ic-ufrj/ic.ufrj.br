@@ -196,7 +196,7 @@ header a:hover {
 
 	width: 100vw;
 
-	background-color: var(--cor-fundo-menu);
+	background-color: var(--cor-ic2);
 	color: var(--cor-texto);
 
 	padding: 20px;
@@ -206,13 +206,15 @@ header a:hover {
 	gap: 50px;
 	justify-content: center;
 	
-	transition: clip-path 200ms ease-out;
+	transition: clip-path 200ms ease-out 100ms;
 }
 
 /* Se refere aos menus escondidos enquanto a categoria tem foco */
 #main-header > ul > li:hover > ul,
 #main-header > ul > li:focus-within > ul {
 	clip-path: inset(0 0 0 0);
+
+	transition-delay: 300ms;
 }
 
 /* Se refere às subcategorias do menu escondido */
