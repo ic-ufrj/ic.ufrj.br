@@ -136,5 +136,22 @@ Right aligned columns
 |     row2 | Lorem ipsum dolor sit amet |
 |     row3 | Lorem ipsum dolor sit amet |
 
+Esquerda:
+
+
+| Heading1 |                   Heading2 |
+| :------- | :------------------------- |
+|     row1 | Lorem ipsum dolor sit amet |
+|     row2 | Lorem ipsum dolor sit amet |
+|     row3 | Lorem ipsum dolor sit amet |
+
+necessarimente meio:
+
+| Heading1 |                   Heading2 |
+| :------: | :------------------------: |
+|     row1 | Lorem ipsum dolor sit amet |
+|     row2 | Lorem ipsum dolor sit amet |
+|     row3 | Lorem ipsum dolor sit amet |
+
 
 

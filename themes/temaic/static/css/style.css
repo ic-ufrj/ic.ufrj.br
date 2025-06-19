@@ -343,6 +343,12 @@ article, main > ul {
 	padding: 20px;
 }
 
+article {
+	font-family: "Open Sans", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+}
+
 main h1, main h2, main h3, main h4, main h5, main h6 {
 	font-family: "Montserrat", sans-serif;
 	font-optical-sizing: auto;
@@ -410,6 +416,53 @@ article ul ul ul { list-style-type: square; }
 article ol { list-style: decimal; }
 article ol ol { list-style: upper-roman; }
 article ol ol ol {list-style: lower-latin; }
+
+article strong {
+	font-weight: bold;
+}
+
+article em {
+	font-style: italic;
+}
+
+article a {
+	color: var(--cor-ic2);
+}
+
+article code {
+	font-family: monospace;
+}
+
+article table thead {
+	color: var(--cor-ic2);
+}
+
+article table th, article table td {
+	padding: 5px;
+	border: 1px solid var(--cor-ic2);
+}
+
+article blockquote {
+	margin-left: 40px;
+	color: var(--cor-ic2);
+	border-left: 10px solid var(--cor-ic2);
+}
+
+article input[type="checkbox"] {
+	appearance: none;
+	-webkit-appearance: none;
+	width: 1em;
+	height: 1em;
+	margin: 0 5px;
+	border: 1px solid var(--cor-ic2);
+}
+
+article input[type="checkbox"]:checked {
+	background-color: var(--cor-ic2);
+}
+
+
+
 
 
 
