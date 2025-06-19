@@ -196,7 +196,7 @@ header a:hover {
 
 	width: 100vw;
 
-	background-color: var(--cor-fundo-menu);
+	background-color: var(--cor-ic2);
 	color: var(--cor-texto);
 
 	padding: 20px;
@@ -206,13 +206,15 @@ header a:hover {
 	gap: 50px;
 	justify-content: center;
 	
-	transition: clip-path 200ms ease-out;
+	transition: clip-path 200ms ease-out 100ms;
 }
 
 /* Se refere aos menus escondidos enquanto a categoria tem foco */
 #main-header > ul > li:hover > ul,
 #main-header > ul > li:focus-within > ul {
 	clip-path: inset(0 0 0 0);
+
+	transition-delay: 300ms;
 }
 
 /* Se refere às subcategorias do menu escondido */
@@ -343,6 +345,12 @@ article, main > ul {
 	padding: 20px;
 }
 
+article {
+	font-family: "Open Sans", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+}
+
 main h1, main h2, main h3, main h4, main h5, main h6 {
 	font-family: "Montserrat", sans-serif;
 	font-optical-sizing: auto;
@@ -388,11 +396,11 @@ article h6 { font-size: 110%; }
 
 article p {
 	text-align: justify;
-	text-indent: 40px;
 }
 
 article p + p {
 	margin-top: 15px;
+	text-indent: 40px;
 }
 
 article ul, article ol {
@@ -411,29 +419,76 @@ article ol { list-style: decimal; }
 article ol ol { list-style: upper-roman; }
 article ol ol ol {list-style: lower-latin; }
 
+article strong {
+	font-weight: bold;
+}
+
+article em {
+	font-style: italic;
+}
+
+article a {
+	color: var(--cor-ic2);
+}
+
+article code {
+	font-family: monospace;
+}
+
+article table thead {
+	color: var(--cor-ic2);
+}
+
+article table th, article table td {
+	padding: 5px;
+	border: 1px solid var(--cor-ic2);
+}
+
+article blockquote {
+	margin-left: 40px;
+	color: var(--cor-ic2);
+	border-left: 10px solid var(--cor-ic2);
+}
+
+article input[type="checkbox"] {
+	appearance: none;
+	-webkit-appearance: none;
+	width: 1em;
+	height: 1em;
+	margin: 0 5px;
+	border: 1px solid var(--cor-ic2);
+}
+
+article input[type="checkbox"]:checked {
+	background-color: var(--cor-ic2);
+}
 
 
-main > h1 {
+
+
+
+
+.masshead {
 	display: flex;
 	height: 100px;
-
-	text-transform: uppercase;
-	font-weight: 800;
-	font-size: 25px;
 
 	align-items: center;
 	justify-content: center;
 
-	color: var(--cor-texto-branco);
 	background: url("/img/masshead.jpg");
 	background-size: cover;
 	background-position: center center;
+}
 
-	text-shadow: 0px 0px 20px black,
-		0px 0px 20px black,
-		0px 0px 20px black,
-		0px 0px 20px black,
-		0px 0px 20px black;
+.masshead h1 {
+	color: var(--cor-texto-branco);
+	background-color: rgba(0, 0, 0, 0.7);
+	padding: 15px;
+	border-radius: 10px;
+
+	text-transform: uppercase;
+	font-weight: 800;
+	font-size: 25px;
 }
 
 .authors {
