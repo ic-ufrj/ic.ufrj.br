@@ -363,18 +363,19 @@ article * {
 article h1, article h2, article h3, article h4, article h5, article h6 {
 	margin: 20px 0;
 }
+
+article h1 a, article h2 a, article h3 a, article h4 a, article h5 a,
+article h6 a {
+	color: var(--cor-ic2);
+	font-size: 70%;
+}
+
 article h1 { font-size: 160%; }
-article h1::before { color: var(--cor-ic2); content: "# " }
 article h2 { font-size: 150%; }
-article h2::before { color: var(--cor-ic2); content: "## " }
 article h3 { font-size: 140%; }
-article h3::before { color: var(--cor-ic2); content: "### " }
 article h4 { font-size: 130%; }
-article h4::before { color: var(--cor-ic2); content: "#### " }
 article h5 { font-size: 120%; }
-article h5::before { color: var(--cor-ic2); content: "##### " }
 article h6 { font-size: 110%; }
-article h6::before { color: var(--cor-ic2); content: "###### " }
 
 article p {
 	text-align: justify;
