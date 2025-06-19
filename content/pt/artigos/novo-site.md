@@ -41,8 +41,8 @@ In nec ante ut orci congue egestas vel in nulla. Phasellus dictum venenatis leo 
 
 ### Images
 
-![Markdown logo](/uploads/Markdown-Logo.webp)
-![Syki Logo](/logo512.png 'My logo')
+
+![Logo do IC](http://localhost:1313/svg/logo-ic.svg 'logo')
 
 ### Lists
 
