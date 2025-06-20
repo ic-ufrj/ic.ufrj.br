@@ -29,8 +29,12 @@
   translation: "/en/artigos/contact/"
 
 - id: todos_direitos_reservados_ic
-  translation: "© All rights reserved - Instituto de Computação / UFRJ"
+  translation: "© All rights reserved - Institute of Computing / UFRJ"
 
 - id: lista_de_artigos
   translation: "List of Articles"
+
+- id: instituto_de_computacao
+  translation: "Institute of Computing"
+
 

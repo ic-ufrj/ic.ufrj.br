@@ -1,7 +1,7 @@
 - name: The Institute
   children:
     - children:
-      - name: História
+      - name: History
         url: /en/artigos/history/
       # - name: "Missão, Visão e Valores"
       # - name: Espaço Físico

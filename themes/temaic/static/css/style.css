@@ -50,14 +50,16 @@ table {
 
 
 :root {
-	--cor-ic1: #344563FF;
-	--cor-ic2: #667da6FF;
+	--cor-ic1: #344563;
+	--cor-ic2: #667DA6;
 
 	--cor-fundo: #FFFFFF;
 	--cor-fundo-menu: var(--cor-ic1);
 	--cor-fundo-menu-cima: var(--cor-ic2);
+	--cor-fundo-apagado: #506080;
 	--cor-texto: #000000;
-	--cor-texto-branco: #ffffff;
+	--cor-texto-branco: #FFFFFF;
+	--cor-accent-artigo: var(--cor-ic1);
 
 	--menu-padding: 100px;
 	--menu-total-height: 120px;
@@ -196,7 +198,7 @@ header a:hover {
 
 	width: 100vw;
 
-	background-color: var(--cor-ic2);
+	background-color: var(--cor-ic1);
 	color: var(--cor-texto);
 
 	padding: 20px;
@@ -206,7 +208,7 @@ header a:hover {
 	gap: 50px;
 	justify-content: center;
 	
-	transition: clip-path 200ms ease-out 100ms;
+	transition: clip-path 200ms ease-out 300ms;
 }
 
 /* Se refere aos menus escondidos enquanto a categoria tem foco */
@@ -214,7 +216,7 @@ header a:hover {
 #main-header > ul > li:focus-within > ul {
 	clip-path: inset(0 0 0 0);
 
-	transition-delay: 300ms;
+	transition-delay: 500ms;
 }
 
 /* Se refere às subcategorias do menu escondido */
@@ -335,7 +337,7 @@ footer .inferior .social {
 
 
 main {
-	background-color: var(--cor-fundo-menu);
+	background-color: var(--cor-fundo-apagado);
 }
 
 article, main > ul {
@@ -383,8 +385,10 @@ article h1, article h2, article h3, article h4, article h5, article h6 {
 
 article h1 a, article h2 a, article h3 a, article h4 a, article h5 a,
 article h6 a {
-	color: var(--cor-ic2);
-	font-size: 70%;
+	color: var(--cor-accent-artigo);
+	font-size: 15px;
+	font-weight: 800;
+
 }
 
 article h1 { font-size: 160%; }
@@ -409,7 +413,7 @@ article ul, article ol {
 }
 
 article ul li::marker, article ol li::marker {
-	color: var(--cor-ic2);
+	color: var(--cor-accent-artigo);
 }
 
 article ul { list-style: disc; }
@@ -428,7 +432,7 @@ article em {
 }
 
 article a {
-	color: var(--cor-ic2);
+	color: var(--cor-accent-artigo);
 }
 
 article code {
@@ -436,18 +440,19 @@ article code {
 }
 
 article table thead {
-	color: var(--cor-ic2);
+	color: var(--cor-accent-artigo);
+	font-weight: 700;
 }
 
 article table th, article table td {
 	padding: 5px;
-	border: 1px solid var(--cor-ic2);
+	border: 1px solid var(--cor-accent-artigo);
 }
 
 article blockquote {
 	margin-left: 40px;
-	color: var(--cor-ic2);
-	border-left: 10px solid var(--cor-ic2);
+	color: var(--cor-accent-artigo);
+	border-left: 10px solid var(--cor-accent-artigo);
 }
 
 article input[type="checkbox"] {
@@ -456,11 +461,11 @@ article input[type="checkbox"] {
 	width: 1em;
 	height: 1em;
 	margin: 0 5px;
-	border: 1px solid var(--cor-ic2);
+	border: 1px solid var(--cor-accent-artigo);
 }
 
 article input[type="checkbox"]:checked {
-	background-color: var(--cor-ic2);
+	background-color: var(--cor-accent-artigo);
 }
 
 
