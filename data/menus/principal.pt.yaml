@@ -4,7 +4,6 @@
       - name: Apresentação
         url: /artigos/apresentacao/
       - name: História
-        url: /artigos/historia/
       - name: "Missão, Visão e Valores"
       - name: Espaço Físico
       - name: Estrutura Administrativa
@@ -30,9 +29,12 @@
       children:
         - name: Disciplinas de Formação
         - name: Calendário Acadêmico
+        - name: Formulários e Requerimentos
+          url: /artigos/formularios/
     - name: Pós-Graduação
       children:
         - name: PPGI
+          url: /artigos/ppgi/
 
 - name: Oportunidades
   children:
@@ -45,6 +47,10 @@
     - name: Extensão
       children:
         - name: Projetos de Extensão
+    - name: Monitoria
+      children:
+        - name: Ofertas de Monitoria
+          url: /artigos/monitoria/
     - children:
         - name: Vagas
         - name: Concursos
