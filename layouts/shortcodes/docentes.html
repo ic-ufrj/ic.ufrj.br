@@ -1,0 +1,28 @@
+{{- $data := index .Site.Data.docentes (.Get 0) -}}
+
+<table>
+  <thead>
+    <tr>
+      <th>{{ i18n "nome" }}</th>
+      <th>{{ i18n "email" }}</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{ range $data }}
+      <tr>
+        <td>
+          {{ if .mostrar_site }}
+            <a href="{{ .site | default (printf "https://dcc.ufrj.br/~%s/" .name ) }}">
+              {{ .nome }}
+            </a>
+          {{ else }}
+            {{ .nome }}
+          {{ end }}
+        </td>
+        <td>{{ .email | default (printf "%s (at) ic.ufrj.br" .name) }}</td>
+      </tr>
+    {{ end }}
+  </tbody>
+</table>
+
+

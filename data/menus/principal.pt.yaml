@@ -12,7 +12,8 @@
       - name: Contato
     - name: Pessoas
       children:
-        - name: Docentes
+        - name: Corpo Docente
+          url: /artigos/docentes/
         - name: Corpo Técnico
         - name: Lista de Autores do Site
           url: /autores/

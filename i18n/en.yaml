@@ -37,4 +37,11 @@
 - id: instituto_de_computacao
   translation: "Institute of Computing"
 
+- id: nome
+  translation: "Name"
+
+- id: email
+  translation: "Email"
+
+
 

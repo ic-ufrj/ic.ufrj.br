@@ -1,0 +1,137 @@
+- name: avivacqua
+  nome: Adriana Santarosa Vivacqua
+
+- name: aloisiopina
+  nome: Aloísio Carlos de Pina
+
+- name: amaury
+  nome: Amaury Alvarez Cruz
+
+- name: anamaria
+  nome: Anamaria Martins Moreira
+
+- name: angela
+  nome: Angela Maria Silva Gonçalves
+
+- name: carla
+  nome: Carla Amor Divino Moreira Delgado
+  mostrar_site: true
+
+- name: carolina
+  nome: Carolina Gil Marcelino
+
+- name: cfb
+  nome: Claudson Ferreira Bornstein
+  mostrar_site: true
+
+- name: danielbastos
+  nome: Daniel Chicayban Bastos
+
+- name: dgalfaro
+  nome: Daniel Gregório Alfaro Vigo
+  mostrar_site: true
+
+- name: sadoc
+  nome: Daniel Sadoc Menasché
+  mostrar_site: true
+
+- name: eldany
+  nome: Eldanae Nogueira Teixeira
+
+- name: gabriel
+  nome: Gabriel Pereira da Silva
+  mostrar_site: true
+
+- name: gabrielaquino
+  nome: Gabriel Rodrigues Caldas de Aquino
+
+- name: giseli
+  nome: Giseli Rabello Lopes
+  mostrar_site: true
+
+- name: hugonobrega
+  nome: Hugo de Holanda Cunha Nobrega
+  mostrar_site: true
+  site: https://hugonobrega.com/
+
+- name: hugomg
+  nome: Hugo Musso Gualandi
+
+- name: jpaixao
+  nome: João Antonio Recio Paixão
+
+- name: jcps
+  nome: João Carlos Pereira da Silva
+  mostrar_site: true
+
+- name: jonice
+  nome: Jonice de Oliveira Sampaio
+  mostrar_site: true
+
+- name: clima
+  nome: Josefino Cabral Melo Lima
+
+- name: julianabsf
+  nome: Juliana Baptista dos Santos França
+
+- name: juvianna
+  nome: Juliana Vianna Valério
+
+- name: luziane
+  nome: Luziane Ferreira de Mendonça
+  mostrar_site: true
+
+- name: marcellogt
+  nome: Marcello Goulart Teixeira
+  mostrar_site: true
+
+- name: marcosleipnitz
+  nome: Marcos Tomazzoli Leipnitz
+
+- name: mhelena
+  nome: Maria Helena Cautiero Horta Jardim
+
+- name: mluiza
+  nome: Maria Luiza Machado Campos
+
+- name: rincon
+  nome: Mauro Antonio Rincon
+  mostrar_site: true
+
+- name: mitre
+  nome: Mitre Costa Dourado
+  mostrar_site: true
+
+- name: paulomann
+  nome: Paulo Roberto Mann Marques Júnior
+
+- name: rafaelmello
+  nome: Rafael Maiani de Mello
+
+- name: ronaldsouza
+  nome: Ronald Chiesse de Souza
+
+- name: sergioserra
+  nome: Sérgio Manuel Serra da Cruz
+
+- name: collier
+  nome: Severino Collier Coutinho
+  mostrar_site: true
+
+- name: silvana
+  nome: Silvana Rossetto
+  mostrar_site: true
+
+- name: valeriab
+  nome: Valeria Menezes Bastos
+  mostrar_site: true
+
+- name: vigusmao
+  nome: Vinícius Gusmão Pereira de Sá
+  mostrar_site: true
+
+- name: vivian
+  nome: Vivian dos Santos Silva
+
+
+
