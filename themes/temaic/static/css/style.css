@@ -170,19 +170,31 @@ header a:hover {
  * o menu escondido */
 #main-header > ul {
 	display: flex;
+	align-items: center;
 }
 
 /* Se refere aos textos O INSTITUTO, ENSINO, etc */
-#main-header > ul > li > span {
+#main-header > ul > li > button {
 	font-weight: 600;
+	font-size: inherit;
 	text-transform: uppercase;
 
-	height: 120px;
-
-	padding: 0px 1em;
+	padding: 0.5em 0.5em;
+	margin: 0px 0.5em;
 	
 	display: flex;
 	align-items: center;
+
+	background: none;
+	border: none;
+	outline: none;
+}
+
+#main-header > ul > li > button:hover,
+#main-header > ul > li > button:focus-within {
+	/*background-color: rgba(0, 0, 0, 0.2);
+	border-radius: 10px;*/
+	text-decoration: underline;
 }
 
 /* Se refere aos menus escondidos (há um para cada categoria) */
@@ -208,15 +220,14 @@ header a:hover {
 	gap: 50px;
 	justify-content: center;
 	
-	transition: clip-path 200ms ease-out 300ms;
+	transition: clip-path 200ms ease-out;
 }
 
 /* Se refere aos menus escondidos enquanto a categoria tem foco */
-#main-header > ul > li:hover > ul,
 #main-header > ul > li:focus-within > ul {
 	clip-path: inset(0 0 0 0);
 
-	transition-delay: 500ms;
+	transition-delay: 200ms;
 }
 
 /* Se refere às subcategorias do menu escondido */
