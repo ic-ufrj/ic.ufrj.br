@@ -11,5 +11,6 @@
 - [ ] Listagem de postagens recentes
 - [ ] Trazer a maioria do conteúdo do site antigo
 - [ ] Testar e estilizar: footnotes, definition lists e goldmark extras
+- [ ] Traduzir nome de alguns autores
 
 
