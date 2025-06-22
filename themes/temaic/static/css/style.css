@@ -375,9 +375,11 @@ article {
 	background-color: var(--cor-fundo);
 	margin-top: 40px;
 	border-radius: 10px;
+	line-height: 1.2em;
 }
 
-article * {
+article table, article blockquote, article pre, article .highlight,
+article ul, article ol {
 	margin: 10px 0;
 }
 
