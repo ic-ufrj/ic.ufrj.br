@@ -52,5 +52,7 @@ languages:
 markup:
   highlight:
     style: nord
-
+  goldmark:
+    renderer:
+      unsafe: true
 
