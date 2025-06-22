@@ -1,17 +1,18 @@
 - name: O Instituto
   children:
     - children:
-      - name: Apresentação
-        url: /artigos/apresentacao/
-      - name: História
-      - name: "Missão, Visão e Valores"
-      - name: Espaço Físico
-      - name: Estrutura Administrativa
-      - name: Identidade Visual
-      - name: Localização
-      - name: Contato
+        - name: Apresentação
+          url: /artigos/apresentacao/
+        - name: História
+        - name: "Missão, Visão e Valores"
+        - name: Espaço Físico
+        - name: Identidade Visual
+        - name: Localização
+        - name: Contato
     - name: Pessoas
       children:
+        - name: Estrutura Administrativa
+          url: /artigos/estrutura-administrativa/
         - name: Corpo Docente
           url: /artigos/docentes/
         - name: Corpo Técnico
