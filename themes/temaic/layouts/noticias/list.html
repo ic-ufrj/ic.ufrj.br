@@ -1,0 +1,12 @@
+{{ define "main" }}
+  <div class="masshead"><h1>{{ i18n "lista_de_artigos" }}</h1></div>
+  <article>
+    <ul>
+      {{ range .Pages }}
+        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+      {{ end }}
+    </ul>
+  </article>
+  <ul class="authors"></ul>
+{{ end }}
+
