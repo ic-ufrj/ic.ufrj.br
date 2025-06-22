@@ -52,7 +52,7 @@ extensao (at) ic.ufrj.br
 
 ###### Direção Adjunta de Gestão e Governança
 
-Rodrigo Mello
+Rodrigo Mello\
 governanca (at) ic.ufrj.br
 
 #### Comissões
