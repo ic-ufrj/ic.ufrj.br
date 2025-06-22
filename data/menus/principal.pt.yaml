@@ -2,7 +2,7 @@
   children:
     - children:
         - name: Apresentação
-          url: /artigos/apresentacao/
+          url: /info/apresentacao/
         - name: História
         - name: "Missão, Visão e Valores"
         - name: Espaço Físico
@@ -12,9 +12,9 @@
     - name: Pessoas
       children:
         - name: Estrutura Administrativa
-          url: /artigos/estrutura-administrativa/
+          url: /info/estrutura-administrativa/
         - name: Corpo Docente
-          url: /artigos/docentes/
+          url: /info/docentes/
         - name: Corpo Técnico
         - name: Lista de Autores do Site
           url: /autores/
@@ -32,11 +32,11 @@
         - name: Disciplinas de Formação
         - name: Calendário Acadêmico
         - name: Formulários e Requerimentos
-          url: /artigos/formularios/
+          url: /info/formularios/
     - name: Pós-Graduação
       children:
         - name: PPGI
-          url: /artigos/ppgi/
+          url: /info/ppgi/
 
 - name: Oportunidades
   children:
@@ -52,7 +52,7 @@
     - name: Monitoria
       children:
         - name: Ofertas de Monitoria
-          url: /artigos/monitoria/
+          url: /info/monitoria/
     - children:
         - name: Vagas
         - name: Concursos

@@ -2,21 +2,21 @@
   children:
     - children:
       - name: History
-        url: /en/artigos/history/
+        url: /en/info/history/
       # - name: "Missão, Visão e Valores"
       # - name: Espaço Físico
       # - name: Estrutura Administrativa
       # - name: Identidade Visual
       - name: Address
-        url: /en/artigos/address/
+        url: /en/info/address/
       - name: Contact Us
-        url: /en/artigos/contact/
+        url: /en/info/contact/
     - name: People
       children:
         - name: Faculty
-          url: /en/artigos/faculty/
+          url: /en/info/faculty/
         - name: Support Staff
-          url: /en/artigos/support-staff/
+          url: /en/info/support-staff/
         - name: List of Post Authors
           url: /en/autores/
 
@@ -25,18 +25,18 @@
     - name: Computer Science
       children:
         - name: Introduction
-          url: /en/artigos/computer-science-introduction/
+          url: /en/info/computer-science-introduction/
       # - name: BCMT
       # children:
       # - name: Ênfase em Análise de Dados
     - name: Other Bachelors
       children:
         - name: Academic Calendar
-          url: /en/artigos/academic-calendar/
+          url: /en/info/academic-calendar/
     - name: Graduate Program
       children:
         - name: PPGI
-          url: /en/artigos/ppgi/
+          url: /en/info/ppgi/
 
 - name: Opportunities
   children:
@@ -44,7 +44,7 @@
       children:
         # - name: Grupos de Pesquisa
         - name: Projects
-          url: /en/artigos/research_projects/
+          url: /en/info/research_projects/
         # - name: Iniciação Científica
         # - name: Editais
       # - name: Extensão
@@ -53,7 +53,7 @@
     - children:
         # - name: Vagas
         - name: Selection
-          url: /en/artigos/selection/
+          url: /en/info/selection/
 
 - name: User
   children:
