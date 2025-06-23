@@ -1,121 +1,121 @@
 - name: avivacqua
-  nome: Adriana Santarosa Vivacqua
+  nome: Adriana Vivacqua
 
 - name: aloisiopina
-  nome: Aloísio Carlos de Pina
+  nome: Aloísio Pina
 
 - name: amaury
-  nome: Amaury Alvarez Cruz
+  nome: Amaury Cruz
 
 - name: anamaria
-  nome: Anamaria Martins Moreira
+  nome: Anamaria Moreira
 
 - name: angela
-  nome: Angela Maria Silva Gonçalves
+  nome: Angela Gonçalves
 
 - name: carla
-  nome: Carla Amor Divino Moreira Delgado
+  nome: Carla Delgado
   mostrar_site: true
 
 - name: carolina
-  nome: Carolina Gil Marcelino
+  nome: Carolina Marcelino
 
 - name: cfb
-  nome: Claudson Ferreira Bornstein
+  nome: Claudson Bornstein
   mostrar_site: true
 
 - name: danielbastos
-  nome: Daniel Chicayban Bastos
+  nome: Daniel  Bastos
 
 - name: dgalfaro
-  nome: Daniel Gregório Alfaro Vigo
+  nome: Daniel Alfaro
   mostrar_site: true
 
 - name: sadoc
-  nome: Daniel Sadoc Menasché
+  nome: Daniel Sadoc
   mostrar_site: true
 
 - name: eldany
-  nome: Eldanae Nogueira Teixeira
+  nome: Eldanae Teixeira
 
 - name: gabriel
-  nome: Gabriel Pereira da Silva
+  nome: Gabriel P. Silva
   mostrar_site: true
 
 - name: gabrielaquino
-  nome: Gabriel Rodrigues Caldas de Aquino
+  nome: Gabriel Caldas
 
 - name: giseli
-  nome: Giseli Rabello Lopes
+  nome: Giseli Lopes
   mostrar_site: true
 
 - name: hugonobrega
-  nome: Hugo de Holanda Cunha Nobrega
+  nome: Hugo Nobrega
   mostrar_site: true
   site: https://hugonobrega.com/
 
 - name: hugomg
-  nome: Hugo Musso Gualandi
+  nome: Hugo Musso
 
 - name: jpaixao
-  nome: João Antonio Recio Paixão
+  nome: JoãomPaixão
 
 - name: jcps
-  nome: João Carlos Pereira da Silva
+  nome: João Carlos P. Silva
   mostrar_site: true
 
 - name: jonice
-  nome: Jonice de Oliveira Sampaio
+  nome: Jonice Oliveira
   mostrar_site: true
 
 - name: clima
-  nome: Josefino Cabral Melo Lima
+  nome: Cabral Lima
 
 - name: julianabsf
-  nome: Juliana Baptista dos Santos França
+  nome: Juliana França
 
 - name: juvianna
-  nome: Juliana Vianna Valério
+  nome: Juliana Valério
 
 - name: luziane
-  nome: Luziane Ferreira de Mendonça
+  nome: Luziane Mendonça
   mostrar_site: true
 
 - name: marcellogt
-  nome: Marcello Goulart Teixeira
+  nome: Marcello Teixeira
   mostrar_site: true
 
 - name: marcosleipnitz
-  nome: Marcos Tomazzoli Leipnitz
+  nome: Marcos Leipnitz
 
 - name: mhelena
-  nome: Maria Helena Cautiero Horta Jardim
+  nome: Maria Helena Cautiero
 
 - name: mluiza
-  nome: Maria Luiza Machado Campos
+  nome: Maria Luiza Campos
 
 - name: rincon
-  nome: Mauro Antonio Rincon
+  nome: Mauro Rincon
   mostrar_site: true
 
 - name: mitre
-  nome: Mitre Costa Dourado
+  nome: Mitre Dourado
   mostrar_site: true
 
 - name: paulomann
-  nome: Paulo Roberto Mann Marques Júnior
+  nome: Paulo Roberto Mann
 
 - name: rafaelmello
-  nome: Rafael Maiani de Mello
+  nome: Rafael Mello
 
 - name: ronaldsouza
-  nome: Ronald Chiesse de Souza
+  nome: Ronald Souza
 
 - name: sergioserra
-  nome: Sérgio Manuel Serra da Cruz
+  nome: Sérgio Serra
 
 - name: collier
-  nome: Severino Collier Coutinho
+  nome: Collier Coutinho
   mostrar_site: true
 
 - name: silvana
@@ -123,15 +123,12 @@
   mostrar_site: true
 
 - name: valeriab
-  nome: Valeria Menezes Bastos
+  nome: Valeria Bastos
   mostrar_site: true
 
 - name: vigusmao
-  nome: Vinícius Gusmão Pereira de Sá
+  nome: Vinícius Gusmão
   mostrar_site: true
 
 - name: vivian
-  nome: Vivian dos Santos Silva
-
-
-
+  nome: Vivian dos Santos
