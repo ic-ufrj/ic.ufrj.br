@@ -1,11 +1,14 @@
 - name: avivacqua
   nome: Adriana Vivacqua
+  site: https://lattes.cnpq.br/6494676052801758
 
 - name: aloisiopina
   nome: Aloísio Pina
+  site: https://lattes.cnpq.br/4830003855063986
 
 - name: amaury
   nome: Amaury Cruz
+  site: https://lattes.cnpq.br/0370476774197561
 
 - name: anamaria
   nome: Anamaria Moreira
@@ -41,13 +44,17 @@
 - name: gabriel
   nome: Gabriel P. Silva
   mostrar_site: true
+  site: https://lattes.cnpq.br/8636301961155552
 
 - name: gabrielaquino
   nome: Gabriel Caldas
+  mostrar_site: true
+  site: https://lattes.cnpq.br/4613499627488074
 
 - name: giseli
   nome: Giseli Lopes
   mostrar_site: true
+  site: https://lattes.cnpq.br/9439416101626260
 
 - name: hugonobrega
   nome: Hugo Nobrega
@@ -56,9 +63,13 @@
 
 - name: hugomg
   nome: Hugo Musso
+  mostrar_site: true
+  site: https://lattes.cnpq.br/4885349527302978
 
 - name: jpaixao
   nome: JoãomPaixão
+  mostrar_site: true
+  site: https://lattes.cnpq.br/5705386762324718
 
 - name: jcps
   nome: João Carlos P. Silva
