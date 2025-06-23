@@ -44,9 +44,11 @@
 - name: sadoc
   nome: Daniel Sadoc
   mostrar_site: true
+  lattes: https://lattes.cnpq.br/9931198850020140
 
 - name: eldany
   nome: Eldanae Teixeira
+  lattes: https://lattes.cnpq.br/6257705605159525
 
 - name: gabriel
   nome: Gabriel P. Silva
