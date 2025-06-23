@@ -69,6 +69,7 @@
   nome: Hugo Nobrega
   mostrar_site: true
   site: https://hugonobrega.com/
+  lattes: https://lattes.cnpq.br/6062840240299930
 
 - name: hugomg
   nome: Hugo Musso
@@ -83,13 +84,16 @@
 - name: jcps
   nome: João Carlos P. Silva
   mostrar_site: true
+  lattes: https://lattes.cnpq.br/9413102524215939
 
 - name: jonice
   nome: Jonice Oliveira
   mostrar_site: true
+  lattes: https://lattes.cnpq.br/0990344839864230
 
 - name: clima
   nome: Cabral Lima
+  lattes: https://lattes.cnpq.br/5775431994199579
 
 - name: julianabsf
   nome: Juliana França
