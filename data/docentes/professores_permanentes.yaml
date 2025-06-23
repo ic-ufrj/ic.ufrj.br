@@ -1,176 +1,176 @@
-- name: avivacqua
+- username: avivacqua
   nome: Adriana Vivacqua
   lattes: https://lattes.cnpq.br/6494676052801758
 
-- name: aloisiopina
+- username: aloisiopina
   nome: Aloísio Pina
   lattes: https://lattes.cnpq.br/4830003855063986
 
-- name: amaury
+- username: amaury
   nome: Amaury Cruz
   lattes: https://lattes.cnpq.br/0370476774197561
 
-- name: anamaria
+- username: anamaria
   nome: Anamaria Moreira
   lattes: https://lattes.cnpq.br/2363575151206774
 
-- name: angela
+- username: angela
   nome: Angela Gonçalves
   lattes: https://lattes.cnpq.br/7053082548725110
 
-- name: carla
+- username: carla
   nome: Carla Delgado
   mostrar_site: true
   lattes: https://lattes.cnpq.br/3831909651244142
 
-- name: carolina
+- username: carolina
   nome: Carolina Marcelino
   lattes: https://lattes.cnpq.br/3289676418940953
 
-- name: cfb
+- username: cfb
   nome: Claudson Bornstein
   mostrar_site: true
   lattes: https://lattes.cnpq.br/6406237838495230
 
-- name: danielbastos
+- username: danielbastos
   nome: Daniel Bastos
   lattes: https://lattes.cnpq.br/4693433228817945
 
-- name: dgalfaro
+- username: dgalfaro
   nome: Daniel Alfaro
   mostrar_site: true
   lattes: https://lattes.cnpq.br/8694890749217765
 
-- name: sadoc
+- username: sadoc
   nome: Daniel Sadoc
   mostrar_site: true
   lattes: https://lattes.cnpq.br/9931198850020140
 
-- name: eldany
+- username: eldany
   nome: Eldanae Teixeira
   lattes: https://lattes.cnpq.br/6257705605159525
 
-- name: gabriel
+- username: gabriel
   nome: Gabriel P. Silva
   mostrar_site: true
   lattes: https://lattes.cnpq.br/8636301961155552
 
-- name: gabrielaquino
+- username: gabrielaquino
   nome: Gabriel Caldas
   mostrar_site: true
   lattes: https://lattes.cnpq.br/4613499627488074
 
-- name: giseli
+- username: giseli
   nome: Giseli Lopes
   mostrar_site: true
   lattes: https://lattes.cnpq.br/9439416101626260
 
-- name: hugonobrega
+- username: hugonobrega
   nome: Hugo Nobrega
   mostrar_site: true
   site: https://hugonobrega.com/
   lattes: https://lattes.cnpq.br/6062840240299930
 
-- name: hugomg
+- username: hugomg
   nome: Hugo Musso
   mostrar_site: true
   lattes: https://lattes.cnpq.br/4885349527302978
 
-- name: jpaixao
+- username: jpaixao
   nome: JoãomPaixão
   mostrar_site: true
   lattes: https://lattes.cnpq.br/5705386762324718
 
-- name: jcps
+- username: jcps
   nome: João Carlos P. Silva
   mostrar_site: true
   lattes: https://lattes.cnpq.br/9413102524215939
 
-- name: jonice
+- username: jonice
   nome: Jonice Oliveira
   mostrar_site: true
   lattes: https://lattes.cnpq.br/0990344839864230
 
-- name: clima
+- username: clima
   nome: Cabral Lima
   lattes: https://lattes.cnpq.br/5775431994199579
 
-- name: julianabsf
+- username: julianabsf
   nome: Juliana França
   lattes: https://lattes.cnpq.br/9341068095520817
 
-- name: juvianna
+- username: juvianna
   nome: Juliana Valério
   lattes: https://lattes.cnpq.br/7094932502443475
 
-- name: luziane
+- username: luziane
   nome: Luziane Mendonça
   mostrar_site: true
   lattes: https://lattes.cnpq.br/4092412037479077
 
-- name: marcellogt
+- username: marcellogt
   nome: Marcello Teixeira
   mostrar_site: true
   lattes: https://lattes.cnpq.br/1551165098428375
 
-- name: marcosleipnitz
+- username: marcosleipnitz
   nome: Marcos Leipnitz
   lattes: https://lattes.cnpq.br/2595714723809105
 
-- name: mhelena
+- username: mhelena
   nome: Maria Helena Cautiero
   lattes: https://lattes.cnpq.br/5855175438608498
 
-- name: mluiza
+- username: mluiza
   nome: Maria Luiza Campos
   lattes: https://lattes.cnpq.br/0659658820912418
 
-- name: rincon
+- username: rincon
   nome: Mauro Rincon
   mostrar_site: true
   lattes: https://lattes.cnpq.br/2436767709775022
 
-- name: mitre
+- username: mitre
   nome: Mitre Dourado
   mostrar_site: true
   lattes: https://lattes.cnpq.br/0841425239502177
 
-- name: paulomann
+- username: paulomann
   nome: Paulo Roberto Mann
   lattes: https://lattes.cnpq.br/3571577377652346
 
-- name: rafaelmello
+- username: rafaelmello
   nome: Rafael Mello
   lattes: https://lattes.cnpq.br/5514393713941443
 
-- name: ronaldsouza
+- username: ronaldsouza
   nome: Ronald Souza
   lattes: https://lattes.cnpq.br/4970955316457568
 
-- name: sergioserra
+- username: sergioserra
   nome: Sérgio Serra
   lattes: https://lattes.cnpq.br/7618571401128973
 
-- name: collier
+- username: collier
   nome: Collier Coutinho
   mostrar_site: true
   lattes: https://lattes.cnpq.br/1416717596426384
 
-- name: silvana
+- username: silvana
   nome: Silvana Rossetto
   mostrar_site: true
   lattes: https://lattes.cnpq.br/0054098292730720
 
-- name: valeriab
+- username: valeriab
   nome: Valeria Bastos
   mostrar_site: true
   lattes: https://lattes.cnpq.br/6948667770415330
 
-- name: vigusmao
+- username: vigusmao
   nome: Vinícius Gusmão
   mostrar_site: true
   lattes: https://lattes.cnpq.br/1507369025671110
 
-- name: vivian
+- username: vivian
   nome: Vivian dos Santos
   lattes: https://lattes.cnpq.br/6480849016794725

@@ -13,14 +13,14 @@
       <tr>
         <td>
           {{ if .mostrar_site }}
-            <a href="{{ .site | default (printf "https://dcc.ufrj.br/~%s/" .name ) }}">
+            <a href="{{ .site | default (printf "https://dcc.ufrj.br/~%s/" .username ) }}">
               {{ .nome }}
             </a>
           {{ else }}
             {{ .nome }}
           {{ end }}
         </td>
-        <td>{{ .email | default (printf "%s (at) ic.ufrj.br" .name) }}</td>
+        <td>{{ .email | default (printf "%s (at) ic.ufrj.br" .username) }}</td>
         <td> <a href="{{ .lattes }}"> {{ .lattes }} </a></td>
       </tr>
     {{ end }}
