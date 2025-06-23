@@ -12,16 +12,20 @@
 
 - name: anamaria
   nome: Anamaria Moreira
+  lattes: https://lattes.cnpq.br/2363575151206774
 
 - name: angela
   nome: Angela Gonçalves
+  lattes: https://lattes.cnpq.br/7053082548725110
 
 - name: carla
   nome: Carla Delgado
   mostrar_site: true
+  lattes: https://lattes.cnpq.br/3831909651244142
 
 - name: carolina
   nome: Carolina Marcelino
+  lattes: https://lattes.cnpq.br/3289676418940953
 
 - name: cfb
   nome: Claudson Bornstein
