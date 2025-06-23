@@ -5,6 +5,7 @@
     <tr>
       <th>{{ i18n "nome" }}</th>
       <th>{{ i18n "email" }}</th>
+      <th>{{ i18n "lattes" }}</th>
     </tr>
   </thead>
   <tbody>
@@ -20,6 +21,7 @@
           {{ end }}
         </td>
         <td>{{ .email | default (printf "%s (at) ic.ufrj.br" .name) }}</td>
+        <td> <a href="{{ .lattes }}"> {{ .lattes }} </a></td>
       </tr>
     {{ end }}
   </tbody>
