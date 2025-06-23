@@ -141,25 +141,30 @@
 
 - name: rafaelmello
   nome: Rafael Mello
-  lattes: http://lattes.cnpq.br/5514393713941443
+  lattes: https://lattes.cnpq.br/5514393713941443
 
 - name: ronaldsouza
   nome: Ronald Souza
+  lattes: https://lattes.cnpq.br/4970955316457568
 
 - name: sergioserra
   nome: Sérgio Serra
+  lattes: https://lattes.cnpq.br/7618571401128973
 
 - name: collier
   nome: Collier Coutinho
   mostrar_site: true
+  lattes: https://lattes.cnpq.br/1416717596426384
 
 - name: silvana
   nome: Silvana Rossetto
   mostrar_site: true
+  lattes: https://lattes.cnpq.br/0054098292730720
 
 - name: valeriab
   nome: Valeria Bastos
   mostrar_site: true
+  lattes: 
 
 - name: vigusmao
   nome: Vinícius Gusmão
