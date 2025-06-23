@@ -30,13 +30,16 @@
 - name: cfb
   nome: Claudson Bornstein
   mostrar_site: true
+  lattes: https://lattes.cnpq.br/6406237838495230
 
 - name: danielbastos
-  nome: Daniel  Bastos
+  nome: Daniel Bastos
+  lattes: https://lattes.cnpq.br/4693433228817945
 
 - name: dgalfaro
   nome: Daniel Alfaro
   mostrar_site: true
+  lattes: https://lattes.cnpq.br/8694890749217765
 
 - name: sadoc
   nome: Daniel Sadoc
