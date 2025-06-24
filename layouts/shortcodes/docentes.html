@@ -12,8 +12,8 @@
     {{ range $data }}
       <tr>
         <td>
-          {{ if .mostrar_site }}
-            <a href="{{ .site | default (printf "https://dcc.ufrj.br/~%s/" .username ) }}">
+          {{ if .site}}
+            <a href="{{.site}}">
               {{ .nome }}
             </a>
           {{ else }}
