@@ -20,7 +20,7 @@
 
 - username: carla
   nome: Carla Delgado
-  mostrar_site: true
+  site: https://ic.ufrj.br/~carla
   lattes: https://lattes.cnpq.br/3831909651244142
 
 - username: carolina
@@ -29,7 +29,7 @@
 
 - username: cfb
   nome: Claudson Bornstein
-  mostrar_site: true
+  site: https://ic.ufrj.br/~cfb
   lattes: https://lattes.cnpq.br/6406237838495230
 
 - username: danielbastos
@@ -38,12 +38,12 @@
 
 - username: dgalfaro
   nome: Daniel Alfaro
-  mostrar_site: true
+  site: https://ic.ufrj.br/~dgalfaro
   lattes: https://lattes.cnpq.br/8694890749217765
 
 - username: sadoc
   nome: Daniel Sadoc
-  mostrar_site: true
+  site:   https://ic.ufrj.br/~sadoc
   lattes: https://lattes.cnpq.br/9931198850020140
 
 - username: eldany
@@ -52,43 +52,39 @@
 
 - username: gabriel
   nome: Gabriel P. Silva
-  mostrar_site: true
+  site: https://ic.ufrj.br/~gabriel
   lattes: https://lattes.cnpq.br/8636301961155552
 
 - username: gabrielaquino
   nome: Gabriel Caldas
-  mostrar_site: true
   lattes: https://lattes.cnpq.br/4613499627488074
 
 - username: giseli
   nome: Giseli Lopes
-  mostrar_site: true
+  site: https://ic.ufrj.br/~giseli
   lattes: https://lattes.cnpq.br/9439416101626260
 
 - username: hugonobrega
   nome: Hugo Nobrega
-  mostrar_site: true
   site: https://hugonobrega.com/
   lattes: https://lattes.cnpq.br/6062840240299930
 
 - username: hugomg
   nome: Hugo Musso
-  mostrar_site: true
   lattes: https://lattes.cnpq.br/4885349527302978
 
 - username: jpaixao
   nome: JoãomPaixão
-  mostrar_site: true
   lattes: https://lattes.cnpq.br/5705386762324718
 
 - username: jcps
   nome: João Carlos P. Silva
-  mostrar_site: true
+  site: https://ic.ufrj.br/~jcps
   lattes: https://lattes.cnpq.br/9413102524215939
 
 - username: jonice
   nome: Jonice Oliveira
-  mostrar_site: true
+  site: https://ic.ufrj.br/~jonice
   lattes: https://lattes.cnpq.br/0990344839864230
 
 - username: clima
@@ -105,12 +101,12 @@
 
 - username: luziane
   nome: Luziane Mendonça
-  mostrar_site: true
+  site: https://ic.ufrj.br/~luziane
   lattes: https://lattes.cnpq.br/4092412037479077
 
 - username: marcellogt
   nome: Marcello Teixeira
-  mostrar_site: true
+  site: https://ic.ufrj.br/~marcellogt
   lattes: https://lattes.cnpq.br/1551165098428375
 
 - username: marcosleipnitz
@@ -127,12 +123,12 @@
 
 - username: rincon
   nome: Mauro Rincon
-  mostrar_site: true
+  site: https://ic.ufrj.br/~rincon
   lattes: https://lattes.cnpq.br/2436767709775022
 
 - username: mitre
   nome: Mitre Dourado
-  mostrar_site: true
+  site: https://ic.ufrj.br/~mitre
   lattes: https://lattes.cnpq.br/0841425239502177
 
 - username: paulomann
@@ -153,22 +149,22 @@
 
 - username: collier
   nome: Collier Coutinho
-  mostrar_site: true
+  site: https://ic.ufrj.br/~collier
   lattes: https://lattes.cnpq.br/1416717596426384
 
 - username: silvana
   nome: Silvana Rossetto
-  mostrar_site: true
+  site: https://ic.ufrj.br/~silvana
   lattes: https://lattes.cnpq.br/0054098292730720
 
 - username: valeriab
   nome: Valeria Bastos
-  mostrar_site: true
+  site: https://ic.ufrj.br/~valeriab
   lattes: https://lattes.cnpq.br/6948667770415330
 
 - username: vigusmao
   nome: Vinícius Gusmão
-  mostrar_site: true
+  site: https://ic.ufrj.br/~vigusmao
   lattes: https://lattes.cnpq.br/1507369025671110
 
 - username: vivian
