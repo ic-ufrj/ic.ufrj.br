@@ -43,6 +43,8 @@
           url: /info/calendario-academico/
         - name: Formulários e Requerimentos
           url: /info/formularios/
+        - name: Inscrição em Disciplina
+          url: /info/inscricao-em-disciplina/
     - name: Pós-Graduação
       children:
         - name: PPGI
