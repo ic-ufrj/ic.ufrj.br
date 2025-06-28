@@ -43,3 +43,9 @@
 - id: email
   translation: "Email"
 
+- id: curriculo
+  translation: "Currículo"
+
+- id: lattes
+  translation: "Lattes"
+

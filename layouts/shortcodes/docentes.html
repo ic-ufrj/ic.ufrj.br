@@ -5,7 +5,7 @@
     <tr>
       <th>{{ i18n "nome" }}</th>
       <th>{{ i18n "email" }}</th>
-      <th>{{ i18n "lattes" }}</th>
+      <th>{{ i18n "curriculo" }}</th>
     </tr>
   </thead>
   <tbody>
@@ -20,8 +20,14 @@
             {{ .nome }}
           {{ end }}
         </td>
-        <td>{{ .email | default (printf "%s (at) ic.ufrj.br" .username) }}</td>
-        <td> <a href="{{ .lattes }}"> {{ .lattes }} </a></td>
+        <td>
+          {{ if .email }}
+            {{ .email }}
+          {{ else }}
+            <span class="email">{{ .username }}@<span>ic.</span>ufrj.<span>gov.</span>br</span>
+          {{ end }}
+        </td>
+        <td><a href="{{ .lattes }}">{{ i18n "lattes" }}</a></td>
       </tr>
     {{ end }}
   </tbody>

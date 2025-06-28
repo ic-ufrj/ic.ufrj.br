@@ -79,6 +79,10 @@ body {
 	color: var(--cor-texto);
 }
 
+.email > span:nth-child(2) {
+	display: none;
+}
+
 
 /* Tudo que faz parte do header */
 header * {
@@ -322,7 +326,7 @@ footer .superior > div {
 	padding: 20px;
 }
 
-footer .superior span {
+footer .superior > span {
 	display: block;
 	height: 20px;
 	font-weight: 600;
