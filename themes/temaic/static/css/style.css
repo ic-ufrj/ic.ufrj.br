@@ -455,6 +455,12 @@ article code {
 	font-family: monospace;
 }
 
+article table {
+	display: block;
+	max-width: 100%;
+	overflow-x: auto;
+}
+
 article table thead {
 	color: var(--cor-accent-artigo);
 	font-weight: 700;
