@@ -11,7 +11,7 @@ autores:
 ###### Coordenação do Curso de Bacharelado em Ciência da Computação
 
 Profa. Juliana Vianna Valério\
-coord_grad (at) ic.ufrj.br
+{{< email coord_grad >}}
 
 #### Secretarias
 
@@ -20,17 +20,18 @@ coord_grad (at) ic.ufrj.br
 Rerison Cavalcante Rocha\
 Fabiana Rocha\
 (21) 3938-9516\
-secgrad (at) ic.ufrj.br
+{{< email secgrad >}}
 
 ###### Secretaria de Gabinete da Direção
 
 Tiago Matias da Silva\
+{{< email gabinete >}}
 gabinete (at) ic.ufrj.br
 
 ###### Secretaria de Atividades Gerenciais
 
 Marcus Vinícius Oliveira\
-secgerencial (at) ic.ufrj.br
+{{< email secgerencial >}}
 
 #### Diretorias
 
@@ -38,43 +39,43 @@ secgerencial (at) ic.ufrj.br
 
 Profa. Anamaria Martins Moreira\
 Profa. Carla Amor Divino Moreira Delgado (Vice)\
-direcao (at) ic.ufrj.br
+{{< email direcao >}}
 
 ###### Direção Adjunta de Pesquisa
 
 Profa. Silvana Rosetto\
-ensino (at) ic.ufrj.br
+{{< email ensino >}}
 
 ###### Direção Adjunta de Extensão
 
 Profa. Maria Luiza Machado Campos\
-extensao (at) ic.ufrj.br
+{{< email extensao >}}
 
 ###### Direção Adjunta de Gestão e Governança
 
 Rodrigo Mello\
-governanca (at) ic.ufrj.br
+{{< email governanca >}}
 
 #### Comissões
 
 ###### Comissão de Orientação e Acompanhamento Acadêmico (COAA)
 
-coaa (at) ic.ufrj.br
+{{< email coaa >}}
 
 ###### Comissão de Equivalência de Disciplinas (COMED)
 
-comissaoequivalencia (at) ic.ufrj.br
+{{< email comissaoequivalencia >}}
 
 ###### Comissão de Atividades Complementares (COAC)
 
-coac (at) ic.ufrj.br
+{{< email coac >}}
 
 ###### Comissão de Estágio
 
-estagio (at) ic.ufrj.br
+{{< email estagio >}}
 
 ###### Comissão de Transferência
 
-comissaotransferencia (at) ic.ufrj.br
+{{< email comissaotransferencia >}}
 
 
