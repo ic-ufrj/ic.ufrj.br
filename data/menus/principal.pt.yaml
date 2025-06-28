@@ -3,12 +3,12 @@
     - children:
         - name: Apresentação
           url: /info/apresentacao/
-        - name: História
-        - name: "Missão, Visão e Valores"
-        - name: Espaço Físico
-        - name: Identidade Visual
-        - name: Localização
-        - name: Contato
+        - name: Contato e Localização
+          url: /info/contato/
+        # - name: História
+        # - name: "Missão, Visão e Valores"
+        # - name: Espaço Físico
+        # - name: Identidade Visual
     - name: Pessoas
       children:
         - name: Estrutura Administrativa
@@ -23,13 +23,18 @@
   children:
     - name: Ciência da Computação
       children:
+        - name: Sobre o Curso
         - name: Grade Curricular
+        - name: Normas de Estágio
+        - name: Normas de Atividades Complementares
+        - name: Calendário de Provas
+        - name: Manual do Aluno
     - name: BCMT
       children:
         - name: Ênfase em Análise de Dados
     - name: Graduação em Geral
       children:
-        - name: Disciplinas de Formação
+        # - name: Disciplinas de Formação
         - name: Calendário Acadêmico
           url: /info/calendario-academico/
         - name: Formulários e Requerimentos
@@ -43,10 +48,10 @@
   children:
     - name: Pesquisa
       children:
-        - name: Grupos de Pesquisa
+        # - name: Grupos de Pesquisa
         - name: Projetos em Andamento
         - name: Iniciação Científica
-        - name: Editais
+        # - name: Editais
     - name: Extensão
       children:
         - name: Projetos de Extensão
@@ -54,13 +59,13 @@
       children:
         - name: Ofertas de Monitoria
           url: /info/monitoria/
-    - children:
-        - name: Vagas
-        - name: Concursos
+    # - children:
+    #     - name: Vagas
+    #     - name: Concursos
 
 - name: Usuário
   children:
     - children:
-      - name: Cadastro de Alunos
+      - name: Cadastro de Alunos Novos
 
 
