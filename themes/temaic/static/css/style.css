@@ -356,7 +356,7 @@ main {
 	background-color: var(--cor-fundo-apagado);
 }
 
-article, main > ul {
+article, main > * {
 	width: auto;
 	max-width: 800px;
 	margin: 0 auto;
@@ -500,7 +500,7 @@ article img {
 
 .cards-pessoais {
 	width: 100%;
-	margin: 0;
+	margin: 0 auto;
 	list-style: none;
 	display: flex;
 	flex-wrap: wrap;
@@ -518,6 +518,7 @@ article img {
 	border: 1px solid var(--cor-borda-cinza);
 	border-radius: 10px;
 
+	background-color: var(--cor-fundo);
 	display: flex;
 	flex-direction: column;
 	padding: 20px;
@@ -534,9 +535,15 @@ article img {
 	font-size: 120%;
 }
 
+.card-pessoal p {
+	max-width: 270px;
+}
+
+
 .masshead {
 	display: flex;
 	height: 100px;
+	max-width: 100%;
 
 	align-items: center;
 	justify-content: center;
@@ -557,38 +564,6 @@ article img {
 	font-size: 25px;
 }
 
-.authors {
-	display: flex;
-	width: 100%;
-	flex-direction: column;
-	align-items: center;
-
-	font-family: "Montserrat", sans-serif;
-	font-optical-sizing: auto;
-	font-weight: 400;
-	font-style: normal;
-}
-
-.authors > li {
-	display: flex;
-	flex-direction: column;
-	width: 80%;
-	gap: 10px;
-
-	background-color: var(--cor-fundo);
-	padding: 20px;
-	margin: 10px 0;
-	border-radius: 10px;
-}
-
-.authors span {
-	font-weight: 600;
-	font-size: 120%;
-}
-
-.authors img {
-	border-radius: 10px;
-}
 
 
 

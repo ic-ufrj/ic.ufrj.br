@@ -14,10 +14,10 @@
       {{ end }}
     </ul>
   </article>
-  <ul class="authors">
-    <li>
+  <ul class="cards-pessoais">
+    <li class="card-pessoal">
       <img src="{{ $author.avatar }}" alt="{{ i18n "foto_de_perfil" }}" width="80px">
-      <span>{{ $author.nome }}</span>
+      <span class="nome">{{ $author.nome }}</span>
       <p>
         {{ index $author.bio .Site.Language.Lang }}
       </p>
