@@ -29,7 +29,7 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	line-height: 1;
+	line-height: 1.2em;
 }
 ol, ul {
 	list-style: none;
@@ -75,7 +75,7 @@ table {
 body {
 	font-size: 17px;
 	font-family: Arial;
-	background-color: var(--cor-fundo);
+	background-color: var(--cor-fundo-menu);
 	color: var(--cor-texto);
 }
 
@@ -379,7 +379,6 @@ article {
 	background-color: var(--cor-fundo);
 	margin-top: 40px;
 	border-radius: 10px;
-	line-height: 1.2em;
 }
 
 article table, article blockquote, article pre, article .highlight,
@@ -398,6 +397,7 @@ article .highlight > pre {
 
 article h1, article h2, article h3, article h4, article h5, article h6 {
 	margin: 20px 0;
+	line-height: 1.2em;
 }
 
 article h1 a, article h2 a, article h3 a, article h4 a, article h5 a,
@@ -405,7 +405,6 @@ article h6 a {
 	color: var(--cor-accent-artigo);
 	font-size: 15px;
 	font-weight: 800;
-
 }
 
 article h1 { font-size: 160%; }
