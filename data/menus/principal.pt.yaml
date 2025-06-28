@@ -31,6 +31,7 @@
       children:
         - name: Disciplinas de Formação
         - name: Calendário Acadêmico
+          url: /info/calendario-academico/
         - name: Formulários e Requerimentos
           url: /info/formularios/
     - name: Pós-Graduação
