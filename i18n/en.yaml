@@ -43,10 +43,24 @@
 - id: email
   translation: "Email"
 
-- id: curriculo
-  translation: "Curriculum"
-
 - id: lattes
   translation: "Lattes"
 
+- id: pagina_pessoal
+  translation: "Personal Page"
+
+- id: titular
+  translation: "Prof. Titular"
+
+- id: adjunto
+  translation: "Prof. Adjunto"
+
+- id: associado
+  translation: "Prof. Associado"
+
+- id: assistente
+  translation: "Prof. Assistente"
+
+- id: substituto
+  translation: "Prof. Substituto"
 

@@ -3,7 +3,7 @@ title: "Formulários"
 date: 2025-06-20T01:05:37-03:00
 draft: false
 autores:
-  - supervisao_lci
+  - supervisao-lci
 ---
 
 O aluno deve entrar em contato com a Secretaria de Graduação por email,

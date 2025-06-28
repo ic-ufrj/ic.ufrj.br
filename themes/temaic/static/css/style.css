@@ -60,6 +60,7 @@ table {
 	--cor-texto: #000000;
 	--cor-texto-branco: #FFFFFF;
 	--cor-accent-artigo: var(--cor-ic1);
+	--cor-borda-cinza: #919294;
 
 	--menu-padding: 100px;
 	--menu-total-height: 120px;
@@ -424,7 +425,6 @@ article p + p {
 }
 
 article ul, article ol {
-	list-style: initial;
 	margin-left: 25px;
 }
 
@@ -433,8 +433,8 @@ article ul li::marker, article ol li::marker {
 }
 
 article ul { list-style: disc; }
-article ul ul { list-style-type: circle; }
-article ul ul ul { list-style-type: square; }
+article ul ul { list-style: circle; }
+article ul ul ul { list-style: square; }
 article ol { list-style: decimal; }
 article ol ol { list-style: upper-roman; }
 article ol ol ol {list-style: lower-latin; }
@@ -491,13 +491,48 @@ article input[type="checkbox"]:checked {
 }
 
 article img {
-	width: 100%;
+	max-width: 100%;
 }
 
 
 
 
 
+.cards-pessoais {
+	width: 100%;
+	margin: 0;
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+
+	font-family: "Montserrat", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+}
+
+.card-pessoal {
+	flex-grow: 1;
+
+	border: 1px solid var(--cor-borda-cinza);
+	border-radius: 10px;
+
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+	margin: 20px;
+	gap: 10px;
+}
+
+.card-pessoal > img {
+	border-radius: 10px;
+}
+
+.card-pessoal .nome {
+	font-weight: 600;
+	font-size: 120%;
+}
 
 .masshead {
 	display: flex;

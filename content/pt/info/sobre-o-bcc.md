@@ -3,7 +3,7 @@ title: "Sobre o BCC"
 date: 2025-06-28T15:23:38-03:00
 draft: false
 autores:
-  - supervisao_lci
+  - supervisao-lci
 ---
 
 ![Logo do BCC](/img/logo-bcc.png)

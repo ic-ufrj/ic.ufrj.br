@@ -3,7 +3,7 @@ title: "Calendário Acadêmico"
 date: 2025-06-27T23:29:25-03:00
 draft: false
 autores:
-  - supervisao_lci
+  - supervisao-lci
 ---
 
 # Período 2025.2

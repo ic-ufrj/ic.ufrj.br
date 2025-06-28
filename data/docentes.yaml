@@ -1,172 +1,264 @@
-- username: avivacqua
+# Inclui não somente docentes, mas também grupos e comissões como a Supervisão do LCI, Secretaria Acadêmica, etc.
+
+avivacqua:
   nome: Adriana Vivacqua
   lattes: https://lattes.cnpq.br/6494676052801758
+  cargo: associado
 
-- username: aloisiopina
+aloisiopina:
   nome: Aloísio Pina
   lattes: https://lattes.cnpq.br/4830003855063986
+  cargo: adjunto
 
-- username: amaury
+amaury:
   nome: Amaury Cruz
   lattes: https://lattes.cnpq.br/0370476774197561
+  cargo: adjunto
 
-- username: anamaria
+anamaria:
   nome: Anamaria Moreira
   lattes: https://lattes.cnpq.br/2363575151206774
+  cargo: titular
 
-- username: angela
+angela:
   nome: Angela Gonçalves
   lattes: https://lattes.cnpq.br/7053082548725110
+  cargo: adjunto
 
-- username: carla
+carla:
   nome: Carla Delgado
   site: https://ic.ufrj.br/~carla
   lattes: https://lattes.cnpq.br/3831909651244142
+  cargo: associado
 
-- username: carolina
+carolina:
   nome: Carolina Marcelino
   lattes: https://lattes.cnpq.br/3289676418940953
+  cargo: adjunto
 
-- username: cfb
+cfb:
   nome: Claudson Bornstein
   site: https://ic.ufrj.br/~cfb
   lattes: https://lattes.cnpq.br/6406237838495230
+  cargo: associado
 
-- username: danielbastos
+danielbastos:
   nome: Daniel Bastos
   lattes: https://lattes.cnpq.br/4693433228817945
+  cargo: assistente
 
-- username: dgalfaro
+dgalfaro:
   nome: Daniel Alfaro
   site: https://ic.ufrj.br/~dgalfaro
   lattes: https://lattes.cnpq.br/8694890749217765
+  cargo: associado
 
-- username: sadoc
+sadoc:
   nome: Daniel Sadoc
   site:   https://ic.ufrj.br/~sadoc
   lattes: https://lattes.cnpq.br/9931198850020140
 
-- username: eldany
+eldany:
   nome: Eldanae Teixeira
   lattes: https://lattes.cnpq.br/6257705605159525
+  cargo: adjunto
 
-- username: gabriel
+gabriel:
   nome: Gabriel P. Silva
   site: https://ic.ufrj.br/~gabriel
   lattes: https://lattes.cnpq.br/8636301961155552
+  cargo: titular
+  bio:
+    pt: "Professor do Instituto de Computação da UFRJ"
+    en: "Professor at Institute of Computing - UFRJ"
+  avatar: /author_img/gabriel.png
 
-- username: gabrielaquino
+gabrielaquino:
   nome: Gabriel Caldas
   lattes: https://lattes.cnpq.br/4613499627488074
+  cargo: assistente
 
-- username: giseli
+giseli:
   nome: Giseli Lopes
   site: https://ic.ufrj.br/~giseli
   lattes: https://lattes.cnpq.br/9439416101626260
+  cargo: adjunto
 
-- username: hugonobrega
+hugonobrega:
   nome: Hugo Nobrega
   site: https://hugonobrega.com/
   lattes: https://lattes.cnpq.br/6062840240299930
+  cargo: adjunto
 
-- username: hugomg
+hugomg:
   nome: Hugo Musso
   lattes: https://lattes.cnpq.br/4885349527302978
+  cargo: assistente
 
-- username: jpaixao
-  nome: JoãomPaixão
+jpaixao:
+  nome: João Paixão
   lattes: https://lattes.cnpq.br/5705386762324718
+  cargo: adjunto
 
-- username: jcps
+jcps:
   nome: João Carlos P. Silva
   site: https://ic.ufrj.br/~jcps
   lattes: https://lattes.cnpq.br/9413102524215939
+  cargo: associado
 
-- username: jonice
+jonice:
   nome: Jonice Oliveira
   site: https://ic.ufrj.br/~jonice
   lattes: https://lattes.cnpq.br/0990344839864230
+  cargo: associado
 
-- username: clima
+clima:
   nome: Cabral Lima
   lattes: https://lattes.cnpq.br/5775431994199579
+  cargo: titular
 
-- username: julianabsf
+julianabsf:
   nome: Juliana França
   lattes: https://lattes.cnpq.br/9341068095520817
+  cargo: adjunto
 
-- username: juvianna
+juvianna:
   nome: Juliana Valério
   lattes: https://lattes.cnpq.br/7094932502443475
+  cargo: associado
 
-- username: luziane
+luziane:
   nome: Luziane Mendonça
   site: https://ic.ufrj.br/~luziane
   lattes: https://lattes.cnpq.br/4092412037479077
+  cargo: associado
 
-- username: marcellogt
+marcellogt:
   nome: Marcello Teixeira
   site: https://ic.ufrj.br/~marcellogt
   lattes: https://lattes.cnpq.br/1551165098428375
+  cargo: associado
 
-- username: marcosleipnitz
+marcosleipnitz:
   nome: Marcos Leipnitz
   lattes: https://lattes.cnpq.br/2595714723809105
+  cargo: assistente
 
-- username: mhelena
+mhelena:
   nome: Maria Helena Cautiero
   lattes: https://lattes.cnpq.br/5855175438608498
+  cargo: adjunto
 
-- username: mluiza
+mluiza:
   nome: Maria Luiza Campos
   lattes: https://lattes.cnpq.br/0659658820912418
+  cargo: associado
 
-- username: rincon
+rincon:
   nome: Mauro Rincon
   site: https://ic.ufrj.br/~rincon
   lattes: https://lattes.cnpq.br/2436767709775022
 
-- username: mitre
+mitre:
   nome: Mitre Dourado
   site: https://ic.ufrj.br/~mitre
   lattes: https://lattes.cnpq.br/0841425239502177
 
-- username: paulomann
+paulomann:
   nome: Paulo Roberto Mann
   lattes: https://lattes.cnpq.br/3571577377652346
+  cargo: assistente
 
-- username: rafaelmello
+rafaelmello:
   nome: Rafael Mello
   lattes: https://lattes.cnpq.br/5514393713941443
+  cargo: adjunto
 
-- username: ronaldsouza
+ronaldsouza:
   nome: Ronald Souza
   lattes: https://lattes.cnpq.br/4970955316457568
+  cargo: assistente
 
-- username: sergioserra
+sergioserra:
   nome: Sérgio Serra
   lattes: https://lattes.cnpq.br/7618571401128973
+  cargo: assistente
 
-- username: collier
+collier:
   nome: Collier Coutinho
   site: https://ic.ufrj.br/~collier
   lattes: https://lattes.cnpq.br/1416717596426384
 
-- username: silvana
+silvana:
   nome: Silvana Rossetto
   site: https://ic.ufrj.br/~silvana
   lattes: https://lattes.cnpq.br/0054098292730720
+  cargo: associado
 
-- username: valeriab
+valeriab:
   nome: Valeria Bastos
   site: https://ic.ufrj.br/~valeriab
   lattes: https://lattes.cnpq.br/6948667770415330
+  cargo: associado
 
-- username: vigusmao
+vigusmao:
   nome: Vinícius Gusmão
   site: https://ic.ufrj.br/~vigusmao
   lattes: https://lattes.cnpq.br/1507369025671110
+  cargo: associado
 
-- username: vivian
+vivian:
   nome: Vivian dos Santos
   lattes: https://lattes.cnpq.br/6480849016794725
+  cargo: assistente
+
+# SUBSTITUTOS
+
+
+annarafaela:
+  nome: Anna Rafaela Ferreira
+  cargo: substituto
+
+cesarraitz:
+  nome: Larissa Galeno
+  cargo: substituto
+
+luansimoes:
+  nome: Luan Simões
+  cargo: substituto
+
+lucenildo:
+  nome: Lucenildo Cerqueira
+  cargo: substituto
+
+luizpaulonascimento:
+  nome: Luiz Paulo Nascimento
+  cargo: substituto
+
+basiliog:
+  nome: Gabriella Basílio
+  cargo: substituto
+
+rogers:
+  nome: Rogers Reiche
+  cargo: substituto
+
+thiagohenrique:
+  nome: Thiago Henrique
+  cargo: substituto
+
+thiagorocha:
+  nome: Thiago José
+  cargo: substituto
+
+# GRUPOS
+
+supervisao-lci:
+  nome: Supervisão do LCI
+  cargo: grupo
+  bio:
+    pt: "Equipe de monitores responsável pelos laboratórios e pelo website do IC"
+    en: "Team of alumni that manages the IC's laboratories and website"
+  avatar: /author_img/supervisao_lci.jpg
+
+
