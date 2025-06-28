@@ -485,6 +485,10 @@ article input[type="checkbox"]:checked {
 	background-color: var(--cor-accent-artigo);
 }
 
+article img {
+	width: 100%;
+}
+
 
 
 

@@ -24,6 +24,7 @@
     - name: Ciência da Computação
       children:
         - name: Sobre o Curso
+          url: /info/sobre-o-bcc/
         - name: Grade Curricular
         - name: Normas de Estágio
         - name: Normas de Atividades Complementares
