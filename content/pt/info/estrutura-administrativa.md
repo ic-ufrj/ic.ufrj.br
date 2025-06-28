@@ -26,7 +26,6 @@ Fabiana Rocha\
 
 Tiago Matias da Silva\
 {{< email gabinete >}}
-gabinete (at) ic.ufrj.br
 
 ###### Secretaria de Atividades Gerenciais
 
