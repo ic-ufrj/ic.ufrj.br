@@ -455,10 +455,11 @@ article code {
 	font-family: monospace;
 }
 
-article table {
+article table, article pre {
 	display: block;
 	max-width: 100%;
-	overflow-x: auto;
+	overflow-x: scroll;
+	overflow-y: hidden;
 }
 
 article table thead {
