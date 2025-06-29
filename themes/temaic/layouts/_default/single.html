@@ -4,12 +4,12 @@
   <article>
     {{ .Content }}
   </article>
-  <ul class="authors">
+  <ul class="cards-pessoais">
     {{ range .Params.Autores }}
-      {{ $author := index site.Data.authors . }}
-      <li>
+      {{ $author := index site.Data.docentes . }}
+      <li class="card-pessoal">
         <img src="{{ $author.avatar }}" alt="{{ i18n "foto_de_perfil" }}" width="80px">
-        <span>{{ $author.name }}</span>
+        <span class="nome">{{ $author.nome }}</span>
         <p>
           {{ index $author.bio site.Language.Lang }}
         </p>

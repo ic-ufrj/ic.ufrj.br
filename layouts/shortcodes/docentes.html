@@ -1,30 +1,34 @@
-{{- $data := index .Site.Data.docentes (.Get 0) -}}
+{{- $data := slice -}}
+{{- range $key, $value := .Site.Data.docentes -}}
+  {{- $item := merge (dict "username" $key) $value -}}
+  {{- $data = $data | append $item -}}
+{{- end -}}
 
-<table>
-  <thead>
-    <tr>
-      <th>{{ i18n "nome" }}</th>
-      <th>{{ i18n "email" }}</th>
-      <th>{{ i18n "lattes" }}</th>
-    </tr>
-  </thead>
-  <tbody>
-    {{ range $data }}
-      <tr>
-        <td>
-          {{ if .mostrar_site }}
-            <a href="{{ .site | default (printf "https://dcc.ufrj.br/~%s/" .username ) }}">
-              {{ .nome }}
-            </a>
-          {{ else }}
-            {{ .nome }}
-          {{ end }}
-        </td>
-        <td>{{ .email | default (printf "%s (at) ic.ufrj.br" .username) }}</td>
-        <td> <a href="{{ .lattes }}"> {{ .lattes }} </a></td>
-      </tr>
+{{- $cargos_professores := slice "titular" "adjunto" "associado" "assistente" "substituto" -}}
+{{- $data := where $data "cargo" "in" $cargos_professores -}}
+{{- $data := sort $data "nome" -}}
+
+<ul class="cards-pessoais">
+  {{ range $data }}
+    {{ if .cargo | in $cargos_professores }}
+      <li class="card-pessoal">
+        <img src="{{ .avatar | default "/author_img/default.png" }}" alt="{{ i18n "foto_de_perfil" }}" width="80px">
+        <span class="nome">{{ .nome }}</span>
+        <span class="cargo">{{ i18n .cargo }}</span>
+        {{ if .email }}
+          <span class="email">{{ .email }}</span>
+        {{ else }}
+          <span class="email">{{ .username }}@<span>ic.</span>ufrj.<span>gov.</span>br</span>
+        {{ end }}
+        {{ if .lattes }}
+          <a href="{{ .lattes }}">{{ i18n "lattes" }}</a>
+        {{ end }}
+        {{ if .site }}
+          <a href="{{ .site }}">{{ i18n "pagina_pessoal" }}</a>
+        {{ end }}
+      </li>
     {{ end }}
-  </tbody>
-</table>
+  {{ end }}
+</ul>
 
 

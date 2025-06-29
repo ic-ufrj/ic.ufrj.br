@@ -3,9 +3,11 @@ title: "Novo Site do IC"
 date: 2025-06-14T20:47:53-03:00
 draft: false
 autores:
-    - supervisao_lci
+    - supervisao-lci
     - gabriel
 ---
+
+{{< email supervisao >}}
 
 # Em breve teremos um novo site
 

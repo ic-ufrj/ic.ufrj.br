@@ -1,23 +1,23 @@
 {{ define "title" }}
-  {{ $author := index site.Data.authors (.Title | urlize) }}
-  {{ $author.name }}
+  {{ $author := index site.Data.docentes (.Title | urlize) }}
+  {{ $author.nome }}
 {{ end }}
 
 {{ define "main" }}
-  {{ $author := index site.Data.authors (.Title | urlize) }}
-  <div class="masshead"><h1>{{ $author.name }}</h1></div>
+  {{ $author := index site.Data.docentes (.Title | urlize) }}
+  <div class="masshead"><h1>{{ $author.nome }}</h1></div>
   <article>
-    <p>Postagens de {{ $author.name }}:</p>
+    <p>Postagens de {{ $author.nome }}:</p>
     <ul>
       {{ range .Pages }}
         <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
       {{ end }}
     </ul>
   </article>
-  <ul class="authors">
-    <li>
+  <ul class="cards-pessoais">
+    <li class="card-pessoal">
       <img src="{{ $author.avatar }}" alt="{{ i18n "foto_de_perfil" }}" width="80px">
-      <span>{{ $author.name }}</span>
+      <span class="nome">{{ $author.nome }}</span>
       <p>
         {{ index $author.bio .Site.Language.Lang }}
       </p>

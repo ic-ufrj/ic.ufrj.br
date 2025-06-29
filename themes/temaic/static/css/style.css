@@ -29,7 +29,7 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	line-height: 1;
+	line-height: 1.2em;
 }
 ol, ul {
 	list-style: none;
@@ -60,6 +60,7 @@ table {
 	--cor-texto: #000000;
 	--cor-texto-branco: #FFFFFF;
 	--cor-accent-artigo: var(--cor-ic1);
+	--cor-borda-cinza: #919294;
 
 	--menu-padding: 100px;
 	--menu-total-height: 120px;
@@ -75,8 +76,12 @@ table {
 body {
 	font-size: 17px;
 	font-family: Arial;
-	background-color: var(--cor-fundo);
+	background-color: var(--cor-fundo-menu);
 	color: var(--cor-texto);
+}
+
+.email > span:nth-child(2) {
+	display: none;
 }
 
 
@@ -322,7 +327,7 @@ footer .superior > div {
 	padding: 20px;
 }
 
-footer .superior span {
+footer .superior > span {
 	display: block;
 	height: 20px;
 	font-weight: 600;
@@ -351,7 +356,7 @@ main {
 	background-color: var(--cor-fundo-apagado);
 }
 
-article, main > ul {
+article, main > * {
 	width: auto;
 	max-width: 800px;
 	margin: 0 auto;
@@ -375,7 +380,6 @@ article {
 	background-color: var(--cor-fundo);
 	margin-top: 40px;
 	border-radius: 10px;
-	line-height: 1.2em;
 }
 
 article table, article blockquote, article pre, article .highlight,
@@ -394,6 +398,7 @@ article .highlight > pre {
 
 article h1, article h2, article h3, article h4, article h5, article h6 {
 	margin: 20px 0;
+	line-height: 1.2em;
 }
 
 article h1 a, article h2 a, article h3 a, article h4 a, article h5 a,
@@ -401,7 +406,6 @@ article h6 a {
 	color: var(--cor-accent-artigo);
 	font-size: 15px;
 	font-weight: 800;
-
 }
 
 article h1 { font-size: 160%; }
@@ -421,7 +425,6 @@ article p + p {
 }
 
 article ul, article ol {
-	list-style: initial;
 	margin-left: 25px;
 }
 
@@ -430,8 +433,8 @@ article ul li::marker, article ol li::marker {
 }
 
 article ul { list-style: disc; }
-article ul ul { list-style-type: circle; }
-article ul ul ul { list-style-type: square; }
+article ul ul { list-style: circle; }
+article ul ul ul { list-style: square; }
 article ol { list-style: decimal; }
 article ol ol { list-style: upper-roman; }
 article ol ol ol {list-style: lower-latin; }
@@ -450,6 +453,13 @@ article a {
 
 article code {
 	font-family: monospace;
+}
+
+article table, article pre {
+	display: block;
+	max-width: 100%;
+	overflow-x: scroll;
+	overflow-y: hidden;
 }
 
 article table thead {
@@ -481,14 +491,60 @@ article input[type="checkbox"]:checked {
 	background-color: var(--cor-accent-artigo);
 }
 
+article img {
+	max-width: 100%;
+}
 
 
 
+
+
+.cards-pessoais {
+	width: 100%;
+	margin: 0 auto;
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+
+	font-family: "Montserrat", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+}
+
+.card-pessoal {
+	flex-grow: 1;
+
+	border: 1px solid var(--cor-borda-cinza);
+	border-radius: 10px;
+
+	background-color: var(--cor-fundo);
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+	margin: 20px;
+	gap: 10px;
+}
+
+.card-pessoal > img {
+	border-radius: 10px;
+}
+
+.card-pessoal .nome {
+	font-weight: 600;
+	font-size: 120%;
+}
+
+.card-pessoal p {
+	max-width: 270px;
+}
 
 
 .masshead {
 	display: flex;
 	height: 100px;
+	max-width: 100%;
 
 	align-items: center;
 	justify-content: center;
@@ -509,38 +565,6 @@ article input[type="checkbox"]:checked {
 	font-size: 25px;
 }
 
-.authors {
-	display: flex;
-	width: 100%;
-	flex-direction: column;
-	align-items: center;
-
-	font-family: "Montserrat", sans-serif;
-	font-optical-sizing: auto;
-	font-weight: 400;
-	font-style: normal;
-}
-
-.authors > li {
-	display: flex;
-	flex-direction: column;
-	width: 80%;
-	gap: 10px;
-
-	background-color: var(--cor-fundo);
-	padding: 20px;
-	margin: 10px 0;
-	border-radius: 10px;
-}
-
-.authors span {
-	font-weight: 600;
-	font-size: 120%;
-}
-
-.authors img {
-	border-radius: 10px;
-}
 
 
 
