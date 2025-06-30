@@ -14,15 +14,17 @@
       {{ end }}
     </ul>
   </article>
-  <ul class="cards-pessoais">
-    <li class="card-pessoal">
-      <img src="{{ $author.avatar }}" alt="{{ i18n "foto_de_perfil" }}" width="80px">
-      <span class="nome">{{ $author.nome }}</span>
-      <p>
-        {{ index $author.bio .Site.Language.Lang }}
-      </p>
-      <a href="{{ "/autores/" | relLangURL }}">{{ i18n "ver_mais_autores" }}</a>
-    </li>
-  </ul>
+  <div class="autores">
+    <ul class="cards-pessoais">
+      <li class="card-pessoal">
+        <img src="{{ $author.avatar }}" alt="{{ i18n "foto_de_perfil" }}" width="80px">
+        <span class="nome">{{ $author.nome }}</span>
+        <p>
+          {{ index $author.bio .Site.Language.Lang }}
+        </p>
+        <a href="{{ "/autores/" | relLangURL }}">{{ i18n "ver_mais_autores" }}</a>
+      </li>
+    </ul>
+  </div>
 {{ end }}
 

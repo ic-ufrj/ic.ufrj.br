@@ -2,18 +2,20 @@
 
 {{ define "main" }}
   <div class="masshead"><h1>{{ i18n "lista_de_autores" }}</h1></div>
-  <ul class="cards-pessoais">
-    {{ range .Pages }}
-      {{ $author := index site.Data.docentes ( .Page.Title | urlize ) }}
-      <li class="card-pessoal">
-	<img src="{{ $author.avatar }}" alt="{{ i18n "foto_de_perfil" }}" width="80px">
-        <span class="nome">{{ $author.nome }}</span>
-        <p>
-          {{ index $author.bio .Site.Language.Lang }}
-        </p>
-	<a href="{{ print "/autores/" ( .Title | urlize ) | relLangURL }}">{{ i18n "ver_postagens" }}</a>
-      </li>
-    {{ end }}
-  </ul>
+  <article>
+    <ul class="cards-pessoais">
+      {{ range .Pages }}
+        {{ $author := index site.Data.docentes ( .Page.Title | urlize ) }}
+        <li class="card-pessoal">
+    <img src="{{ $author.avatar }}" alt="{{ i18n "foto_de_perfil" }}" width="80px">
+          <span class="nome">{{ $author.nome }}</span>
+          <p>
+            {{ index $author.bio .Site.Language.Lang }}
+          </p>
+    <a href="{{ print "/autores/" ( .Title | urlize ) | relLangURL }}">{{ i18n "ver_postagens" }}</a>
+        </li>
+      {{ end }}
+    </ul>
+  </article>
 {{ end }}
 

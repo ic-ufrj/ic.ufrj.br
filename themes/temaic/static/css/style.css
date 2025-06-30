@@ -76,7 +76,7 @@ table {
 body {
 	font-size: 17px;
 	font-family: Arial;
-	background-color: var(--cor-fundo-menu);
+	background-color: var(--cor-fundo);
 	color: var(--cor-texto);
 }
 
@@ -353,14 +353,16 @@ footer .inferior .social {
 
 
 main {
-	background-color: var(--cor-fundo-apagado);
+	background-color: var(--cor-fundo);
+	padding: 0;
+	margin: 0;
 }
 
-article, main > * {
-	width: auto;
+main > * {
+	width: 100%;
 	max-width: 800px;
 	margin: 0 auto;
-	padding: 20px;
+	padding: 0 20px;
 }
 
 article {
@@ -377,9 +379,8 @@ main h1, main h2, main h3, main h4, main h5, main h6 {
 }
 
 article {
-	background-color: var(--cor-fundo);
-	margin-top: 40px;
-	border-radius: 10px;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
 article table, article blockquote, article pre, article .highlight,
@@ -428,7 +429,12 @@ article ul, article ol {
 	margin-left: 25px;
 }
 
-article ul li::marker, article ol li::marker {
+article ul > li, article ol > li {
+	margin-top: 6px;
+	margin-bottom: 6px;
+}
+
+article ul > li::marker, article ol > li::marker {
 	color: var(--cor-accent-artigo);
 }
 
@@ -506,6 +512,9 @@ article img {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
+	gap: 50px;
+	margin-top: 20px;
+	margin-bottom: 20px;
 
 	font-family: "Montserrat", sans-serif;
 	font-optical-sizing: auto;
@@ -514,6 +523,8 @@ article img {
 }
 
 .card-pessoal {
+	width: 35%;
+	min-width: 300px;
 	flex-grow: 1;
 
 	border: 1px solid var(--cor-borda-cinza);
@@ -522,9 +533,9 @@ article img {
 	background-color: var(--cor-fundo);
 	display: flex;
 	flex-direction: column;
-	padding: 20px;
-	margin: 20px;
 	gap: 10px;
+
+	padding: 20px;
 }
 
 .card-pessoal > img {
@@ -536,8 +547,13 @@ article img {
 	font-size: 120%;
 }
 
-.card-pessoal p {
-	max-width: 270px;
+
+.autores {
+	margin-top: 50px;
+}
+
+.autores h1 {
+	font-size: 150%;
 }
 
 

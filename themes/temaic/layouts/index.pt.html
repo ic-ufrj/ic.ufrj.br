@@ -3,21 +3,72 @@
 {{ define "main" }}
 
 <style>
-.vermelho {
-    color: red;
-    font-weight: bold;
-    font-size: 150%;
-    padding: 50px;
+
+.imagem-principal {
+  display: block;
+  padding: 0;
 }
+
+.icones-home {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+}
+
+.icones-home li a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icones-home li a div {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icones-home li a:hover div {
+  background-color: var(--cor-borda-cinza);
+}
+
+.icones-home li a div i {
+  font-size: 40px;
+}
+
 </style>
 
-<p class="vermelho">
-  Bem-vindo ao novo site do Instituto de Computação.
-  <br>Esse site está em desenvolvimento.
-  <br>Uma lista de artigos pode ser encontrada aqui:
-  <br><a href="/info/">Lista de artigos de informação</a>
-  <br><a href="/noticias/">Lista de notícias</a>
-</p>
+<img class="imagem-principal" src="/img/parede-vermelha.jpg"></div>
+
+<ul class="icones-home">
+  <li><a href="/info/apresentacao/">
+    <div><img src="/svg/logo-ic.svg" width="60px"></div>
+    <span>Apresentação do Instituto</span>
+  </a></li>
+  <li><a href="/info/contato/">
+    <div><i class="bi bi-globe-americas-fill"></i></div>
+    <span>Endereço e Contato</span>
+  </a></li>
+  <li><a href="/info/docentes/">
+    <div><i class="bi bi-people-fill"></i></div>
+    <span>Corpo Docente</span>
+  </a></li>
+  <li><a href="/info/estrutura-administrativa/">
+    <div><i class="bi bi-diagram-3-fill"></i></div>
+    <span>Estrutura Administrativa</span>
+  </a></li>
+  <li><a href="/info/calendario-academico/">
+    <div><i class="bi bi-calendar-date-fill"></i></div>
+    <span>Calendário Acadêmico</span>
+  </a></li>
+  <li><a href="https://dcc.ufrj.br/">
+    <div><i class="bi bi-person-fill-add"></i></div>
+    <span>Criar Conta</span>
+  </a></li>
+</ul>
 
 {{ end }}
 

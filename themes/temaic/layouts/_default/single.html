@@ -4,18 +4,21 @@
   <article>
     {{ .Content }}
   </article>
-  <ul class="cards-pessoais">
-    {{ range .Params.Autores }}
-      {{ $author := index site.Data.docentes . }}
-      <li class="card-pessoal">
-        <img src="{{ $author.avatar }}" alt="{{ i18n "foto_de_perfil" }}" width="80px">
-        <span class="nome">{{ $author.nome }}</span>
-        <p>
-          {{ index $author.bio site.Language.Lang }}
-        </p>
-	<a href="{{ printf "/autores/%s" . | relLangURL }}">{{ i18n "ver_outras_postagens" }}</a>
-      </li>
-    {{ end }}
-  </ul>
+  <div class="autores">
+    <h1>Autores</h1>
+    <ul class="cards-pessoais">
+      {{ range .Params.Autores }}
+        {{ $author := index site.Data.docentes . }}
+        <li class="card-pessoal">
+          <img src="{{ $author.avatar }}" alt="{{ i18n "foto_de_perfil" }}" width="80px">
+          <span class="nome">{{ $author.nome }}</span>
+          <p>
+            {{ index $author.bio site.Language.Lang }}
+          </p>
+    <a href="{{ printf "/autores/%s" . | relLangURL }}">{{ i18n "ver_outras_postagens" }}</a>
+        </li>
+      {{ end }}
+    </ul>
+  </div>
 {{ end }}
 
