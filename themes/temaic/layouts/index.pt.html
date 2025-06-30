@@ -13,6 +13,11 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   justify-items: center;
+  gap: 40px;
+  margin: 40px auto;
+
+  font-size: 70%;
+  text-transform: uppercase;
 }
 
 .icones-home li a {
@@ -22,6 +27,7 @@
 }
 
 .icones-home li a div {
+  border: solid 1px var(--cor-borda-cinza);
   border-radius: 50%;
   width: 80px;
   height: 80px;
@@ -39,6 +45,14 @@
   font-size: 40px;
 }
 
+.icones-home li > * {
+  text-decoration: none;
+}
+
+.icones-home li a:hover h1 {
+  text-decoration: underline;
+}
+
 </style>
 
 <img class="imagem-principal" src="/img/parede-vermelha.jpg"></div>
@@ -46,27 +60,27 @@
 <ul class="icones-home">
   <li><a href="/info/apresentacao/">
     <div><img src="/svg/logo-ic.svg" width="60px"></div>
-    <span>Apresentação do Instituto</span>
+    <h1>Apresentação do Instituto</h1>
   </a></li>
   <li><a href="/info/contato/">
     <div><i class="bi bi-globe-americas-fill"></i></div>
-    <span>Endereço e Contato</span>
+    <h1>Endereço e Contato</h1>
   </a></li>
   <li><a href="/info/docentes/">
     <div><i class="bi bi-people-fill"></i></div>
-    <span>Corpo Docente</span>
+    <h1>Corpo Docente</h1>
   </a></li>
   <li><a href="/info/estrutura-administrativa/">
     <div><i class="bi bi-diagram-3-fill"></i></div>
-    <span>Estrutura Administrativa</span>
+    <h1>Estrutura Administrativa</h1>
   </a></li>
   <li><a href="/info/calendario-academico/">
     <div><i class="bi bi-calendar-date-fill"></i></div>
-    <span>Calendário Acadêmico</span>
+    <h1>Calendário Acadêmico</h1>
   </a></li>
   <li><a href="https://dcc.ufrj.br/">
     <div><i class="bi bi-person-fill-add"></i></div>
-    <span>Criar Conta</span>
+    <h1>Criar Conta</h1>
   </a></li>
 </ul>
 
