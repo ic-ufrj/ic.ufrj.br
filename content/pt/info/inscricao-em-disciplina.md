@@ -2,8 +2,6 @@
 title: "Inscrição em Disciplina"
 date: 2025-06-28T20:06:26-03:00
 draft: false
-autores:
-  - supervisao-lci
 ---
 
 ### Onde fazer a inscrição

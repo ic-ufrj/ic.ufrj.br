@@ -2,8 +2,6 @@
 title: "Apresentação"
 date: 2025-06-18T17:09:45-03:00
 draft: false
-autores:
-  - supervisao-lci
 ---
 
 O **Instituto de Computação**, criado da transformação do Departamento de

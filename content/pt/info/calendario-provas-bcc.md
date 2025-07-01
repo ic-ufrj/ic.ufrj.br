@@ -2,8 +2,6 @@
 title: "Calendário de Provas do BCC"
 date: 2025-06-28T16:31:50-03:00
 draft: false
-autores:
-  - supervisao-lci
 ---
 
 Aqui está o *Google Agenda* com as datas de algumas provas. Vale ressaltar que nem todos os professores usam esse calendário e que as informações contidas nele podem não estar atualizadas, portanto, é necessário verificar as datas.

@@ -50,17 +50,17 @@
   translation: "Personal Page"
 
 - id: titular
-  translation: "Prof. Titular"
+  translation: "Full Professor"
 
 - id: adjunto
-  translation: "Prof. Adjunto"
+  translation: "Adjunct Professor"
 
 - id: associado
-  translation: "Prof. Associado"
+  translation: "Associate Professor"
 
 - id: assistente
-  translation: "Prof. Assistente"
+  translation: "Assistant Professor"
 
 - id: substituto
-  translation: "Prof. Substituto"
+  translation: "Substitute Professor"
 

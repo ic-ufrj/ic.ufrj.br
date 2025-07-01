@@ -1,10 +1,10 @@
 {{ define "title" }}
-  {{ $author := index site.Data.docentes (.Title | urlize) }}
+  {{ $author := index site.Data.pessoas_e_grupos (.Title | urlize) }}
   {{ $author.nome }}
 {{ end }}
 
 {{ define "main" }}
-  {{ $author := index site.Data.docentes (.Title | urlize) }}
+  {{ $author := index site.Data.pessoas_e_grupos (.Title | urlize) }}
   <div class="masshead"><h1>{{ $author.nome }}</h1></div>
   <article>
     <p>Postagens de {{ $author.nome }}:</p>
@@ -17,7 +17,7 @@
   <div class="autores">
     <ul class="cards-pessoais">
       <li class="card-pessoal">
-        <img src="{{ $author.avatar }}" alt="{{ i18n "foto_de_perfil" }}" width="80px">
+        <img src="{{ $author.avatar | default "/author_img/default.png" }}" alt="{{ i18n "foto_de_perfil" }}" width="80px">
         <span class="nome">{{ $author.nome }}</span>
         <p>
           {{ index $author.bio .Site.Language.Lang }}

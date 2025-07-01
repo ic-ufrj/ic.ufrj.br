@@ -4,7 +4,7 @@ slug: "new-website"
 date: 2025-06-14T20:47:53-03:00
 draft: false
 autores:
-    - supervisao-lci
+    - supervisao
     - gabriel
 ---
 
