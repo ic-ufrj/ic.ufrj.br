@@ -305,6 +305,7 @@ footer {
 	font-optical-sizing: auto;
 	font-weight: 400;
 	font-style: normal;
+	font-size: 90%;
 
 	color: var(--cor-texto-branco);
 }
