@@ -29,6 +29,8 @@
         - name: Normas de Atividades Complementares
         - name: Calendário de Provas
           url: /info/calendario-provas-bcc/
+        - name: Formas de Acesso
+          url: /info/formas-de-acesso-bcc/
         - name: Manual do Aluno
           url: /info/manual-do-aluno-bcc/
     - name: BCMT
@@ -70,6 +72,4 @@
 - name: Usuário
   children:
     - children:
-      - name: Cadastro de Alunos Novos
-
-
+        - name: Cadastro de Alunos Novos
