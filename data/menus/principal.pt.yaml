@@ -16,8 +16,6 @@
         - name: Corpo Docente
           url: /info/docentes/
         # - name: Corpo Técnico
-        - name: Lista de Autores do Site
-          url: /autores/
 
 - name: Ensino
   children:
