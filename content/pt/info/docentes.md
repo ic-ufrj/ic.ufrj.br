@@ -11,6 +11,12 @@ data/pessoas_e_grupos.yaml
 
 Aqui estão os professores do Instituto de Computação:
 
-{{< docentes "professores_permanentes" >}}
+# Professores Permanentes
+
+{{< docentes "titular" "adjunto" "associado" "assistente" >}}
+
+# Professores Substitutos
+
+{{< docentes "substituto" >}}
 
 
