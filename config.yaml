@@ -22,11 +22,11 @@ languages:
         - name: CCMN
           url: https://ccmn.ufrj.br/
           weight: 2
+        - name: PPGI
+          url: https://ppgi.ufrj.br/
+          weight: 3
         - name: Ouvidoria UFRJ
           url: https://ouvidoria.ufrj.br/
-          weight: 3
-        - name: EJCM
-          url: https://ejcm.com.br/
           weight: 4
         - name: Intranet
           url: https://intranet.ufrj.br/
@@ -45,8 +45,8 @@ languages:
         - name: CCMN
           url: https://ccmn.ufrj.br/
           weight: 2
-        - name: EJCM
-          url: https://ejcm.com.br/
+        - name: PPGI
+          url: https://ppgi.ufrj.br/
           weight: 3
 
 markup:
