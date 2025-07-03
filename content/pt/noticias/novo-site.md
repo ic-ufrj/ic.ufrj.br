@@ -2,9 +2,6 @@
 title: "Novo Site do IC"
 date: 2025-06-14T20:47:53-03:00
 draft: false
-autores:
-    - supervisao
-    - gabriel
 ---
 
 {{< email supervisao >}}
@@ -154,6 +151,3 @@ necessarimente meio:
 |     row1 | Lorem ipsum dolor sit amet |
 |     row2 | Lorem ipsum dolor sit amet |
 |     row3 | Lorem ipsum dolor sit amet |
-
-
-

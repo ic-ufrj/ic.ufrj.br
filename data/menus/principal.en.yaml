@@ -17,8 +17,6 @@
           url: /en/info/faculty/
         - name: Support Staff
           url: /en/info/support-staff/
-        - name: List of Post Authors
-          url: /en/autores/
 
 - name: Education
   children:
@@ -60,5 +58,3 @@
     - children:
       - name: Registration of Students
         url: https://dcc.ufrj.br/
-
-

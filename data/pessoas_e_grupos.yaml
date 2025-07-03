@@ -1,5 +1,7 @@
 # Inclui não somente docentes, mas também grupos e comissões como a Supervisão do LCI, Secretaria Acadêmica, etc.
 
+# 1) Professores permanentes
+
 avivacqua:
   nome: Adriana Santarosa Vivacqua
   lattes: https://lattes.cnpq.br/6494676052801758
@@ -211,8 +213,7 @@ vivian:
   lattes: https://lattes.cnpq.br/6480849016794725
   cargo: assistente
 
-# SUBSTITUTOS
-
+# 2) Professores Substitutos
 
 annarafaela:
   nome: Anna Rafaela Ferreira
@@ -249,16 +250,3 @@ thiagohenrique:
 thiagorocha:
   nome: Thiago José
   cargo: substituto
-
-# GRUPOS
-
-supervisao:
-  nome: Supervisão do LCI
-  cargo: grupo
-  bio:
-    pt: "Equipe de monitores responsável pelos laboratórios e pelo website do IC"
-    en: "Team of alumni that manages the IC's laboratories and website"
-  avatar: /author_img/supervisao.jpg
-
-
-
