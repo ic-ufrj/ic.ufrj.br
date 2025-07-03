@@ -4,9 +4,20 @@
 
 <style>
 
+.container-imagem-principal {
+  background-color: #FF3333;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  max-width: 100%;
+}
+
 .imagem-principal {
   display: block;
   padding: 0;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 800px;
 }
 
 .icones-home {
@@ -20,10 +31,17 @@
   text-transform: uppercase;
 }
 
+@media screen and (max-width: 600px) {
+  .icones-home {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 .icones-home li a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 10px;
 }
 
 .icones-home li a div {
@@ -56,7 +74,9 @@
 
 </style>
 
-<img class="imagem-principal" src="/img/parede-vermelha.jpg"></div>
+<div class="container-imagem-principal">
+  <img class="imagem-principal" src="/img/parede-vermelha.jpg">
+</div>
 
 <ul class="icones-home">
   <li><a href="/info/apresentacao/">
