@@ -91,7 +91,7 @@ Para pedir isenção de pré-requisito ou concomitância de disciplina, você de
 2. Imprimir o formulário de concordância, expor seus motivos e pegar, com o professor da disciplina em questão, sua concordância por escrito.
 3. Providencia uma cópia do histórico escolar.
 4. Abrir um processo, anexando os 2 primeiros documentos.
-5. Protocolar o processo no Instituto de Computação. 
+5. Protocolar o processo no Instituto de Computação.
 
 ### Inscrição aparece como "Não Alocado", mas a turma teve as vagas expandidas
 
