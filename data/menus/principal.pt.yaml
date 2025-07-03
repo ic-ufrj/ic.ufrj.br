@@ -3,6 +3,8 @@
     - children:
         - name: Apresentação
           url: /info/apresentacao/
+        - name: Estrutura Administrativa
+          url: /info/estrutura-administrativa/
         - name: Contato e Localização
           url: /info/contato/
         # - name: História
@@ -11,8 +13,6 @@
         # - name: Identidade Visual
     - name: Pessoas
       children:
-        - name: Estrutura Administrativa
-          url: /info/estrutura-administrativa/
         - name: Corpo Docente
           url: /info/docentes/
         # - name: Corpo Técnico
