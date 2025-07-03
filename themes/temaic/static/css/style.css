@@ -80,6 +80,7 @@ body {
 	color: var(--cor-texto);
 }
 
+/* Obfuscação de emails (usado pelo shortcode de email) */
 .email > span:nth-child(2) {
 	display: none;
 }
