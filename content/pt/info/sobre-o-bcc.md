@@ -9,7 +9,7 @@ O Curso de Bacharelado em Ciência da Computação da UFRJ teve seu início em 1
 
 A primeira turma foi organizada no 1o semestre de 1974, com o nome de Bacharelado em Matemática (Modalidade Informática), recebendo mais tarde, em 1983, a denominação de Bacharelado em Matemática Aplicada (Modalidade Informática), por ocasião do reconhecimento pelo MEC. Em Junho de 1988, o Conselho Universitário da UFRJ aprovou a mudança para a denominação de Bacharelado em Informática. O Conselho Universitário da UFRJ aprovou a atual denominação de **Bacharelado em Ciência da Computação** em Junho de 2003, em atenção às Diretrizes Curriculares propostas ao MEC para a área de Computação e Informática.
 
-Em Setembro de 2005, o curso foi submetido a um novo processo de avaliação pelo Ministério da Educação, com a finalidade de revalidar o reconhecimento já com a denominação atual de Bacharelado em Ciência da Computação. A Comissão Avaliadora do MEC recomendou o seu reconhecimento, atribuindo notas máximas a todos os quesitos. 
+Em Setembro de 2005, o curso foi submetido a um novo processo de avaliação pelo Ministério da Educação, com a finalidade de revalidar o reconhecimento já com a denominação atual de Bacharelado em Ciência da Computação. A Comissão Avaliadora do MEC recomendou o seu reconhecimento, atribuindo notas máximas a todos os quesitos.
 
 Por ocasião da renovação do reconhecimento do Curso de Bacharelado em Ciência da Computação em 2009, o projeto pedagógico e o currículo do Curso sofreram pequenos ajustes com o objetivo de adequá-los à Resolução no 2 de 18 de Junho de 2007 do Conselho Nacional de Educação.
 
@@ -21,13 +21,13 @@ O principal objetivo do Curso de Bacharelado em Ciência da Computação é a fo
 
 # Perfil do Profissional
 
-Entendemos que o bacharel da área de Ciência da Computação deve ter uma atuação crítica, ética, competente, colaborativa e relevante dentro de sua área. Para tal, o curso deve contribuir para a formação técnica, científica, e cidadã dos seus alunos. 
+Entendemos que o bacharel da área de Ciência da Computação deve ter uma atuação crítica, ética, competente, colaborativa e relevante dentro de sua área. Para tal, o curso deve contribuir para a formação técnica, científica, e cidadã dos seus alunos.
 
-O egresso do Curso de Bacharelado em Ciência da Computação deve ser: 
+O egresso do Curso de Bacharelado em Ciência da Computação deve ser:
 
 - crítico e reflexivo acerca das questões técnicas, profissionais, sociais, legais, éticas, políticas e humanísticas de seu tempo;
 - atento ao impacto da computação e suas tecnologias na sociedade e no ambiente;
-- capaz de identificar e atuar em situações onde a computação possa contribuir para atender as demandas sociais e ambientais contemporâneas, bem como antecipar demandas futuras; 
+- capaz de identificar e atuar em situações onde a computação possa contribuir para atender as demandas sociais e ambientais contemporâneas, bem como antecipar demandas futuras;
 - colaborador criativo, competente e inovador com o desenvolvimento de sua área;
 - atuante de forma empreendedora, abrangente e cooperativa no atendimento às demandas sociais da região onde atua, do Brasil e do mundo;
 - eficiente e eficaz na utilização de recursos tecnológicos e computacionais de acordo com o contexto;
