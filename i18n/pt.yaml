@@ -16,9 +16,6 @@
 - id: localizacao
   translation: "Localização"
 
-- id: endereco_correspondencia
-  translation: "Endereço para Correspondência"
-
 - id: contato
   translation: "Contato"
 
@@ -64,5 +61,16 @@
 - id: substituto
   translation: "Prof. Substituto"
 
+- id: redes-sociais
+  translation: "Redes Sociais"
+
+- id: youtube-footer
+  translation: "YouTube"
+
+- id: github-footer
+  translation: "Organização do GitHub"
+
+- id: telegram-footer
+  translation: "Telegram da Coordenação do BCC"
 
 

@@ -16,9 +16,6 @@
 - id: localizacao
   translation: "Address"
 
-- id: endereco_correspondencia
-  translation: "Address for Mail"
-
 - id: contato
   translation: "Contact Us"
 
@@ -63,4 +60,17 @@
 
 - id: substituto
   translation: "Substitute Professor"
+
+- id: redes-sociais
+  translation: "Social Media"
+
+- id: youtube-footer
+  translation: "YouTube"
+
+- id: github-footer
+  translation: "GitHub Organization"
+
+- id: telegram-footer
+  translation: "Computer Science Telegram Channel"
+
 
