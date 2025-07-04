@@ -73,4 +73,14 @@
 - id: telegram-footer
   translation: "Computer Science Telegram Channel"
 
+- id: pag-docentes
+  translation: "/en/info/faculty/"
+
+# TODO: FIXME: adicionar esses dois
+
+- id: pag-tecnicos
+  translation: "/info/tecnicos/"
+
+- id: pag-grupos
+  translation: "/info/estrutura-administrativa/"
 

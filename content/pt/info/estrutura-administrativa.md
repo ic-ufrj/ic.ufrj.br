@@ -4,6 +4,8 @@ date: 2025-06-22T01:08:55-03:00
 draft: false
 ---
 
+{{< docentes grupo >}}
+
 #### BCC
 
 ###### Coordenação do Curso de Bacharelado em Ciência da Computação

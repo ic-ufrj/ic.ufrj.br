@@ -15,7 +15,8 @@
       children:
         - name: Corpo Docente
           url: /info/docentes/
-        # - name: Corpo Técnico
+        - name: Corpo Técnico
+          url: /info/tecnicos/
 
 - name: Ensino
   children:

@@ -547,6 +547,14 @@ article img {
 .card-pessoal .nome {
 	font-weight: 600;
 	font-size: 120%;
+	line-height: 1.5em;
+}
+
+.card-pessoal .grupo, .card-pessoal .membro {
+	margin-top: 20px;
+}
+.card-pessoal .grupo + .grupo, .card-pessoal .membro + .membro {
+	margin-top: 0;
 }
 
 

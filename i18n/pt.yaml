@@ -73,4 +73,12 @@
 - id: telegram-footer
   translation: "Telegram da Coordenação do BCC"
 
+- id: pag-docentes
+  translation: "/info/docentes/"
+
+- id: pag-tecnicos
+  translation: "/info/tecnicos/"
+
+- id: pag-grupos
+  translation: "/info/estrutura-administrativa/"
 
