@@ -1,0 +1,11 @@
+<span class="email">
+  {{ $email := . }}
+  {{ $email := $email | replaceRE "^([^@]*)$" "$1@ic.ufrj.br" }}
+  {{ $email := $email | htmlEscape }}
+  {{ $email := $email | replaceRE "@([^\\.]*)" "@<span>$1</span>" }}
+  {{ $email := $email | replaceRE "\\.([^\\.]*)$" "<span>.amongus</span>.$1" }}
+  {{ $email := $email | replaceRE "$" "<span>.su</span>" }}
+  {{ $email := $email | safeHTML }}
+  {{ $email }}
+</span>
+

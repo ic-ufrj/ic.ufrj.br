@@ -81,7 +81,7 @@ body {
 }
 
 /* Obfuscação de emails (usado pelo shortcode de email) */
-.email > span:nth-child(2) {
+.email > span:nth-child(2), .email > span:nth-child(3) {
 	display: none;
 }
 
