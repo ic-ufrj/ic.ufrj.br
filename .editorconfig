@@ -1,8 +1,11 @@
+# Configure seu editor de texto para seguir esta configuração!
+# Siga as instruções em https://EditorConfig.org
 root = true
 
 [*]
 end_of_line = lf
 insert_final_newline = true
+trim_trailing_whitespace = true
 
 [*.css]
 indent_style = tab
@@ -11,4 +14,5 @@ indent_style = tab
 indent_style = space
 indent_size = 2
 
-
+[COMMIT_EDITMSG]
+max_line_length=72
