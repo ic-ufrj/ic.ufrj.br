@@ -1,0 +1,109 @@
+supervisao:
+  nome: Supervisão do LCI
+  tipo: outros
+  bio:
+    pt: "Equipe de monitores responsável pelos laboratórios e pelo website do IC"
+    en: "Team of alumni that manages the IC's laboratories and website"
+  avatar: /author_img/supervisao.jpg
+  membros:
+    - gabriel
+
+secretaria_ppgi:
+  nome: "Secretaria Acadêmica de Pós Graduação (PPGI)"
+  tipo: secretaria
+  email: "secretaria@ppgi.ufrj.br"
+  membros:
+    - karlasantanna
+    - patriciawirzmarinhomanede
+
+secgrad:
+  nome: Secretaria Acadêmica de Graduação
+  tipo: secretaria
+  membros:
+    - fabianabarbosarocha
+    - rerisonwilbercavalcanterocha
+
+secgerencial:
+  nome: Secretaria de Atividades Gerenciais
+  tipo: secretaria
+  membros:
+    - marcusviniciusmoliveira
+
+gabinete:
+  nome: Secretaria de Gabinete da Direção
+  tipo: secretaria
+  membros:
+    - tiagoms
+
+coord_grad:
+  nome: Coordenação do Curso de Bacharelado em Ciência da Computação
+  tipo: coordenacao
+  membros:
+    # LEMBRAR DE TROCAR PARA O VINICIUS GUSMAO
+    - juvianna
+
+direcao:
+  nome: Direção do Instituto de Computação
+  tipo: comissao
+  membros:
+    - anamaria
+    - carla
+
+ensino:
+  nome: "Direção Adjunta de Ensino"
+  tipo: comissao
+  membros:
+    - silvana
+
+pesquisa:
+  nome: "Direção Adjunta de Pesquisa"
+  tipo: comissao
+  membros:
+    - avivacqua
+
+governanca:
+  nome: "Direção Adjunta de Gestão e Governança"
+  tipo: comissao
+  membros:
+    - rodrigomello
+
+nde:
+  nome: "Núcleo Docente Estruturante (NDE)"
+  tipo: comissao
+  membros:
+    - avivacqua
+    - dgalfaro
+    - giseli
+    - jcps
+    - juvianna
+    - mitre
+    - collier
+    - silvana
+
+coaa:
+  nome: "Comissão de Orientação e Acompanhamento Acadêmico (COAA)"
+  tipo: comissao
+  membros:
+    - angela
+    - cfb
+    - jcps
+    - juvianna
+    - mhelena
+
+comissaoequivalencia:
+  tipo: comissao
+  nome: "Comissão de Equivalência de Disciplinas (COMED)"
+
+coac:
+  tipo: comissao
+  nome: "Comissão de Atividades Complementares (COAC)"
+
+estagio:
+  tipo: comissao
+  nome: Comissão de Estágio
+
+comissaotransferencia:
+  tipo: comissao
+  nome: Comissão de Transferência
+
+

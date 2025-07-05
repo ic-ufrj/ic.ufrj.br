@@ -1,4 +1,6 @@
-# Inclui não somente docentes, mas também grupos e comissões como a Supervisão do LCI, Secretaria Acadêmica, etc.
+# ATENÇÃO: a ordem não necessariamente é alfabética e a ordem desse arquivo
+# não reflete na ordem exibida no site (que vai sempre ser alfabética). Os
+# substitutos encontram-se no final do arquivo
 
 avivacqua:
   nome: Adriana Santarosa Vivacqua
@@ -213,7 +215,6 @@ vivian:
 
 # SUBSTITUTOS
 
-
 annarafaela:
   nome: Anna Rafaela Ferreira
   cargo: substituto
@@ -249,151 +250,4 @@ thiagohenrique:
 thiagorocha:
   nome: Thiago José
   cargo: substituto
-
-# TECNICOS
-
-patriciawirzmarinhomanede:
-  nome: Patrícia Wirz Marinho Mamede
-  email: "secretaria@ppgi.ufrj.br"
-  cargo: tecnico
-
-rodrigomello:
-  nome: Rodrigo Araujo de Mello
-  email: governanca
-  cargo: tecnico
-
-marcusviniciusmoliveira:
-  nome: Marcus Vinicius M. Oliveira
-  email: secgerencial
-  cargo: tecnico
-
-fabianabarbosarocha:
-  nome: Fabiana Barbosa Rocha
-  email: secgrad
-  cargo: tecnico
-
-rerisonwilbercavalcanterocha:
-  nome: Rerison Wilber Cavalcante Rocha
-  email: secgrad
-  cargo: tecnico
-
-karlasantanna:
-  nome: Karla Sant'Anna de Moura Coutinho
-  cargo: tecnico
-
-tiagoms:
-  nome: Tiago Matias da Silva
-  email: gabinete
-  cargo: tecnico
-
-
-# GRUPOS
-
-supervisao:
-  nome: Supervisão do LCI
-  cargo: grupo
-  bio:
-    pt: "Equipe de monitores responsável pelos laboratórios e pelo website do IC"
-    en: "Team of alumni that manages the IC's laboratories and website"
-  avatar: /author_img/supervisao.jpg
-  membros:
-    - gabriel
-
-secretaria_ppgi:
-  nome: "Secretaria Acadêmica de Pós Graduação (PPGI)"
-  cargo: grupo
-  email: "secretaria@ppgi.ufrj.br"
-  membros:
-    - patriciawirzmarinhomanede
-    - karlasantanna
-
-secgrad:
-  nome: Secretaria Acadêmica de Graduação
-  cargo: grupo
-  membros:
-    - fabianabarbosarocha
-    - rerisonwilbercavalcanterocha
-
-secgerencial:
-  nome: Secretaria de Atividades Gerenciais
-  cargo: grupo
-  membros:
-    - marcusviniciusmoliveira
-
-gabinete:
-  nome: Secretaria de Gabinete da Direção
-  cargo: grupo
-  membros:
-    - tiagoms
-
-coord_grad:
-  nome: Coordenação do Curso de Bacharelado em Ciência da Computação
-  cargo: grupo
-  membros:
-    # LEMBRAR DE TROCAR PARA O VINICIUS GUSMAO
-    - juvianna
-
-direcao:
-  nome: Direção do Instituto de Computação
-  cargo: grupo
-  membros:
-    - anamaria
-    - carla
-
-ensino:
-  nome: "Direção Adjunta de Ensino"
-  cargo: grupo
-  membros:
-    - silvana
-
-pesquisa:
-  nome: "Direção Adjunta de Pesquisa"
-  cargo: grupo
-  membros:
-    - avivacqua
-
-governanca:
-  nome: "Direção Adjunta de Gestão e Governança"
-  cargo: grupo
-  membros:
-    - rodrigomello
-
-nde:
-  nome: "Núcleo Docente Estruturante (NDE)"
-  cargo: grupo
-  membros:
-    - avivacqua
-    - dgalfaro
-    - giseli
-    - jcps
-    - juvianna
-    - mitre
-    - collier
-    - silvana
-
-coaa:
-  nome: "Comissão de Orientação e Acompanhamento Acadêmico (COAA)"
-  cargo: grupo
-  membros:
-    - angela
-    - cfb
-    - jcps
-    - juvianna
-    - mhelena
-
-comissaoequivalencia:
-  nome: "Comissão de Equivalência de Disciplinas (COMED)"
-  cargo: grupo
-
-coac:
-  nome: "Comissão de Atividades Complementares (COAC)"
-  cargo: grupo
-
-estagio:
-  nome: Comissão de Estágio
-  cargo: grupo
-
-comissaotransferencia:
-  nome: Comissão de Transferência
-  cargo: grupo
 
