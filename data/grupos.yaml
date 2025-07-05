@@ -40,26 +40,26 @@ coord_grad:
 
 direcao:
   nome: Direção do Instituto de Computação
-  tipo: comissao
+  tipo: direcao
   membros:
     - anamaria
     - carla
 
 ensino:
   nome: "Direção Adjunta de Ensino"
-  tipo: comissao
+  tipo: direcao
   membros:
     - silvana
 
 pesquisa:
   nome: "Direção Adjunta de Pesquisa"
-  tipo: comissao
+  tipo: direcao
   membros:
     - avivacqua
 
 governanca:
   nome: "Direção Adjunta de Gestão e Governança"
-  tipo: comissao
+  tipo: direcao
   membros:
     - rodrigomello
 

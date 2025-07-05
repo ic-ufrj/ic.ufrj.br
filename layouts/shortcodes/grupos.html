@@ -4,6 +4,7 @@
   {{- $data = $data | append $item -}}
 {{- end -}}
 
+{{- $data := where $data "tipo" "=" (.Get 0) -}}
 {{- $data := sort $data "nome" -}}
 
 <ul class="cards-pessoais">
