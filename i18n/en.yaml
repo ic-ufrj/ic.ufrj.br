@@ -1,18 +1,3 @@
-- id: foto_de_perfil
-  translation: "Profile picture"
-
-- id: ver_outras_postagens
-  translation: "View other posts"
-
-- id: ver_mais_autores
-  translation: "View other authors"
-
-- id: ver_postagens
-  translation: "View posts"
-
-- id: lista_de_autores
-  translation: "List of Authors"
-
 - id: localizacao
   translation: "Address"
 

@@ -3,9 +3,6 @@ title: "New website for the Institute of Computing"
 slug: "new-website"
 date: 2025-06-14T20:47:53-03:00
 draft: false
-autores:
-    - supervisao
-    - gabriel
 ---
 
 # Soon

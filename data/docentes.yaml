@@ -2,6 +2,8 @@
 # não reflete na ordem exibida no site (que vai sempre ser alfabética). Os
 # substitutos encontram-se no final do arquivo
 
+# 1) Professores permanentes
+
 avivacqua:
   nome: Adriana Santarosa Vivacqua
   lattes: https://lattes.cnpq.br/6494676052801758
@@ -213,7 +215,7 @@ vivian:
   lattes: https://lattes.cnpq.br/6480849016794725
   cargo: assistente
 
-# SUBSTITUTOS
+# 2) Professores Substitutos
 
 annarafaela:
   nome: Anna Rafaela Ferreira

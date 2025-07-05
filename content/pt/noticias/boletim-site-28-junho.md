@@ -2,8 +2,6 @@
 title: "Boletim do Site do dia 28 de Junho"
 date: 2025-06-28T21:14:16-03:00
 draft: false
-autores:
-  - supervisao
 ---
 
 ```
@@ -91,4 +89,3 @@ Em sáb., 28 de jun. de 2025 às 00:14, Arthur Bacci escreveu:
 > > >
 > > > Seria interessante se alguém pudesse verificar os nomes e emails
 ```
-
