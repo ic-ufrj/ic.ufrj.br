@@ -2,6 +2,8 @@ baseURL: "https://novo.ic.ufrj.br"
 title: "Instituto de Computação"
 theme: temaic
 
+taxonomies: []
+
 defaultContentLanguage: pt
 defaultContentLanguageInSubdir: false
 languages:
