@@ -1,10 +1,6 @@
 supervisao:
   nome: Supervisão do LCI
   tipo: outros
-  bio:
-    pt: "Equipe de monitores responsável pelos laboratórios e pelo website do IC"
-    en: "Team of alumni that manages the IC's laboratories and website"
-  avatar: /author_img/supervisao.jpg
   membros:
     - gabriel
 
