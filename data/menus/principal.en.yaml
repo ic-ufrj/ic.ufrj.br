@@ -2,39 +2,32 @@
   children:
     - children:
       - name: History
-        url: /en/info/history/
       # - name: "Missão, Visão e Valores"
       # - name: Espaço Físico
       # - name: Estrutura Administrativa
       # - name: Identidade Visual
       - name: Address
-        url: /en/info/address/
       - name: Contact Us
-        url: /en/info/contact/
     - name: People
       children:
         - name: Faculty
           url: /en/info/faculty/
         - name: Support Staff
-          url: /en/info/support-staff/
 
 - name: Education
   children:
     - name: Computer Science
       children:
         - name: Introduction
-          url: /en/info/computer-science-introduction/
       # - name: BCMT
       # children:
       # - name: Ênfase em Análise de Dados
     - name: Other Bachelors
       children:
         - name: Academic Calendar
-          url: /en/info/academic-calendar/
     - name: Graduate Program
       children:
         - name: PPGI
-          url: /en/info/ppgi/
 
 - name: Opportunities
   children:
@@ -42,7 +35,6 @@
       children:
         # - name: Grupos de Pesquisa
         - name: Projects
-          url: /en/info/research_projects/
         # - name: Iniciação Científica
         # - name: Editais
       # - name: Extensão
@@ -51,10 +43,9 @@
     - children:
         # - name: Vagas
         - name: Selection
-          url: /en/info/selection/
 
 - name: User
   children:
     - children:
       - name: Registration of Students
-        url: https://dcc.ufrj.br/
+

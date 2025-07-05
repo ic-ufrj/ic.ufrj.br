@@ -31,7 +31,11 @@
               {{ end }}
               <ul>
                 {{ range .children }}
-                  <li><a href="{{ .url }}">{{ .name }}</a></li>
+                  {{ if .url }}
+                    <li><a href="{{ .url }}">{{ .name }}</a></li>
+                  {{ else }}
+                    <li><a href="https://dcc.ufrj.br/" style="color:red;">{{ .name }}</a></li>
+                  {{ end }}
                 {{ end }}
               </ul>
             </li>
