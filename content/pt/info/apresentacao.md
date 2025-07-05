@@ -51,7 +51,7 @@ empreendedor dos seus alunos de graduação de pós-graduação;
 de atividades e serviços destinados a apoiar o desenvolvimento científico e
 tecnológico, a melhoria da educação e a difusão do conhecimento nos seus campos
 de atuação;
-- promover e manter, por iniciativa própria ou em parceria, atividades de 
+- promover e manter, por iniciativa própria ou em parceria, atividades de
 pesquisa e prospecção tecnológica nos campos de sua competência;
 - apoiar os processos de inclusão digital e de democratização de acesso à
 informação a todos os níveis da sociedade, através de atividades de extensão;

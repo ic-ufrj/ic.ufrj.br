@@ -1,0 +1,39 @@
+# ATENÇÃO: para alterar a secretaria ou diretoria a qual os técnicos fazem parte,
+# favor alterar o arquivo data/grupos.yaml e também modificar o email listado
+# aqui.
+
+patriciawirzmarinhomanede:
+  nome: Patrícia Wirz Marinho Mamede
+  email: "secretaria@ppgi.ufrj.br"
+  cargo: tecnico
+
+rodrigomello:
+  nome: Rodrigo Araujo de Mello
+  email: governanca
+  cargo: tecnico
+
+marcusviniciusmoliveira:
+  nome: Marcus Vinicius M. Oliveira
+  email: secgerencial
+  cargo: tecnico
+
+fabianabarbosarocha:
+  nome: Fabiana Barbosa Rocha
+  email: secgrad
+  cargo: tecnico
+
+rerisonwilbercavalcanterocha:
+  nome: Rerison Wilber Cavalcante Rocha
+  email: secgrad
+  cargo: tecnico
+
+karlasantanna:
+  nome: Karla Sant'Anna de Moura Coutinho
+  cargo: tecnico
+
+tiagoms:
+  nome: Tiago Matias da Silva
+  email: gabinete
+  cargo: tecnico
+
+

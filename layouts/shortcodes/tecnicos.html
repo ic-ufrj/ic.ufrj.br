@@ -1,5 +1,5 @@
 {{- $data := slice -}}
-{{- range $key, $value := .Site.Data.docentes -}}
+{{- range $key, $value := .Site.Data.tecnicos -}}
   {{- $item := merge (dict "username" $key) $value -}}
   {{- $data = $data | append $item -}}
 {{- end -}}
@@ -9,7 +9,7 @@
 <ul class="cards-pessoais">
   {{ range $data }}
 
-    <!-- Acha os grupos em que o docente faz parte -->
+    <!-- Acha os grupos em que o tecnico faz parte -->
     {{ $grupos := slice }}
     {{ range $key, $value := site.Data.grupos }}
       {{ $item := merge (dict "username" $key) $value }}

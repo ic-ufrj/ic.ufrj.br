@@ -1,4 +1,4 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -13,8 +13,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
@@ -24,7 +24,7 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
@@ -81,7 +81,7 @@ body {
 }
 
 /* Obfuscação de emails (usado pelo shortcode de email) */
-.email > span:nth-child(2) {
+.email > span:nth-child(2), .email > span:nth-child(3) {
 	display: none;
 }
 
@@ -121,7 +121,7 @@ header a:hover {
 	 * comporta de forma semelhante a um padding-right */
 	position: absolute;
 	right: var(--menu-padding);
-	
+
 	width: 100vw;
 
 	padding: 13px 0px;
@@ -187,7 +187,7 @@ header a:hover {
 
 	padding: 0.5em 0.5em;
 	margin: 0px 0.5em;
-	
+
 	display: flex;
 	align-items: center;
 
@@ -225,7 +225,7 @@ header a:hover {
 	flex-wrap: wrap;
 	gap: 50px;
 	justify-content: center;
-	
+
 	transition: clip-path 200ms ease-out;
 }
 
@@ -547,6 +547,14 @@ article img {
 .card-pessoal .nome {
 	font-weight: 600;
 	font-size: 120%;
+	line-height: 1.5em;
+}
+
+.card-pessoal .grupo, .card-pessoal .membro {
+	margin-top: 20px;
+}
+.card-pessoal .grupo + .grupo, .card-pessoal .membro + .membro {
+	margin-top: 0;
 }
 
 .masshead {
@@ -574,13 +582,3 @@ article img {
 
 	text-align: center;
 }
-
-
-
-
-
-
-
-
-
-

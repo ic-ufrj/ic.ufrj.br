@@ -12,12 +12,7 @@ data/pessoas_e_grupos.yaml
 
 Faculty of the Institute of Computing:
 
-# Permanent Faculty
+{{< docentes "titular" "adjunto" "associado" "assistente" "substituto" >}}
 
-{{< docentes "titular" "adjunto" "associado" "assistente" >}}
-
-# Substitute Faculty
-
-{{< docentes "substituto" >}}
 
 
