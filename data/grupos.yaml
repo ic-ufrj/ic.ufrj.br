@@ -4,6 +4,19 @@ supervisao:
   membros:
     - gabriel
 
+decania_ccmn:
+  nome: Decania do Centro de Ciências Matemáticas e da Natureza
+  email: OCULTO
+  tipo: outros
+  membros:
+    - clima
+
+chefe:
+  nome: Chefe do Departamento de Computação
+  tipo: outros
+  membros:
+    - hugonobrega
+
 secretaria_ppgi:
   nome: "Secretaria Acadêmica de Pós Graduação (PPGI)"
   tipo: secretaria
@@ -38,6 +51,21 @@ coord_grad:
     # LEMBRAR DE TROCAR PARA O VINICIUS GUSMAO
     - juvianna
 
+coord_bcmt_sup_decisoes:
+  nome: Coordenação da Habilitação em Suporte a Decisões do Curso de Bacharelado
+        em Ciências Matemáticas e da Terra
+  email: OCULTO
+  tipo: coordenacao
+  membros:
+    - julianabsf
+
+coord_ppgi:
+  nome: Coordenação do Programa de Pós-Graduação em Informática
+  email: OCULTO
+  tipo: coordenacao
+  membros:
+    - dgalfaro
+
 direcao:
   nome: Direção do Instituto de Computação
   tipo: direcao
@@ -57,6 +85,12 @@ pesquisa:
   membros:
     - avivacqua
 
+extensao:
+  nome: "Direção Adjunta de Extensão"
+  tipo: direcao
+  membros:
+    - mluiza
+
 governanca:
   nome: "Direção Adjunta de Gestão e Governança"
   tipo: direcao
@@ -68,13 +102,13 @@ nde:
   tipo: comissao
   membros:
     - avivacqua
-    - dgalfaro
     - giseli
     - jcps
     - juvianna
-    - mitre
+    - marcellogt
     - collier
     - silvana
+    - vigusmao
 
 coaa:
   nome: "Comissão de Orientação e Acompanhamento Acadêmico (COAA)"

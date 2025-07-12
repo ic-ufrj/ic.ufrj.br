@@ -23,7 +23,9 @@
 
       <span class="cargo">{{ i18n .cargo }}</span>
 
-      {{ partial "email.html" (.email | default .username) }}
+      {{ if ne .email "OCULTO" }}
+        {{ partial "email.html" (.email | default .username) }}
+      {{ end }}
 
       {{ if .lattes }}
         <a href="{{ .lattes }}">{{ i18n "lattes" }}</a>

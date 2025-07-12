@@ -12,7 +12,9 @@
     <li class="card-pessoal" id="{{ .username }}">
       <span class="nome">{{ .nome }}</span>
 
-      {{ partial "email.html" (.email | default .username) }}
+      {{ if ne .email "OCULTO" }}
+        {{ partial "email.html" (.email | default .username) }}
+      {{ end }}
 
       {{ range .membros }}
         {{ $membro_prof := index site.Data.docentes . }}
