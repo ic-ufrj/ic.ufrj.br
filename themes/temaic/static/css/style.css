@@ -557,6 +557,15 @@ article img {
 	margin-top: 0;
 }
 
+.card-pessoal .membro {
+	color: var(--cor-texto);
+	text-decoration: none;
+}
+.card-pessoal .membro:hover {
+	text-decoration: underline;
+}
+
+
 .masshead {
 	display: flex;
 	height: 100px;

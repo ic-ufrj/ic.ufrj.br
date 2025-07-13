@@ -12,7 +12,7 @@ draft: false
 
 {{< grupos coordenacao >}}
 
-# Direções
+# Direções e Chefes de Departamento
 
 {{< grupos direcao >}}
 
@@ -20,7 +20,9 @@ draft: false
 
 {{< grupos comissao >}}
 
+<!--
 # Outros
 
 {{< grupos outros >}}
+-->
 
