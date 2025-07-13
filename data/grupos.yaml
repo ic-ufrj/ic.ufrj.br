@@ -1,19 +1,6 @@
-supervisao:
-  nome: Supervisão do LCI
-  tipo: outros
-  membros:
-    - gabriel
-
-decania_ccmn:
-  nome: Decania do Centro de Ciências Matemáticas e da Natureza
-  email: OCULTO
-  tipo: outros
-  membros:
-    - clima
-
 chefe:
   nome: Chefe do Departamento de Computação
-  tipo: outros
+  tipo: direcao
   membros:
     - hugonobrega
 
@@ -48,11 +35,11 @@ coord_grad:
   nome: Coordenação do Curso de Bacharelado em Ciência da Computação
   tipo: coordenacao
   membros:
-    # LEMBRAR DE TROCAR PARA O VINICIUS GUSMAO
+    # TODO: LEMBRAR DE TROCAR PARA O VINICIUS GUSMAO
     - juvianna
 
 coord_bcmt_sup_decisoes:
-  nome: Coordenação da Habilitação em Suporte a Decisões do Curso de Bacharelado
+  nome: Coordenação da Habilitação em Suporte à Decisão do Curso de Bacharelado
         em Ciências Matemáticas e da Terra
   email: OCULTO
   tipo: coordenacao
@@ -61,7 +48,7 @@ coord_bcmt_sup_decisoes:
 
 coord_ppgi:
   nome: Coordenação do Programa de Pós-Graduação em Informática
-  email: OCULTO
+  email: coordenacao@ppgi.ufrj.br
   tipo: coordenacao
   membros:
     - dgalfaro
