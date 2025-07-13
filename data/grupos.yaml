@@ -106,10 +106,17 @@ coaa:
     - jcps
     - juvianna
     - mhelena
+    - cassioefs
+    - joaovbn
 
 comissaoequivalencia:
   tipo: comissao
   nome: "Comissão de Equivalência de Disciplinas (COMED)"
+  membros:
+    - cfb
+    - hugomg
+    - juvianna
+    - luziane
 
 coac:
   tipo: comissao
@@ -122,5 +129,9 @@ estagio:
 comissaotransferencia:
   tipo: comissao
   nome: Comissão de Transferência
+  membros:
+    - hugomg
+    - juvianna
+    - luziane
 
 
