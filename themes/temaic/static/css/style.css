@@ -196,11 +196,16 @@ header a:hover {
 	outline: none;
 }
 
-#main-header > ul > li > button:hover,
-#main-header > ul > li > button:focus-within {
+#main-header > ul > li:hover > button,
+#main-header > ul > li:focus > button,
+#main-header > ul > li:focus-within > button {
 	/*background-color: rgba(0, 0, 0, 0.2);
 	border-radius: 10px;*/
 	text-decoration: underline;
+}
+
+#main-header > ul > li {
+	position: relative;
 }
 
 /* Se refere aos menus escondidos (há um para cada categoria) */
@@ -208,37 +213,37 @@ header a:hover {
 	/* Esconde o menu */
 	clip-path: inset(0 0 100% 0);
 
-	/* Faz com que ele fique posicionado lá embaixo */
-	/* FIXME: não hardcodar */
 	position: absolute;
-	top: var(--menu-total-height);
-	left: 0px;
+	right: -30px;
 
-	width: 100vw;
+	max-width: 700px;
 
-	background-color: var(--cor-ic1);
+	background-color: var(--cor-fundo);
 	color: var(--cor-texto);
+
+	border: 1px solid var(--cor-borda-cinza);
+	border-radius: 10px;
 
 	padding: 20px;
 
 	display: flex;
-	flex-wrap: wrap;
-	gap: 50px;
+	gap: 20px;
 	justify-content: center;
 
-	transition: clip-path 200ms ease-out;
+	transition: clip-path 150ms ease-out;
 }
 
 /* Se refere aos menus escondidos enquanto a categoria tem foco */
+#main-header > ul > li:hover > ul,
+#main-header > ul > li:focus > ul,
 #main-header > ul > li:focus-within > ul {
 	clip-path: inset(0 0 0 0);
-
-	transition-delay: 200ms;
+	transition-delay: 150ms;
 }
 
 /* Se refere às subcategorias do menu escondido */
 #main-header > ul > li > ul > li {
-	background-color: var(--cor-fundo);
+	border: 1px solid var(--cor-borda-cinza);
 	width: 250px;
 	padding: 20px;
 	border-radius: 10px;
