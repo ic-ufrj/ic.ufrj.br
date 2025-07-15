@@ -18,7 +18,7 @@
         - name: Corpo Técnico
           url: /info/tecnicos/
 
-- name: Ensino
+- name: Graduação
   children:
     - name: Ciência da Computação
       children:
@@ -46,10 +46,12 @@
           url: /info/formularios/
         - name: Inscrição em Disciplina
           url: /info/inscricao-em-disciplina/
-    - name: Pós-Graduação
-      children:
-        - name: PPGI
-          url: /info/ppgi/
+
+- name: Pós-Graduação
+  children:
+    - children:
+      - name: PPGI
+        url: /info/ppgi/
 
 - name: Oportunidades
   children:

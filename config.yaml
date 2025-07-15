@@ -12,41 +12,11 @@ languages:
     languageCode: "pt-BR"
     contentDir: content/pt
     weight: 1
-
-    menu:
-      links:
-        - name: UFRJ
-          url: https://ufrj.br/
-          weight: 1
-        - name: CCMN
-          url: https://ccmn.ufrj.br/
-          weight: 2
-        - name: PPGI
-          url: https://ppgi.ufrj.br/
-          weight: 3
-        - name: Ouvidoria UFRJ
-          url: https://ouvidoria.ufrj.br/
-          weight: 4
-        - name: Intranet
-          url: https://intranet.ufrj.br/
-          weight: 5
   en:
     languageName: English
     languageCode: en
     contentDir: content/en
     weight: 2
-
-    menu:
-      links:
-        - name: UFRJ
-          url: https://ufrj.br/
-          weight: 1
-        - name: CCMN
-          url: https://ccmn.ufrj.br/
-          weight: 2
-        - name: PPGI
-          url: https://ppgi.ufrj.br/
-          weight: 3
 
 markup:
   highlight:

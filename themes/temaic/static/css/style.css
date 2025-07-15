@@ -55,7 +55,7 @@ table {
 
 	--cor-fundo: #FFFFFF;
 	--cor-fundo-menu: var(--cor-ic1);
-	--cor-fundo-menu-cima: var(--cor-ic2);
+	--cor-fundo-menu-cima: #202020;
 	--cor-fundo-apagado: #506080;
 	--cor-texto: #000000;
 	--cor-texto-branco: #FFFFFF;
@@ -196,11 +196,16 @@ header a:hover {
 	outline: none;
 }
 
-#main-header > ul > li > button:hover,
-#main-header > ul > li > button:focus-within {
+#main-header > ul > li:hover > button,
+#main-header > ul > li:focus > button,
+#main-header > ul > li:focus-within > button {
 	/*background-color: rgba(0, 0, 0, 0.2);
 	border-radius: 10px;*/
 	text-decoration: underline;
+}
+
+#main-header > ul > li {
+	position: relative;
 }
 
 /* Se refere aos menus escondidos (há um para cada categoria) */
@@ -208,38 +213,38 @@ header a:hover {
 	/* Esconde o menu */
 	clip-path: inset(0 0 100% 0);
 
-	/* Faz com que ele fique posicionado lá embaixo */
-	/* FIXME: não hardcodar */
 	position: absolute;
-	top: var(--menu-total-height);
-	left: 0px;
+	right: -30px;
 
-	width: 100vw;
+	max-width: 700px;
 
-	background-color: var(--cor-ic1);
+	background-color: var(--cor-fundo);
 	color: var(--cor-texto);
+
+	border: 1px solid var(--cor-borda-cinza);
+	border-radius: 10px;
 
 	padding: 20px;
 
 	display: flex;
-	flex-wrap: wrap;
-	gap: 50px;
+	gap: 20px;
 	justify-content: center;
 
-	transition: clip-path 200ms ease-out;
+	transition: clip-path 150ms ease-out;
 }
 
 /* Se refere aos menus escondidos enquanto a categoria tem foco */
+#main-header > ul > li:hover > ul,
+#main-header > ul > li:focus > ul,
 #main-header > ul > li:focus-within > ul {
 	clip-path: inset(0 0 0 0);
-
-	transition-delay: 200ms;
+	transition-delay: 150ms;
 }
 
 /* Se refere às subcategorias do menu escondido */
 #main-header > ul > li > ul > li {
-	background-color: var(--cor-fundo);
-	width: 250px;
+	border: 1px solid var(--cor-borda-cinza);
+	width: 200px;
 	padding: 20px;
 	border-radius: 10px;
 }
@@ -262,41 +267,56 @@ header a:hover {
 
 /* Sempre verificar se os breakpoints repetem */
 
-@media screen and (min-width: 700px) and (max-width: 1150px) {
-	#main-header > a > p {
-		display: none;
-	}
-}
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1300px) {
 	:root {
 		--menu-padding: 10px;
 	}
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (min-width: 900px) and (max-width: 1150px) {
+	#main-header > a > p {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 1100px) {
 	:root {
 		--menu-total-height: 250px;
 	}
 
 	#links-header > ul {
 		font-size: 11px;
+		gap: 5px;
 	}
 
 	#main-header {
 		flex-direction: column;
 		align-items: center;
 		justify-content: space-evenly;
+		height: auto;
+		padding: 20px;
+	}
+
+	#main-header > a {
+		height: 80px;
+		margin-top: 20px;
 	}
 
 	#main-header > ul {
-		align-items: center;
-		flex-wrap: wrap;
-		justify-content: space-between;
+		width: 100%;
+		flex-direction: column;
+		align-items: flex-end;
 	}
 
-	#main-header > ul > li > span {
-		height: 30px;
+	#main-header > ul > li > button {
+		font-size: 85%;
+	}
+
+	#main-header > ul > li > ul {
+		flex-direction: column;
+		right: 0px;
+		z-index: 10;
 	}
 }
 
@@ -320,7 +340,7 @@ footer > div {
 }
 
 footer .superior {
-	background-color: var(--cor-fundo-menu-cima);
+	background-color: var(--cor-ic2);
 
 	justify-content: space-between;
 }
