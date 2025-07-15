@@ -4,27 +4,23 @@
 
 patriciawirzmarinhomanede:
   nome: Patrícia Wirz Marinho Mamede
-  email: "secretaria@ppgi.ufrj.br"
+  email: OCULTO
   cargo: tecnico
 
 rodrigomello:
   nome: Rodrigo Araújo de Mello
-  email: governanca
   cargo: tecnico
 
-marcusviniciusmoliveira:
+marcusoliveira:
   nome: Marcus Vinicius M. Oliveira
-  email: secgerencial
   cargo: tecnico
 
-fabianabarbosarocha:
+fabianarocha:
   nome: Fabiana Barbosa Rocha
-  email: secgrad
   cargo: tecnico
 
-rerisonwilbercavalcanterocha:
+rerison:
   nome: Rerison Wilber Cavalcante Rocha
-  email: secgrad
   cargo: tecnico
 
 karlasantanna:
@@ -33,7 +29,6 @@ karlasantanna:
 
 tiagoms:
   nome: Tiago Matias da Silva
-  email: gabinete
   cargo: tecnico
 
 
