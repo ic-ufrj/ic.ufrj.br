@@ -180,7 +180,7 @@ header a:hover {
 }
 
 /* Se refere aos textos O INSTITUTO, ENSINO, etc */
-#main-header > ul > li > button {
+#main-header > ul > li > a {
 	font-weight: 600;
 	font-size: inherit;
 	text-transform: uppercase;
@@ -196,9 +196,9 @@ header a:hover {
 	outline: none;
 }
 
-#main-header > ul > li:hover > button,
-#main-header > ul > li:focus > button,
-#main-header > ul > li:focus-within > button {
+#main-header > ul > li:hover > a,
+#main-header > ul > li:focus > a,
+#main-header > ul > li:focus-within > a {
 	/*background-color: rgba(0, 0, 0, 0.2);
 	border-radius: 10px;*/
 	text-decoration: underline;
@@ -309,7 +309,7 @@ header a:hover {
 		align-items: flex-end;
 	}
 
-	#main-header > ul > li > button {
+	#main-header > ul > li > a {
 		font-size: 85%;
 	}
 
