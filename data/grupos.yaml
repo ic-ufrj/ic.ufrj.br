@@ -16,14 +16,14 @@ secgrad:
   nome: Secretaria Acadêmica de Graduação
   tipo: secretaria
   membros:
-    - fabianabarbosarocha
-    - rerisonwilbercavalcanterocha
+    - fabianarocha
+    - rerison
 
 secgerencial:
   nome: Secretaria de Atividades Gerenciais
   tipo: secretaria
   membros:
-    - marcusviniciusmoliveira
+    - marcusoliveira
 
 gabinete:
   nome: Secretaria de Gabinete da Direção
