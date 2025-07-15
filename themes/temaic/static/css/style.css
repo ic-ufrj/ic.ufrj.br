@@ -55,7 +55,7 @@ table {
 
 	--cor-fundo: #FFFFFF;
 	--cor-fundo-menu: var(--cor-ic1);
-	--cor-fundo-menu-cima: var(--cor-ic2);
+	--cor-fundo-menu-cima: #202020;
 	--cor-fundo-apagado: #506080;
 	--cor-texto: #000000;
 	--cor-texto-branco: #FFFFFF;
@@ -320,7 +320,7 @@ footer > div {
 }
 
 footer .superior {
-	background-color: var(--cor-fundo-menu-cima);
+	background-color: var(--cor-ic2);
 
 	justify-content: space-between;
 }
