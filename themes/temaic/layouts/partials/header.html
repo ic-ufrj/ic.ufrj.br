@@ -1,8 +1,9 @@
 <nav id="links-header">
   <ul>
-    {{ range .Site.Menus.links }}
-      <li><a href="{{ .URL }}" target="_blank" rel="noreferrer">
-        {{ .Name }}<i class="bi bi-arrow-up-right"></i>
+    {{ $menu := index site.Data.menus (printf "links.%s" .Site.Language.Lang) }}
+    {{ range $menu }}
+      <li><a href="{{ .url }}" target="_blank" rel="noreferrer">
+        {{ .name }}<i class="bi bi-arrow-up-right"></i>
       </a></li>
     {{ end }}
     {{ range .Translations }}
