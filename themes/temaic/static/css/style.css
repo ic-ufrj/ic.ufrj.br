@@ -214,6 +214,7 @@ header a:hover {
 	clip-path: inset(0 0 100% 0);
 
 	position: absolute;
+	top: 50px;
 	right: -30px;
 
 	max-width: 700px;
@@ -230,15 +231,26 @@ header a:hover {
 	gap: 20px;
 	justify-content: center;
 
-	transition: clip-path 150ms ease-out;
+	transition: clip-path 150ms ease-out 100ms;
+}
+
+#main-header > ul > li > ul::before {
+	content: "";
+	width: 30px;
+	height: 20px;
+	background-color: var(--cor-fundo);
+	position: absolute;
+	top: -20px;
+	right: 80px;
+	clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 }
 
 /* Se refere aos menus escondidos enquanto a categoria tem foco */
 #main-header > ul > li:hover > ul,
 #main-header > ul > li:focus > ul,
 #main-header > ul > li:focus-within > ul {
-	clip-path: inset(0 0 0 0);
-	transition-delay: 150ms;
+	clip-path: inset(-50px 0 0 0);
+	transition-delay: 200ms;
 }
 
 /* Se refere às subcategorias do menu escondido */
