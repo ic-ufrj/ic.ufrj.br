@@ -20,9 +20,7 @@ draft: false
 
 {{< grupos comissao >}}
 
-<!--
 # Outros
 
 {{< grupos outros >}}
--->
 

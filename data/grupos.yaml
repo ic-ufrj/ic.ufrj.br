@@ -134,4 +134,31 @@ comissaotransferencia:
     - juvianna
     - luziane
 
+afastamentos:
+  tipo: comissao
+  nome: Comissão de Afastamentos
+  membros:
+    - mitre
+    - tiagoms
+
+congregacao:
+  tipo: outros
+  nome: Congregação do Instituto de Computação
+  membros:
+    - anamaria
+    - clima
+    - carla
+    - dgalfaro
+    - hugomg
+    - hugonobrega
+    - jpaixao
+    - jcps
+    - juvianna
+    - mhelena
+    - rincon
+    - rerison
+    - rodrigomello
+    - collier
+    - silvana
+    - tiagoms
 
