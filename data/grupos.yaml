@@ -121,10 +121,17 @@ comissaoequivalencia:
 coac:
   tipo: comissao
   nome: "Comissão de Atividades Complementares (COAC)"
+  membros:
+    - luziane
+    - vivian
 
 estagio:
   tipo: comissao
   nome: Comissão de Estágio
+  membros:
+    - julianabsf
+    - valeriab
+    - carolina
 
 comissaotransferencia:
   tipo: comissao
