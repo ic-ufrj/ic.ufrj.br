@@ -5,18 +5,20 @@
           url: /info/apresentacao/
         - name: Estrutura Administrativa
           url: /info/estrutura-administrativa/
+        - name: Corpo Docente
+          url: /info/docentes/
+        - name: Corpo Técnico
+          url: /info/tecnicos/
         - name: Contato e Localização
           url: /info/contato/
         # - name: História
         # - name: "Missão, Visão e Valores"
         # - name: Espaço Físico
         # - name: Identidade Visual
-    - name: Pessoas
+    - name: Serviços
       children:
-        - name: Corpo Docente
-          url: /info/docentes/
-        - name: Corpo Técnico
-          url: /info/tecnicos/
+        - name: Laboratórios do Curso de Informática
+        - name: Cadastro de Alunos Novos
 
 - name: Graduação
   children:
@@ -32,6 +34,7 @@
           url: /info/calendario-provas-bcc/
         - name: Formas de Acesso
           url: /info/formas-de-acesso-bcc/
+        - name: CAInfo
         - name: Manual do Aluno
           url: /info/manual-do-aluno-bcc/
     - name: BCMT
@@ -46,6 +49,8 @@
           url: /info/formularios/
         - name: Inscrição em Disciplina
           url: /info/inscricao-em-disciplina/
+        - name: Ofertas de Monitoria
+          url: /info/monitoria/
 
 - name: Pós-Graduação
   children:
@@ -53,26 +58,8 @@
       - name: PPGI
         url: /info/ppgi/
 
-- name: Oportunidades
-  children:
-    - name: Pesquisa
-      children:
-        # - name: Grupos de Pesquisa
-        - name: Projetos em Andamento
-        - name: Iniciação Científica
-        # - name: Editais
-    - name: Extensão
-      children:
-        - name: Projetos de Extensão
-    - name: Monitoria
-      children:
-        - name: Ofertas de Monitoria
-          url: /info/monitoria/
-    # - children:
-    #     - name: Vagas
-    #     - name: Concursos
 
-- name: Usuário
-  children:
-    - children:
-        - name: Cadastro de Alunos Novos
+# - name: Usuário
+#   children:
+#     - children:
+#         - name: Cadastro de Alunos Novos
