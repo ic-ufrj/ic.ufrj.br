@@ -9,6 +9,7 @@
           url: /info/docentes/
         - name: Corpo Técnico
           url: /info/tecnicos/
+        - name: Mapa do CCMN
         - name: Contato e Localização
           url: /info/contato/
         # - name: História
@@ -17,7 +18,7 @@
         # - name: Identidade Visual
     - name: Serviços
       children:
-        - name: Laboratórios do Curso de Informática
+        - name: Laboratórios de Computação e Informática
         - name: Cadastro de Alunos Novos
 
 - name: Graduação
@@ -27,11 +28,12 @@
         - name: Sobre o Curso
           url: /info/sobre-o-bcc/
         - name: Grade Curricular
-        # NO AGUARDO DA COMISSÃO DE ESTÁGIO
-        # - name: Normas de Estágio
+        - name: Normas de Estágio
         - name: Normas de Atividades Complementares
+        - name: Normas de TCC
         - name: Calendário de Provas
           url: /info/calendario-provas-bcc/
+        - name: Grade de Disciplinas
         - name: Formas de Acesso
           url: /info/formas-de-acesso-bcc/
         - name: CAInfo
