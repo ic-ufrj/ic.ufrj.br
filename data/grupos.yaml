@@ -3,6 +3,7 @@ chefe:
   tipo: direcao
   membros:
     - hugonobrega
+    - jpaixao
 
 secretaria_ppgi:
   nome: "Secretaria Acadêmica de Pós Graduação (PPGI)"
