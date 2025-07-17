@@ -415,6 +415,7 @@ main h1, main h2, main h3, main h4, main h5, main h6 {
 article {
 	margin-top: 20px;
 	margin-bottom: 20px;
+	text-align: justify;
 }
 
 article table, article blockquote, article pre, article .highlight,
@@ -449,10 +450,6 @@ article h3 { font-size: 140%; }
 article h4 { font-size: 130%; }
 article h5 { font-size: 120%; }
 article h6 { font-size: 110%; }
-
-article p {
-	text-align: justify;
-}
 
 article p + p {
 	margin-top: 15px;
