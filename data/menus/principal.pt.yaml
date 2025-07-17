@@ -10,6 +10,7 @@
         - name: Corpo Técnico
           url: /info/tecnicos/
         - name: Mapa do CCMN
+          url: /info/mapa-ccmn/
         - name: Contato e Localização
           url: /info/contato/
         # - name: História
@@ -39,7 +40,7 @@
         - name: CAInfo
         - name: Manual do Aluno
           url: /info/manual-do-aluno-bcc/
-    - name: BCMT
+    - name: Ciências Matemáticas e da Terra
       children:
         - name: Ênfase em Análise de Dados
     - name: Graduação em Geral
