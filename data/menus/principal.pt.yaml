@@ -20,6 +20,7 @@
         - name: Laboratório de Computação e Informática
           url: /info/lci/
         - name: Cadastro de Alunos Novos
+          url: /info/cadastro/
 
 - name: Graduação
   children:
