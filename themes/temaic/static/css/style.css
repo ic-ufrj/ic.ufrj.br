@@ -437,23 +437,15 @@ article h1, article h2, article h3, article h4, article h5, article h6 {
 	line-height: 1.2em;
 }
 
-article h1 a, article h2 a, article h3 a, article h4 a, article h5 a,
-article h6 a {
-	color: var(--cor-accent-artigo);
-	font-size: 15px;
-	font-weight: 800;
-}
-
-article h1 { font-size: 160%; }
-article h2 { font-size: 150%; }
-article h3 { font-size: 140%; }
-article h4 { font-size: 130%; }
-article h5 { font-size: 120%; }
-article h6 { font-size: 110%; }
+article h1 { font-size: 160%; font-weight: 800; }
+article h2 { font-size: 140%; font-weight: 700; }
+article h3 { font-size: 120%; font-weight: 700; }
+article h4 {                  font-weight: 700; }
+article h5 {                  font-weight: 500; }
+article h6 {                  font-weight: 400; }
 
 article p + p {
 	margin-top: 15px;
-	text-indent: 40px;
 }
 
 article ul, article ol {
@@ -495,6 +487,7 @@ article code {
 article table, article pre {
 	display: block;
 	max-width: 100%;
+	/* TODO: testar overflow-x: auto */
 	overflow-x: scroll;
 	overflow-y: hidden;
 }
