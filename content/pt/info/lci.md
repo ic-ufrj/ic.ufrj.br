@@ -12,21 +12,25 @@ A Supervisão do LCI é responsável pela manutenção dos Laboratórios e compu
 
 # Laboratórios
 
-O Instituto gerencia quatro laboratórios exclusivos a seus alunos. Sua manutenção é de responsabilidade da Supervisão do LCI, equipe composta majoritariamente por alunos que tem vagas abertas todo ano. Para acessar os computadores, o nome de usuário deve ser a parte do seu email institucional antes do @ (arroba) e a senha é a senha digitada no formulário de criação de conta. Caso tenha esquecido a senha, [contate a Supervisão fisicamente](#a-supervisão).
+O Instituto gerencia quatro laboratórios exclusivos a seus alunos. Sua manutenção é de responsabilidade da Supervisão do LCI, equipe composta majoritariamente por alunos que tem vagas abertas todo ano. Para acessar os computadores dos LEP, o nome é "convidado" e, caso peça senha, é "convidado" também. Já nos LAB, o nome de usuário deve ser a parte do seu email institucional antes do @ (arroba) e a senha é a senha digitada no formulário de criação de conta. Caso tenha esquecido a senha, [contate a Supervisão fisicamente](#a-supervisão).
 
 Os laboratórios são:
 
 | Nome | Local  | N.º de Máquinas | Disponibilidade          |
 |------|--------|-----------------|--------------------------|
-| LEP1 | F-1013 | 40              | Somente durante aulas    |
+| LEP1 | F1     | 40              | Somente durante aulas    |
 | LEP2 | F1     | 40              | Somente durante aulas    |
 | LAB1 | E-2009 | 30              | Aberto até as 17:00      |
-| LAB3 | E1     | 20              | Aberto das 7:00 às 20:00 |
+| LAB3 | E1     | 20              | Aberto das 8:00 às 20:00 |
 
 Os LAB1 e LAB3 ficam disponíveis a todos os alunos quando não têm aulas. Os horários ocupados podem ser vistos abaixo:
 
+Lab 1:
+
 <div style="margin: 20px 0;">
 <iframe src="https://calendar.google.com/calendar/u/0/embed?src=dcc.ufrj.br_34373636333433373431@resource.calendar.google.com&ctz=America/Sao_Paulo" width="100%" height="400" scrolling="no"></iframe>
+
+Lab 3:
 
 <iframe src="https://calendar.google.com/calendar/u/0/embed?src=dcc.ufrj.br_333831383837313533@resource.calendar.google.com&ctz=America/Sao_Paulo" width="100%" height="400" scrolling="no"></iframe>
 </div>
@@ -53,7 +57,7 @@ UM DIA VOLTARÁ
 
 # Cadastro
 
-Atualmente o sistema de cadastro está em manutenção.
+O cadastro é [por meio dessa página](/info/cadastro/).
 
 # Disposições Finais
 
