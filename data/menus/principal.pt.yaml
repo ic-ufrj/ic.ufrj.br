@@ -9,8 +9,6 @@
           url: /info/docentes/
         - name: Corpo Técnico
           url: /info/tecnicos/
-        - name: Mapa do CCMN
-          url: /info/mapa-ccmn/
         - name: Contato e Localização
           url: /info/contato/
         # - name: História

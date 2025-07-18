@@ -26,6 +26,8 @@ CEP 21941-590
 
 O Centro de Ciências Matemáticas e da Natureza (CCMN) da Universidade Federal do Rio de Janeiro (UFRJ) compõe unidades de ensino, pesquisa e extensão desta universidade, sendo composto por sete unidades. O CCMN criou em 2003 o Centro Cultural Professor Horácio Macedo com a proposta de ser um difusor da ciência. O centro cultural é composto por um auditório conhecido como Roxinho, biblioteca, área de exposições, anfiteatro, museu, sala multimídia, laboratórios de informática, salas de seminários e um mini teatro de arena.
 
+![Mapa do CCMN](/img/ccmn_mapa.jpg)
+
 #### Email
 
 [Clique aqui para ver mais sobre a estrutura administrativa e os emails de contato.](/info/estrutura-administrativa)
