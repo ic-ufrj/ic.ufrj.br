@@ -65,6 +65,15 @@ document.getElementById("cadastrojs-formulario").addEventListener("submit", func
   delete data.senha2;
   console.log("Confirmado que as senhas batem");
 
+  data.data = data.data.replace(
+    /(\d{4})-(\d{2})-(\d{2})/,
+    (match, year, month, day) => {
+      return `${day}/${month}/${year}`;
+    }
+  );
+  console.log("Data substituída");
+  console.log(data.data);
+
   fetch("https://novo.ic.ufrj.br/api/cadastrar", {
     method: "POST",
     headers: {
