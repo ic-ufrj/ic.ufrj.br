@@ -613,3 +613,44 @@ article img {
 
 	text-align: center;
 }
+
+
+#cadastrojs-formulario {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.cadastrojs-elemento {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+
+.cadastrojs-elemento > input {
+	font-size: 100%;
+	border: 1px solid var(--cor-borda-cinza);
+	border-radius: 10px;
+	padding: 7px;
+}
+
+#cadastrojs-formulario > button {
+	font-size: 100%;
+	border: none;
+	border-radius: 10px;
+	padding: 7px;
+	background-color: var(--cor-ic2);
+	color: var(--cor-texto-branco);
+}
+
+#cadastrojs-problemas {
+	display: flex;
+	flex-direction: column;
+}
+
+#cadastrojs-problemas > p {
+	font-weight: 700;
+	font-size: 130%;
+}
+
+

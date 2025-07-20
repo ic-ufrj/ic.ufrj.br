@@ -15,6 +15,8 @@ Condições para cadastro:
 - O número de telefone precisa ser brasileiro.
 - A senha precisa ter entre 8 e 25 caracteres, dentre eles uma letra maiúscula, uma minúscula e um número.
 
+# Formulário
+
 <div id="cadastrojs-place-aqui">
 
 # Habilite o JS
