@@ -63,7 +63,6 @@ table {
 	--cor-borda-cinza: #919294;
 
 	--menu-padding: 100px;
-	--menu-total-height: 120px;
 }
 
 * {
@@ -147,7 +146,7 @@ header a:hover {
  * embaixo, porém ela não é exibida durante a maior parte do tempo */
 #main-header {
 	width: 100vw;
-	height: var(--menu-total-height);
+	height: 120px;
 
 	display: flex;
 	justify-content: space-between;
@@ -293,13 +292,12 @@ header a:hover {
 }
 
 @media screen and (max-width: 1100px) {
-	:root {
-		--menu-total-height: 250px;
-	}
 
 	#links-header > ul {
-		font-size: 11px;
-		gap: 5px;
+		position: static;
+		flex-direction: column;
+		background-color: var(--cor-fundo-menu-cima);
+		padding: 20px 40px;
 	}
 
 	#main-header {
@@ -311,8 +309,7 @@ header a:hover {
 	}
 
 	#main-header > a {
-		height: 80px;
-		margin-top: 20px;
+		display: none;
 	}
 
 	#main-header > ul {
@@ -322,13 +319,41 @@ header a:hover {
 	}
 
 	#main-header > ul > li > a {
-		font-size: 85%;
+		display: flex;
+		margin-top: 20px;
+		justify-content: center;
+	}
+
+	#main-header > ul > li {
+		width: 100%;
+		position: static;
+	}
+
+	#main-header > ul > li:hover > a,
+	#main-header > ul > li:focus > a,
+	#main-header > ul > li:focus-within > a {
+		text-decoration: none;
 	}
 
 	#main-header > ul > li > ul {
+		position: static;
 		flex-direction: column;
-		right: 0px;
-		z-index: 10;
+		align-items: center;
+		max-width: none;
+		width: 100%;
+		background: none;
+		border: none;
+		clip-path: inset(-50px 0 0 0);
+	}
+
+	#main-header > ul > li > ul::before {
+		content: none;
+	}
+
+	#main-header > ul > li > ul > li {
+		background-color: var(--cor-fundo);
+		border: none;
+		width: 100%;
 	}
 }
 
