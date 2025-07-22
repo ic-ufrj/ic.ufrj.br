@@ -114,11 +114,12 @@ header a:hover {
 }
 
 /* Se refere ao flexbox contendo os links externos no topo direito da página */
-#links-header > ul {
+#links-header {
 	/* Faz com que ele fique "dentro" do menu principal, ou seja, que ele
 	 * não faça o menu principal se deslocar para baixo. Já o right se
 	 * comporta de forma semelhante a um padding-right */
 	position: absolute;
+	top: 0px;
 	right: var(--menu-padding);
 
 	width: 100vw;
@@ -157,9 +158,13 @@ header a:hover {
 	background-color: var(--cor-fundo-menu-cima);
 }
 
+#hamburger-label, #hamburger {
+	display: none;
+}
+
 /* Se refere ao conjunto da logo do IC e do texto
  * "Instituto de Computação UFRJ" */
-#main-header > a {
+#logo-principal {
 	display: flex;
 	align-items: center;
 
@@ -173,13 +178,13 @@ header a:hover {
 
 /* Se refere às categorias O INSTITUTO, ENSINO, etc. Porém, também pode afetar
  * o menu escondido */
-#main-header > ul {
+#main-header > .principal {
 	display: flex;
 	align-items: center;
 }
 
 /* Se refere aos textos O INSTITUTO, ENSINO, etc */
-#main-header > ul > li > a {
+#main-header > .principal > li > a {
 	font-weight: 600;
 	font-size: inherit;
 	text-transform: uppercase;
@@ -195,20 +200,20 @@ header a:hover {
 	outline: none;
 }
 
-#main-header > ul > li:hover > a,
-#main-header > ul > li:focus > a,
-#main-header > ul > li:focus-within > a {
+#main-header > .principal > li:hover > a,
+#main-header > .principal > li:focus > a,
+#main-header > .principal > li:focus-within > a {
 	/*background-color: rgba(0, 0, 0, 0.2);
 	border-radius: 10px;*/
 	text-decoration: underline;
 }
 
-#main-header > ul > li {
+#main-header > .principal > li {
 	position: relative;
 }
 
 /* Se refere aos menus escondidos (há um para cada categoria) */
-#main-header > ul > li > ul {
+#main-header > .principal > li > ul {
 	/* Esconde o menu */
 	clip-path: inset(0 0 100% 0);
 
@@ -233,7 +238,7 @@ header a:hover {
 	transition: clip-path 150ms ease-out 100ms;
 }
 
-#main-header > ul > li > ul::before {
+#main-header > .principal > li > ul::before {
 	content: "";
 	width: 30px;
 	height: 20px;
@@ -245,15 +250,15 @@ header a:hover {
 }
 
 /* Se refere aos menus escondidos enquanto a categoria tem foco */
-#main-header > ul > li:hover > ul,
-#main-header > ul > li:focus > ul,
-#main-header > ul > li:focus-within > ul {
+#main-header > .principal > li:hover > ul,
+#main-header > .principal > li:focus > ul,
+#main-header > .principal > li:focus-within > ul {
 	clip-path: inset(-50px 0 0 0);
 	transition-delay: 200ms;
 }
 
 /* Se refere às subcategorias do menu escondido */
-#main-header > ul > li > ul > li {
+#main-header > .principal > li > ul > li {
 	border: 1px solid var(--cor-borda-cinza);
 	width: 200px;
 	padding: 20px;
@@ -261,7 +266,7 @@ header a:hover {
 }
 
 /* Se refere aos títulos das subcategorias do menu escondido */
-#main-header > ul > li > ul > li > span {
+#main-header > .principal > li > ul > li > span {
 	display: block;
 	margin-bottom: 30px;
 
@@ -269,15 +274,12 @@ header a:hover {
 }
 
 /* Se refere à lista de links contida dentro de cada subcategoria de menu */
-#main-header > ul > li > ul > li > ul {
+#main-header > .principal > li > ul > li > ul {
 	display: flex;
 	flex-direction: column;
 	gap: 15px;
 	line-height: 20px;
 }
-
-/* Sempre verificar se os breakpoints repetem */
-
 
 @media screen and (max-width: 1300px) {
 	:root {
@@ -285,15 +287,34 @@ header a:hover {
 	}
 }
 
-@media screen and (min-width: 900px) and (max-width: 1150px) {
-	#main-header > a > p {
+@media screen and (max-width: 1100px) {
+	#links-header, #main-header .principal {
 		display: none;
 	}
-}
 
-@media screen and (max-width: 1100px) {
+	#logo-principal {
+		margin: 0 auto 0 0;
+	}
 
-	#links-header > ul {
+	#logo-principal p {
+		display: none;
+	}
+
+	#hamburger-label {
+		display: block;
+		position: absolute;
+		top: 10px;
+		right: 10px;
+	}
+
+	#hamburger:checked + .principal {
+		display: block;
+	}
+	#hamburger:checked + .principal + #links-header {
+		display: block;
+	}
+
+	#links-header {
 		position: static;
 		flex-direction: column;
 		background-color: var(--cor-fundo-menu-cima);
@@ -308,34 +329,30 @@ header a:hover {
 		padding: 20px;
 	}
 
-	#main-header > a {
-		display: none;
-	}
-
-	#main-header > ul {
+	#main-header > .principal {
 		width: 100%;
 		flex-direction: column;
 		align-items: flex-end;
 	}
 
-	#main-header > ul > li > a {
+	#main-header > .principal > li > a {
 		display: flex;
 		margin-top: 20px;
 		justify-content: center;
 	}
 
-	#main-header > ul > li {
+	#main-header > .principal > li {
 		width: 100%;
 		position: static;
 	}
 
-	#main-header > ul > li:hover > a,
-	#main-header > ul > li:focus > a,
-	#main-header > ul > li:focus-within > a {
+	#main-header > .principal > li:hover > a,
+	#main-header > .principal > li:focus > a,
+	#main-header > .principal > li:focus-within > a {
 		text-decoration: none;
 	}
 
-	#main-header > ul > li > ul {
+	#main-header > .principal > li > ul {
 		position: static;
 		flex-direction: column;
 		align-items: center;
@@ -346,11 +363,11 @@ header a:hover {
 		clip-path: inset(-50px 0 0 0);
 	}
 
-	#main-header > ul > li > ul::before {
+	#main-header > .principal > li > ul::before {
 		content: none;
 	}
 
-	#main-header > ul > li > ul > li {
+	#main-header > .principal > li > ul > li {
 		background-color: var(--cor-fundo);
 		border: none;
 		width: 100%;

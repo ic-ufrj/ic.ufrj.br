@@ -1,25 +1,14 @@
-<nav id="links-header">
-  <ul>
-    {{ $menu := index site.Data.menus (printf "links.%s" .Site.Language.Lang) }}
-    {{ range $menu }}
-      <li><a href="{{ .url }}" target="_blank" rel="noreferrer">
-        {{ .name }}<i class="bi bi-arrow-up-right"></i>
-      </a></li>
-    {{ end }}
-    {{ range .Translations }}
-      <li><a href="{{ .RelPermalink }}" class="linguagem">{{ .Language.LanguageCode | upper }}</a></li>
-    {{ end }}
-  </ul>
-</nav>
 
 
 <nav id="main-header">
-  <a href="{{ "/" | relLangURL }}">
+  <a href="{{ "/" | relLangURL }}" id="logo-principal">
     <img src="{{ "/svg/logo-ic.svg" | relURL }}" alt="Logo do IC" width="80px">
     <p>{{ i18n "instituto_de_computacao" }}<br>UFRJ</p>
   </a>
+  <label for="hamburger" id="hamburger-label">HAMBURGO</label>
+  <input type="checkbox" id="hamburger">
 
-  <ul>
+  <ul class="principal">
     {{ $menu := index site.Data.menus (printf "principal.%s" .Site.Language.Lang) }}
     {{ range $menu }}
       <li>
@@ -45,7 +34,19 @@
       </li>
     {{ end }}
   </ul>
+  <ul id="links-header">
+    {{ $menu := index site.Data.menus (printf "links.%s" .Site.Language.Lang) }}
+    {{ range $menu }}
+      <li><a href="{{ .url }}" target="_blank" rel="noreferrer">
+        {{ .name }}<i class="bi bi-arrow-up-right"></i>
+      </a></li>
+    {{ end }}
+    {{ range .Translations }}
+      <li><a href="{{ .RelPermalink }}" class="linguagem">{{ .Language.LanguageCode | upper }}</a></li>
+    {{ end }}
+  </ul>
 </nav>
+
 
 
 
