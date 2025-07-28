@@ -39,6 +39,7 @@
         - name: Formas de Acesso
           url: /info/formas-de-acesso-bcc/
         - name: CAInfo
+          url: /info/cainfo/
         - name: Manual do Aluno
           url: /info/manual-do-aluno-bcc/
     - name: Ciências Matemáticas e da Terra
