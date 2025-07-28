@@ -1,6 +1,7 @@
 - name: O Instituto
   children:
-    - children:
+    - name: O Instituto
+      children:
         - name: Apresentação
           url: /info/apresentacao/
         - name: Estrutura Administrativa
@@ -15,7 +16,7 @@
         # - name: "Missão, Visão e Valores"
         # - name: Espaço Físico
         # - name: Identidade Visual
-    - name: Serviços
+    - name: Serviços do Instituto
       children:
         - name: Laboratório de Computação e Informática
           url: /info/lci/
