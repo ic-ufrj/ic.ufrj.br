@@ -16,7 +16,7 @@ draft: false
 | Efetivação de pedidos de inscrição em disciplinas | 31/07/2025 - 01/08/2025 |
 | Alteração de pedidos de inscrição em disciplinas | 04/08/2025 - 13/08/2025 |
 | Concordância das alterações de pedidos de inscrição em disciplinas | 14/08/2025 - 15/08/2025 |
-| Efetivação das alterações de peidos de inscrição em disciplinas | 18/08/2025 - 19/08/2025 |
+| Efetivação das alterações de pedidos de inscrição em disciplinas | 18/08/2025 - 19/08/2025 |
 | Desistência / trancamento de disciplinas (via SIGA) | 20/08/2025 - 04/09/2025 |
 | Concordância do trancamento de inscrição em disciplinas | 05/09/2025 - 08/09/2025 |
 | Efetivação do trancamento de inscrição em disciplinas | 09/09/2025 - 10/09/2025 |
@@ -37,7 +37,7 @@ draft: false
 | Efetivação de pedidos de inscrição em disciplinas | 13/03/2025 - 14/03/2025 |
 | Alteração de pedidos de inscrição em disciplinas | 17/03/2025 - 24/03/2025 |
 | Concordância das alterações de pedidos de inscrição em disciplinas | 25/03/2025 - 26/03/2025 |
-| Efetivação das alterações de peidos de inscrição em disciplinas | 25/03/2025 - 26/03/2025 |
+| Efetivação das alterações de pedidos de inscrição em disciplinas | 25/03/2025 - 26/03/2025 |
 | Desistência / trancamento de disciplinas (via SIGA) | 31/03/2025 - 12/04/2025 |
 | Concordância do trancamento de inscrição em disciplinas | 14/04/2025 - 15/04/2025 |
 | Efetivação do trancamento de inscrição em disciplinas | 16/04/2025 - 17/04/2025 |
