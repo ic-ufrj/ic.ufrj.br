@@ -23,25 +23,5 @@ Condições para cadastro:
 
 **ATENÇÃO: Se você vê essa mensagem é porque não está com o JavaScript ligado, por favor ative para o formulário aparecer.**
 
-Caso não queira usar JavaScript, crie sua conta via curl:
-
-```bash
-curl -X POST https://novo.ic.ufrj.br/api/cadastrar \
-  -H "Content-Type: application/json" \
-  -d '
-{
-  "dre": "123456789",
-  "data": "01/01/2025",
-  "hora": "14:32",
-  "codigo": "1234.5678.9ABC.DEFG.HIJK.LMNO.PQRS.TUVW",
-  "nome": "Amácio Mazzaropi",
-  "email": "mazzaropi@pamfilmes.com",
-  "telefone": "(21) 98765-4321",
-  "senha": "MinhaSenhaSegura12345"
-}'
-```
-
-</div>
-
 <script src="/js/cadastro.js"></script>
 

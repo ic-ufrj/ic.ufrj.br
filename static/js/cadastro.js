@@ -15,11 +15,11 @@ document.getElementById("cadastrojs-place-aqui").innerHTML = `
     <input type="tel" name="telefone" id="registrojs-telefone" placeholder="(21) 98765-4321" required>
   </div>
   <div class="cadastrojs-elemento">
-    <label for="registrojs-senha">Senha</label>
+    <label for="registrojs-senha" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">Senha</label>
     <input type="password" name="senha" id="registrojs-senha" required>
   </div>
   <div class="cadastrojs-elemento">
-    <label for="registrojs-senha2">Confirmar senha</label>
+    <label for="registrojs-senha2" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">Confirmar senha</label>
     <input type="password" name="senha2" id="registrojs-senha2" required>
   </div>
 
