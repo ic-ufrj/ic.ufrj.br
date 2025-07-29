@@ -16,11 +16,11 @@ document.getElementById("cadastrojs-place-aqui").innerHTML = `
   </div>
   <div class="cadastrojs-elemento">
     <label for="registrojs-senha">Senha</label>
-    <input type="password" name="senha" id="registrojs-senha" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+    <input type="password" name="senha" id="registrojs-senha" required>
   </div>
   <div class="cadastrojs-elemento">
     <label for="registrojs-senha2">Confirmar senha</label>
-    <input type="password" name="senha2" id="registrojs-senha2" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+    <input type="password" name="senha2" id="registrojs-senha2" required>
   </div>
 
   <div class="cadastrojs-elemento">
