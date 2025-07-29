@@ -15,12 +15,12 @@ document.getElementById("cadastrojs-place-aqui").innerHTML = `
     <input type="tel" name="telefone" id="registrojs-telefone" placeholder="(21) 98765-4321" required>
   </div>
   <div class="cadastrojs-elemento">
-    <label for="registrojs-senha" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">Senha</label>
-    <input type="password" name="senha" id="registrojs-senha" required>
+    <label for="registrojs-senha">Senha</label>
+    <input type="password" name="senha" id="registrojs-senha" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
   </div>
   <div class="cadastrojs-elemento">
-    <label for="registrojs-senha2" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">Confirmar senha</label>
-    <input type="password" name="senha2" id="registrojs-senha2" required>
+    <label for="registrojs-senha2">Confirmar senha</label>
+    <input type="password" name="senha2" id="registrojs-senha2" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
   </div>
 
   <div class="cadastrojs-elemento">
@@ -37,7 +37,7 @@ document.getElementById("cadastrojs-place-aqui").innerHTML = `
   </div>
   <div class="cadastrojs-elemento">
     <label for="registrojs-codigo">Código de Autenticação</label>
-    <input type="text" name="codigo" id="registrojs-codigo" placeholder="1234.5678.9ABC.DEFG.HIJK.LMNO.PQRS.TUVW" pattern="[A-F0-9]{4}\\.[A-F0-9]{4}\\.[A-F0-9]{4}\\.[A-F0-9]{4}\\.[A-F0-9]{4}\\.[A-F0-9]{4}\\.[A-F0-9]{4}\\.[A-F0-9]{4}" required>
+    <input type="text" name="codigo" id="registrojs-codigo" placeholder="1234.5678.9ABC.DEF1.4918.1923.AAAA.F124" pattern="[A-F0-9]{4}\\.[A-F0-9]{4}\\.[A-F0-9]{4}\\.[A-F0-9]{4}\\.[A-F0-9]{4}\\.[A-F0-9]{4}\\.[A-F0-9]{4}\\.[A-F0-9]{4}" required>
   </div>
 
   <div id="cadastrojs-problemas"></div>
