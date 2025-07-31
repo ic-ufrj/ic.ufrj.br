@@ -4,9 +4,13 @@ date: 2025-06-27T23:29:25-03:00
 draft: false
 ---
 
-# Período 2025.2
+# Período 2025.2 [^1]
 
-**Duração: 04/08/2025 a 13/12/2025**
+[^1]: O Conselho Universitário, no dia 24 de julho de 2025, atualizou o calendário acadêmico e algumas datas foram alteradas. As datas antigas ainda estão na tabela, porém riscadas, com as datas novas no lugar.
+
+**Duração: 04/08/2025 a** (~13/12/2025~) **20/12/2025**
+
+**Atenção:** A duração do período foi recentemente alterada e as informações da tabela podem ainda não estar atualizadas.
 
 | Atividade | Data |
 | --- | --: |
