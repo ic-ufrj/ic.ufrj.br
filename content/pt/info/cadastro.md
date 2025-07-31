@@ -15,6 +15,10 @@ Condições para cadastro:
 - O número de telefone precisa ser brasileiro.
 - A senha precisa ter entre 8 e 25 caracteres, dentre eles uma letra maiúscula, uma minúscula e um número.
 
+## Partes do Documento
+
+![Imagem motrando os campos no documento "Regularmente Matriculado"](/cadastro/certidao.png)
+
 # Formulário
 
 <div id="cadastrojs-place-aqui">
@@ -22,6 +26,8 @@ Condições para cadastro:
 # Habilite o JS
 
 **ATENÇÃO: Se você vê essa mensagem é porque não está com o JavaScript ligado, por favor ative para o formulário aparecer.**
+
+</div>
 
 <script src="/js/cadastro.js"></script>
 
