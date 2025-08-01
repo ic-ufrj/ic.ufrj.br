@@ -156,7 +156,7 @@ draft: false
     <span>{{< nome_completo silvana >}}</span>
     <span>{{< nome_completo tiagoms >}}</span>
     <span>Izabel Alcântara (Representante Discente)</span>
-    <span>Vitor Fernandes de Carvalho Ambrizziat (Representante Discente)</span>
+    <span>Vitor Fernandes de Carvalho Ambrizzi (Representante Discente)</span>
   {{< /grupo >}}
 </ul>
 
