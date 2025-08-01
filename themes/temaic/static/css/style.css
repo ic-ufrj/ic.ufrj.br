@@ -584,6 +584,10 @@ article a.footnote-ref::after {
 	content: "]";
 }
 
+article hr {
+	margin: 35px 0;
+}
+
 
 
 
