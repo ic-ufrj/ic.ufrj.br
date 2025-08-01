@@ -1,15 +1,14 @@
-# membro da COAA
-cassioefs:
-  nome: Cássio Silva
+# Apesar de vazio, deixe esse arquivo aqui pois alguns shortcodes pegam coisas
+# dele.
+#
+# Caso precise, pode adicionar aqui um elemento que seja útil conferir, por
+# exemplo, o nome completo com {{< nome_completo username >}} mas que não deve
+# ser listado em Corpo Docente nem em Corpo Técnico.
+#
+# Nesse caso, substitua o {} por algo como:
+#
+# arthurbo:
+#   nome: Arthur Bacci
 
-# membro da COAA
-joaovbn:
-  nome: João Victor Nascimento
+{}
 
-# membro da Congregação
-izabelsra:
-  nome: Izabel Alcântara
-
-# membro da Congregação
-vitorfca:
-  nome: Vitor Fernandes de Carvalho Ambrizzi

@@ -1,0 +1,3 @@
+{{- $data := merge .Site.Data.docentes .Site.Data.tecnicos .Site.Data.outros -}}
+{{- $pessoa := index $data (.Get 0) -}}
+{{- $pessoa.nome -}}

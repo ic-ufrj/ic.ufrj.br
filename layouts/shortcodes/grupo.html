@@ -1,0 +1,14 @@
+{{ if (.Get 1) }}
+<li class="card-pessoal" id="{{ .Get 1 | urlize }}">
+{{ else }}
+<li class="card-pessoal">
+{{ end }}
+  <span class="nome">{{ .Get 0 }}</span>
+
+  {{ if (.Get 1) }}
+    {{ partial "email.html" (.Get 1) }}
+  {{ end }}
+
+  {{ .Inner }}
+</li>
+
