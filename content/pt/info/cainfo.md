@@ -34,17 +34,17 @@ O CAInfo possui um estatuto que norteia nosso funcionamento e princípios, atual
 
 O CAInfo é composto por alunos voluntários que dedicam seu tempo e esforço para a melhoria da vida acadêmica. Conheça a nossa gestão, eleita em **04/09/2024**:
 
-- Brenno Alves de Castro - Representante discente na COAA
-- Cássio Emanuel F. da Silva - Representante discente no Conselho de Coordenação do CCMN
+- Brenno Alves de Castro - COAA-IC
+- Cássio Emanuel F. da Silva - Conselho de Coordenação do CCMN
 - Giovana Aguiar Moraes
 - **Giovanna Magalhães Lavouras** - Diretora da Comissão Feminina
 - Isaac Marconi Pereira Raboeira
-- Izabel de Souza Resende Alcantara - Representante discente na Congregação
+- Izabel de Souza Resende Alcantara - Congregação IC
 - João Pedro Fernandes dos Santos Tiago
-- **João Victor Borges Nascimento** - Diretor-Presidente e Representante discente na COAA
+- **João Victor Borges Nascimento** - Diretor-Presidente e COAA-IC
 - Maria Eduarda Albuquerque da Silva
 - **Ricardo Augusto de Borba** - Diretor-Tesoureiro
-- **Vítor Fernandes de Carvalho Ambrizzi** - Diretor-Secretário e Representante discente na Congregação
+- **Vítor Fernandes de Carvalho Ambrizzi** - Diretor-Secretário e Congregação IC
 
 O CAInfo está sempre aberto a novas ideias e à participação de mais alunos. Se você tem interesse em contribuir, **entre em contato com nossa equipe!**
 
