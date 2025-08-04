@@ -32,6 +32,7 @@ draft: false
 <ul class="cards-pessoais">
   {{< grupo "Coordenação do Curso de Bacharelado em Ciência da Computação" "coord_grad" >}}
     <span>{{< nome_completo vigusmao >}}</span>
+    <span>{{< nome_completo marcellogt >}} (Vice)</span>
   {{< /grupo >}}
 
   {{< grupo "Coordenação da Habilitação em Suporte à Decisão do Curso de Bacharelado em Ciências Matemáticas e da Terra" >}}
