@@ -91,7 +91,6 @@ draft: false
   {{< /grupo >}}
 
   {{< grupo "Comissão de Orientação e Acompanhamento Acadêmico (COAA)" "coaa" >}}
-    <span>{{< nome_completo angela >}}</span>
     <span>{{< nome_completo cfb >}}</span>
     <span>{{< nome_completo jcps >}}</span>
     <span>{{< nome_completo juvianna >}}</span>
