@@ -168,7 +168,7 @@ header a:hover {
 	display: flex;
 	align-items: center;
 
-	height: 120px;
+	height: 100%;
 
 	gap: 30px;
 
@@ -300,6 +300,7 @@ header a:hover {
 
 	#logo-principal {
 		margin: 0 auto 0 0;
+		height: 70px;
 	}
 	#logo-principal > img {
 		width: 60px;
@@ -311,7 +312,7 @@ header a:hover {
 		position: absolute;
 		top: 0;
 		right: var(--menu-padding);
-		height: 120px;
+		height: 70px;
 		font-size: 60px;
 	}
 
