@@ -259,7 +259,7 @@ header a:hover {
 
 /* Se refere às subcategorias do menu escondido */
 #main-header > .principal > li > ul > li {
-	border: 1px solid var(--cor-borda-cinza);
+	/*border: 1px solid var(--cor-borda-cinza);*/
 	width: 200px;
 	padding: 20px;
 	border-radius: 10px;
