@@ -134,14 +134,38 @@ draft: false
   {{< /grupo >}}
 </ul>
 
+# Congregação
 
+Email: {{< email congregacao >}}
+
+| Membro | Representação | Suplente? |
+|--------|---------------|-----------|
+| {{< nome_completo anamaria >}} | Presidente | |
+| {{< nome_completo carla >}} | Vice-Presidente | |
+| {{< nome_completo hugonobrega >}} | Chefe do DCC | |
+| {{< nome_completo mitre >}} | Professores Titulares | |
+| {{< nome_completo vigusmao >}} | Professores Associados | |
+| {{< nome_completo juvianna >}} | Professores Associados | |
+| {{< nome_completo jonice >}} | Professores Associados | 1º Suplente |
+| {{< nome_completo silvana >}} | Professores Associados | 2º Suplente |
+| {{< nome_completo carolina >}} | Professores Adjuntos | |
+| {{< nome_completo julianabsf >}} | Professores Adjuntos | |
+| {{< nome_completo giseli >}} | Professores Adjuntos | 1º Suplente |
+| {{< nome_completo eldany >}} | Professores Adjuntos | 2º Suplente |
+| {{< nome_completo hugomg >}} | Professores Assistentes | |
+| {{< nome_completo marcosleipnitz >}} | Professores Assistentes | Suplente |
+| {{< nome_completo tiagoms >}} | Técnico-Administrativos | |
+| {{< nome_completo rerison >}} | Técnico-Administrativos | Suplente |
+| Vitor Fernandes de Carvalho Ambrizzi | Discentes | |
+| Izabel Souza Resende | Discentes | Suplente |
+
+<!--
 # Congregação
 
 <ul class="cards-pessoais">
   {{< grupo "Congregação do Instituto de Computação" "congregacao" >}}
     <span>{{< nome_completo anamaria >}} (Presidente)</span>
     <span>{{< nome_completo carla >}} (Vice-Presidente)</span>
-    <span>{{< nome_completo hugonobrega >}} (Chefe do DCC)</span>
     <span>{{< nome_completo mitre >}} (Professor Titular)</span>
     <span>{{< nome_completo vigusmao >}} (Professor Associado)</span>
     <span>{{< nome_completo juvianna >}} (Professor Associado)</span>
@@ -155,8 +179,9 @@ draft: false
     <span>{{< nome_completo marcosleipnitz >}} (Professor Assistente)</span>
     <span>{{< nome_completo tiagoms >}} (Técnico-Administrativo)</span>
     <span>{{< nome_completo rerison >}} (Técnico-Administrativo)</span>
-    <span>Izabel Alcântara (Discente)</span>
+    <span>Izabel Sousa Resende (Discente)</span>
     <span>Vitor Fernandes de Carvalho Ambrizzi (Discente)</span>
   {{< /grupo >}}
 </ul>
+-->
 
