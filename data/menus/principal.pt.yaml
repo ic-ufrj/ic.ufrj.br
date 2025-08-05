@@ -46,6 +46,7 @@
     - name: Ciências Matemáticas e da Terra
       children:
         - name: Ênfase em Análise de Dados
+          url: /info/analise-de-dados-bcmt/
     - name: Graduação em Geral
       children:
         # - name: Disciplinas de Formação
