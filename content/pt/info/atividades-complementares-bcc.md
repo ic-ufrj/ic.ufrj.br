@@ -37,14 +37,14 @@ Algumas observações gerais:
 | Participações em Comissões de grupos de trabalhos acadêmicos como representante discente | 3 meses | 3h por mês | 18h |
 | Mesário em processos eleitorais oficiais (TSE/TRE) | Por dia de evento | 3h por evento | 9h |
 | Membro de diretoria estudantil | 3 meses | 3h por mês | 18h |
-| Participação na EJCM como membro simples, mantendo no período CR e CR Acumulado acima de 5,0 e não realizando estágio no período | 3 meses | 3h por mês | 27h |
-| Participação na EJCM como Conselheiro ou Diretor, mantendo no período CR e CR Acumulado acima de 5,0 e não realizando estágio no período | 3 meses | 5h por mês | 30h |
+| Participação na EjCM como membro simples, mantendo no período CR e CR Acumulado acima de 5,0 e não realizando estágio no período | 3 meses | 3h por mês | 27h |
+| Participação na EjCM como Conselheiro ou Diretor, mantendo no período CR e CR Acumulado acima de 5,0 e não realizando estágio no período | 3 meses | 5h por mês | 30h |
 | Participação na organização de eventos (SNCT, Semana da Computação, etc.) | Por evento | 5h por evento | 30h |
 | Monitor de disciplina ofertada pelo IC (com ou sem bolsa e sem contar créditos) | Por semestre | 15h por semestre | 30h |
 | Monitor de laboratório LCI/LIGs (com ou sem bolsa e sem contar créditos) | Por semestre | 15h por semestre | 30h |
 | Trabalhos comunitários | 3 meses | 5h por mês | 30h |
 | Intercâmbio Acadêmico (atividade não creditada no histórico) | 1 mês | 5h por mês | 30h |
-| Participação em projeto determinado por área de Ciência da Computação oferecido durante a graduação, externos à UFRJ | Por curso | 50% do número de horas do curso realizado | — |
+| Cursos de aperfeiçoamento dentro da área de Ciência da Computação realizados durante a graduação, externos à UFRJ | Por curso | 50% do número de horas do curso realizado | — |
 | Cursos de idiomas realizados durante a graduação | Por semestre | 5h por semestre | 20h |
 
 Outras atividades, diferentes das mencionadas nas tabelas, poderão ser consideradas para a totalização das Atividades Complementares. Nesse caso, a determinação da quantidade de horas concedida será feita após análise da Comissão de Atividades Complementares (e-mail: coac@ic.ufrj.br).
@@ -67,8 +67,8 @@ A seguir, são listados os tipos aceitos de documentos comprobatórios para cada
 | Participações em Comissões de grupos de trabalhos acadêmicos como representante discente | Declaração assinada pelo(a) presidente da Comissão em questão informando por quanto tempo o aluno participou de suas atividades |
 | Mesário em processos eleitorais oficiais (TSE/TRE) | Declaração da Justiça Eleitoral |
 | Membro de diretoria estudantil | Ata oficial do CA ou do DCE atestando a eleição do aluno e a vigência |
-| Participação na EJCM como membro simples, mantendo no período CR e CR Acumulado acima de 5,0 e não realizando estágio no período | Declaração da EJCM assinada por seu presidente informando o cargo do aluno e por quanto tempo ele desenvolveu essa atividade |
-| Participação na EJCM como Conselheiro ou Diretor, mantendo no período CR e CR Acumulado acima de 5,0 e não realizando estágio no período | Declaração da EJCM assinada por seu presidente informando o cargo do aluno e por quanto tempo ele desenvolveu essa atividade |
+| Participação na EjCM como membro simples, mantendo no período CR e CR Acumulado acima de 5,0 e não realizando estágio no período | Declaração da EjCM assinada por seu presidente informando o cargo do aluno e por quanto tempo ele desenvolveu essa atividade |
+| Participação na EjCM como Conselheiro ou Diretor, mantendo no período CR e CR Acumulado acima de 5,0 e não realizando estágio no período | Declaração da EjCM assinada por seu presidente informando o cargo do aluno e por quanto tempo ele desenvolveu essa atividade |
 | Participação na organização de eventos (SNCT, Semana da Computação, etc.) | Declaração assinada pelo coordenador da organização do evento |
 | Monitor de disciplina ofertada pelo IC (com ou sem bolsa e sem contar créditos) | Declaração assinada pelo(s) professor(es) responsável pela disciplina indicando o nome e código da disciplina e o semestre em que ocorreu a monitoria |
 | Monitor de laboratório LCI/LIGs (com ou sem bolsa e sem contar créditos) | Declaração assinada pelo(s) professor(es)/coordenador(es)/responsável pelo laboratório indicando o semestre em que ocorreu a monitoria |
