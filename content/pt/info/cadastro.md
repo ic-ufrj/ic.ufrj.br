@@ -2,6 +2,7 @@
 title: "Cadastro"
 date: 2025-07-18T00:30:04-03:00
 draft: false
+description: "Página de cadastro no LDAP e email institucional para alunos novos do Instituto de Computação"
 ---
 
 **Antes de tudo, por favor leia a página [Laboratório de Computação e Informática](/info/lci/).**
