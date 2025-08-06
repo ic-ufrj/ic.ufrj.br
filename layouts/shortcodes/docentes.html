@@ -7,7 +7,7 @@
 {{- $data := sort $data "nome" -}}
 
 <ul class="cards-pessoais">
-  {{ range $data }}
+  {{ range where $data "cargo" (cond (eq (.Get 0) "substitutos") "==" "!=") "substituto" }}
 
     <!-- Acha os grupos em que o docente faz parte -->
     {{ $grupos := slice }}

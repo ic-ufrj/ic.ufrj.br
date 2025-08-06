@@ -5,9 +5,11 @@ draft: false
 description: "Lista de docentes do Instituto de Computação da UFRJ"
 ---
 
-Aqui estão os professores do Instituto de Computação:
+# Professores Permanentes
 
 {{< docentes >}}
 
+# Professores Substitutos
 
+{{< docentes substitutos >}}
 
