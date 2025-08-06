@@ -12,7 +12,7 @@
     {{ $menu := index site.Data.menus (printf "principal.%s" .Site.Language.Lang) }}
     {{ range $menu }}
       <li>
-        <a>{{ .name }}</a>
+        <button type="button" aria-expanded="false" aria-controls="{{ .name | urlize }}-dropdown">{{ .name }}</button>
         <ul>
           {{ range .children }}
             <li>

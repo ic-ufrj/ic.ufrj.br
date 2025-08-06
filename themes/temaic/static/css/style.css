@@ -184,9 +184,9 @@ header a:hover {
 }
 
 /* Se refere aos textos O INSTITUTO, ENSINO, etc */
-#main-header > .principal > li > a {
+#main-header > .principal > li > button {
 	font-weight: 600;
-	font-size: inherit;
+	font-size: 18px;
 	text-transform: uppercase;
 
 	padding: 0.5em 0.5em;
@@ -200,9 +200,9 @@ header a:hover {
 	outline: none;
 }
 
-#main-header > .principal > li:hover > a,
-#main-header > .principal > li:focus > a,
-#main-header > .principal > li:focus-within > a {
+#main-header > .principal > li:hover > button,
+#main-header > .principal > li:focus > button,
+#main-header > .principal > li:focus-within > button {
 	/*background-color: rgba(0, 0, 0, 0.2);
 	border-radius: 10px;*/
 	text-decoration: underline;
@@ -346,7 +346,7 @@ header a:hover {
 		align-items: flex-end;
 	}
 
-	#main-header > .principal > li > a {
+	#main-header > .principal > li > button {
 		display: flex;
 		margin-top: 20px;
 		justify-content: center;
@@ -357,9 +357,9 @@ header a:hover {
 		position: static;
 	}
 
-	#main-header > .principal > li:hover > a,
-	#main-header > .principal > li:focus > a,
-	#main-header > .principal > li:focus-within > a {
+	#main-header > .principal > li:hover > button,
+	#main-header > .principal > li:focus > button,
+	#main-header > .principal > li:focus-within > button {
 		text-decoration: none;
 	}
 
@@ -371,7 +371,13 @@ header a:hover {
 		width: 100%;
 		background: none;
 		border: none;
-		clip-path: inset(-50px 0 0 0);
+		display: none;
+	}
+
+	#main-header > .principal > li:hover > ul,
+	#main-header > .principal > li:focus > ul,
+	#main-header > .principal > li:focus-within > ul {
+		display: flex;
 	}
 
 	#main-header > .principal > li > ul::before {
