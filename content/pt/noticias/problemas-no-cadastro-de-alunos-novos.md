@@ -2,6 +2,7 @@
 title: "Problemas No Cadastro De Alunos Novos"
 date: 2025-08-06T22:27:35-03:00
 draft: false
+description: "Informações sobre problemas de cadastro desse período"
 ---
 
 Até agora me foram relatados alguns problemas com o formulário de cadastro e aqui estão as soluções para os erros mais comuns. Caso tenha algum problema que não esteja listado aqui ou caso as soluções daqui não resolvam, contate a Supervisão pelo email {{< email suporte >}}. **Não use o email {{< email supervisao >}}, ele não funciona de emails externos.**
