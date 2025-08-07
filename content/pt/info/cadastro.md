@@ -5,6 +5,12 @@ draft: false
 description: "Página de cadastro no LDAP e email institucional para alunos novos do Instituto de Computação"
 ---
 
+# Informe
+
+O cadastro encontra-se temporariamente desativado por conta de problemas técnicos com o sistema. Alunos que precisam de conta **urgentemente** podem comparecer à Supervisão para criação manual. Outros alunos, por favor aguardem um pouco, em breve disponibilizaremos outro formulário de cadastro.
+
+<!--
+
 **Antes de tudo, por favor leia a página [Laboratório de Computação e Informática](/info/lci/).**
 
 Condições para cadastro:
@@ -32,3 +38,4 @@ Condições para cadastro:
 
 <script src="/js/cadastro.js"></script>
 
+-->
