@@ -3,10 +3,14 @@
   <article>
     <ul>
       {{ range .Pages }}
-        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+        <li>
+          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+          <div class="{{ if .Params.description }}descricao-noticia{{ else }}preview-noticia{{ end }}">
+            {{ .Params.description | default .Summary }}
+          </div>
+        </li>
       {{ end }}
     </ul>
   </article>
-  <ul class="authors"></ul>
 {{ end }}
 
