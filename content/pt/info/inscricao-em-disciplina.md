@@ -2,6 +2,7 @@
 title: "Inscrição em Disciplina"
 date: 2025-06-28T20:06:26-03:00
 draft: false
+description: "FAQ com informações sobre o processo de Inscrição em Disciplina"
 ---
 
 ### Onde fazer a inscrição

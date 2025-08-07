@@ -2,6 +2,7 @@
 title: "Formas de Acesso ao BCC"
 date: 2025-07-01T13:44:08-03:00
 draft: false
+description: "Informações sobre a distribuição das vagas para acesso ao BCC"
 ---
 
 # Formas de acesso ao curso de Ciência da Computação

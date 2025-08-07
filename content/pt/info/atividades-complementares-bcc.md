@@ -2,6 +2,7 @@
 title: "Normas de Atividades Complementares do BCC"
 date: 2025-08-04T19:19:16-03:00
 draft: false
+description: "Informações sobre a contagem de horas complementares"
 ---
 
 # Versão Curricular

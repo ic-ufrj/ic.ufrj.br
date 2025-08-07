@@ -2,6 +2,7 @@
 title: "Normas de Estágio do BCC"
 date: 2025-07-17T13:30:24-03:00
 draft: false
+description: "Informações sobre o estágio do BCC, desde os requisitos até a renovação do contrato"
 ---
 
 Todas as atividades relacionadas a estágios para alunos do Curso de Ciência da Computação serão acompanhadas pela Comissão de Estágio do IC. Suas informações de contato estão disponíveis [aqui](/info/estrutura-administrativa#estagio).

@@ -2,6 +2,7 @@
 title: "Apresentação"
 date: 2025-06-18T17:09:45-03:00
 draft: false
+description: "Apresentação do Instituto de Computação, sua história e seus objetivos"
 ---
 
 O **Instituto de Computação**, criado da transformação do Departamento de
@@ -11,7 +12,7 @@ Art. 24 e do Art. 49 do Estatuto da Universidade Federal do Rio de Janeiro.
 
 O Instituto de Computação é responsável:
 - pelo Bacharelado em Ciência da Computação;
-- pela habilitação Análise de Suporte à Decisão do Bacharelado em Ciências
+- pela habilitação Análise de Dados do Bacharelado em Ciências
 Matemáticas e da Terra do CCMN;
 - pelo Programa de Pós-Graduação em Informática;
 - por diversas disciplinas de Cálculo Numérico e Computação I e II para

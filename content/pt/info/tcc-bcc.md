@@ -2,6 +2,7 @@
 title: "Trabalho de Conclusão de Curso (BCC)"
 date: 2025-08-05T19:45:05-03:00
 draft: false
+description: "Informações sobre as exigências, processos e outros detalhes sobre o Trabalho de Conclusão do Curso do BCC"
 ---
 
 # Exigências

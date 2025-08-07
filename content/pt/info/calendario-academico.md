@@ -2,6 +2,7 @@
 title: "Calendário Acadêmico"
 date: 2025-06-27T23:29:25-03:00
 draft: false
+description: "Calendário acadêmico da UFRJ para os cursos do Instituto de Computação"
 ---
 
 # Período 2025.2 [^1]

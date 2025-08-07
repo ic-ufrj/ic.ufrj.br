@@ -2,6 +2,7 @@
 title: "Laboratório de Computação e Informática"
 date: 2025-07-17T16:45:55-03:00
 draft: false
+description: "Informações sobre a Supervisão do LCI, equipe de monitores que gerencia os LCI, sobre o LCI e sobre o cadastro dos alunos do Instituto"
 ---
 
 # A Supervisão

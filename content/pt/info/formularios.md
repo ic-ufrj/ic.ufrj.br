@@ -2,6 +2,7 @@
 title: "Formulários"
 date: 2025-06-20T01:05:37-03:00
 draft: false
+description: "Formulários e requerimentos úteis para alguns processos na Secretaria de Graduação do BCC"
 ---
 
 O aluno deve entrar em contato com a Secretaria de Graduação por email,
