@@ -474,7 +474,7 @@ main h1, main h2, main h3, main h4, main h5, main h6 {
 article {
 	margin-top: 20px;
 	margin-bottom: 20px;
-	text-align: justify;
+	/* text-align: justify; */
 }
 
 article table, article blockquote, article pre, article .highlight,
