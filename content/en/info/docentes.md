@@ -3,16 +3,16 @@ title: "Faculty"
 slug: faculty
 date: 2025-06-20T23:42:27-03:00
 draft: false
+description: "List of professors of the Institute of Computing"
 ---
 
-<!--
-Caso queira editar as informações dos docentes, modifique os arquivos em
-data/pessoas_e_grupos.yaml
--->
+# Permanent Professors
 
-Faculty of the Institute of Computing:
+{{< docentes >}}
 
-{{< docentes "titular" "adjunto" "associado" "assistente" "substituto" >}}
+# Substitute Professors
+
+{{< docentes substitutos >}}
 
 
 
