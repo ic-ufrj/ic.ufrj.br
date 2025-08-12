@@ -4,6 +4,7 @@
     {{ range .Pages }}
       <a href="{{ .RelPermalink }}" class="noticia">
         <h2>{{ .Title }}</h2>
+        <small>{{ .Date | time.Format ":date_long" }}</small>
         <div class="{{ if .Params.description }}descricao-noticia{{ else }}preview-noticia{{ end }}">
           {{ .Params.description | default .Summary }}
         </div>

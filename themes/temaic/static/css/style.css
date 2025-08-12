@@ -748,8 +748,15 @@ article hr {
 	border: 1px solid var(--cor-borda-cinza);
 	border-radius: 10px;
 	padding: 20px;
-	padding-top: 0px;
 	margin: 10px 0;
+}
+.noticia > h2 {
+	margin-top: 0px;
+	margin-bottom: 5px;
+}
+.noticia > small {
+	font-weight: 200;
+	margin-bottom: 10px;
 }
 
 .preview-noticia {

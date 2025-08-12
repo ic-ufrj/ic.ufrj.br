@@ -6,5 +6,25 @@
   <img class="imagem-principal" src="/img/parede-vermelha.jpg">
 </div>
 
+<article>
+
+  <a title="Consultar Cadastro e-MEC" href="https://emec.mec.gov.br/emec/consulta-cadastro/detalhamento/d96957f455f6405d14c6542552b0f6eb/NTg2" rel="alternate"><img src="https://ufrj.br/wp-content/uploads/2022/11/cadastro-e-mec.png" alt="banner consulta cadastro e-mec" width="376" height="174"></a>
+
+  <h1>Notícias Recentes</h1>
+
+  {{ range first 5 (where .Site.RegularPages "Section" "noticias" ) }}
+    <a href="{{ .RelPermalink }}" class="noticia">
+      <h2>{{ .Title }}</h2>
+      <small>{{ .Date | time.Format ":date_long" }}</small>
+      <div class="{{ if .Params.description }}descricao-noticia{{ else }}preview-noticia{{ end }}">
+        {{ .Params.description | default .Summary }}
+      </div>
+    </a>
+  {{ end }}
+
+  <p><strong><a href="{{ "/noticias" | relLangURL }}">Ver mais notícias</a></strong></p>
+
+</article>
+
 {{ end }}
 
