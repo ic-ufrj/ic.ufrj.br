@@ -47,7 +47,7 @@
           url: /info/cainfo/
         - name: Manual do Aluno
           url: /info/manual-do-aluno-bcc/
-    - name: Ciências Matemáticas e da Terra # obs: non-break-space no "da Terra"
+    - name: Ciências Matemáticas e da&nbsp;Terra
       children:
         - name: Ênfase em Análise de Dados
           url: /info/analise-de-dados-bcmt/
