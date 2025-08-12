@@ -17,14 +17,14 @@
           {{ range .children }}
             <li>
               {{ if .name }}
-                <span>{{ .name }}</span>
+                <span>{{ htmlUnescape .name }}</span>
               {{ end }}
               <ul>
                 {{ range .children }}
                   {{ if .url }}
-                    <li><a href="{{ .url }}">{{ .name }}</a></li>
+                    <li><a href="{{ .url }}">{{ htmlUnescape .name }}</a></li>
                   {{ else }}
-                    <li><a href="https://dcc.ufrj.br/" style="color:red;">{{ .name }}</a></li>
+                    <li><a href="https://dcc.ufrj.br/" style="color:red;">{{ htmlUnescape .name }}</a></li>
                   {{ end }}
                 {{ end }}
               </ul>
