@@ -1,16 +1,14 @@
 {{ define "main" }}
   <div class="masshead"><h1>{{ i18n "lista_de_artigos" }}</h1></div>
   <article>
-    <ul>
-      {{ range .Pages }}
-        <li>
-          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-          <div class="{{ if .Params.description }}descricao-noticia{{ else }}preview-noticia{{ end }}">
-            {{ .Params.description | default .Summary }}
-          </div>
-        </li>
-      {{ end }}
-    </ul>
+    {{ range .Pages }}
+      <a href="{{ .RelPermalink }}" class="noticia">
+        <h2>{{ .Title }}</h2>
+        <div class="{{ if .Params.description }}descricao-noticia{{ else }}preview-noticia{{ end }}">
+          {{ .Params.description | default .Summary }}
+        </div>
+      </a>
+    {{ end }}
   </article>
 {{ end }}
 

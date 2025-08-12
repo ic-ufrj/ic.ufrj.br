@@ -726,7 +726,7 @@ article hr {
 }
 
 .icones-home li a div {
-  border: solid 1px var(--cor-borda-cinza);
+  border: 1px solid var(--cor-borda-cinza);
   border-radius: 50%;
   width: 80px;
   height: 80px;
@@ -792,6 +792,17 @@ article hr {
 	font-size: 130%;
 }
 
+.noticia {
+	display: flex;
+	flex-direction: column;
+	text-decoration: inherit;
+	color: inherit;
+	border: 1px solid var(--cor-borda-cinza);
+	border-radius: 10px;
+	padding: 20px;
+	padding-top: 0px;
+	margin: 10px 0;
+}
 
 .preview-noticia {
   -webkit-mask-image: linear-gradient(to bottom, black 30%, transparent 100%);
