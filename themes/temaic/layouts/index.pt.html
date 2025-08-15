@@ -17,7 +17,7 @@
       <h2>{{ .Title }}</h2>
       <small>{{ .Date | time.Format ":date_long" }}</small>
       <div class="{{ if .Params.description }}descricao-noticia{{ else }}preview-noticia{{ end }}">
-        {{ .Params.description | default .Summary }}
+        {{ .Params.description | default .Summary | plainify }}
       </div>
     </a>
   {{ end }}
