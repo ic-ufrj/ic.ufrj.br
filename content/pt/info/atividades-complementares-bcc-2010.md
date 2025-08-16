@@ -6,7 +6,7 @@ draft: false
 
 # Versão Curricular
 
-**O conteúdo dessa página se refere ao currículo 2010/1.** Para saber o seu, veja o que está escrito em "Versão Curricular" no seu BOA.
+**O conteúdo dessa página se refere ao currículo 2010/1.** Para saber o seu, veja o que está escrito em "Versão Curricular" no seu BOA. **[Link para a página do currículo 2022/2.](/info/atividades-complementares-bcc)**
 
 # Atividades Complementares
 
