@@ -601,14 +601,11 @@ article hr {
 
 .cards-pessoais {
 	width: 100%;
-	margin: 0 auto;
+	margin: 20px 0;
 	list-style: none;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
+	display: grid;
 	gap: 50px;
-	margin-top: 20px;
-	margin-bottom: 20px;
+	grid-template-columns: 1fr 1fr;
 
 	font-family: "Montserrat", sans-serif;
 	font-optical-sizing: auto;
@@ -616,10 +613,15 @@ article hr {
 	font-style: normal;
 }
 
+@media screen and (max-width: 700px) {
+	.cards-pessoais {
+		grid-template-columns: 1fr;
+	}
+}
+
+
 .card-pessoal {
-	width: 35%;
 	min-width: 300px;
-	flex-grow: 1;
 
 	border: 1px solid var(--cor-borda-cinza);
 	border-radius: 10px;
@@ -630,6 +632,10 @@ article hr {
 	gap: 10px;
 
 	padding: 20px;
+}
+
+.card-pessoal-largo {
+	grid-column-end: span 2;
 }
 
 .card-pessoal > img {
