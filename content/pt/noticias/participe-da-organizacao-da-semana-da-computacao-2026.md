@@ -1,5 +1,5 @@
 ---
-title: "Participe Da Organização Da Semana Da Computação 2026"
+title: "Participe da organização da Semana da Computação 2026"
 date: 2025-07-24
 draft: false
 ---
