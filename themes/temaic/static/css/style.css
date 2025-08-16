@@ -604,7 +604,7 @@ article hr {
 	margin: 20px 0;
 	list-style: none;
 	display: grid;
-	gap: 50px;
+	gap: 20px;
 	grid-template-columns: 1fr 1fr;
 
 	font-family: "Montserrat", sans-serif;
@@ -621,17 +621,14 @@ article hr {
 
 
 .card-pessoal {
-	min-width: 300px;
+	min-width: 400px;
+	margin: 0px;
+	padding: 0px;
 
-	border: 1px solid var(--cor-borda-cinza);
-	border-radius: 10px;
-
-	background-color: var(--cor-fundo);
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
 
-	padding: 20px;
 }
 
 .card-pessoal-largo {
