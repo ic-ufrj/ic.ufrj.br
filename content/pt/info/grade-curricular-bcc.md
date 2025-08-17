@@ -5,9 +5,9 @@ draft: false
 description: "Grade curricular do curso conforme dados do SIGA UFRJ."
 ---
 
-# Matérias Obrigatórias por período
+## Matérias Obrigatórias por período
 
-## 1º Período
+### 1º Período
 
 | Código | Nome                            | Créditos | Carga Horária | Requisitos |
 |--------|--------------------------------|----------|---------------|:-----------|
@@ -22,7 +22,7 @@ description: "Grade curricular do curso conforme dados do SIGA UFRJ."
 
 **Total de Créditos:** 26.0
 
-## 2º Período
+### 2º Período
 
 | Código | Nome                            | Créditos | Carga Horária | Requisitos                  |
 |--------|--------------------------------|----------|---------------|:----------------------------|
@@ -35,7 +35,7 @@ description: "Grade curricular do curso conforme dados do SIGA UFRJ."
 
 **Total de Créditos:** 20.0
 
-## 3º Período
+### 3º Período
 
 
 | Código | Nome                            | Créditos | Carga Horária | Requisitos                                |
@@ -49,7 +49,7 @@ description: "Grade curricular do curso conforme dados do SIGA UFRJ."
 
 **Total de Créditos:** 23.0
 
-## 4º Período
+### 4º Período
 
 | Código | Nome                            | Créditos | Carga Horária | Requisitos                        |
 |--------|--------------------------------|----------|---------------|:--------------------------------|
@@ -61,7 +61,7 @@ description: "Grade curricular do curso conforme dados do SIGA UFRJ."
 
 **Total de Créditos:** 20.0
 
-## 5º Período
+### 5º Período
 
 | Código | Nome                            | Créditos | Carga Horária | Requisitos                                |
 |--------|--------------------------------|----------|---------------|:------------------------------------------|
@@ -73,7 +73,7 @@ description: "Grade curricular do curso conforme dados do SIGA UFRJ."
 
 **Total de Créditos:** 20.0
 
-## 6º Período
+### 6º Período
 
 | Código | Nome                            | Créditos | Carga Horária | Requisitos                         |
 |--------|--------------------------------|----------|---------------|:---------------------------------|
@@ -85,7 +85,7 @@ description: "Grade curricular do curso conforme dados do SIGA UFRJ."
 
 **Total de Créditos:** 20.0
 
-## 7º Período
+### 7º Período
 
 | Código | Nome                            | Créditos | Carga Horária | Requisitos                         |
 |--------|--------------------------------|----------|---------------|:---------------------------------|
@@ -96,7 +96,7 @@ description: "Grade curricular do curso conforme dados do SIGA UFRJ."
 
 **Total de Créditos:** 20.0
 
-## 8º Período
+### 8º Período
 
 | Código | Nome                            | Créditos | Carga Horária | Requisitos                         |
 |--------|--------------------------------|----------|---------------|:---------------------------------|
@@ -106,7 +106,7 @@ description: "Grade curricular do curso conforme dados do SIGA UFRJ."
 
 **Total de Créditos:** 18.0
 
-## 9º Período
+### 9º Período
 
 | Código | Nome                            | Créditos | Carga Horária | Requisitos                         |
 |--------|--------------------------------|----------|---------------|:---------------------------------|
@@ -114,7 +114,7 @@ description: "Grade curricular do curso conforme dados do SIGA UFRJ."
 
 **Total de Créditos:** 16.0
 
-# Disciplinas Optativas (Escolha Restrita)
+## Disciplinas Optativas (Escolha Restrita)
 
 
 | Código | Nome                             | Créditos | Carga Horária | Requisitos |
@@ -151,7 +151,7 @@ description: "Grade curricular do curso conforme dados do SIGA UFRJ."
 
 **Créditos a cumprir:** 4.0
 
-# Disciplinas Optativas (Escolha Condicionada)
+## Disciplinas Optativas (Escolha Condicionada)
 
 | Código | Nome                           | Créditos | Carga Horária | Requisitos                        |
 |--------|--------------------------------|----------|---------------|:--------------------------------|

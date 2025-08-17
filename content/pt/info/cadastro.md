@@ -5,7 +5,7 @@ draft: false
 description: "Página de cadastro no LDAP e email institucional para alunos novos do Instituto de Computação"
 ---
 
-# Informe
+## Informe
 
 <!--
 
@@ -24,15 +24,15 @@ Condições para cadastro:
 - O número de telefone precisa ser brasileiro.
 - A senha precisa ter entre 8 e 25 caracteres, dentre eles uma letra maiúscula, uma minúscula e um número.
 
-## Partes do Documento
+### Partes do Documento
 
 ![Imagem motrando os campos no documento "Regularmente Matriculado"](/cadastro/certidao.png)
 
-# Formulário
+## Formulário
 
 <div id="cadastrojs-place-aqui">
 
-# Habilite o JS
+## Habilite o JavaScript
 
 **ATENÇÃO: Se você vê essa mensagem é porque não está com o JavaScript ligado, por favor ative para o formulário aparecer.**
 

@@ -7,7 +7,7 @@ description: "Texto de teste de Markdown"
 
 {{< email supervisao >}}
 
-# Em breve teremos um novo site
+## Em breve teremos um novo site
 
  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quis ligula euismod, lacinia mauris et, tempor lorem. In elementum odio convallis nibh fermentum feugiat. Vestibulum elit ligula, tincidunt eget lectus nec, fringilla interdum sapien. Vivamus vulputate quam et risus fringilla gravida. Quisque nulla ipsum, lacinia ac quam a, imperdiet scelerisque risus. Pellentesque eleifend pharetra aliquam. Nam quis urna ut velit congue iaculis. Mauris lorem justo, ullamcorper id bibendum ultricies, consectetur id turpis. Fusce at mi facilisis, venenatis ligula semper, feugiat nibh. Sed eu ex ac turpis elementum eleifend. Sed viverra ligula sit amet urna placerat elementum.
 
@@ -19,7 +19,7 @@ Donec magna libero, lobortis eget dui vel, ultricies accumsan turpis. Vestibulum
 
 In nec ante ut orci congue egestas vel in nulla. Phasellus dictum venenatis leo nec tempor. Mauris gravida dolor mauris, ac tempus erat iaculis id. Vestibulum faucibus felis eget est sagittis, sit amet mattis mi gravida. Ut bibendum mi pellentesque pretium accumsan. Ut placerat posuere aliquam. Sed ultricies gravida mauris nec convallis. Vivamus sollicitudin gravida erat, a elementum dolor dictum quis. Proin varius augue at venenatis facilisis. Pellentesque at ante rutrum, pulvinar lorem in, congue arcu. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mollis leo sed nisl pellentesque, sit amet laoreet ex gravida.
 
-### Headings
+## Headings
 
 # h1 Heading
 
@@ -33,20 +33,20 @@ In nec ante ut orci congue egestas vel in nulla. Phasellus dictum venenatis leo 
 
 ###### h6 Heading
 
-### Links
+## Links
 
 [Link text](/)
 
 [Link with title](/blog 'My blog!')
 
-### Images
+## Images
 
 
 ![Logo do IC](http://localhost:1313/svg/logo-ic.svg 'logo')
 
-### Lists
+## Lists
 
-#### Unordered
+### Unordered
 
 -   Lorem ipsum dolor sit amet
 -   Lorem ipsum dolor sit amet
@@ -56,7 +56,7 @@ In nec ante ut orci congue egestas vel in nulla. Phasellus dictum venenatis leo 
         -   Lorem ipsum dolor sit amet
 -   Lorem ipsum dolor sit amet
 
-#### Ordered
+### Ordered
 
 1. Lorem ipsum dolor sit amet
 2. Lorem ipsum dolor sit amet
@@ -76,13 +76,13 @@ a:
         2. s
     3. a
 
-#### Checkboxes
+## Checkboxes
 
 -   [ ] Lorem ipsum dolor sit amet
 -   [x] Lorem ipsum dolor sit amet
 -   [ ] Lorem ipsum dolor sit amet
 
-### Emphasis
+## Emphasis
 
 **Bold text**
 
@@ -90,11 +90,11 @@ _Italic text_
 
 ~~Strikethrough~~
 
-### Horizontal Rule
+## Horizontal Rule
 
 ---
 
-### Blockquotes
+## Blockquotes
 
 > Blockquotes
 >
@@ -102,7 +102,7 @@ _Italic text_
 > >
 > > > Nested blockquotes
 
-### Code
+## Code
 
 Inline `code`
 
@@ -120,7 +120,7 @@ var foo = function (bar) {
 console.log(foo(5))
 ```
 
-### Tables
+## Tables
 
 | Heading1 | Heading2                   |
 | -------- | -------------------------- |

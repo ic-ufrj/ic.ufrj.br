@@ -15,7 +15,7 @@ a demanda solicitada.
 
 [Clique aqui para ler a orientação completa de como abrir um processo](https://docs.google.com/document/d/1sWtApa9iIJ9HFueG0H3NuVN1wu7J5ma36RvLpdpWOWs/edit?usp=drive_link)
 
-#### Lista de Formulários
+## Lista de Formulários
 
 - [Requerimento de Alteração de Grau](/formularios/Requerimento%20de%20Altera%C3%A7%C3%A3o%20de%20Grau.pdf)
 - [Requerimento de Alteração de Inscrição em Disciplinas](/formularios/Requerimento%20de%20Altera%C3%A7%C3%A3o%20de%20Inscri%C3%A7%C3%A3o%20em%20Disciplinas.pdf)

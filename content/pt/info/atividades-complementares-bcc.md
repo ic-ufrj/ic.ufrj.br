@@ -5,11 +5,11 @@ draft: false
 description: "Informações sobre a contagem de horas complementares"
 ---
 
-# Versão Curricular
+## Versão Curricular
 
 **O conteúdo dessa página se refere ao currículo 2022/2.** Para saber o seu, veja o que está escrito em "Versão Curricular" no seu BOA. **[Link para a página do currículo 2010/1.](/info/atividades-complementares-bcc-2010)**
 
-# Atividades Complementares
+## Atividades Complementares
 
 Um dos requisitos obrigatórios para a conclusão do curso de Graduação em Ciência da Computação (CC) é o cumprimento de pelo menos 90h do Requisito Curricular Suplementar (RCS)  ICPX06 - Atividades Complementares, em atendimento às Diretrizes Curriculares Nacionais (Parecer da Câmara de Educação Superior do Conselho Nacional de Educação – [Parecer CNE/CES no8/2007](http://portal.mec.gov.br/cne/arquivos/pdf/2007/rces002_07.pdf)).
 
@@ -24,7 +24,7 @@ Algumas observações gerais:
 - Dependendo da atividade, sua pontuação pode estar relacionada com a duração do seu desenvolvimento ou sua quantidade comprovada (por mês, por evento, por apresentação, etc.).
 - Cada tipo de atividade tem um total máximo de horas que podem ser concedidas, conforme a tabela. Impreterivelmente, nenhum tipo de atividade terá um total de horas concedido superior a 54h.
 
-# Atividades Consideradas e Notas Concedidas
+## Atividades Consideradas e Notas Concedidas
 
 | Atividades | Duração Mínima | Horas | Máximo concedido |
 |------------|:--------------:|:-----:|:-----------------:|
@@ -50,7 +50,7 @@ Algumas observações gerais:
 
 Outras atividades, diferentes das mencionadas nas tabelas, poderão ser consideradas para a totalização das Atividades Complementares. Nesse caso, a determinação da quantidade de horas concedida será feita após análise da Comissão de Atividades Complementares (e-mail: coac@ic.ufrj.br).
 
-# Documentação
+## Documentação
 
 Cada atividade relacionada pelo aluno deve ser comprovada; todos os comprovantes juntos, assim como o formulário preenchido com a indicação das atividades, devem ser enviados para a Comissão de Atividades Complementares no ato da solicitação de inclusão.
 
@@ -78,7 +78,7 @@ A seguir, são listados os tipos aceitos de documentos comprobatórios para cada
 | Cursos de aperfeiçoamento dentro da área de Ciência da Computação realizados durante a graduação, externos à UFRJ | Certificado emitido pela instituição organizadora do curso, indicando sua carga horária total |
 | Cursos de idiomas realizados durante a graduação | Certificado ou declaração emitida pela instituição responsável pelo curso, indicando a data de início e término (ou os semestres) e se houve participação como aluno. |
 
-# Solicitação de Inclusão e sua Tramitação
+## Solicitação de Inclusão e sua Tramitação
 
 **Somente quando julgar já possuir as 90h**, o aluno deverá enviar mensagem para a [COAC](/info/estrutura-administrativa/#coac) com as seguintes informações e anexos:
 

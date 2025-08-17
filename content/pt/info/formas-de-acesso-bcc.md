@@ -5,8 +5,6 @@ draft: false
 description: "Informações sobre a distribuição das vagas para acesso ao BCC"
 ---
 
-# Formas de acesso ao curso de Ciência da Computação
-
 ## Modalidades e editais
 
 O acesso ao Bacharelado de Ciência da Computação ocorre através das seguintes formas:

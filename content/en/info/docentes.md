@@ -6,11 +6,11 @@ draft: false
 description: "List of professors of the Institute of Computing"
 ---
 
-# Permanent Professors
+## Permanent Professors
 
 {{< docentes >}}
 
-# Substitute Professors
+## Substitute Professors
 
 {{< docentes substitutos >}}
 

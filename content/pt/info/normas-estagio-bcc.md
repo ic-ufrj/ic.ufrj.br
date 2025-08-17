@@ -14,11 +14,11 @@ Se você está interessado em iniciar estágio ou renovar seu contrato, é impor
 - RENOVAÇÃO: **O pedido de renovação deve ser encaminhado para a Comissão de Estágio 1 mês antes do término do contrato.** No pedido devem ser encaminhados OBRIGATORIAMENTE os formulários de avaliação: (i) do aluno sobre o estágio; (ii) do supervisor de estágio sobre o desempenho do aluno. O não cumprimento deste prazo pode atrasar a assinatura da renovação do contrato.
 - INFORMAÇÕES SOBRE ESTÁGIO: O aluno pode pedir uma reunião com a Comissão de Estágio caso discorde da decisão da mesma ou queira alguma orientação sobre os procedimentos para liberação de estágio.
 
-### Como se Inscrever?
+## Como se Inscrever?
 
 Basta preencher esse formulário durante o tempo indicado: https://goo.gl/forms/qmiKnIbPDuVw4hRv1.
 
-### O Programa de Estágio
+## O Programa de Estágio
 
 O Programa de Estágio do Curso de Ciência da Computação pode ser consultado [em anexo](#anexo-i---programa-de-estágio). Nele são estabelecidas as condições que os alunos interessados devem satisfazer para que tenham seus Termos de Compromisso de Estágio assinados pela Comissão de Estágio do IC.
 
@@ -27,24 +27,24 @@ Além do estabelecido no Programa de Estágio, o aluno deve observar:
 - A Empresa na qual deseja fazer estágio ou o Agente de Integração que faz a intermediação entre Universidade e a Empresa deve ter um Convênio de Estágio com a UFRJ. O aluno pode verificar a existência deste Convênio consultando a página www.pr1.ufrj.br ou entrando em contato com a Pró-Reitoria de Graduação.
 - No caso de Empresa, o Termo de Compromisso de Estágio deve seguir o modelo estabelecido pela Pró-Reitoria de Graduação (ver anexos). Apenas contratos neste formato serão aceitos pela Comissão de Estágio.
 
-### Após a Assinatura
+## Após a Assinatura
 
 Para armazenar e organizar a realização da assinatura nos contratos de estágio, os alunos que **já foram autorizados pela Comissão de Estágio** devem preencher este formulário: https://forms.gle/3zJB2a7UMMMrsTSx5.
 
 Após o envio, aguarde seu contrato ser assinado pela coordenação e enviado por email.
 
-### Anexo I - Programa de Estágio
+## Anexo I - Programa de Estágio
 
 - Programa de Estágio **em vigor desde 2025.1**: [Programa de Estágio 2025](/estagio/estagio2025.pdf)
 
 - Programa de Estágio anterior: [Programa de Estágio Antigo](/estagio/estagio-antigo.pdf)
 
-### Anexo II - Lei de Estágio
+## Anexo II - Lei de Estágio
 
 - [Lei de Estágio](/estagio/lei.pdf)
 - [Cartilha Sobre a Nova Lei de Estágio](/estagio/cartilha-lei.pdf)
 
-### Anexo III - Modelos
+## Anexo III - Modelos
 
 - [Relatório Estagiário](/estagio/relatorio-estagiario.pdf)
 - [Relatório Supervisor](/estagio/relatorio-supervisor.pdf)

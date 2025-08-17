@@ -494,12 +494,12 @@ article h1, article h2, article h3, article h4, article h5, article h6 {
 	line-height: 1.2em;
 }
 
-article h1 { font-size: 160%; font-weight: 800; }
-article h2 { font-size: 140%; font-weight: 700; }
-article h3 { font-size: 120%; font-weight: 700; }
-article h4 {                  font-weight: 700; }
-article h5 {                  font-weight: 500; }
-article h6 {                  font-weight: 400; }
+article h1 { color: red; /* nunca use h1 no markdown. Só deve ter um h1 por página */ }
+article h2 { font-size: 160%; font-weight: 800; }
+article h3 { font-size: 140%; font-weight: 700; }
+article h4 { font-size: 120%; font-weight: 700; }
+article h5 {                  font-weight: 700; }
+article h6 {                  font-weight: 500; }
 
 article p + p {
 	margin-top: 15px;
@@ -657,7 +657,6 @@ article hr {
 .card-pessoal .membro:hover {
 	text-decoration: underline;
 }
-
 
 .masshead {
 	display: flex;
