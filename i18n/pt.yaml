@@ -67,3 +67,6 @@
 - id: pag-grupos
   translation: "/info/estrutura-administrativa/"
 
+- id: lista-de-membros
+  translation: "Lista de Membros"
+

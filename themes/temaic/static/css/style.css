@@ -86,14 +86,14 @@ body {
 
 
 /* Tudo que faz parte do header */
-header * {
+body > header * {
 	/* Faz com que os links não fiquem azuis e sublinhados como normalmente
 	 * ficam no HTML padrão */
 	color: inherit;
 	text-decoration: inherit;
 }
 
-header {
+body > header {
 	/* Seta tudo dentro do header para usar Montserrat como fonte */
 	font-family: "Montserrat", sans-serif;
 	font-optical-sizing: auto;
@@ -103,12 +103,12 @@ header {
 	user-select: none;
 }
 
-header a, header span {
+body > header a, body > header span {
 	/* Faz o ponteiro ficar daquele jeito de quando passa por um link */
 	cursor: pointer;
 }
 
-header a:hover {
+body > header a:hover {
 	/* Faz os links ficarem sublinhados ao passar o mouse por cima */
 	text-decoration: underline;
 }
@@ -597,13 +597,29 @@ article hr {
 
 
 
-.cards-pessoais {
+.lista-pessoal {
 	width: 100%;
 	margin: 20px 0;
 	list-style: none;
 	display: grid;
 	gap: 20px;
 	grid-template-columns: 1fr 1fr;
+}
+
+.lista-pessoal > li.lista-pessoal-card-largo {
+	grid-column-end: span 2;
+}
+
+@media screen and (max-width: 700px) {
+	.lista-pessoal {
+		grid-template-columns: 1fr;
+	}
+}
+
+.card-pessoal {
+	min-width: 400px;
+	margin: 0px;
+	padding: 0px;
 
 	font-family: "Montserrat", sans-serif;
 	font-optical-sizing: auto;
@@ -611,52 +627,21 @@ article hr {
 	font-style: normal;
 }
 
-@media screen and (max-width: 700px) {
-	.cards-pessoais {
-		grid-template-columns: 1fr;
-	}
-}
-
-
-.card-pessoal {
-	min-width: 400px;
-	margin: 0px;
-	padding: 0px;
-
+.card-pessoal header {
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
-
 }
 
-.card-pessoal-largo {
-	grid-column-end: span 2;
+.card-pessoal h3 {
+	margin: 0;
 }
 
-.card-pessoal > img {
-	border-radius: 10px;
+.card-pessoal ul {
+	list-style: none;
+	margin: 20px 0 0 0;
 }
 
-.card-pessoal .nome {
-	font-weight: 600;
-	font-size: 120%;
-	line-height: 1.5em;
-}
-
-.card-pessoal .grupo, .card-pessoal .membro {
-	margin-top: 20px;
-}
-.card-pessoal .grupo + .grupo, .card-pessoal .membro + .membro {
-	margin-top: 0;
-}
-
-.card-pessoal .membro {
-	color: var(--cor-texto);
-	text-decoration: none;
-}
-.card-pessoal .membro:hover {
-	text-decoration: underline;
-}
 
 
 .masshead {

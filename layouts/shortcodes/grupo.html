@@ -1,14 +1,20 @@
-{{ if (.Get 1) }}
-<li class="card-pessoal" id="{{ .Get 1 | urlize }}">
-{{ else }}
-<li class="card-pessoal">
-{{ end }}
-  <span class="nome">{{ .Get 0 }}</span>
+{{ $id := (.Get 1 | default (.Get 0)) | urlize }}
+<li>
+  <article class="card-pessoal" id="{{ $id }}" aria-labelled-by="cardname-{{ $id }}">
+    <header>
+      <h3 class="nome" id="cardname-{{ $id }}">{{ .Get 0 }}</h3>
 
-  {{ if (.Get 1) }}
-    {{ partial "email.html" (.Get 1) }}
-  {{ end }}
-
-  {{ .Inner }}
+      <address>
+        {{ if (.Get 1) }}
+          <p>{{ partial "email.html" (.Get 1) }}</p>
+        {{ end }}
+      </address>
+    </header>
+    <section aria-label="{{ i18n "lista-de-membros" }}">
+      <ul>
+        {{ .Inner }}
+      </ul>
+    </section>
+  </article>
 </li>
 

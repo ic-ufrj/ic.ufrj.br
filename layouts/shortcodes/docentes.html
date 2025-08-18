@@ -6,7 +6,7 @@
 
 {{- $data := sort $data "nome" -}}
 
-<ul class="cards-pessoais">
+<ul class="lista-pessoal">
   {{ range where $data "cargo" (cond (eq (.Get 0) "substitutos") "==" "!=") "substituto" }}
 
     <!-- Acha os grupos em que o docente faz parte -->
@@ -18,30 +18,27 @@
     {{ $grupos := where $grupos "membros" "intersect" (slice .username) }}
     {{ $grupos := sort $grupos "nome" }}
 
-    <li class="card-pessoal" id="{{ .username }}">
-      <span class="nome">{{ .nome }}</span>
+    <li>
+      <article class="card-pessoal" id="{{ .username }}" aria-labelledby="cardname-{{ .username }}">
+        <header>
+          <h3 class="nome" id="cardname-{{ .username }}">{{ .nome }}</h3>
 
-      <span class="cargo">{{ i18n .cargo }}</span>
+          <address>
+            <p>{{ i18n .cargo }}</p>
 
-      {{ if ne .email "OCULTO" }}
-        {{ partial "email.html" (.email | default .username) }}
-      {{ end }}
+            {{ if ne .email "OCULTO" }}
+              <p>{{ partial "email.html" (.email | default .username) }}</p>
+            {{ end }}
 
-      {{ if .lattes }}
-        <a href="{{ .lattes }}" target="_blank" rel="noopener">{{ i18n "lattes" }}</a>
-      {{ end }}
+            {{ if .lattes }}
+              <p><a href="{{ .lattes }}" target="_blank" rel="noopener">{{ i18n "lattes" }}</a></p>
+            {{ end }}
 
-      {{ if .site }}
-        <a href="{{ .site }}" target="_blank" rel="noopener">{{ i18n "pagina_pessoal" }}</a>
-      {{ end }}
-
-      <!--
-      {{ range $grupos }}
-        <a class="grupo" href="{{ i18n "pag-grupos" }}#{{ .username }}">
-          {{ .nome }}
-        </a>
-      {{ end }}
-      -->
+            {{ if .site }}
+              <p><a href="{{ .site }}" target="_blank" rel="noopener">{{ i18n "pagina_pessoal" }}</a></p>
+            {{ end }}
+        </header>
+      </article>
     </li>
   {{ end }}
 </ul>

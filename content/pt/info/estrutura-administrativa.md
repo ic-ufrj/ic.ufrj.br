@@ -7,131 +7,131 @@ description: "Organizações e cargos do Instituto de Computação da UFRJ"
 
 # Secretarias
 
-<ul class="cards-pessoais">
+<ul class="lista-pessoal">
   {{< grupo "Secretaria Acadêmica de Pós Graduação (PPGI)" "secretaria_ppgi" >}}
-    <span>{{< nome_completo karlasantanna >}}</span>
-    <span>{{< nome_completo patriciawirzmarinhomanede >}}</span>
+    <li>{{< nome_completo karlasantanna >}}</li>
+    <li>{{< nome_completo patriciawirzmarinhomanede >}}</li>
   {{< /grupo >}}
 
   {{< grupo "Secretaria Acadêmica de Graduação" "secgrad" >}}
-    <span>{{< nome_completo fabianarocha >}}</span>
-    <span>{{< nome_completo rerison >}}</span>
+    <li>{{< nome_completo fabianarocha >}}</li>
+    <li>{{< nome_completo rerison >}}</li>
   {{< /grupo >}}
 
   {{< grupo "Secretaria de Atividades Gerenciais" "secgerencial" >}}
-    <span>{{< nome_completo marcusoliveira >}}</span>
+    <li>{{< nome_completo marcusoliveira >}}</li>
   {{< /grupo >}}
 
   {{< grupo "Secretaria de Gabinete da Direção" "gabinete" >}}
-    <span>{{< nome_completo tiagoms >}}</span>
+    <li>{{< nome_completo tiagoms >}}</li>
   {{< /grupo >}}
 </ul>
 
 
 # Coordenações
 
-<ul class="cards-pessoais">
+<ul class="lista-pessoal">
   {{< grupo "Coordenação do Curso de Bacharelado em Ciência da Computação" "coord_grad" >}}
-    <span>{{< nome_completo vigusmao >}}</span>
-    <span>{{< nome_completo marcellogt >}} (Vice)</span>
+    <li>{{< nome_completo vigusmao >}}</li>
+    <li>{{< nome_completo marcellogt >}} (Vice)</li>
   {{< /grupo >}}
 
   {{< grupo "Coordenação da Habilitação em Suporte à Decisão do Curso de Bacharelado em Ciências Matemáticas e da Terra" >}}
-    <span>{{< nome_completo julianabsf >}}</span>
+    <li>{{< nome_completo julianabsf >}}</li>
   {{< /grupo >}}
 
   {{< grupo "Coordenação do Programa de Pós-Graduação em Informática" >}}
-    <span>{{< nome_completo dgalfaro >}}</span>
+    <li>{{< nome_completo dgalfaro >}}</li>
   {{< /grupo >}}
 </ul>
 
 
 # Direções e Chefes de Departamento
 
-<ul class="cards-pessoais">
+<ul class="lista-pessoal">
   {{< grupo "Direção do Instituto de Computação" "direcao" >}}
-    <span>{{< nome_completo anamaria >}} (Diretora)</span>
-    <span>{{< nome_completo carla >}} (Vice-Diretora)</span>
+    <li>{{< nome_completo anamaria >}} (Diretora)</li>
+    <li>{{< nome_completo carla >}} (Vice-Diretora)</li>
   {{< /grupo >}}
 
   {{< grupo "Chefe do Departamento de Computação" "chefe" >}}
-    <span>{{< nome_completo hugonobrega >}} (Chefe)</span>
-    <span>{{< nome_completo jpaixao >}} (Chefe Substituto)</span>
+    <li>{{< nome_completo hugonobrega >}} (Chefe)</li>
+    <li>{{< nome_completo jpaixao >}} (Chefe Substituto)</li>
   {{< /grupo >}}
 
   {{< grupo "Direção Adjunta de Ensino" "ensino" >}}
-    <span>{{< nome_completo silvana >}}</span>
+    <li>{{< nome_completo silvana >}}</li>
   {{< /grupo >}}
 
   {{< grupo "Direção Adjunta de Pesquisa" "pesquisa" >}}
-    <span>{{< nome_completo avivacqua >}}</span>
+    <li>{{< nome_completo avivacqua >}}</li>
   {{< /grupo >}}
 
   {{< grupo "Direção Adjunta de Extensão" "extensao" >}}
-    <span>{{< nome_completo mluiza >}}</span>
+    <li>{{< nome_completo mluiza >}}</li>
   {{< /grupo >}}
 
   {{< grupo "Direção Adjunta de Gestão e Governança" "governanca" >}}
-    <span>{{< nome_completo rodrigomello >}}</span>
+    <li>{{< nome_completo rodrigomello >}}</li>
   {{< /grupo >}}
 </ul>
 
 
 # Comissões
 
-<ul class="cards-pessoais">
+<ul class="lista-pessoal">
   {{< grupo "Núcleo Docente Estruturante (NDE)" "nde" >}}
-    <span>{{< nome_completo avivacqua >}}</span>
-    <span>{{< nome_completo giseli >}}</span>
-    <span>{{< nome_completo jcps >}}</span>
-    <span>{{< nome_completo juvianna >}}</span>
-    <span>{{< nome_completo marcellogt >}}</span>
-    <span>{{< nome_completo collier >}}</span>
-    <span>{{< nome_completo silvana >}}</span>
-    <span>{{< nome_completo vigusmao >}}</span>
+    <li>{{< nome_completo avivacqua >}}</li>
+    <li>{{< nome_completo giseli >}}</li>
+    <li>{{< nome_completo jcps >}}</li>
+    <li>{{< nome_completo juvianna >}}</li>
+    <li>{{< nome_completo marcellogt >}}</li>
+    <li>{{< nome_completo collier >}}</li>
+    <li>{{< nome_completo silvana >}}</li>
+    <li>{{< nome_completo vigusmao >}}</li>
   {{< /grupo >}}
 
   {{< grupo "Comissão de Orientação e Acompanhamento Acadêmico (COAA)" "coaa" >}}
-    <span>{{< nome_completo cfb >}}</span>
-    <span>{{< nome_completo jcps >}}</span>
-    <span>{{< nome_completo juvianna >}}</span>
-    <span>{{< nome_completo mhelena >}}</span>
-    <span>Cássio Silva (Representante Discente)</span>
-    <span>João Vitor Nascimento (Representante Discente)</span>
+    <li>{{< nome_completo cfb >}}</li>
+    <li>{{< nome_completo jcps >}}</li>
+    <li>{{< nome_completo juvianna >}}</li>
+    <li>{{< nome_completo mhelena >}}</li>
+    <li>Cássio Silva (Representante Discente)</li>
+    <li>João Vitor Nascimento (Representante Discente)</li>
   {{< /grupo >}}
 
   {{< grupo "Comissão de Equivalência de Disciplinas (COMED)" "comissaoequivalencia" >}}
-    <span>{{< nome_completo cfb >}}</span>
-    <span>{{< nome_completo hugomg >}}</span>
-    <span>{{< nome_completo juvianna >}}</span>
-    <span>{{< nome_completo luziane >}}</span>
+    <li>{{< nome_completo cfb >}}</li>
+    <li>{{< nome_completo hugomg >}}</li>
+    <li>{{< nome_completo juvianna >}}</li>
+    <li>{{< nome_completo luziane >}}</li>
   {{< /grupo >}}
 
   {{< grupo "Comissão de Atividades Complementares (COAC)" "coac" >}}
-    <span>{{< nome_completo luziane >}}</span>
-    <span>{{< nome_completo vivian >}}</span>
+    <li>{{< nome_completo luziane >}}</li>
+    <li>{{< nome_completo vivian >}}</li>
   {{< /grupo >}}
 
   {{< grupo "Comissão de Estágio" "estagio" >}}
-    <span>{{< nome_completo julianabsf >}}</span>
-    <span>{{< nome_completo valeriab >}}</span>
-    <span>{{< nome_completo carolina >}}</span>
+    <li>{{< nome_completo julianabsf >}}</li>
+    <li>{{< nome_completo valeriab >}}</li>
+    <li>{{< nome_completo carolina >}}</li>
   {{< /grupo >}}
 
   {{< grupo "Comissão de Transferência" "comissaotransferencia" >}}
-    <span>{{< nome_completo hugomg >}}</span>
-    <span>{{< nome_completo juvianna >}}</span>
-    <span>{{< nome_completo luziane >}}</span>
+    <li>{{< nome_completo hugomg >}}</li>
+    <li>{{< nome_completo juvianna >}}</li>
+    <li>{{< nome_completo luziane >}}</li>
   {{< /grupo >}}
 
   {{< grupo "Comissão de Afastamentos" "afastamentos" >}}
-    <span>{{< nome_completo mitre >}}</span>
-    <span>{{< nome_completo tiagoms >}}</span>
+    <li>{{< nome_completo mitre >}}</li>
+    <li>{{< nome_completo tiagoms >}}</li>
   {{< /grupo >}}
 
   {{< grupo "Comissão de Monitoria" "monitoria" >}}
-    <span>{{< nome_completo eldany >}}</span>
-    <span>{{< nome_completo jpaixao >}}</span>
+    <li>{{< nome_completo eldany >}}</li>
+    <li>{{< nome_completo jpaixao >}}</li>
   {{< /grupo >}}
 </ul>
 
@@ -163,25 +163,25 @@ Email: {{< email congregacao >}}
 <!--
 # Congregação
 
-<ul class="cards-pessoais">
+<ul class="lista-pessoal">
   {{< grupo "Congregação do Instituto de Computação" "congregacao" >}}
-    <span>{{< nome_completo anamaria >}} (Presidente)</span>
-    <span>{{< nome_completo carla >}} (Vice-Presidente)</span>
-    <span>{{< nome_completo mitre >}} (Professor Titular)</span>
-    <span>{{< nome_completo vigusmao >}} (Professor Associado)</span>
-    <span>{{< nome_completo juvianna >}} (Professor Associado)</span>
-    <span>{{< nome_completo jonice >}} (Professor Associado)</span>
-    <span>{{< nome_completo silvana >}} (Professor Associado)</span>
-    <span>{{< nome_completo carolina >}} (Professor Adjunto)</span>
-    <span>{{< nome_completo julianabsf >}} (Professor Adjunto)</span>
-    <span>{{< nome_completo giseli >}} (Professor Adjunto)</span>
-    <span>{{< nome_completo eldany >}} (Professor Adjunto)</span>
-    <span>{{< nome_completo hugomg >}} (Professor Assistente)</span>
-    <span>{{< nome_completo marcosleipnitz >}} (Professor Assistente)</span>
-    <span>{{< nome_completo tiagoms >}} (Técnico-Administrativo)</span>
-    <span>{{< nome_completo rerison >}} (Técnico-Administrativo)</span>
-    <span>Izabel Sousa Resende (Discente)</span>
-    <span>Vitor Fernandes de Carvalho Ambrizzi (Discente)</span>
+    <li>{{< nome_completo anamaria >}} (Presidente)</li>
+    <li>{{< nome_completo carla >}} (Vice-Presidente)</li>
+    <li>{{< nome_completo mitre >}} (Professor Titular)</li>
+    <li>{{< nome_completo vigusmao >}} (Professor Associado)</li>
+    <li>{{< nome_completo juvianna >}} (Professor Associado)</li>
+    <li>{{< nome_completo jonice >}} (Professor Associado)</li>
+    <li>{{< nome_completo silvana >}} (Professor Associado)</li>
+    <li>{{< nome_completo carolina >}} (Professor Adjunto)</li>
+    <li>{{< nome_completo julianabsf >}} (Professor Adjunto)</li>
+    <li>{{< nome_completo giseli >}} (Professor Adjunto)</li>
+    <li>{{< nome_completo eldany >}} (Professor Adjunto)</li>
+    <li>{{< nome_completo hugomg >}} (Professor Assistente)</li>
+    <li>{{< nome_completo marcosleipnitz >}} (Professor Assistente)</li>
+    <li>{{< nome_completo tiagoms >}} (Técnico-Administrativo)</li>
+    <li>{{< nome_completo rerison >}} (Técnico-Administrativo)</li>
+    <li>Izabel Sousa Resende (Discente)</li>
+    <li>Vitor Fernandes de Carvalho Ambrizzi (Discente)</li>
   {{< /grupo >}}
 </ul>
 -->
