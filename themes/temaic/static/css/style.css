@@ -123,18 +123,21 @@ body > header a:hover {
 	right: var(--menu-padding);
 
 	width: 100vw;
+	height: 70px;
 
-	padding: 13px 0px;
+	padding: 0px;
 
 	display: flex;
 	justify-content: flex-end;
+	align-items: center;
 	gap: 20px;
 
-	color: var(--cor-texto-branco);
+	color: var(--cor-texto);
 
 	font-weight: 300;
 }
 
+/* TODO: refazer */
 #links-header .linguagem {
 	font-weight: 600;
 	border: solid 1px var(--cor-texto-branco);
@@ -142,17 +145,20 @@ body > header a:hover {
 	border-radius: 5px;
 }
 
+#barra-superior {
+	height: 70px;
+}
+
 /* Se refere ao menu principal no topo da página, com a logo do IC e as
  * categorias de menu. Inclui também a parte escondida do menu que abre
  * embaixo, porém ela não é exibida durante a maior parte do tempo */
 #main-header {
 	width: 100vw;
-	height: 120px;
 
 	display: flex;
-	justify-content: space-between;
+	justify-content: flex-end;
 
-	padding: 0px var(--menu-padding) 0px var(--menu-padding);
+	padding: 5px var(--menu-padding) 5px 0px;
 
 	color: var(--cor-texto-branco);
 	background-color: var(--cor-fundo-menu-cima);
@@ -314,10 +320,10 @@ body > header a:hover {
 		font-size: 60px;
 	}
 
-	#hamburger:checked + label + .principal {
+	#hamburger:checked + .principal {
 		display: block;
 	}
-	#hamburger:checked + label + .principal + #links-header {
+	#hamburger:checked + .principal + #links-header {
 		display: block;
 	}
 
@@ -326,6 +332,7 @@ body > header a:hover {
 		flex-direction: column;
 		background-color: var(--cor-fundo-menu-cima);
 		padding: 20px var(--menu-padding);
+		color: var(--cor-texto-branco);
 	}
 	#links-header > li {
 		margin: 13px 0;
