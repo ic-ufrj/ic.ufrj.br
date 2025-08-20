@@ -62,7 +62,7 @@ table {
 	--cor-accent-artigo: var(--cor-ic1);
 	--cor-borda-cinza: #919294;
 
-	--menu-padding: 100px;
+	--menu-padding: 300px;
 }
 
 * {
@@ -189,7 +189,7 @@ body > header a:hover {
 #main-header > .principal {
 	display: flex;
 	align-items: center;
-	gap: 20px;
+	gap: 30px;
 }
 
 /* Se refere aos textos O INSTITUTO, ENSINO, etc */
@@ -246,6 +246,11 @@ body > header a:hover {
 
 	transition: clip-path 150ms ease-out 100ms;
 }
+#main-header > .principal > li:nth-child(1) > ul,
+#main-header > .principal > li:nth-child(2) > ul {
+	left: -30px;
+	right: auto;
+}
 
 #main-header > .principal > li > ul::before {
 	content: "";
@@ -256,6 +261,10 @@ body > header a:hover {
 	top: -20px;
 	right: 80px;
 	clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+#main-header > .principal > li:nth-child(1) > ul::before,
+#main-header > .principal > li:nth-child(2) > ul::before {
+	left: 80px;
 }
 
 /* Se refere aos menus escondidos enquanto a categoria tem foco */
@@ -288,19 +297,23 @@ body > header a:hover {
 	line-height: 20px;
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1500px) {
 	:root {
-		--menu-padding: 15px;
+		--menu-padding: 200px;
 	}
 }
 
-@media screen and (max-width: 480px) {
-	#logo-principal p {
-		display: none;
+@media screen and (max-width: 1200px) {
+	:root {
+		--menu-padding: 130px;
 	}
 }
 
 @media screen and (max-width: 900px) {
+	:root {
+		--menu-padding: 15px;
+	}
+
 	#links-header, #main-header .principal {
 		display: none;
 	}
@@ -396,6 +409,12 @@ body > header a:hover {
 		background-color: var(--cor-fundo);
 		border: none;
 		width: 100%;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	#logo-principal p {
+		display: none;
 	}
 }
 
