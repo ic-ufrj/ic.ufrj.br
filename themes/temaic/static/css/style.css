@@ -122,7 +122,6 @@ body > header a:hover {
 	top: 0px;
 	right: var(--menu-padding);
 
-	width: 100vw;
 	height: 70px;
 
 	padding: 0px;
@@ -349,6 +348,9 @@ body > header a:hover {
 		background-color: var(--cor-fundo-menu-cima);
 		padding: 20px var(--menu-padding);
 		color: var(--cor-texto-branco);
+		height: auto;
+		width: auto;
+		margin: 0 auto;
 	}
 	#links-header > li {
 		margin: 13px 0;
@@ -359,23 +361,27 @@ body > header a:hover {
 		align-items: center;
 		justify-content: space-evenly;
 		height: auto;
+		padding: 0;
 	}
 
 	#main-header > .principal {
 		width: 100%;
 		flex-direction: column;
+
+		/* Por que isso está aqui? */
 		align-items: flex-end;
 	}
 
 	#main-header > .principal > li > button {
 		display: flex;
-		margin-top: 20px;
 		justify-content: center;
+		width: 100%;
 	}
 
 	#main-header > .principal > li {
 		width: 100%;
 		position: static;
+		margin: 15px 0;
 	}
 
 	#main-header > .principal > li:hover > button,
@@ -408,7 +414,10 @@ body > header a:hover {
 	#main-header > .principal > li > ul > li {
 		background-color: var(--cor-fundo);
 		border: none;
+		border-radius: 10px;
+		padding: 20px;
 		width: 100%;
+		text-align: center;
 	}
 }
 
