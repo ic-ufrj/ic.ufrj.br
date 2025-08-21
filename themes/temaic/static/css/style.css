@@ -62,7 +62,7 @@ table {
 	--cor-accent-artigo: var(--cor-ic1);
 	--cor-borda-cinza: #919294;
 
-	--menu-padding: 300px;
+	--menu-padding: calc(50vw - 600px);
 }
 
 * {
@@ -152,12 +152,10 @@ body > header a:hover {
  * categorias de menu. Inclui também a parte escondida do menu que abre
  * embaixo, porém ela não é exibida durante a maior parte do tempo */
 #main-header {
-	width: 100vw;
-
 	display: flex;
-	justify-content: flex-end;
+	justify-content: center;
 
-	padding: 5px var(--menu-padding) 5px 0px;
+	padding: 5px var(--menu-padding);
 
 	color: var(--cor-texto-branco);
 	background-color: var(--cor-fundo-menu-cima);
@@ -296,19 +294,13 @@ body > header a:hover {
 	line-height: 20px;
 }
 
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1270px) {
 	:root {
-		--menu-padding: 200px;
+		--menu-padding: 30px;
 	}
 }
 
-@media screen and (max-width: 1200px) {
-	:root {
-		--menu-padding: 130px;
-	}
-}
-
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 930px) {
 	:root {
 		--menu-padding: 15px;
 	}
