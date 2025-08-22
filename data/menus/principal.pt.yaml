@@ -63,12 +63,22 @@
         - name: Ofertas de Monitoria
           url: /info/monitoria/
 
+- name: Pesquisa
+  children:
+    - children:
+      - name: Grupos de Pesquisa
+        # url: /info/grupos-de-pesquisa/
+      - name: Iniciação Científica
+        # url: /info/iniciacao-cientifica/
+
+- name: Extensão
+  children:
+    - children:
+      - name: Projetos de Extensão
+        # url: /info/projetos-extensao/
+
 - name: Pós-Graduação
   children:
     - children:
         - name: PPGI
           url: /info/ppgi/
-# - name: Usuário
-#   children:
-#     - children:
-#         - name: Cadastro de Alunos Novos

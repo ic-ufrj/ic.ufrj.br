@@ -62,7 +62,7 @@ table {
 	--cor-accent-artigo: var(--cor-ic1);
 	--cor-borda-cinza: #919294;
 
-	--menu-padding: 100px;
+	--menu-padding: calc(50vw - 600px);
 }
 
 * {
@@ -122,19 +122,21 @@ body > header a:hover {
 	top: 0px;
 	right: var(--menu-padding);
 
-	width: 100vw;
+	height: 70px;
 
-	padding: 13px 0px;
+	padding: 0px;
 
 	display: flex;
 	justify-content: flex-end;
+	align-items: center;
 	gap: 20px;
 
-	color: var(--cor-texto-branco);
+	color: var(--cor-texto);
 
 	font-weight: 300;
 }
 
+/* TODO: refazer */
 #links-header .linguagem {
 	font-weight: 600;
 	border: solid 1px var(--cor-texto-branco);
@@ -142,17 +144,18 @@ body > header a:hover {
 	border-radius: 5px;
 }
 
+#barra-superior {
+	height: 70px;
+}
+
 /* Se refere ao menu principal no topo da página, com a logo do IC e as
  * categorias de menu. Inclui também a parte escondida do menu que abre
  * embaixo, porém ela não é exibida durante a maior parte do tempo */
 #main-header {
-	width: 100vw;
-	height: 120px;
-
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 
-	padding: 0px var(--menu-padding) 0px var(--menu-padding);
+	padding: 5px var(--menu-padding);
 
 	color: var(--cor-texto-branco);
 	background-color: var(--cor-fundo-menu-cima);
@@ -174,6 +177,8 @@ body > header a:hover {
 
 	font-weight: 300;
 	line-height: 23px;
+
+	padding: 0 var(--menu-padding);
 }
 
 /* Se refere às categorias O INSTITUTO, ENSINO, etc. Porém, também pode afetar
@@ -181,6 +186,7 @@ body > header a:hover {
 #main-header > .principal {
 	display: flex;
 	align-items: center;
+	gap: 30px;
 }
 
 /* Se refere aos textos O INSTITUTO, ENSINO, etc */
@@ -189,8 +195,8 @@ body > header a:hover {
 	font-size: 18px;
 	text-transform: uppercase;
 
-	padding: 0.5em 0.5em;
-	margin: 0px 0.5em;
+	padding: 0.5em 0;
+	margin: 0;
 
 	display: flex;
 	align-items: center;
@@ -237,6 +243,11 @@ body > header a:hover {
 
 	transition: clip-path 150ms ease-out 100ms;
 }
+#main-header > .principal > li:nth-child(1) > ul,
+#main-header > .principal > li:nth-child(2) > ul {
+	left: -30px;
+	right: auto;
+}
 
 #main-header > .principal > li > ul::before {
 	content: "";
@@ -247,6 +258,10 @@ body > header a:hover {
 	top: -20px;
 	right: 80px;
 	clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+#main-header > .principal > li:nth-child(1) > ul::before,
+#main-header > .principal > li:nth-child(2) > ul::before {
+	left: 80px;
 }
 
 /* Se refere aos menus escondidos enquanto a categoria tem foco */
@@ -279,19 +294,17 @@ body > header a:hover {
 	line-height: 20px;
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1270px) {
+	:root {
+		--menu-padding: 30px;
+	}
+}
+
+@media screen and (max-width: 930px) {
 	:root {
 		--menu-padding: 15px;
 	}
-}
 
-@media screen and (max-width: 480px) {
-	#logo-principal p {
-		display: none;
-	}
-}
-
-@media screen and (max-width: 900px) {
 	#links-header, #main-header .principal {
 		display: none;
 	}
@@ -314,10 +327,10 @@ body > header a:hover {
 		font-size: 60px;
 	}
 
-	#hamburger:checked + label + .principal {
+	#hamburger:checked + .principal {
 		display: block;
 	}
-	#hamburger:checked + label + .principal + #links-header {
+	#hamburger:checked + .principal + #links-header {
 		display: block;
 	}
 
@@ -326,6 +339,10 @@ body > header a:hover {
 		flex-direction: column;
 		background-color: var(--cor-fundo-menu-cima);
 		padding: 20px var(--menu-padding);
+		color: var(--cor-texto-branco);
+		height: auto;
+		width: auto;
+		margin: 0 auto;
 	}
 	#links-header > li {
 		margin: 13px 0;
@@ -336,23 +353,27 @@ body > header a:hover {
 		align-items: center;
 		justify-content: space-evenly;
 		height: auto;
+		padding: 0;
 	}
 
 	#main-header > .principal {
 		width: 100%;
 		flex-direction: column;
+
+		/* Por que isso está aqui? */
 		align-items: flex-end;
 	}
 
 	#main-header > .principal > li > button {
 		display: flex;
-		margin-top: 20px;
 		justify-content: center;
+		width: 100%;
 	}
 
 	#main-header > .principal > li {
 		width: 100%;
 		position: static;
+		margin: 15px 0;
 	}
 
 	#main-header > .principal > li:hover > button,
@@ -385,7 +406,16 @@ body > header a:hover {
 	#main-header > .principal > li > ul > li {
 		background-color: var(--cor-fundo);
 		border: none;
+		border-radius: 10px;
+		padding: 20px;
 		width: 100%;
+		text-align: center;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	#logo-principal p {
+		display: none;
 	}
 }
 
