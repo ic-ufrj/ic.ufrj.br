@@ -12,11 +12,11 @@ languages:
     languageCode: "pt-BR"
     contentDir: content/pt
     weight: 1
-  en:
-    languageName: English
-    languageCode: en
-    contentDir: content/en
-    weight: 2
+  # en:
+    # languageName: English
+    # languageCode: en
+    # contentDir: content/en
+    # weight: 2
 
 markup:
   highlight:

@@ -1,12 +1,13 @@
-
-
-<nav id="main-header">
+<div id="barra-superior">
   <a href="{{ "/" | relLangURL }}" id="logo-principal">
-    <img src="{{ "/svg/logo-ic.svg" | relURL }}" alt="Logo do IC" width="80px">
+    <img src="{{ "/svg/logo-ic.svg" | relURL }}" alt="Logo do IC" height="40px">
     <p>{{ i18n "instituto_de_computacao" }}<br>UFRJ</p>
   </a>
-  <input type="checkbox" id="hamburger">
   <label for="hamburger" id="hamburger-label"><i class="bi bi-list"></i></label>
+</div>
+
+<nav id="main-header">
+  <input type="checkbox" id="hamburger">
 
   <ul class="principal">
     {{ $menu := index site.Data.menus (printf "principal.%s" .Site.Language.Lang) }}
