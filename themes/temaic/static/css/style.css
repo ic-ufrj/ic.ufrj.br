@@ -216,6 +216,8 @@ body > header a:hover {
 	/* Esconde o menu */
 	clip-path: inset(0 0 100% 0);
 
+	z-index: 10;
+
 	position: absolute;
 	top: 50px;
 	right: -30px;
@@ -498,12 +500,6 @@ main h1, main h2, main h3, main h4, main h5, main h6 {
 	font-style: normal;
 }
 
-article {
-	margin-top: 20px;
-	margin-bottom: 20px;
-	/* text-align: justify; */
-}
-
 article table, article blockquote, article pre, article .highlight,
 article ul, article ol {
 	margin: 10px 0;
@@ -518,7 +514,7 @@ article .highlight > pre {
 	border-radius: 10px;
 }
 
-article h1, article h2, article h3, article h4, article h5, article h6 {
+article h2, article h3, article h4, article h5, article h6 {
 	margin: 20px 0;
 	line-height: 1.2em;
 }
@@ -625,7 +621,6 @@ article hr {
 
 
 
-
 .lista-pessoal {
 	width: 100%;
 	margin: 20px 0;
@@ -675,7 +670,8 @@ article hr {
 .masshead {
 	display: flex;
 	height: 100px;
-	max-width: 100%;
+	width: 100vw;
+	margin-left: calc(380px - 50vw);
 
 	align-items: center;
 	justify-content: center;
@@ -687,7 +683,7 @@ article hr {
 
 .masshead h1 {
 	color: var(--cor-texto-branco);
-	background-color: rgba(0, 0, 0, 0.7);
+	background-color: rgba(0, 0, 0, 1);
 	padding: 15px;
 	border-radius: 10px;
 
