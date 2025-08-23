@@ -80,16 +80,6 @@ description: "Organizações e cargos do Instituto de Computação da UFRJ"
 # Comissões
 
 <ul class="lista-pessoal">
-  {{< grupo "Núcleo Docente Estruturante (NDE)" "nde" >}}
-    <li>{{< nome_completo avivacqua >}}</li>
-    <li>{{< nome_completo giseli >}}</li>
-    <li>{{< nome_completo jcps >}}</li>
-    <li>{{< nome_completo juvianna >}}</li>
-    <li>{{< nome_completo marcellogt >}}</li>
-    <li>{{< nome_completo collier >}}</li>
-    <li>{{< nome_completo silvana >}}</li>
-    <li>{{< nome_completo vigusmao >}}</li>
-  {{< /grupo >}}
 
   {{< grupo "Comissão de Orientação e Acompanhamento Acadêmico (COAA)" "coaa" >}}
     <li>{{< nome_completo cfb >}}</li>
@@ -132,6 +122,21 @@ description: "Organizações e cargos do Instituto de Computação da UFRJ"
   {{< grupo "Comissão de Monitoria" "monitoria" >}}
     <li>{{< nome_completo eldany >}}</li>
     <li>{{< nome_completo jpaixao >}}</li>
+  {{< /grupo >}}
+</ul>
+
+# NDEs
+
+<ul class="lista-pessoal">
+  {{< grupo "Núcleo Docente Estruturante (NDE) do Bacharel em Ciência da Computação (BCC)" "nde" >}}
+    <li>{{< nome_completo avivacqua >}}</li>
+    <li>{{< nome_completo giseli >}}</li>
+    <li>{{< nome_completo jcps >}}</li>
+    <li>{{< nome_completo juvianna >}}</li>
+    <li>{{< nome_completo marcellogt >}}</li>
+    <li>{{< nome_completo collier >}}</li>
+    <li>{{< nome_completo silvana >}}</li>
+    <li>{{< nome_completo vigusmao >}}</li>
   {{< /grupo >}}
 </ul>
 
