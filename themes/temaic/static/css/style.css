@@ -694,6 +694,12 @@ article hr {
 	text-align: center;
 }
 
+@media screen and (max-width: 800px) {
+	.masshead {
+		margin-left: -20px;
+	}
+}
+
 
 .container-imagem-principal {
   background-color: #960D07;
