@@ -5,7 +5,7 @@ draft: false
 description: "Organizações e cargos do Instituto de Computação da UFRJ"
 ---
 
-# Secretarias
+## Secretarias
 
 <ul class="lista-pessoal">
   {{< grupo "Secretaria Acadêmica de Pós Graduação (PPGI)" "secretaria_ppgi" >}}
@@ -28,7 +28,7 @@ description: "Organizações e cargos do Instituto de Computação da UFRJ"
 </ul>
 
 
-# Coordenações
+## Coordenações
 
 <ul class="lista-pessoal">
   {{< grupo "Coordenação do Curso de Bacharelado em Ciência da Computação" "coord_grad" >}}
@@ -46,7 +46,7 @@ description: "Organizações e cargos do Instituto de Computação da UFRJ"
 </ul>
 
 
-# Direções e Chefes de Departamento
+## Direções e Chefes de Departamento
 
 <ul class="lista-pessoal">
   {{< grupo "Direção do Instituto de Computação" "direcao" >}}
@@ -77,7 +77,7 @@ description: "Organizações e cargos do Instituto de Computação da UFRJ"
 </ul>
 
 
-# Comissões
+## Comissões
 
 <ul class="lista-pessoal">
 
@@ -140,7 +140,7 @@ description: "Organizações e cargos do Instituto de Computação da UFRJ"
   {{< /grupo >}}
 </ul>
 
-# Congregação
+## Congregação
 
 Email: {{< email congregacao >}}
 
@@ -166,7 +166,7 @@ Email: {{< email congregacao >}}
 | Izabel Souza Resende | Discentes | Suplente |
 
 <!--
-# Congregação
+## Congregação
 
 <ul class="lista-pessoal">
   {{< grupo "Congregação do Instituto de Computação" "congregacao" >}}

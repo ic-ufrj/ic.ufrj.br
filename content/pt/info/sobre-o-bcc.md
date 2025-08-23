@@ -16,11 +16,11 @@ Por ocasião da renovação do reconhecimento do Curso de Bacharelado em Ciênci
 
 Em Dezembro de 2020, o Conselho Universitário da UFRJ aprovou a criação do Instituto de Computação (Resolução CONSUNI nº 29 de 2020), que passou a ser responsável pelo Curso de Bacharelado em Ciência da Computação. A iniciativa da condução de um processo de reforma curricular evidencia o fortalecimento do envolvimento do corpo social deste recém criado instituto com o ensino de graduação.
 
-# Objetivos do Curso
+## Objetivos do Curso
 
 O principal objetivo do Curso de Bacharelado em Ciência da Computação é a formação de pessoal qualificado na  área de Ciência da Computação para atender às demandas de profissionais de excelência nessa área, atualmente estratégica para o mercado, para a ciência e para o governo, não apenas do Rio de Janeiro, como do Brasil. Seguindo o propósito de um Bacharelado, o curso visa proporcionar uma formação generalista sólida de ampla visão da área, que possa sustentar a atuação profissional na prática de mercado, bem como permitir sua posterior especialização. Para isso, é essencial que se ofereça aos alunos uma formação de forte base teórica referente aos fundamentos da área de computação, bem como oportunidades de experimentar a relação teoria-prática e desenvolver a percepção de como os fundamentos sustentam as práticas e técnicas vigentes, bem como sua evolução. Vale ressaltar que aspectos ético-sociais também fazem parte da formação fundamental e sua relação com a prática profissional deve ser igualmente exercitada.
 
-# Perfil do Profissional
+## Perfil do Profissional
 
 Entendemos que o bacharel da área de Ciência da Computação deve ter uma atuação crítica, ética, competente, colaborativa e relevante dentro de sua área. Para tal, o curso deve contribuir para a formação técnica, científica, e cidadã dos seus alunos.
 
@@ -36,7 +36,7 @@ O egresso do Curso de Bacharelado em Ciência da Computação deve ser:
 - consciente da importância do contínuo aprimoramento de suas competências técnicas e humanas; e
 - ciente da importância da investigação científica e capacitado a promover a inovação e articular diferentes áreas de conhecimento.
 
-# Regulamentação Profissional e Denominações de Cursos Superiores
+## Regulamentação Profissional e Denominações de Cursos Superiores
 
 As atividades profissionais em Computação e Informática não são regulamentadas no Brasil. Essa situação reflete o reconhecimento de que esta área ainda experimenta transformações intensas na tecnologia e nas aplicações, estando o seu leque de atuação em contínua expansão.
 

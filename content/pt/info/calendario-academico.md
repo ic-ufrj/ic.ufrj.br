@@ -5,11 +5,11 @@ draft: false
 description: "Calendário acadêmico da UFRJ para os cursos do Instituto de Computação"
 ---
 
-# Aviso
+## Aviso
 
 Esse calendário existe por conveniência, por favor verifique o calendário do CONSUNI ou do CEG para qualquer atividade importante, pois esse calendário pode ficar desatualizado.
 
-# Período 2025.2 [^1] [^2] [^3]
+## Período 2025.2 [^1] [^2] [^3]
 
 [^1]: O Conselho Universitário, no dia 24 de julho de 2025, atualizou o calendário acadêmico e a data do fim do período foi alterada do dia 13/12/2025 para dia 20/12/2025.
 
@@ -42,7 +42,7 @@ Esse calendário existe por conveniência, por favor verifique o calendário do 
 | Regularização dos pedidos de inscrição em disciplinas (Secretaria) | _11/09/2025 - 28/11/2025_ |
 | Lançamento de graus e frequências | _04/12/2025 - 18/12/2025_ |
 
-# Período 2025.1
+## Período 2025.1
 
 **Duração: 17/03/2025 a 19/07/2025**
 

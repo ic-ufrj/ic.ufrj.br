@@ -7,7 +7,7 @@
 </div>
 
 <article>
-  <h1>Notícias Recentes</h1>
+  <h2>Notícias Recentes</h2>
 
   {{ range first 5 (where .Site.RegularPages "Section" "noticias" ) }}
     <a href="{{ .RelPermalink }}" class="noticia">

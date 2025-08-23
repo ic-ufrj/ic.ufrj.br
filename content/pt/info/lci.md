@@ -5,13 +5,13 @@ draft: false
 description: "Informações sobre a Supervisão do LCI, equipe de monitores que gerencia os LCI, sobre o LCI e sobre o cadastro dos alunos do Instituto"
 ---
 
-# A Supervisão
+## A Supervisão
 
 A Supervisão do LCI é responsável pela manutenção dos Laboratórios e computadores em geral do Instituto, das contas instuticionais, dos sites (incluindo esse) e de outros recursos do Instituto. Ela pode ser contactada pelo email {{< email supervisao >}} ou na sala E-2015, no Instituto de Computação, bloco E do CCMN (porta do NCE). Os horários disponíveis para atendimento podem ser vizualidos na Escala de Horários abaixo:
 
 <iframe src="https://calendar.google.com/calendar/u/0/embed?src=dcc.ufrj.br_po6evqil7ddfudsk1loul3p5to@group.calendar.google.com&ctz=America/Sao_Paulo" width="100%" height="400" scrolling="no" style="margin: 20px 0;"></iframe>
 
-# Laboratórios
+## Laboratórios
 
 O Instituto gerencia quatro laboratórios exclusivos a seus alunos. Sua manutenção é de responsabilidade da Supervisão do LCI, equipe composta majoritariamente por alunos que tem vagas abertas todo ano. Para acessar os computadores dos LEP, o nome é "convidado" e, caso peça senha, é "convidado" também. Já nos LAB, o nome de usuário deve ser a parte do seu email institucional antes do @ (arroba), por exemplo, se seu email é {{< email aluno >}}, seu nome de usuário deve ser `aluno`, e a senha é a senha digitada no formulário de criação de conta, que pode não ser a mesma do email. Caso tenha esquecido a senha, [contate a Supervisão fisicamente](#a-supervisão).
 
@@ -46,7 +46,7 @@ Lab 3:
 - **Líquidos somente em recipientes com tampa,** sempre fechados quando não estiver sendo utilizado para evitar acidentes.
 - **Use os computadores de maneira responsável:** não acesse links suspeitos, não instale programas e não mude as configurações do computador. Em caso de necessidade de algum software, chame a nossa equipe.
 
-# Contas de Email
+## Contas de Email
 
 Os alunos cadastrados no sistema do Instituto têm acesso a uma conta de email do Google, com 50GB de armazenamento e outros benefícios. **Essa conta só fica disponível um dia após o cadastro do aluno**, já que a sincronização acontece de madrugada.
 
@@ -55,14 +55,14 @@ Para utilizar essa conta, você deve usar o Gmail para logar em uma conta {{< em
 <!--
 UM DIA VOLTARÁ
 
-# Login do Wifi
+## Login do Wifi
 -->
 
-# Cadastro
+## Cadastro
 
 O cadastro é [por meio dessa página](/info/cadastro/).
 
-# Disposições Finais
+## Disposições Finais
 
 - Às vezes a equipe da Supervisão tem que resolver problemas pelo Instituto e a sala fica vazia, mesmo em horários da escala. Recomendamos que vá à sala diversas vezes, preferencialmente em horários diferentes.
 - Mais informações podem ser encontradas no [Manual de Uso do LCI](https://docs.google.com/document/d/129TvHxSG_etqP_VcKAF9QezvCrH0ACh4tb22CJjxb0E/edit?usp=drive_link)

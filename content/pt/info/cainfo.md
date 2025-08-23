@@ -11,7 +11,7 @@ Nossa missão é coordenar e auxiliar as atividades dos membros em prol do desen
 
 Complementarmente, a gestão do Centro Acadêmico administra a sala do CAInfo, dedicando-se à manutenção de seus equipamentos, jogos e espaços de lazer.
 
-# Organização e Participação
+## Organização e Participação
 
 Todos os alunos com **matrícula ativa no curso de Bacharelado em Ciência da Computação da UFRJ são Membros Efetivos** do Centro Acadêmico.
 
@@ -49,7 +49,7 @@ O CAInfo é composto por alunos voluntários que dedicam seu tempo e esforço pa
 O CAInfo está sempre aberto a novas ideias e à participação de mais alunos. Se você tem interesse em contribuir, **entre em contato com nossa equipe!**
 
 
-# Mídias Sociais e Canal do CAInfo
+## Mídias Sociais e Canal do CAInfo
 
 Fique por dentro das nossas atividades, comunicados e eventos!
 
@@ -63,7 +63,7 @@ Historicamente utilizamos os grupos do Telegram para trocar informações e nos 
 Canal com objetivo de divulgar todas as ações e movimentações do Centro Acadêmico de Ciência da Computação da UFRJ. Será usado também para lembrar datas de reuniões e assembleias. <a href="https://t.me/cainfoufrj" target="_blank">Clique aqui para acessar!</a>
 * Interessado em entrar no nosso grupo geral ou encontrar nossos grupos de disciplinas? **Entre em contato conosco via e-mail** para receber os links de convite!
 
-# Endereço e Horário de Funcionamento
+## Endereço e Horário de Funcionamento
 
 Nossa sede está localizada no:
 
@@ -71,7 +71,7 @@ Nossa sede está localizada no:
   - Estamos especificamente no Bloco F, primeiro andar (F1) do CCMN.*
 - **Horário de Funcionamento da Sala:** De 10:00 às 15:00, podendo ter seu horário alterado mediante aviso em nossas mídias sociais.
 
-# Contato
+## Contato
 
 Tem alguma dúvida, sugestão ou quer entrar em contato conosco? Mande um e-mail!
 
