@@ -207,14 +207,6 @@ body > header a:hover {
 	outline: none;
 }
 
-#main-header > .principal > li:hover > button,
-#main-header > .principal > li:focus > button,
-#main-header > .principal > li:focus-within > button {
-	/*background-color: rgba(0, 0, 0, 0.2);
-	border-radius: 10px;*/
-	text-decoration: underline;
-}
-
 #main-header > .principal > li {
 	position: relative;
 }
@@ -265,13 +257,6 @@ body > header a:hover {
 	left: 80px;
 }
 
-/* Se refere aos menus escondidos enquanto a categoria tem foco */
-#main-header > .principal > li:hover > ul,
-#main-header > .principal > li:focus > ul,
-#main-header > .principal > li:focus-within > ul {
-	clip-path: inset(-50px 0 0 0);
-	transition-delay: 200ms;
-}
 
 /* Se refere às subcategorias do menu escondido */
 #main-header > .principal > li > ul > li {
@@ -298,6 +283,24 @@ body > header a:hover {
 @media screen and (max-width: 1270px) {
 	:root {
 		--menu-padding: 30px;
+	}
+}
+
+@media screen and (min-width: 930px) {
+	#main-header > .principal > li:hover > button,
+	#main-header > .principal > li:focus > button,
+	#main-header > .principal > li:focus-within > button {
+		/*background-color: rgba(0, 0, 0, 0.2);
+		border-radius: 10px;*/
+		text-decoration: underline;
+	}
+
+	/* Se refere aos menus escondidos enquanto a categoria tem foco */
+	#main-header > .principal > li:hover > ul,
+	#main-header > .principal > li:focus > ul,
+	#main-header > .principal > li:focus-within > ul {
+		clip-path: inset(-50px 0 0 0);
+		transition-delay: 200ms;
 	}
 }
 
@@ -377,12 +380,6 @@ body > header a:hover {
 		margin: 15px 0;
 	}
 
-	#main-header > .principal > li:hover > button,
-	#main-header > .principal > li:focus > button,
-	#main-header > .principal > li:focus-within > button {
-		text-decoration: none;
-	}
-
 	#main-header > .principal > li > ul {
 		position: static;
 		flex-direction: column;
@@ -394,10 +391,11 @@ body > header a:hover {
 		display: none;
 	}
 
-	#main-header > .principal > li:hover > ul,
 	#main-header > .principal > li:focus > ul,
 	#main-header > .principal > li:focus-within > ul {
 		display: flex;
+		clip-path: inset(-50px 0 0 0);
+		transition-delay: 200ms;
 	}
 
 	#main-header > .principal > li > ul::before {
