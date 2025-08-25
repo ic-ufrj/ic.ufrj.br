@@ -31,7 +31,7 @@ angela:
 
 carla:
   nome: Carla Amor Divino Moreira Delgado
-  site: https://ic.ufrj.br/~carla
+  # site: https://ic.ufrj.br/~carla
   lattes: https://lattes.cnpq.br/3831909651244142
   cargo: associado
 
@@ -42,7 +42,7 @@ carolina:
 
 cfb:
   nome: Claudson Ferreira Bornstein
-  site: https://ic.ufrj.br/~cfb
+  # site: https://ic.ufrj.br/~cfb
   lattes: https://lattes.cnpq.br/6406237838495230
   cargo: associado
 
@@ -53,7 +53,7 @@ danielbastos:
 
 dgalfaro:
   nome: Daniel G. Alfaro Vigo
-  site: https://ic.ufrj.br/~dgalfaro
+  # site: https://ic.ufrj.br/~dgalfaro
   lattes: https://lattes.cnpq.br/8694890749217765
   cargo: associado
 
@@ -70,7 +70,7 @@ eldany:
 
 gabriel:
   nome: Gabriel P. Silva
-  site: https://ic.ufrj.br/~gabriel
+  # site: https://ic.ufrj.br/~gabriel
   lattes: https://lattes.cnpq.br/8636301961155552
   cargo: titular
 
@@ -81,13 +81,13 @@ gabrielaquino:
 
 giseli:
   nome: Giseli Rabello Lopes
-  site: https://ic.ufrj.br/~giseli
+  # site: https://ic.ufrj.br/~giseli
   lattes: https://lattes.cnpq.br/9439416101626260
   cargo: adjunto
 
 hugonobrega:
   nome: Hugo Nobrega
-  site: https://hugonobrega.com/
+  # site: https://hugonobrega.com/
   lattes: https://lattes.cnpq.br/6062840240299930
   cargo: adjunto
 
@@ -109,7 +109,7 @@ jcps:
 
 jonice:
   nome: Jonice Oliveira
-  site: https://ic.ufrj.br/~jonice
+  # site: https://www.joniceoliveira.net/
   lattes: https://lattes.cnpq.br/0990344839864230
   cargo: associado
 
@@ -130,13 +130,13 @@ juvianna:
 
 luziane:
   nome: Luziane F. de Mendonça
-  site: https://ic.ufrj.br/~luziane
+  # site: https://ic.ufrj.br/~luziane
   lattes: https://lattes.cnpq.br/4092412037479077
   cargo: associado
 
 marcellogt:
   nome: Marcello Goulart Teixeira
-  site: https://ic.ufrj.br/~marcellogt
+  # site: https://ic.ufrj.br/~marcellogt
   lattes: https://lattes.cnpq.br/1551165098428375
   cargo: associado
 
@@ -157,13 +157,13 @@ mluiza:
 
 rincon:
   nome: Mauro Antonio Rincon
-  site: https://ic.ufrj.br/~rincon
+  # site: https://ic.ufrj.br/~rincon
   lattes: https://lattes.cnpq.br/2436767709775022
   cargo: titular
 
 mitre:
   nome: Mitre Costa Dourado
-  site: https://ic.ufrj.br/~mitre
+  # site: https://ic.ufrj.br/~mitre
   lattes: https://lattes.cnpq.br/0841425239502177
   cargo: titular
 
@@ -195,19 +195,19 @@ collier:
 
 silvana:
   nome: Silvana Rossetto
-  site: https://ic.ufrj.br/~silvana
+  # site: https://ic.ufrj.br/~silvana
   lattes: https://lattes.cnpq.br/0054098292730720
   cargo: associado
 
 valeriab:
   nome: Valeria Menezes Bastos
-  site: https://ic.ufrj.br/~valeriab
+  # site: https://ic.ufrj.br/~valeriab
   lattes: https://lattes.cnpq.br/6948667770415330
   cargo: associado
 
 vigusmao:
   nome: Vinícius Gusmão Pereira de Sá
-  site: https://ic.ufrj.br/~vigusmao
+  # site: https://ic.ufrj.br/~vigusmao
   lattes: https://lattes.cnpq.br/1507369025671110
   cargo: associado
 
