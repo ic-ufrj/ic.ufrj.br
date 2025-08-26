@@ -125,7 +125,7 @@ description: "Organizações e cargos do Instituto de Computação da UFRJ"
   {{< /grupo >}}
 </ul>
 
-# NDEs
+## Núcleos Docentes Estruturantes (NDEs)
 
 <ul class="lista-pessoal">
   {{< grupo "Núcleo Docente Estruturante (NDE) do Bacharel em Ciência da Computação (BCC)" "nde" >}}
