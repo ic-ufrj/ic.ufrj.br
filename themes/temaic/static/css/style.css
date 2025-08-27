@@ -394,7 +394,8 @@ body > header a:hover {
 	}
 
 	#main-header > .principal > li:focus > ul,
-	#main-header > .principal > li:focus-within > ul {
+	#main-header > .principal > li:focus-within > ul,
+	#main-header > .principal > li:hover > ul {
 		display: flex;
 		clip-path: inset(-50px 0 0 0);
 		transition-delay: 200ms;
