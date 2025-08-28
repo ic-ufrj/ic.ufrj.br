@@ -3,8 +3,8 @@
   {{ $email := $email | replaceRE "^([^@]*)$" "$1@ic.ufrj.br" }}
   {{ $email := $email | htmlEscape }}
   {{ $email := $email | replaceRE "@([^\\.]*)" "@<span>$1</span>" }}
-  {{ $email := $email | replaceRE "\\.([^\\.]*)$" "<span>.nceebapoli</span>.$1" }}
-  {{ $email := $email | replaceRE "$" "<span>.com</span>" }}
+  {{ $email := $email | replaceRE "\\.([^\\.]*)$" "<span>.textoantispam</span>.$1" }}
+  {{ $email := $email | replaceRE "$" "<span>.naodeveaparecer</span>" }}
   {{ $email := $email | safeHTML }}
   {{ $email }}
 </span>
