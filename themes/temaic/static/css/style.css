@@ -282,6 +282,40 @@ body > header a:hover {
 	line-height: 20px;
 }
 
+.masshead {
+	display: flex;
+	height: 100px;
+	width: 100vw;
+	margin-left: calc(380px - 50vw);
+
+	align-items: center;
+	justify-content: center;
+
+	background: url("/img/masshead.jpg");
+	background-size: cover;
+	background-position: center center;
+}
+
+.masshead h1 {
+	color: var(--cor-texto-branco);
+	background-color: rgba(0, 0, 0, 1);
+	padding: 15px;
+	border-radius: 10px;
+
+	text-transform: uppercase;
+	font-weight: 800;
+	font-size: 25px;
+
+	text-align: center;
+}
+
+@media screen and (max-width: 800px) {
+	.masshead {
+		margin-left: -20px;
+	}
+}
+
+
 @media screen and (max-width: 1270px) {
 	:root {
 		--menu-padding: 30px;
@@ -412,6 +446,23 @@ body > header a:hover {
 		padding: 20px;
 		width: 100%;
 		text-align: center;
+	}
+
+	.masshead {
+		height: auto;
+
+		align-items: center;
+		justify-content: center;
+
+		background: none;
+	}
+
+	.masshead h1 {
+		color: var(--cor-texto);
+		background-color: rgba(0, 0, 0, 0);
+		line-height: 1.2em;
+
+		font-size: 25px;
 	}
 }
 
@@ -667,38 +718,6 @@ article hr {
 }
 
 
-.masshead {
-	display: flex;
-	height: 100px;
-	width: 100vw;
-	margin-left: calc(380px - 50vw);
-
-	align-items: center;
-	justify-content: center;
-
-	background: url("/img/masshead.jpg");
-	background-size: cover;
-	background-position: center center;
-}
-
-.masshead h1 {
-	color: var(--cor-texto-branco);
-	background-color: rgba(0, 0, 0, 1);
-	padding: 15px;
-	border-radius: 10px;
-
-	text-transform: uppercase;
-	font-weight: 800;
-	font-size: 25px;
-
-	text-align: center;
-}
-
-@media screen and (max-width: 800px) {
-	.masshead {
-		margin-left: -20px;
-	}
-}
 
 
 .container-imagem-principal {
