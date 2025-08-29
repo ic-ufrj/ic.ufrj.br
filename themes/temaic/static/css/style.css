@@ -294,6 +294,8 @@ body > header a:hover {
 	background: url("/img/masshead.jpg");
 	background-size: cover;
 	background-position: center center;
+
+	margin-bottom: 15px;
 }
 
 .masshead h1 {
