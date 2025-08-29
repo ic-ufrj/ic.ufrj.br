@@ -103,7 +103,9 @@ body > header {
 	user-select: none;
 }
 
-body > header a, body > header span {
+body > header a,
+body > header button,
+#hamburger-label {
 	/* Faz o ponteiro ficar daquele jeito de quando passa por um link */
 	cursor: pointer;
 }
