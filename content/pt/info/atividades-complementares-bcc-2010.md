@@ -21,7 +21,7 @@ Algumas observações gerais:
 - Somente solicite a contagem de suas horas de Atividades Complementares para a inclusão no seu BOA quando acreditar já possuir as 200h ou mais.
 - Observe sempre o tempo mínimo (ou quantidade mínima) da atividade para que sua pontuação seja considerada.
 - Dependendo da atividade, sua pontuação pode estar relacionada com a duração do seu desenvolvimento ou sua quantidade comprovada (por mês, por evento, por apresentação, etc.).
-- Cada tipo de atividade tem um total máximo de horas que podem ser concedidas, conforme a tabela. Impreterivelmente, nenhum tipo de atividade terá um total de horas concedido superior a 54h.
+- Cada tipo de atividade tem um total máximo de horas que podem ser concedidas, conforme a tabela. Impreterivelmente, nenhum tipo de atividade terá um total de horas concedido superior a 120h.
 
 ## Atividades Consideradas e Horas Concedidas
 
