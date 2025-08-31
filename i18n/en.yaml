@@ -72,3 +72,9 @@
 - id: lista-de-membros
   translation: "Members"
 
+- id: formulario-site
+  translation: "Feedback About this Website"
+
+- id: codigo-fonte-site
+  translation: "Source Code"
+

@@ -70,3 +70,9 @@
 - id: lista-de-membros
   translation: "Lista de Membros"
 
+- id: formulario-site
+  translation: "Formulário de Feedback do Site"
+
+- id: codigo-fonte-site
+  translation: "Código Fonte"
+
