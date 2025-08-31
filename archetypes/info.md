@@ -1,5 +1,7 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
-draft: true
+draft: false
+# uma breve descrição do artigo, tire o # para habilitar
+#description: ""
 ---
