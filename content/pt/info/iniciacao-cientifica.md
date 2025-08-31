@@ -8,5 +8,3 @@ draft: false
 
 Essa página ainda está em construção...
 
-Por enquanto, você pode ler [esse artigo](https://pr2.ufrj.br/iniciacao-cientifica/) para aprender sobre as bolsas PIBIC!
-
