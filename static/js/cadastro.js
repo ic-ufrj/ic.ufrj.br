@@ -74,7 +74,7 @@ document.getElementById("cadastrojs-formulario").addEventListener("submit", func
   console.log("Data substituída");
   console.log(data.data);
 
-  fetch("https://novo.ic.ufrj.br/api/cadastrar", {
+  fetch("https://ic.ufrj.br/api/cadastrar", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
