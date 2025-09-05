@@ -25,7 +25,7 @@ document.getElementById("cadastrojs-place-aqui").innerHTML = `
 
   <div class="cadastrojs-elemento">
     <label for="registrojs-dre">DRE (nove dígitos)</label>
-    <input type="text" name="dre" id="registrojs-dre" placeholder="123456789" pattern="\\d{9}" required>
+    <input type="number" name="dre" id="registrojs-dre" placeholder="123456789" required>
   </div>
   <div class="cadastrojs-elemento">
     <label for="registrojs-data">Data do documento</label>
@@ -37,7 +37,7 @@ document.getElementById("cadastrojs-place-aqui").innerHTML = `
   </div>
   <div class="cadastrojs-elemento">
     <label for="registrojs-codigo">Código de Autenticação</label>
-    <input type="text" name="codigo" id="registrojs-codigo" placeholder="1234.5678.9ABC.DEF1.4918.1923.AAAA.F124" pattern="[A-F0-9]{4}\\.[A-F0-9]{4}\\.[A-F0-9]{4}\\.[A-F0-9]{4}\\.[A-F0-9]{4}\\.[A-F0-9]{4}\\.[A-F0-9]{4}\\.[A-F0-9]{4}" required>
+    <input type="text" name="codigo" id="registrojs-codigo" placeholder="1234.5678.9ABC.DEF1.4918.1923.AAAA.F124" required>
   </div>
 
   <div id="cadastrojs-problemas"></div>
