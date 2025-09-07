@@ -138,6 +138,8 @@ description: "Organizações e cargos do Instituto de Computação da UFRJ"
   {{< /grupo >}}
 </ul>
 
+<!--
+
 ## Congregação
 
 Email: {{< email congregacao >}}
@@ -163,29 +165,30 @@ Email: {{< email congregacao >}}
 | Vitor Fernandes de Carvalho Ambrizzi | Discentes | |
 | Izabel Souza Resende | Discentes | Suplente |
 
-<!--
+-->
+
 ## Congregação
 
 <ul class="lista-pessoal">
-  {{< grupo "Congregação do Instituto de Computação" "congregacao" >}}
-    <li>{{< nome_completo anamaria >}} (Presidente)</li>
-    <li>{{< nome_completo carla >}} (Vice-Presidente)</li>
-    <li>{{< nome_completo mitre >}} (Professor Titular)</li>
-    <li>{{< nome_completo vigusmao >}} (Professor Associado)</li>
-    <li>{{< nome_completo juvianna >}} (Professor Associado)</li>
-    <li>{{< nome_completo jonice >}} (Professor Associado)</li>
-    <li>{{< nome_completo silvana >}} (Professor Associado)</li>
-    <li>{{< nome_completo carolina >}} (Professor Adjunto)</li>
-    <li>{{< nome_completo julianabsf >}} (Professor Adjunto)</li>
-    <li>{{< nome_completo giseli >}} (Professor Adjunto)</li>
-    <li>{{< nome_completo eldany >}} (Professor Adjunto)</li>
-    <li>{{< nome_completo hugomg >}} (Professor Assistente)</li>
-    <li>{{< nome_completo marcosleipnitz >}} (Professor Assistente)</li>
-    <li>{{< nome_completo tiagoms >}} (Técnico-Administrativo)</li>
-    <li>{{< nome_completo rerison >}} (Técnico-Administrativo)</li>
-    <li>Izabel Sousa Resende (Discente)</li>
-    <li>Vitor Fernandes de Carvalho Ambrizzi (Discente)</li>
+  {{< grupo "Congregação do Instituto de Computação" "congregacao" "longo" >}}
+    <li>{{< nome_completo anamaria >}} - Presidente</li>
+    <li>{{< nome_completo carla >}} - Vice-Presidente</li>
+    <li>{{< nome_completo hugonobrega >}} - Chefe do DCC</li>
+    <li>{{< nome_completo mitre >}} - Professores Titulares</li>
+    <li>{{< nome_completo vigusmao >}} - Professores Associados</li>
+    <li>{{< nome_completo juvianna >}} - Professores Associados</li>
+    <li>{{< nome_completo jonice >}} - Professores Associados (1º Suplente)</li>
+    <li>{{< nome_completo silvana >}} - Professores Associados (2º Suplente)</li>
+    <li>{{< nome_completo carolina >}} - Professores Adjuntos</li>
+    <li>{{< nome_completo julianabsf >}} - Professores Adjuntos</li>
+    <li>{{< nome_completo giseli >}} - Professores Adjuntos (1º Suplente)</li>
+    <li>{{< nome_completo eldany >}} - Professores Adjuntos (1º Suplente)</li>
+    <li>{{< nome_completo hugomg >}} - Professores Assistentes</li>
+    <li>{{< nome_completo marcosleipnitz >}} - Professores Assistentes (Suplente)</li>
+    <li>{{< nome_completo tiagoms >}} - Técnicos-Administrativos</li>
+    <li>{{< nome_completo rerison >}} - Técnicos-Administrativos (Suplente)</li>
+    <li>Vitor Fernandes de Carvalho Ambrizzi - Discente</li>
+    <li>Izabel Sousa Resende - Discentes (Suplente)</li>
   {{< /grupo >}}
 </ul>
--->
 

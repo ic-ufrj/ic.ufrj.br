@@ -1,5 +1,5 @@
 {{ $id := (.Get 1 | default (.Get 0)) | urlize }}
-<li>
+<li {{ if (eq (.Get 2) "longo") }}class="lista-pessoal-card-largo"{{ end }}>
   <article class="card-pessoal" id="{{ $id }}" aria-labelled-by="cardname-{{ $id }}">
     <header>
       <h3 class="nome" id="cardname-{{ $id }}">{{ .Get 0 }}</h3>
