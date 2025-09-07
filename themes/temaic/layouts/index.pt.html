@@ -10,13 +10,13 @@
   <h2>Notícias Recentes</h2>
 
   {{ range first 5 (where .Site.RegularPages "Section" "noticias" ) }}
-    <a href="{{ .RelPermalink }}" class="noticia">
-      <h2>{{ .Title }}</h2>
+    <article class="noticia">
+      <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
       <small>{{ .Date | time.Format ":date_long" }}</small>
       <div class="{{ if .Params.description }}descricao-noticia{{ else }}preview-noticia{{ end }}">
         {{ .Params.description | default .Summary | plainify }}
       </div>
-    </a>
+    </article>
   {{ end }}
 
   <p><strong><a href="{{ "/noticias" | relLangURL }}">Ver mais notícias</a></strong></p>

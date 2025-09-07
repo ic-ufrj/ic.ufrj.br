@@ -788,6 +788,9 @@ article hr {
 	margin-top: 0px;
 	margin-bottom: 5px;
 }
+.noticia > h2 a {
+	color: inherit;
+}
 .noticia > small {
 	font-weight: 200;
 	margin-bottom: 10px;
