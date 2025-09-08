@@ -24,3 +24,12 @@ markup:
   goldmark:
     renderer:
       unsafe: true
+
+services:
+  googleAnalytics:
+    id: G-7MT71KGPF2
+privacy:
+  googleAnalytics:
+    respectDoNotTrack: true
+
+
