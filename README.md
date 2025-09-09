@@ -1,14 +1,40 @@
-# Em desenvolvimento...
+# Instituto de Computação
 
-- [ ] Trocar ícones do Bootstrap por SVGs estáticos
-- [X] Configurar melhor o NGINX da montagem
-- [ ] Acessibilidade básica com `aria-label`, etc.
-- [ ] Menu mais bem elaborado para dispositivos móveis
-- [ ] Listagem de notícias recentes
-- [ ] Trazer a maioria do conteúdo do site antigo
-- [ ] Testar e estilizar: footnotes, definition lists e goldmark extras
-- [ ] Testar responsividade de tudo
-- [ ] Testar mais navegadores
-- [X] Mover /artigos/ para /info/ e criar /noticias/
+## Como instalar o Hugo
 
+### Ubuntu e derivados (Pop! OS, Linux Menta, etc)
 
+```bash
+sudo snap install hugo
+```
+
+### Arch Linux
+
+```bash
+sudo pacman -S hugo
+```
+
+## Como testar o site localmente
+
+Primeiro, faça um fork do repositório usando o GitHub. Depois, clone o repositório:
+
+```bash
+git clone https://github.com/SEU_NOME_DE_USUARIO/ic.ufrj.br.git
+cd ic.ufrj.br
+```
+
+Em um terminal separado, execute:
+
+```bash
+hugo serve
+```
+
+Isso vai tornar o site acessível em http://localhost:1313/. O site atualiza sozinho quando altera o código.
+
+### Testar em um celular
+
+Use `hugo serve --bind 0.0.0.0` em vez de `hugo serve`, isso faz com que o site esteja disponível de fora do `localhost`. Assim, dá para acessar no celular por https://192.168.0.2:1313/ ou https://146.164.41.39:1313/. Para saber o IP do seu computador, use `ip addr` e procure o indereço `inet` da interface de rede principal.
+
+## Documentação em progresso
+
+Mais em breve...
