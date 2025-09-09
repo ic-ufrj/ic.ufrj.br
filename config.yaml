@@ -33,3 +33,7 @@ privacy:
     respectDoNotTrack: true
 
 
+params:
+  images:
+  - /img/parede-vermelha.jpg
+
