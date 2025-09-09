@@ -491,7 +491,7 @@ footer > div {
 }
 
 footer .superior {
-	background-color: var(--cor-ic2);
+	background-color: var(--cor-ic1);
 
 	justify-content: space-between;
 }
@@ -512,7 +512,7 @@ footer .superior p {
 }
 
 footer .inferior {
-	background-color: var(--cor-fundo-menu);
+	background-color: var(--cor-fundo-menu-cima);
 }
 
 footer .inferior > * {
