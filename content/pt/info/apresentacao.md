@@ -20,7 +20,7 @@ diversos cursos de Engenharia da Escola Politécnica, com exceção dos cursos
 de Engenharia de Computação e Informação e de Engenharia Eletrônica e
 de Computação; e
 - por disciplinas de Computação para os cursos de Astronomia, Biofísica,
-Física, Matemática, Metereologia, Nanotecnologia e Química.
+Física, Matemática, Meteorologia, Nanotecnologia e Química.
 
 <!--
 Aqui se dizia que o ic possui 42 docentes, 10 substitutos etc etc, mas são
