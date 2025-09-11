@@ -83,18 +83,23 @@ description: "Organizações e cargos do Instituto de Computação da UFRJ"
 
   {{< grupo "Comissão de Orientação e Acompanhamento Acadêmico (COAA)" "coaa" >}}
     <li>{{< nome_completo cfb >}}</li>
-    <li>{{< nome_completo jcps >}}</li>
     <li>{{< nome_completo juvianna >}}</li>
     <li>{{< nome_completo mhelena >}}</li>
-    <li>Cássio Silva (Representante Discente)</li>
-    <li>João Vitor Nascimento (Representante Discente)</li>
+    <li>{{< nome_completo rodrigomello >}}</li>    
+    <li>{{< nome_completo sergioserra >}}</li>
+    <li>{{< nome_completo vigusmao >}}</li>
+    <li>Brenno Alves de Castro (Representante Discente)</li>
+    <li>João Victor Borges Nascimento (Representante Discente)</li>
   {{< /grupo >}}
 
   {{< grupo "Comissão de Equivalência de Disciplinas (COMED)" "comissaoequivalencia" >}}
     <li>{{< nome_completo cfb >}}</li>
+    <li>{{< nome_completo hugonobrega >}}</li>
     <li>{{< nome_completo hugomg >}}</li>
     <li>{{< nome_completo juvianna >}}</li>
     <li>{{< nome_completo luziane >}}</li>
+    <li>{{< nome_completo marcellogt >}}</li>
+    <li>{{< nome_completo vigusmao >}}</li>
   {{< /grupo >}}
 
   {{< grupo "Comissão de Atividades Complementares (COAC)" "coac" >}}
@@ -103,9 +108,10 @@ description: "Organizações e cargos do Instituto de Computação da UFRJ"
   {{< /grupo >}}
 
   {{< grupo "Comissão de Estágio" "estagio" >}}
-    <li>{{< nome_completo julianabsf >}}</li>
-    <li>{{< nome_completo valeriab >}}</li>
     <li>{{< nome_completo carolina >}}</li>
+    <li>{{< nome_completo julianabsf >}}</li>
+    <li>{{< nome_completo paulomann >}}</li>
+    <li>{{< nome_completo valeriab >}}</li>
   {{< /grupo >}}
 
   {{< grupo "Comissão de Transferência" "comissaotransferencia" >}}
