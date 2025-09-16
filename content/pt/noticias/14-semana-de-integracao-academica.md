@@ -6,7 +6,6 @@ draft: false
 #description: ""
 ---
 
-O Instituto de Computação (IC/UFRJ) convida a comunidade acadêmica para participar das Sessões de Pesquisa, que serão realizadas do dia 23/09/2025 a 25/09/2025.
+O Instituto de Computação (IC/UFRJ) convida a comunidade acadêmica para participar das Sessões de Pesquisa e Extensão, que serão realizadas do dia 23/09/2025 a 25/09/2025.
 
 [Clique aqui para ver a lista de apresentações e seus horários e salas.](/noticias/14-semana-de-integracao-academica/sessao-de-apresentacao-oral.pdf)
-
