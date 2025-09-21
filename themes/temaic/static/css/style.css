@@ -485,15 +485,15 @@ footer {
 footer > div {
 	width: 100vw;
 	padding: 0 var(--menu-padding);
-
-	display: flex;
-	flex-wrap: wrap;
 }
 
 footer .superior {
 	background-color: var(--cor-ic1);
 
 	justify-content: space-between;
+
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 footer .superior > div {
@@ -512,6 +512,9 @@ footer .superior p {
 }
 
 footer .inferior {
+	display: flex;
+	flex-wrap: wrap;
+
 	background-color: var(--cor-fundo-menu-cima);
 }
 

@@ -43,6 +43,23 @@
       <a href="{{ i18n "link_mais_informacoes_contato" }}">{{ i18n "mais_informacoes_contato" }}</a>
     </p>
   </div>
+
+  {{ $menu := index site.Data.menus (printf "principal.%s" .Site.Language.Lang) }}
+  {{ range $menu }}
+    {{ $upper := .name }}
+    {{ range .children }}
+      <div>
+        <span>{{ .name | default $upper | htmlUnescape }}</span>
+        <p>
+          {{ range .children }}
+            {{ if .url }}
+              <a href="{{ .url }}">{{ htmlUnescape .name }}</a><br>
+            {{ end }}
+          {{ end }}
+        </p>
+      </div>
+    {{ end }}
+  {{ end }}
 </div>
 
 <div class="inferior">
