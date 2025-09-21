@@ -1,11 +1,12 @@
+{{- /* Essa linha serve para remover o espaço ao redor do span */ -}}
 <span class="email">
-  {{ $email := . }}
-  {{ $email := $email | replaceRE "^([^@]*)$" "$1@ic.ufrj.br" }}
-  {{ $email := $email | htmlEscape }}
-  {{ $email := $email | replaceRE "@([^\\.]*)" "@<span>$1</span>" }}
-  {{ $email := $email | replaceRE "\\.([^\\.]*)$" "<span>.textoantispam</span>.$1" }}
-  {{ $email := $email | replaceRE "$" "<span>.naodeveaparecer</span>" }}
-  {{ $email := $email | safeHTML }}
-  {{ $email }}
+  {{- $email := . -}}
+  {{- $email := $email | replaceRE "^([^@]*)$" "$1@ic.ufrj.br" -}}
+  {{- $email := $email | htmlEscape -}}
+  {{- $email := $email | replaceRE "@([^\\.]*)" "@<span>$1</span>" -}}
+  {{- $email := $email | replaceRE "\\.([^\\.]*)$" "<span>.textoantispam</span>.$1" -}}
+  {{- $email := $email | replaceRE "$" "<span>.naodeveaparecer</span>" -}}
+  {{- $email := $email | safeHTML -}}
+  {{- $email -}}
 </span>
-
+{{- /* Essa linha serve para remover o espaço ao redor do span */ -}}

@@ -1,5 +1,5 @@
-{{ $url := .Destination }}
+{{- $url := .Destination -}}
 <a href="{{ $url }}"{{ if strings.HasPrefix $url "http" }} target="_blank" rel="noopener"{{ end }}>
-  {{ .Text | safeHTML }}
+  {{- .Text | safeHTML -}}
 </a>
-
+{{- /* Essa linha serve para remover o espaço depois do link */ -}}
