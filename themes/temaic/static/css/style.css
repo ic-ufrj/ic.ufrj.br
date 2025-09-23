@@ -368,7 +368,6 @@ body > header a:hover {
 		top: 0;
 		right: var(--menu-padding);
 		height: 70px;
-		font-size: 60px;
 	}
 
 	#hamburger:checked + .principal {
