@@ -80,3 +80,5 @@
     - children:
         - name: PPGI
           url: /info/ppgi/
+        - name: ProfComp
+          url: /info/profcomp/
