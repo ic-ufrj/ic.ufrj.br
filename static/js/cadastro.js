@@ -90,7 +90,7 @@ document.getElementById("cadastrojs-formulario").addEventListener("submit", func
     if (data.sabar_mais) {
       detalhes = `<details><summary>Mais informações</summary><p>${data.sabar_mais}</p></details>`;
     }
-    if (status === 422 || status === 500) {
+    if (status === 422 || status === 500 || status == 401) {
       document.getElementById("cadastrojs-problemas").innerHTML = `<p>${data.message}</p>` + detalhes;
     } else if (status === 403 || status === 409 || status === 201) {
       document.getElementById("cadastrojs-formulario").outerHTML = `<p>${data.message}</p>` + detalhes;
