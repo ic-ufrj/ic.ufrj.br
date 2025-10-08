@@ -302,7 +302,6 @@ body > header a:hover {
 
 .masshead h1 {
 	color: var(--cor-texto-branco);
-	background-color: rgba(0, 0, 0, 1);
 	padding: 15px;
 	border-radius: 10px;
 
@@ -452,12 +451,11 @@ body > header a:hover {
 		align-items: center;
 		justify-content: center;
 
-		background: none;
+		/*background: none;*/
 	}
 
 	.masshead h1 {
-		color: var(--cor-texto);
-		background-color: rgba(0, 0, 0, 0);
+		/*color: var(--cor-texto);*/
 		line-height: 1.2em;
 
 		font-size: 25px;
