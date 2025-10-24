@@ -188,7 +188,7 @@ Email: {{< email congregacao >}}
     <li>{{< nome_completo carolina >}} - Professores Adjuntos</li>
     <li>{{< nome_completo julianabsf >}} - Professores Adjuntos</li>
     <li>{{< nome_completo giseli >}} - Professores Adjuntos (1º Suplente)</li>
-    <li>{{< nome_completo eldany >}} - Professores Adjuntos (1º Suplente)</li>
+    <li>{{< nome_completo eldany >}} - Professores Adjuntos (2º Suplente)</li>
     <li>{{< nome_completo hugomg >}} - Professores Assistentes</li>
     <li>{{< nome_completo marcosleipnitz >}} - Professores Assistentes (Suplente)</li>
     <li>{{< nome_completo tiagoms >}} - Técnicos-Administrativos</li>
