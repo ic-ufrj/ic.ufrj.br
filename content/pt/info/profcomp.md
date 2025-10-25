@@ -20,8 +20,8 @@ Veja o edital completo no site da SBC:  [www.sbc.org.br/profcomp-sbc/](https://w
 
 ## Informações complementares - Edital de Seleção 2026 - IC-UFRJ
 
-- Procedimentos para ações afirmativas e compensatórias e cronograma: [Anexo IC-UFRJ](https://drive.google.com/file/d/1NWdwEzDiAeM1KT4pEAOvnLZVmC8xPcfc/view?usp=sharing)
-- Apenas o cronograma UFRJ: [Cronograma IC-UFRJ](https://drive.google.com/file/d/1yisFNrMwlyo62bfSqAZ9WWxDG3JzqxSY/view?usp=sharing)
+- Procedimentos para ações afirmativas e compensatórias e cronograma: [Anexo IC-UFRJ](https://drive.google.com/file/d/1h5yfyJCvEzO8MHF_5wYwT5EUaASIXmB8/view?usp=drive_link)
+- Apenas o cronograma UFRJ: [Cronograma IC-UFRJ](https://drive.google.com/file/d/1nok4CZ1rwyBvwfkkeAEX1U3JM7Y189A1/view?usp=drive_link)
 
 ## Regulamento PROFCOMP IC-UFRJ
 O Regulamento interno do PROFCOMP também está disponível: [Regulamento PROFCOMP IC-UFRJ](https://drive.google.com/file/d/1ZqluZ_F6WuMGeTRZjx6oi7xKE9hMyusw/view?usp=drive_link)
