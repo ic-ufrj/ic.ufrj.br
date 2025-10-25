@@ -2,6 +2,10 @@ baseURL: "https://ic.ufrj.br/"
 title: "Instituto de Computação"
 theme: temaic
 
+module:
+  hugoVersion:
+    min: "0.149.1"
+
 taxonomies: []
 
 defaultContentLanguage: pt
