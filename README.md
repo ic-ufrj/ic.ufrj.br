@@ -16,9 +16,9 @@ sudo snap install hugo
 sudo pacman -S hugo
 ```
 
-### Outras Distros
+### Outras Distribuições
 
-Baixar do Github do Hugo
+Baixar do Github do Hugo: https://github.com/gohugoio/hugo/releases
 
 ## Como testar o site localmente
 
