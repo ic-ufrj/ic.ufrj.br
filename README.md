@@ -2,6 +2,8 @@
 
 ## Como instalar o Hugo
 
+A versão mínima recomendada do Hugo é a 0.149.1
+
 ### Ubuntu e derivados (Pop! OS, Linux Menta, etc)
 
 ```bash
@@ -13,6 +15,10 @@ sudo snap install hugo
 ```bash
 sudo pacman -S hugo
 ```
+
+### Outras Distros
+
+Baixar do Github do Hugo
 
 ## Como testar o site localmente
 
