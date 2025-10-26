@@ -1,7 +1,16 @@
-
 {{ define "main" }}
   <article>
     <header class="masshead"><h1>{{ .Title }}</h1></header>
+
+    {{- $toc := .TableOfContents -}}
+    {{- $toc = replaceRE `(?s)^<nav[^>]*>(.*)</nav>$` "$1" $toc -}}
+    {{- $toc = $toc | safeHTML -}}
+    {{ with $toc }}
+      <nav aria-label="{{ i18n "sumario" }}" class="sumario">
+        <h2>{{ i18n "sumario" }}</h2>
+        {{ . }}
+      </nav>
+    {{ end }}
     {{ .Content }}
   </article>
 {{ end }}

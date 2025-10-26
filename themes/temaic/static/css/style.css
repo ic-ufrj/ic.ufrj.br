@@ -669,6 +669,15 @@ article hr {
 	margin: 35px 0;
 }
 
+article > .sumario {
+	border: 1px solid var(--cor-borda-cinza);
+	border-radius: 10px;
+	padding: 20px;
+}
+article > .sumario > h2 {
+	margin-top: 0px;
+}
+
 
 
 

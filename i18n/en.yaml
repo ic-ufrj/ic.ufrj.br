@@ -78,3 +78,6 @@
 - id: codigo-fonte-site
   translation: "Source Code"
 
+- id: sumario
+  translation: "Table of Contents"
+
