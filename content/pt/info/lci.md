@@ -9,7 +9,7 @@ description: "Informações sobre a Supervisão do LCI, equipe de monitores que 
 
 A Supervisão do LCI é responsável pela manutenção dos Laboratórios e computadores em geral do Instituto, das contas instuticionais, dos sites (incluindo esse) e de outros recursos do Instituto. Ela pode ser contactada pelo email {{< email supervisao >}} ou na sala E-2015, no Instituto de Computação, bloco E do CCMN (porta do NCE). Os horários disponíveis para atendimento podem ser vizualidos na Escala de Horários abaixo:
 
-<iframe src="https://calendar.google.com/calendar/u/0/embed?src=dcc.ufrj.br_po6evqil7ddfudsk1loul3p5to@group.calendar.google.com&ctz=America/Sao_Paulo" width="100%" height="400" scrolling="no" style="margin: 20px 0;"></iframe>
+<iframe src="https://calendar.google.com/calendar/u/0/embed?src=dcc.ufrj.br_po6evqil7ddfudsk1loul3p5to@group.calendar.google.com&ctz=America/Sao_Paulo&mode=WEEK" width="100%" height="600" scrolling="no" style="margin: 20px 0;"></iframe>
 
 ## Laboratórios
 
@@ -29,11 +29,11 @@ Os LAB1 e LAB3 ficam disponíveis a todos os alunos quando não têm aulas. Os h
 Lab 1:
 
 <div style="margin: 20px 0;">
-<iframe src="https://calendar.google.com/calendar/u/0/embed?src=dcc.ufrj.br_34373636333433373431@resource.calendar.google.com&ctz=America/Sao_Paulo" width="100%" height="400" scrolling="no"></iframe>
+<iframe src="https://calendar.google.com/calendar/u/0/embed?src=dcc.ufrj.br_34373636333433373431@resource.calendar.google.com&ctz=America/Sao_Paulo&mode=WEEK" width="100%" height="600" scrolling="no"></iframe>
 
 Lab 3:
 
-<iframe src="https://calendar.google.com/calendar/u/0/embed?src=dcc.ufrj.br_333831383837313533@resource.calendar.google.com&ctz=America/Sao_Paulo" width="100%" height="400" scrolling="no"></iframe>
+<iframe src="https://calendar.google.com/calendar/u/0/embed?src=dcc.ufrj.br_333831383837313533@resource.calendar.google.com&ctz=America/Sao_Paulo&mode=WEEK" width="100%" height="600" scrolling="no"></iframe>
 </div>
 
 ## Regras de Uso dos Laboratórios
