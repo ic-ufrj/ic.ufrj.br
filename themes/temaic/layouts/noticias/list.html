@@ -1,6 +1,6 @@
 {{ define "main" }}
   <article>
-    <div class="masshead"><h1>{{ i18n "lista_de_artigos" }}</h1></div>
+    <div class="masshead"><h1>{{ .Title }}</h1></div>
     {{ range .Pages }}
       <article class="noticia">
         <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
