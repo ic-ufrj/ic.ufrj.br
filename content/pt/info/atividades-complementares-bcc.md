@@ -50,7 +50,7 @@ O tempo dedicado ao desenvolvimento de cada atividade será convertido em uma qu
 | Cursos de aperfeiçoamento dentro da área de Ciência da Computação realizados durante a graduação, externos à UFRJ                              |     Por curso     | 50% do número de horas do curso realizado |       36h        |
 | Cursos de idiomas realizados durante a graduação                                                                                               |   Por semestre    |              5h por semestre              |       20h        |
 
-Outras atividades, diferentes das mencionadas nas tabelas, poderão ser consideradas para a totalização das Atividades Complementares. Nesse caso, a determinação da quantidade de horas concedida será feita após análise da Comissão de Atividades Complementares (e-mail: coac@ic.ufrj.br).
+Outras atividades, diferentes das mencionadas nas tabelas, poderão ser consideradas para a totalização das Atividades Complementares. Nesse caso, a determinação da quantidade de horas concedida será feita após análise da Comissão de Atividades Complementares (e-mail: {{< email coac >}}).
 
 ## Documentação
 

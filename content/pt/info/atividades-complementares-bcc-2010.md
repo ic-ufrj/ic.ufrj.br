@@ -49,7 +49,7 @@ O tempo dedicado ao desenvolvimento de cada atividade será convertido em uma qu
 | Intercâmbio Acadêmico (atividade não creditada no histórico)                                                                             |       1 mês       |                10h por mês                |       60h        |
 | Cursos de aperfeiçoamento dentro da área de Ciência da Computação realizados durante a graduação, externos à UFRJ                        |     Por curso     | 10% do número de horas do curso realizado |       40h        |
 
-Outras atividades, diferentes das mencionadas nas tabelas, poderão ser consideradas para a totalização das Atividades Complementares. Nesse caso, a determinação da quantidade de horas concedida será feita após análise da Comissão de Atividades Complementares (e-mail: coac@ic.ufrj.br).
+Outras atividades, diferentes das mencionadas nas tabelas, poderão ser consideradas para a totalização das Atividades Complementares. Nesse caso, a determinação da quantidade de horas concedida será feita após análise da Comissão de Atividades Complementares (e-mail: {{< email coac >}}).
 
 ## Documentação
 
