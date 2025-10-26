@@ -1,69 +1,65 @@
 <div class="superior">
-  <div>
-    <span>{{ i18n "localizacao" }}</span>
-    <p>
+  <section>
+    <h2>{{ i18n "localizacao" }}</h2>
+    <address>
       Centro de Ciências Matemáticas e da Natureza
       <br>Avenida Athos da Silveira Ramos, 274 - Bloco E
       <br>Cidade Universitária
       <br>Rio de Janeiro, RJ, Brasil
       <br>CEP: 21941-916
-    </p>
-  </div>
-  <div>
-    <span>{{ i18n "redes-sociais" }}</span>
-    <p>
-      <a href="https://www.youtube.com/@institutodecomputacao-ufrj2797" target="_blank" rel="noopener">
+    </address>
+  </section>
+  <nav>
+    <h2>{{ i18n "redes-sociais" }}</h2>
+    <ul>
+      <li><a href="https://www.youtube.com/@institutodecomputacao-ufrj2797" target="_blank" rel="noopener">
         {{ i18n "youtube-footer" }}
-      </a>
-      <br><a href="https://github.com/ic-ufrj" target="_blank" rel="noopener">
+      </a></li>
+      <li><a href="https://github.com/ic-ufrj" target="_blank" rel="noopener">
         {{ i18n "github-footer" }}
-      </a>
-      <br><a href="https://bit.ly/telegram_coord_icufrj" target="_blank" rel="noopener">
+      </a></li>
+      <li><a href="https://bit.ly/telegram_coord_icufrj" target="_blank" rel="noopener">
         {{ i18n "telegram-footer" }}
-      </a>
-      <br><a href="https://github.com/ic-ufrj/ic.ufrj.br" target="_blank" rel="noopener">
+      </a></li>
+      <li><a href="https://github.com/ic-ufrj/ic.ufrj.br" target="_blank" rel="noopener">
         {{ i18n "codigo-fonte-site" }}
-      </a>
-    </p>
-  </div>
-  <div>
-    <span>{{ i18n "contato" }}</span>
-    <p>
-      Tel.: +55 21 3938-3338
-      <br>Tel.: +55 21 3938-3393
-      <br>Tel.: +55 21 3938-9516
-    </p>
-    <p>
-      {{ partial "email.html" "secretaria" }}
-    </p>
-    <p>
-      <a href="{{ i18n "link_mais_informacoes_contato" }}">{{ i18n "mais_informacoes_contato" }}</a>
-    </p>
-  </div>
-
-  {{ $menu := index site.Data.menus (printf "principal.%s" .Site.Language.Lang) }}
-  {{ range $menu }}
-    {{ $upper := .name }}
-    {{ range .children }}
-      <div>
-        <span>{{ .name | default $upper | htmlUnescape }}</span>
-        <p>
-          {{ range .children }}
-            {{ if .url }}
-              <a href="{{ .url }}">{{ htmlUnescape .name }}</a><br>
-            {{ end }}
-          {{ end }}
-        </p>
-      </div>
-    {{ end }}
-  {{ end }}
+      </a></li>
+    </ul>
+  </nav>
+  <section>
+    <h2>{{ i18n "contato" }}</h2>
+    <address>
+      <ul>
+        <li>Tel.: +55 21 3938-3338</li>
+        <li>Tel.: +55 21 3938-3393</li>
+        <li>Tel.: +55 21 3938-9516</li>
+        <li>E-mail: {{ partial "email.html" "secretaria" }}</li>
+        <li><a href="{{ i18n "link_mais_informacoes_contato" }}">{{ i18n "mais_informacoes_contato" }}</a></li>
+      </ul>
+    </address>
+  </section>
 </div>
 
+<nav class="menu-footer">
+  {{- $menu := index site.Data.menus (printf "principal.%s" .Site.Language.Lang) -}}
+  {{- range $menu -}}
+    {{- $upper := .name -}}
+    {{- range .children -}}
+      <section>
+        <h2>{{ .name | default $upper | htmlUnescape }}</h2>
+        <ul>
+          {{- range .children -}}
+            {{- if .url -}}
+              <li><a href="{{ .url }}">{{ htmlUnescape .name }}</a></li>
+            {{- end -}}
+          {{- end -}}
+        </ul>
+      </section>
+    {{- end -}}
+  {{- end -}}
+</nav>
+
 <div class="inferior">
-  <span class="copyright">{{ i18n "todos_direitos_reservados_ic" }}</span>
-  <!--<ul class="social">
-    <li><a href="https://www.youtube.com/@institutodecomputacao-ufrj2797" target="_blank" rel="noopener"><i class="bi bi-youtube"></i></a></li>
-    <li><a href="https://github.com/ic-ufrj" target="_blank" rel="noopener"><i class="bi bi-github"></i></a></li>
-  </ul>-->
+  <p class="copyright"><small>{{ i18n "todos_direitos_reservados_ic" }}</small></p>
 </div>
 

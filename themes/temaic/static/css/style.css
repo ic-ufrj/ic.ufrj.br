@@ -479,12 +479,12 @@ footer {
 	color: var(--cor-texto-branco);
 }
 
-footer > div {
+footer > * {
 	width: 100vw;
 	padding: 0 var(--menu-padding);
 }
 
-footer .superior {
+footer .superior, footer .menu-footer {
 	background-color: var(--cor-ic1);
 
 	justify-content: space-between;
@@ -493,20 +493,22 @@ footer .superior {
 	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
-footer .superior > div {
+footer .superior > *, footer .menu-footer > * {
 	padding: 20px;
 }
 
-footer .superior > span {
+footer .superior h2, footer .menu-footer h2 {
 	display: block;
-	height: 20px;
+	padding-bottom: 15px;
 	font-weight: 600;
 }
 
-footer .superior p {
-	padding: 10px 0px;
-	line-height: 22px;
+footer .superior ul, footer .menu-footer ul {
+	display: flex;
+	flex-direction: column;
+	gap: 7px;
 }
+
 
 footer .inferior {
 	display: flex;
