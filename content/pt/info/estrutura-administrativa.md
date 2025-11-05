@@ -128,6 +128,7 @@ description: "Organizações e cargos do Instituto de Computação da UFRJ"
   {{< grupo "Comissão de Monitoria" "monitoria" >}}
     <li>{{< nome_completo eldany >}}</li>
     <li>{{< nome_completo jpaixao >}}</li>
+    <li>{{< nome_completo vivian >}}</li>
   {{< /grupo >}}
 </ul>
 
