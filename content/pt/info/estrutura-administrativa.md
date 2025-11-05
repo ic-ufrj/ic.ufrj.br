@@ -94,7 +94,6 @@ description: "Organizações e cargos do Instituto de Computação da UFRJ"
 
   {{< grupo "Comissão de Equivalência de Disciplinas (COMED)" "comissaoequivalencia" >}}
     <li>{{< nome_completo cfb >}}</li>
-    <li>{{< nome_completo hugonobrega >}}</li>
     <li>{{< nome_completo hugomg >}}</li>
     <li>{{< nome_completo juvianna >}}</li>
     <li>{{< nome_completo luziane >}}</li>
