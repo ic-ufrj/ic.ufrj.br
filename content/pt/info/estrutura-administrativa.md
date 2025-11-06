@@ -85,8 +85,8 @@ description: "Organizações e cargos do Instituto de Computação da UFRJ"
     <li>{{< nome_completo cfb >}}</li>
     <li>{{< nome_completo juvianna >}}</li>
     <li>{{< nome_completo mhelena >}}</li>
-    <li>{{< nome_completo rodrigomello >}}</li>    
     <li>{{< nome_completo sergioserra >}}</li>
+    <li>{{< nome_completo ronaldsouza >}}</li>
     <li>{{< nome_completo vigusmao >}}</li>
     <li>Brenno Alves de Castro (Representante Discente)</li>
     <li>João Victor Borges Nascimento (Representante Discente)</li>
