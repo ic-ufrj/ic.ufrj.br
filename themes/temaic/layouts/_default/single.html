@@ -2,7 +2,7 @@
   <article>
     <header class="masshead"><h1>{{ .Title }}</h1></header>
 
-    {{- $toc := .TableOfContents -}}
+    <!--{{- $toc := .TableOfContents -}}
     {{- $toc = replaceRE `(?s)^<nav[^>]*>(.*)</nav>$` "$1" $toc -}}
     {{- $toc = $toc | safeHTML -}}
     {{ with $toc }}
@@ -10,7 +10,7 @@
         <h2>{{ i18n "sumario" }}</h2>
         {{ . }}
       </nav>
-    {{ end }}
+    {{ end }}-->
     {{ .Content }}
   </article>
 {{ end }}
