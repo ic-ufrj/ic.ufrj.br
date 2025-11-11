@@ -19,7 +19,7 @@ O trabalho deve ser orientado obrigatoriamente por 1 docente permanente do Insti
 
 ### Texto
 
-Os autores devem elaborar uma monografia - texto auto contido contendo referências para aprofundamento do tema. Modelos: [Latex](/tcc-bcc/ModeloTCC-Latex-2021.zip), [Word](/tcc-bcc/ModeloTCC-Word-2021.zip).
+Os autores devem elaborar uma monografia - texto auto contido contendo referências para aprofundamento do tema. Modelos: [Latex](/tcc-bcc/ModeloTCC-Latex-2025.zip), [Word e LibreOffice](/tcc-bcc/ModeloTCC-Word-2025.zip).
 
 ### Banca
 
