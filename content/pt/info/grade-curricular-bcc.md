@@ -160,48 +160,48 @@ description: "Grade curricular do curso conforme dados do SIGA UFRJ."
 | FIT112 | Física I - a                  | 4.0      | 60            |                                 |
 | FIT122 | Física II - a                 | 4.0      | 60            | [FIT112](#1º-período), [MAC118](#1º-período)  |
 | ICP005 | Ética em Computação           | 4.0      | 60            |                                 |
-| ICP006 | Internet das Coisas           | 4.0      | 60            | [ICP246](#5º-período), [ICP362](#6º-período)  |
-| ICP009 | Sist Colaborat e Comput Social| 4.0      | 60            | [ICP237](#4º-período)           |
-| ICP010 | Web Semântica                | 4.0      | 60            | [ICP489](#6º-período)           |
-| ICP011 | Tóp Esp em Ciência de Dados I | 4.0      | 60            | [ICP363](#5º-período), [ICP489](#6º-período)  |
-| ICP012 | Tóp Esp em Ciência de Dados II| 4.0      | 60            | [ICP363](#5º-período), [ICP489](#6º-período)  |
-| ICP013 | Séries e Transformadas Comput| 4.0      | 60            | [ICP115](#3º-período), [MAE992](#2º-período)  |
+| ICP006 | Internet das Coisas           | 4.0      | 60            | [ICP246](#4º-período), [ICP362](#6º-período)  |
+| ICP009 | Sist Colaborat e Comput Social| 4.0      | 60            | [ICP237](#3º-período)           |
+| ICP010 | Web Semântica                | 4.0      | 60            | [ICP489](#4º-período)           |
+| ICP011 | Tóp Esp em Ciência de Dados I | 4.0      | 60            | [ICP363](#6º-período), [ICP489](#4º-período)  |
+| ICP012 | Tóp Esp em Ciência de Dados II| 4.0      | 60            | [ICP363](#6º-período), [ICP489](#4º-período)  |
+| ICP013 | Séries e Transformadas Comput| 4.0      | 60            | [ICP115](#3º-período), [MAE992](#3º-período)  |
 | ICP014 | Comput Científ Equaç Dif Ordin| 4.0      | 60            | [ICP248](#4º-período), [ICP351](#5º-período)  |
 | ICP015 | Comput Científ Equaç Dif Parc| 4.0      | 60            | [ICP014](#4º-período)           |
 | ICP016 | Introd Métod Elementos Finitos| 4.0      | 60            | [ICP248](#4º-período)           |
-| ICP017 | Otimização Linear            | 4.0      | 60            | [ICP365](#5º-período)           |
-| ICP018 | Otimização Não Linear        | 4.0      | 60            | [ICP365](#5º-período)           |
+| ICP017 | Otimização Linear            | 4.0      | 60            | [ICP365](#6º-período)           |
+| ICP018 | Otimização Não Linear        | 4.0      | 60            | [ICP365](#6º-período)           |
 | ICP019 | Álgebra Linear Aplicada      | 4.0      | 60            | [ICP248](#4º-período)           |
-| ICP020 | Engenharia de Software       | 4.0      | 60            | [ICP237](#4º-período)           |
-| ICP021 | Tóp Esp em Engenharia Dados I| 4.0      | 60            | [ICP489](#6º-período)           |
-| ICP022 | Tóp Esp em Engenharia Dados II| 4.0      | 60            | [ICP489](#6º-período)           |
-| ICP023 | Gestão de Projetos           | 4.0      | 60            | [ICP237](#4º-período)           |
-| ICP024 | Análise e Projeto de Sistemas| 4.0      | 60            | [ICP237](#4º-período)           |
-| ICP025 | Computação em Nuvem          | 4.0      | 60            | [ICP246](#5º-período), [ICP362](#6º-período)  |
+| ICP020 | Engenharia de Software       | 4.0      | 60            | [ICP237](#3º-período)           |
+| ICP021 | Tóp Esp em Engenharia Dados I| 4.0      | 60            | [ICP489](#4º-período)           |
+| ICP022 | Tóp Esp em Engenharia Dados II| 4.0      | 60            | [ICP489](#4º-período)           |
+| ICP023 | Gestão de Projetos           | 4.0      | 60            | [ICP237](#3º-período)           |
+| ICP024 | Análise e Projeto de Sistemas| 4.0      | 60            | [ICP237](#3º-período)           |
+| ICP025 | Computação em Nuvem          | 4.0      | 60            | [ICP246](#4º-período), [ICP362](#6º-período)  |
 | ICP026 | Redes de Computadores II     | 4.0      | 60            | [ICP362](#6º-período)           |
-| ICP027 | Criptografia                | 4.0      | 60            | [ICP115](#3º-período), [ICP131](#4º-período), [ICP134](#4º-período) |
-| ICP028 | Tóp Esp em Arquitetura Comput| 4.0      | 60            | [ICP246](#5º-período)           |
-| ICP029 | Empreendedorismo e Inovação  | 4.0      | 60            | [ICP145](#3º-período)           |
-| ICP030 | Governança e Gestão de Dados | 4.0      | 60            | [ICP489](#6º-período)           |
-| ICP031 | Tóp Esp em Comp Científica I | 4.0      | 60            | [ICP351](#5º-período), [ICP365](#5º-período)  |
-| ICP032 | Tóp Esp em Comp Científica II| 4.0      | 60            | [ICP351](#5º-período), [ICP365](#5º-período)  |
+| ICP027 | Criptografia                | 4.0      | 60            | [ICP115](#3º-período), [ICP131](#1º-período), [ICP134](#1º-período) |
+| ICP028 | Tóp Esp em Arquitetura Comput| 4.0      | 60            | [ICP246](#4º-período)           |
+| ICP029 | Empreendedorismo e Inovação  | 4.0      | 60            | [ICP145](#2º-período)           |
+| ICP030 | Governança e Gestão de Dados | 4.0      | 60            | [ICP489](#4º-período)           |
+| ICP031 | Tóp Esp em Comp Científica I | 4.0      | 60            | [ICP351](#5º-período), [ICP365](#6º-período)  |
+| ICP032 | Tóp Esp em Comp Científica II| 4.0      | 60            | [ICP351](#5º-período), [ICP365](#6º-período)  |
 | ICP034 | Análise de Redes Sociais     | 4.0      | 60            |                                 |
-| ICP035 | Tóp Esp em Teoria da Comput I| 4.0      | 60            | [ICP116](#3º-período), [ICP144](#3º-período)  |
-| ICP036 | Tóp Esp em Teoria da Comput II| 4.0      | 60            | [ICP116](#3º-período), [ICP144](#3º-período)  |
-| ICP038 | Fundamentos Processo Negócio | 4.0      | 60            | [ICP132](#3º-período)           |
-| ICP041 | Oficina de Desenv Software I | 4.0      | 60            | [ICP237](#4º-período)           |
-| ICP042 | Oficina de Desenv Software II| 4.0      | 60            | [ICP237](#4º-período)           |
-| ICP051 | Tóp Esp em Eng de Software I | 4.0      | 60            | [ICP237](#4º-período)           |
-| ICP052 | Tóp Esp em Eng de Software II| 4.0      | 60            | [ICP237](#4º-período)           |
-| ICP061 | Desenvolvimento Web I        | 4.0      | 60            | [ICP239](#4º-período)           |
-| ICP062 | Desenvolvimento Web II       | 4.0      | 60            | [ICP239](#4º-período)           |
-| ICP071 | Tóp Esp em Sist Computacion I| 4.0      | 60            | [ICP361](#5º-período)           |
+| ICP035 | Tóp Esp em Teoria da Comput I| 4.0      | 60            | [ICP116](#3º-período), [ICP144](#2º-período)  |
+| ICP036 | Tóp Esp em Teoria da Comput II| 4.0      | 60            | [ICP116](#3º-período), [ICP144](#2º-período)  |
+| ICP038 | Fundamentos Processo Negócio | 4.0      | 60            | [ICP132](#1º-período)           |
+| ICP041 | Oficina de Desenv Software I | 4.0      | 60            | [ICP237](#3º-período)           |
+| ICP042 | Oficina de Desenv Software II| 4.0      | 60            | [ICP237](#3º-período)           |
+| ICP051 | Tóp Esp em Eng de Software I | 4.0      | 60            | [ICP237](#3º-período)           |
+| ICP052 | Tóp Esp em Eng de Software II| 4.0      | 60            | [ICP237](#3º-período)           |
+| ICP061 | Desenvolvimento Web I        | 4.0      | 60            | [ICP239](#3º-período)           |
+| ICP062 | Desenvolvimento Web II       | 4.0      | 60            | [ICP239](#3º-período)           |
+| ICP071 | Tóp Esp em Sist Computacion I| 4.0      | 60            | [ICP361](#6º-período)           |
 | ICP072 | Tóp Esp em Sist Computacion II| 4.0      | 60            | [ICP362](#6º-período)           |
-| ICP081 | Oficina de Teconologia I     | 2.0      | 30            | [ICP141](#4º-período), [ICP239](#4º-período) |
-| ICP082 | Oficina de Teconologia II    | 2.0      | 30            | [ICP141](#4º-período), [ICP239](#4º-período) |
-| ICP083 | Oficina de Teconologia III   | 2.0      | 30            | [ICP141](#4º-período), [ICP239](#4º-período) |
-| ICP084 | Oficina de Teconologia IV    | 2.0      | 30            | [ICP141](#4º-período), [ICP239](#4º-período) |
-| ICP085 | Oficina de Teconologia V     | 2.0      | 30            | [ICP141](#4º-período), [ICP239](#4º-período) |
+| ICP081 | Oficina de Teconologia I     | 2.0      | 30            | [ICP141](#2º-período), [ICP239](#3º-período) |
+| ICP082 | Oficina de Teconologia II    | 2.0      | 30            | [ICP141](#2º-período), [ICP239](#3º-período) |
+| ICP083 | Oficina de Teconologia III   | 2.0      | 30            | [ICP141](#2º-período), [ICP239](#3º-período) |
+| ICP084 | Oficina de Teconologia IV    | 2.0      | 30            | [ICP141](#2º-período), [ICP239](#3º-período) |
+| ICP085 | Oficina de Teconologia V     | 2.0      | 30            | [ICP141](#2º-período), [ICP239](#3º-período) |
 | ICP091 | Tóp Esp em Ciência Comput I  | 4.0      | 60            |                                 |
 | ICP092 | Tóp Esp em Ciência Comput II | 4.0      | 60            |                                 |
 | ICP093 | Tóp Esp em Ciência Comput III| 4.0      | 60            |                                 |
@@ -209,29 +209,29 @@ description: "Grade curricular do curso conforme dados do SIGA UFRJ."
 | ICP095 | Tóp Esp em Ciência Comput V  | 4.0      | 60            |                                 |
 | ICP096 | Lab Análise de Redes Sociais | 4.0      | 60            | [ICP034](#3º-período)           |
 | ICP100 | Introd Gestão Estratégica Ti | 4.0      | 60            |                                 |
-| ICP102 | Tecn para Grandes Vol de Dados| 4.0      | 60            | [ICP489](#6º-período)           |
-| ICP103 | Análise de Risco             | 4.0      | 60            | [MAD243](#5º-período)           |
+| ICP102 | Tecn para Grandes Vol de Dados| 4.0      | 60            | [ICP489](#4º-período)           |
+| ICP103 | Análise de Risco             | 4.0      | 60            | [MAD243](#4º-período)           |
 | ICP356 | Organização de Dados II      | 4.0      | 60            | [ICP116](#3º-período)           |
-| ICP357 | Data Warehousing e Intel Negóc| 4.0      | 60            | [ICP489](#6º-período)           |
-| ICP359 | Introd ao Suporte à Decisão  | 4.0      | 60            | [MAD243](#5º-período)           |
-| ICP367 | Sistemas Distribuídos        | 4.0      | 60            | [ICP361](#5º-período), [ICP362](#6º-período)  |
+| ICP357 | Data Warehousing e Intel Negóc| 4.0      | 60            | [ICP489](#4º-período)           |
+| ICP359 | Introd ao Suporte à Decisão  | 4.0      | 60            | [MAD243](#4º-período)           |
+| ICP367 | Sistemas Distribuídos        | 4.0      | 60            | [ICP361](#6º-período), [ICP362](#6º-período)  |
 | ICP465 | Tóp Esp Informática Sociedade| 4.0      | 60            |                                 |
-| ICP471 | Compiladores                | 4.0      | 60            | [ICP116](#3º-período), [ICP123](#4º-período), [ICP353](#5º-período) |
+| ICP471 | Compiladores                | 4.0      | 60            | [ICP116](#3º-período), [ICP123](#5º-período), [ICP353](#5º-período) |
 | ICP478 | Métodos Numéricos I          | 4.0      | 60            | [ICP231](#4º-período)           |
-| ICP491 | Banco de Dados II            | 4.0      | 60            | [ICP489](#6º-período)           |
+| ICP491 | Banco de Dados II            | 4.0      | 60            | [ICP489](#4º-período)           |
 | ICP508 | Inteligência Artificial      | 4.0      | 60            | [ICP368](#5º-período)           |
 | ICP518 | Teoria de Grafos             | 4.0      | 60            | [ICP368](#5º-período)           |
-| ICP532 | Mineração de Dados           | 4.0      | 60            | [ICP489](#6º-período), [MAD243](#5º-período) |
-| ICP603 | Gestão do Conhecimento       | 4.0      | 60            | [ICP142](#3º-período)           |
+| ICP532 | Mineração de Dados           | 4.0      | 60            | [ICP489](#4º-período), [MAD243](#4º-período) |
+| ICP603 | Gestão do Conhecimento       | 4.0      | 60            | [ICP142](#2º-período)           |
 | ICP605 | Recuperação de Informação    | 4.0      | 60            | [ICP116](#3º-período)           |
 | ICP606 | Tóp Esp em Programação       | 4.0      | 60            | [ICP368](#5º-período)           |
-| ICP616 | Interação Humano-computador  | 4.0      | 60            | [ICP237](#4º-período)           |
-| ICP622 | Program Paralela e Distribuída| 4.0      | 60            | [ICP361](#5º-período)           |
+| ICP616 | Interação Humano-computador  | 4.0      | 60            | [ICP237](#3º-período)           |
+| ICP622 | Program Paralela e Distribuída| 4.0      | 60            | [ICP361](#6º-período)           |
 | ICP633 | Algoritmos de Aproximação    | 4.0      | 60            | [ICP368](#5º-período)           |
 | ICP636 | Algoritmos Paralelos         | 4.0      | 60            | [ICP368](#5º-período)           |
-| ICP638 | Computação Algébrica         | 4.0      | 60            | [ICP115](#3º-período), [ICP131](#4º-período), [ICP134](#4º-período) |
-| ICP639 | Computação Quântica          | 4.0      | 60            | [ICP115](#3º-período), [ICP134](#4º-período)  |
-| ICP640 | Projeto Teste de Software    | 4.0      | 60            | [ICP237](#4º-período)           |
+| ICP638 | Computação Algébrica         | 4.0      | 60            | [ICP115](#3º-período), [ICP131](#1º-período), [ICP134](#1º-período) |
+| ICP639 | Computação Quântica          | 4.0      | 60            | [ICP115](#3º-período), [ICP134](#1º-período)  |
+| ICP640 | Projeto Teste de Software    | 4.0      | 60            | [ICP237](#3º-período)           |
 | ICPX03 | Monitoria I                  | 2.0      | 90            |                                 |
 | ICPX04 | Monitoria II                 | 2.0      | 90            | [ICPX03](#)                    |
 | IEE115 | Economia                     | 4.0      | 60            |                                 |
