@@ -129,6 +129,12 @@ description: "Organizações e cargos do Instituto de Computação da UFRJ"
     <li>{{< nome_completo jpaixao >}}</li>
     <li>{{< nome_completo vivian >}}</li>
   {{< /grupo >}}
+
+  {{< grupo "Comissão de Internacionalização" "intercambio" >}}
+    <li>{{< nome_completo carolina >}}</li>
+    <li>{{< nome_completo sadoc >}}</li>
+    <li>{{< nome_completo jonice >}}</li>
+  {{< /grupo >}}
 </ul>
 
 ## Núcleos Docentes Estruturantes (NDEs)

@@ -60,6 +60,8 @@
           url: /info/inscricao-em-disciplina/
         - name: Ofertas de Monitoria
           url: /info/monitoria/
+        - name: Intercâmbio Internacional
+          url: /info/intercambio-internacional/
 
 - name: Pesquisa
   children:
