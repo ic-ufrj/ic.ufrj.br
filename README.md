@@ -41,6 +41,16 @@ Isso vai tornar o site acessível em http://localhost:1313/. O site atualiza soz
 
 Use `hugo serve --bind 0.0.0.0` em vez de `hugo serve`, isso faz com que o site esteja disponível de fora do `localhost`. Assim, dá para acessar no celular por https://192.168.0.2:1313/ ou https://146.164.41.39:1313/. Para saber o IP do seu computador, use `ip addr` e procure o indereço `inet` da interface de rede principal.
 
+## Como criar uma página
+
+Vamos dizer que queremos criar uma notícia "Departamento de Ciência da Computação Volta a Fazer Parte do Instituto De Matemática". Para isso, usamos o seguinte comando:
+
+```bash
+hugo new content/pt/noticias/departamento-de-ciencia-da-computacao-volta-a-fazer-parte-do-instituto-de-matematica.md
+```
+
+Então, edite o arquivo Markdown que o Hugo criou. Lembre-se de verificar se o título está correto. Apesar dele trocar os hífens por espaços e capitalizar ele não é capaz de colocar os acentos. Abaixo do "cabeçalho", escreva o conteúdo da página em Markdown.
+
 ## Documentação em progresso
 
 Mais em breve...
