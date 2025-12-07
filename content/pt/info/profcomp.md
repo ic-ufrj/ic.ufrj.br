@@ -18,6 +18,10 @@ O programa é liderado pela **Sociedade Brasileira de Computação (SBC)** e mai
 
 Veja o edital completo no site da SBC:  [www.sbc.org.br/profcomp-sbc/](https://www.sbc.org.br/profcomp-sbc/)
 
+**Resultado do processo seletivo**.
+
+[Resultado preliminar](/info/profcomp-resultados-2026)
+
 ## Informações complementares - Edital de Seleção 2026 - IC-UFRJ
 
 - Procedimentos para ações afirmativas e compensatórias e cronograma: [Anexo IC-UFRJ](https://drive.google.com/file/d/1h5yfyJCvEzO8MHF_5wYwT5EUaASIXmB8/view?usp=drive_link)
