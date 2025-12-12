@@ -5,7 +5,8 @@ draft: false
 description: "História, objetivo e informações úteis sobre o BCC"
 ---
 
-![Logo do BCC](/img/logo-bcc.png)
+![Logo do BCC](logo-bcc.png)
+
 O Curso de Bacharelado em Ciência da Computação da UFRJ teve seu início em 1974, sendo um dos primeiros cursos de Computação do Brasil, e desde então já passou por quatro denominações. O curso foi reconhecido inicialmente pelo Conselho Federal de Educação em 10/01/1983 (Portaria Ministerial no 11), conforme publicação feita no Diário Oficial da União em 11/01/1983.
 
 A primeira turma foi organizada no 1o semestre de 1974, com o nome de Bacharelado em Matemática (Modalidade Informática), recebendo mais tarde, em 1983, a denominação de Bacharelado em Matemática Aplicada (Modalidade Informática), por ocasião do reconhecimento pelo MEC. Em Junho de 1988, o Conselho Universitário da UFRJ aprovou a mudança para a denominação de Bacharelado em Informática. O Conselho Universitário da UFRJ aprovou a atual denominação de **Bacharelado em Ciência da Computação** em Junho de 2003, em atenção às Diretrizes Curriculares propostas ao MEC para a área de Computação e Informática.
