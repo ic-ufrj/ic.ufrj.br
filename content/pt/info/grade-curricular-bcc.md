@@ -155,10 +155,10 @@ description: "Grade curricular do curso conforme dados do SIGA UFRJ."
 
 | Código | Nome                           | Créditos | Carga Horária | Requisitos                        |
 |--------|--------------------------------|----------|---------------|:--------------------------------|
-| FIM230 | Física III - a                | 4.0      | 60            | [FIT112](#1º-período), [MAC128](#2º-período) |
-| FIM240 | Física IV - a                | 4.0      | 60            | [FIM230](#3º-período)           |
+| FIM230 | Física III - a                | 4.0      | 60            | [FIT112](#disciplinas-optativas-escolha-condicionada), [MAC128=MAE992](#3º-período) |
+| FIM240 | Física IV - a                | 4.0      | 60            | [FIM230](#disciplinas-optativas-escolha-condicionada)           |
 | FIT112 | Física I - a                  | 4.0      | 60            |                                 |
-| FIT122 | Física II - a                 | 4.0      | 60            | [FIT112](#1º-período), [MAC118](#1º-período)  |
+| FIT122 | Física II - a                 | 4.0      | 60            | [FIT112](#disciplinas-optativas-escolha-condicionada), [MAC118=MAE111](#2º-período)  |
 | ICP005 | Ética em Computação           | 4.0      | 60            |                                 |
 | ICP006 | Internet das Coisas           | 4.0      | 60            | [ICP246](#4º-período), [ICP362](#6º-período)  |
 | ICP009 | Sist Colaborat e Comput Social| 4.0      | 60            | [ICP237](#3º-período)           |
@@ -167,7 +167,7 @@ description: "Grade curricular do curso conforme dados do SIGA UFRJ."
 | ICP012 | Tóp Esp em Ciência de Dados II| 4.0      | 60            | [ICP363](#6º-período), [ICP489](#4º-período)  |
 | ICP013 | Séries e Transformadas Comput| 4.0      | 60            | [ICP115](#3º-período), [MAE992](#3º-período)  |
 | ICP014 | Comput Científ Equaç Dif Ordin| 4.0      | 60            | [ICP248](#4º-período), [ICP351](#5º-período)  |
-| ICP015 | Comput Científ Equaç Dif Parc| 4.0      | 60            | [ICP014](#4º-período)           |
+| ICP015 | Comput Científ Equaç Dif Parc| 4.0      | 60            | [ICP014](#disciplinas-optativas-escolha-condicionada)           |
 | ICP016 | Introd Métod Elementos Finitos| 4.0      | 60            | [ICP248](#4º-período)           |
 | ICP017 | Otimização Linear            | 4.0      | 60            | [ICP365](#6º-período)           |
 | ICP018 | Otimização Não Linear        | 4.0      | 60            | [ICP365](#6º-período)           |
@@ -207,7 +207,7 @@ description: "Grade curricular do curso conforme dados do SIGA UFRJ."
 | ICP093 | Tóp Esp em Ciência Comput III| 4.0      | 60            |                                 |
 | ICP094 | Tóp Esp em Ciência Comput IV | 4.0      | 60            |                                 |
 | ICP095 | Tóp Esp em Ciência Comput V  | 4.0      | 60            |                                 |
-| ICP096 | Lab Análise de Redes Sociais | 4.0      | 60            | [ICP034](#3º-período)           |
+| ICP096 | Lab Análise de Redes Sociais | 4.0      | 60            | [ICP034](#disciplinas-optativas-escolha-condicionada)           |
 | ICP100 | Introd Gestão Estratégica Ti | 4.0      | 60            |                                 |
 | ICP102 | Tecn para Grandes Vol de Dados| 4.0      | 60            | [ICP489](#4º-período)           |
 | ICP103 | Análise de Risco             | 4.0      | 60            | [MAD243](#4º-período)           |
@@ -233,7 +233,7 @@ description: "Grade curricular do curso conforme dados do SIGA UFRJ."
 | ICP639 | Computação Quântica          | 4.0      | 60            | [ICP115](#3º-período), [ICP134](#1º-período)  |
 | ICP640 | Projeto Teste de Software    | 4.0      | 60            | [ICP237](#3º-período)           |
 | ICPX03 | Monitoria I                  | 2.0      | 90            |                                 |
-| ICPX04 | Monitoria II                 | 2.0      | 90            | [ICPX03](#)                    |
+| ICPX04 | Monitoria II                 | 2.0      | 90            | [ICPX03](#disciplinas-optativas-escolha-condicionada)                    |
 | IEE115 | Economia                     | 4.0      | 60            |                                 |
 | LEB599 | Est da Líng Bras de Sinais I | 4.0      | 60            |                                 |
 | MAE993 | Cálculo Int e Diferencial III| 4.0      | 60            | [MAE992](#3º-período)
