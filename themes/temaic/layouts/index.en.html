@@ -2,9 +2,13 @@
 
 {{ define "main" }}
 
-<div class="container-imagem-principal">
+<div class="container-imagem-principal" style="margin-bottom: 10px">
   <img class="imagem-principal" src="/img/parede-vermelha.jpg">
 </div>
+
+<article>
+  {{ .Content }}
+</article>
 
 {{ end }}
 
