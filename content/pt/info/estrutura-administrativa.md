@@ -183,24 +183,24 @@ Email: {{< email congregacao >}}
 
 <ul class="lista-pessoal">
   {{< grupo "Congregação do Instituto de Computação" "congregacao" "longo" >}}
-    <li>{{< nome_completo anamaria >}} - Presidente</li>
-    <li>{{< nome_completo carla >}} - Vice-Presidente</li>
-    <li>{{< nome_completo hugonobrega >}} - Chefe do DCC</li>
-    <li>{{< nome_completo mitre >}} - Professores Titulares</li>
-    <li>{{< nome_completo vigusmao >}} - Professores Associados</li>
-    <li>{{< nome_completo juvianna >}} - Professores Associados</li>
-    <li>{{< nome_completo jonice >}} - Professores Associados (1º Suplente)</li>
-    <li>{{< nome_completo silvana >}} - Professores Associados (2º Suplente)</li>
-    <li>{{< nome_completo carolina >}} - Professores Adjuntos</li>
-    <li>{{< nome_completo julianabsf >}} - Professores Adjuntos</li>
-    <li>{{< nome_completo giseli >}} - Professores Adjuntos (1º Suplente)</li>
-    <li>{{< nome_completo eldany >}} - Professores Adjuntos (2º Suplente)</li>
-    <li>{{< nome_completo hugomg >}} - Professores Assistentes</li>
-    <li>{{< nome_completo marcosleipnitz >}} - Professores Assistentes (Suplente)</li>
-    <li>{{< nome_completo tiagoms >}} - Técnicos-Administrativos</li>
-    <li>{{< nome_completo rerison >}} - Técnicos-Administrativos (Suplente)</li>
-    <li>Vitor Fernandes de Carvalho Ambrizzi - Discente</li>
-    <li>Izabel Sousa Resende - Discentes (Suplente)</li>
+    <li>{{< nome_completo anamaria >}} <span style="color: #606060;"> - Presidente</span></li>
+    <li>{{< nome_completo carla >}} <span style="color: #606060;"> - Vice-Presidente</span></li>
+    <li>{{< nome_completo hugonobrega >}} <span style="color: #606060;"> - Chefe do DCC</span></li>
+    <li>{{< nome_completo mitre >}} <span style="color: #606060;"> - Professores Titulares</span></li>
+    <li>{{< nome_completo vigusmao >}} <span style="color: #606060;"> - Professores Associados</span></li>
+    <li>{{< nome_completo juvianna >}} <span style="color: #606060;"> - Professores Associados</span></li>
+    <li>{{< nome_completo jonice >}} <span style="color: #606060;"> - Professores Associados (1º Suplente)</span></li>
+    <li>{{< nome_completo silvana >}} <span style="color: #606060;"> - Professores Associados (2º Suplente)</span></li>
+    <li>{{< nome_completo carolina >}} <span style="color: #606060;"> - Professores Adjuntos</span></li>
+    <li>{{< nome_completo julianabsf >}} <span style="color: #606060;"> - Professores Adjuntos</span></li>
+    <li>{{< nome_completo giseli >}} <span style="color: #606060;"> - Professores Adjuntos (1º Suplente)</span></li>
+    <li>{{< nome_completo eldany >}} <span style="color: #606060;"> - Professores Adjuntos (2º Suplente)</span></li>
+    <li>{{< nome_completo hugomg >}} <span style="color: #606060;"> - Professores Assistentes</span></li>
+    <li>{{< nome_completo marcosleipnitz >}} <span style="color: #606060;"> - Professores Assistentes (Suplente)</span></li>
+    <li>{{< nome_completo tiagoms >}} <span style="color: #606060;"> - Técnicos-Administrativos</span></li>
+    <li>{{< nome_completo rerison >}} <span style="color: #606060;"> - Técnicos-Administrativos (Suplente)</span></li>
+    <li>Vitor Fernandes de Carvalho Ambrizzi <span style="color: #606060;"> - Discente</span></li>
+    <li>Izabel Sousa Resende <span style="color: #606060;"> - Discentes (Suplente)</span></li>
   {{< /grupo >}}
 </ul>
 
