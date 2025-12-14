@@ -513,12 +513,14 @@ footer .superior ul, footer .menu-footer ul {
 footer .inferior {
 	display: flex;
 	flex-wrap: wrap;
+	align-items: center;
 
 	background-color: var(--cor-fundo-menu-cima);
 }
 
 footer .inferior > * {
 	padding: 20px;
+	margin: auto;
 }
 
 footer .inferior .social {
