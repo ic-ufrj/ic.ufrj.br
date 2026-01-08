@@ -13,7 +13,7 @@ A Supervisão do LCI é responsável pela manutenção dos Laboratórios e compu
 
 ## Laboratórios
 
-O Instituto gerencia quatro laboratórios exclusivos a seus alunos. Sua manutenção é de responsabilidade da Supervisão do LCI, equipe composta majoritariamente por alunos que tem vagas abertas todo ano. Para acessar os computadores dos LEP, o nome é "convidado" e, caso peça senha, é "convidado" também. Já nos LAB, o nome de usuário deve ser a parte do seu email institucional antes do @ (arroba), por exemplo, se seu email é {{< email aluno >}}, seu nome de usuário deve ser `aluno`, e a senha é a senha digitada no formulário de criação de conta, que pode não ser a mesma do email. Caso tenha esquecido a senha, [contate a Supervisão fisicamente](#a-supervisão).
+O Instituto gerencia quatro laboratórios exclusivos a seus alunos. Sua manutenção é de responsabilidade da Supervisão do LCI, equipe composta majoritariamente por alunos, que tem vagas abertas todo ano. Para acessar os computadores do LEP1 e do LEP2, o nome de usuário é "convidado" e, caso peça senha, é "convidado" também. Já no LAB1 e no LAB3, o nome de usuário deve ser a parte do seu email institucional antes do @ (arroba). Por exemplo, se seu email é {{< email aluno >}}, seu nome de usuário deve ser `aluno`, e a senha é a que você colocou no formulário de criação de conta, que pode não ser a mesma do email. Caso tenha esquecido a senha, [contate a Supervisão fisicamente](#a-supervisão).
 
 Os laboratórios são:
 
@@ -48,15 +48,9 @@ Lab 3:
 
 ## Contas de Email
 
-Os alunos cadastrados no sistema do Instituto têm acesso a uma conta de email do Google, com 50GB de armazenamento e outros benefícios. **Essa conta só fica disponível um dia após o cadastro do aluno**, já que a sincronização acontece de madrugada.
+Os alunos cadastrados no sistema do Instituto têm acesso a uma conta de email do Google, com 50GB de armazenamento e outros benefícios. **Essa conta só fica disponível um dia após o cadastro do aluno no site**, já que a sincronização acontece de madrugada.
 
-Para utilizar essa conta, você deve usar o Gmail para logar em uma conta {{< email "username@dcc.ufrj.br" >}}, onde o `username` é o nome de usuário que o sistema de cadastro te mostrou. Caso tenha esquecido, basta utilizar o formulário de cadastro novamente, que ele vai detectar que a conta já existe e mostrar o nome de usuário. Apesar dos emails @ic.ufrj.br funcionarem para receber emails, no login do Google o email com @dcc.ufrj.br deve ser usado. **Além disso, é necessário selecionar a opção de conta Google, não "Outro", caso o Gmail pergunte.** A senha não necessariamente é a a mesma dos laboratórios, caso seja seu primeiro login essa senha é o seu DRE, depois disso, será a que você cadastrar. **Mudanças de senha na conta Google não refletem nas senhas dos laboratórios nem vice-versa.**
-
-<!--
-UM DIA VOLTARÁ
-
-## Login do Wifi
--->
+Para utilizar essa conta, você deve usar o Gmail para logar em uma conta {{< email "username@ic.ufrj.br" >}}, onde o `username` é o nome de usuário que o sistema de cadastro te mostrou. Caso tenha esquecido, basta utilizar o formulário de cadastro novamente, que ele vai detectar que a conta já existe e mostrar o nome de usuário. **É necessário selecionar a opção de conta Google, não "Outro", caso o Gmail pergunte.** A senha não necessariamente é a mesma dos laboratórios. Caso seja seu primeiro login essa senha é o seu DRE, depois disso, será a que você cadastrar. **Mudanças de senha na conta Google não refletem nas senhas dos laboratórios nem vice-versa.**
 
 ## Cadastro
 
@@ -65,5 +59,4 @@ O cadastro é [por meio dessa página](/info/cadastro/).
 ## Disposições Finais
 
 - Às vezes a equipe da Supervisão tem que resolver problemas pelo Instituto e a sala fica vazia, mesmo em horários da escala. Recomendamos que vá à sala diversas vezes, preferencialmente em horários diferentes.
-- Mais informações podem ser encontradas no [Manual de Uso do LCI](https://docs.google.com/document/d/129TvHxSG_etqP_VcKAF9QezvCrH0ACh4tb22CJjxb0E/edit?usp=drive_link)
 
