@@ -40,7 +40,7 @@ description: "Organizações e cargos do Instituto de Computação da UFRJ"
     <li>{{< nome_completo julianabsf >}}</li>
   {{< /grupo >}}
 
-  {{< grupo "Coordenação do Programa de Pós-Graduação em Informática" >}}
+  {{< grupo "Coordenação do Programa de Pós-Graduação em Informática" "coordenacao@ppgi.ufrj.br" >}}
     <li>{{< nome_completo dgalfaro >}}</li>
   {{< /grupo >}}
 </ul>
