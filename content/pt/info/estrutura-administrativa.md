@@ -8,7 +8,7 @@ description: "Organizações e cargos do Instituto de Computação da UFRJ"
 ## Secretarias
 
 <ul class="lista-pessoal">
-  {{< grupo "Secretaria Acadêmica de Pós Graduação (PPGI)" "secretaria_ppgi" >}}
+  {{< grupo "Secretaria Acadêmica de Pós Graduação (PPGI)" "secretaria@ppgi.ufrj.br" >}}
     <li>{{< nome_completo karlasantanna >}}</li>
     <li>{{< nome_completo patriciawirzmarinhomanede >}}</li>
   {{< /grupo >}}
