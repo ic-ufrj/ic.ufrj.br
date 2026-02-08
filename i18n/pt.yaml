@@ -76,3 +76,9 @@
 - id: sumario
   translation: "Sumário"
 
+- id: emails-de-contato
+  translation: "E-mails de Contato"
+
+- id: link-emails-de-contato
+  translation: "/info/estrutura-administrativa"
+
