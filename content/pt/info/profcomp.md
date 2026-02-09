@@ -22,6 +22,18 @@ Veja o edital completo no site da SBC:  [www.sbc.org.br/profcomp-sbc/](https://w
 
 [Resultado preliminar](/info/profcomp-resultados-2026)
 
+**2a convocação para preenchimento de vagas remanescentes**.
+
+Em razão da desistência da vaga de AMPLA CONCORRÊNCIA do(a)s candidato(a)s com número de inscrição  1036010734911-3 e 1036010735079-1, convocamos o(a)s candidato(a)s listados abaixo para manifestação de interesse e apresentação da documentação exigida até o dia **12 de fevereiro de 2026**:
+
+| Classificação | Inscrição |
+|---------------|-----------|
+|15 |	1036010702981-5	|
+|16 |	1036010662922-2	|
+
+Informações complementares serão  enviadas por email para o(a)s candidato(a)s convocado(a)s.
+
+
 ## Informações complementares - Edital de Seleção 2026 - IC-UFRJ
 
 - Procedimentos para ações afirmativas e compensatórias e cronograma: [Anexo IC-UFRJ](https://drive.google.com/file/d/1h5yfyJCvEzO8MHF_5wYwT5EUaASIXmB8/view?usp=drive_link)
