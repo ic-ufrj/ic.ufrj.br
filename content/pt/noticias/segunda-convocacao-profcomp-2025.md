@@ -1,5 +1,5 @@
 ---
-title: "Segunda Convocação para Preenchimento de Vagas Remanescentes"
+title: "Segunda Convocação para Preenchimento de Vagas Remanescentes do PROFCOMP-UFRJ"
 date: 2026-02-08T21:00:01-03:00
 draft: false
 # uma breve descrição do artigo, tire o # para habilitar
