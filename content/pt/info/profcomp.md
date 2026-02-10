@@ -33,6 +33,17 @@ Em razão da desistência da vaga de AMPLA CONCORRÊNCIA do(a)s candidato(a)s co
 
 Informações complementares serão  enviadas por email para o(a)s candidato(a)s convocado(a)s.
 
+**3a convocação para preenchimento de vagas remanescentes**.
+
+Em razão da reclassificação de uma vaga de AÇÃO AFIRMATIVA após procedimento de heteroidentificação realizado no dia 5 de fevereiro, convocamos o(a) candidato(a) listado(a) abaixo para manifestação de interesse e apresentação da documentação exigida até o dia **12 de fevereiro de 2026**:
+
+| Classificação | Inscrição |
+|---------------|-----------|
+|6 |	1036010735332-1	    |
+
+
+Informações complementares serão  enviadas por email para o(a) candidato(a) convocado(a).
+
 
 ## Informações complementares - Edital de Seleção 2026 - IC-UFRJ
 
