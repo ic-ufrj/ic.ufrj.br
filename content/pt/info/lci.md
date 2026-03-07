@@ -13,7 +13,9 @@ A Supervisão do LCI é responsável pela manutenção dos Laboratórios e compu
 
 ## Laboratórios
 
-O Instituto gerencia quatro laboratórios exclusivos a seus alunos. Sua manutenção é de responsabilidade da Supervisão do LCI, equipe composta majoritariamente por alunos, que tem vagas abertas todo ano. Para acessar os computadores do LEP1 e do LEP2, o nome de usuário é "convidado" e, caso peça senha, é "convidado" também. Já no LAB1 e no LAB3, o nome de usuário deve ser a parte do seu email institucional antes do @ (arroba). Por exemplo, se seu email é {{< email aluno >}}, seu nome de usuário deve ser `aluno`, e a senha é a que você colocou no formulário de criação de conta, que pode não ser a mesma do email. Caso tenha esquecido a senha, [contate a Supervisão fisicamente](#a-supervisão).
+O Instituto gerencia quatro laboratórios exclusivos a seus alunos. Sua manutenção é de responsabilidade da Supervisão do LCI, equipe composta majoritariamente por alunos, que tem vagas abertas todo ano.
+
+Para acessar os computadores do LEP1 e do LEP2, o nome de usuário é "convidado" e, caso peça senha, é "convidado" também. Já no LAB1 e no LAB3, o nome de usuário deve ser a parte do seu email institucional antes do @ (arroba). Por exemplo, se seu email é {{< email aluno >}}, seu nome de usuário deve ser `aluno`, e a senha é a que você colocou no formulário de criação de conta, que pode não ser a mesma do email. Caso tenha esquecido a senha, [contate a Supervisão fisicamente](#a-supervisão).
 
 Os laboratórios são:
 
@@ -46,13 +48,27 @@ Lab 3:
 - **Líquidos somente em recipientes com tampa,** sempre fechados quando não estiver sendo utilizado para evitar acidentes.
 - **Use os computadores de maneira responsável:** não acesse links suspeitos, não instale programas e não mude as configurações do computador. Em caso de necessidade de algum software, chame a nossa equipe.
 
-## Contas de Email
+## Contas de E-mail
 
-Os alunos cadastrados no sistema do Instituto têm acesso a uma conta de email do Google, com 50GB de armazenamento e outros benefícios. **Essa conta só fica disponível um dia após o cadastro do aluno no site**, já que a sincronização acontece de madrugada.
+Os alunos cadastrados no sistema do Instituto têm acesso a uma conta de e-mail do Google, com 50GB de armazenamento e outros benefícios. Essa conta só fica disponível um dia após o cadastro do aluno no site, já que a sincronização acontece de madrugada.
 
-Para utilizar essa conta, você deve usar o Gmail para logar em uma conta {{< email "username@ic.ufrj.br" >}}, onde o `username` é o nome de usuário que o sistema de cadastro te mostrou. Caso tenha esquecido, basta utilizar o formulário de cadastro novamente, que ele vai detectar que a conta já existe e mostrar o nome de usuário. **É necessário selecionar a opção de conta Google, não "Outro", caso o Gmail pergunte.** A senha não necessariamente é a mesma dos laboratórios. Caso seja seu primeiro login essa senha é o seu DRE, depois disso, será a que você cadastrar. **Mudanças de senha na conta Google não refletem nas senhas dos laboratórios nem vice-versa.**
+Para utilizar essa conta, você deve usar o Gmail para logar em uma conta {{< email "aluno@ic.ufrj.br" >}}, onde o `aluno` é o nome de usuário que o sistema de cadastro te mostrou.
 
-## Cadastro
+### Solução de Problemas com as Contas de E-mail
+
+#### Esqueci o e-mail / nome de usuário
+
+Basta preencher novamente o formulário de cadastro de alunos novos que ele vai dizer qual o e-mail / nome de usuário que já foi criado.
+
+#### O Gmail não loga
+
+Verifique se você selecionou a opção de conta Google e não "Outro". As contas do Instituto são contas Google.
+
+#### Não sei a senha
+
+Logo ao criar a conta sua senha é seu DRE. Caso já tenha mudado a senha é necessário usar a opção "Esqueci minha senha" para enviar um e-mail de recuperação para seu endereço de e-mail pessoal.
+
+## Cadastro de Alunos Novos
 
 O cadastro é [por meio dessa página](/info/cadastro/).
 
