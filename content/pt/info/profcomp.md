@@ -44,8 +44,37 @@ Em razão da reclassificação de uma vaga de AÇÃO AFIRMATIVA após procedimen
 
 Informações complementares serão  enviadas por email para o(a) candidato(a) convocado(a).
 
+**Resultado Preliminar  - Processo seletivo de bolsistas do curso - turma 2026**.
 
-## Informações complementares - Edital de Seleção 2026 - IC-UFRJ
+Seguindo os termos do [Edital 1/2026 - Retificação] (https://www.sbc.org.br/wp-content/uploads/2026/03/Edital-de-Bolsas-PROFCOMP-2026-Ret.pdf), foram recebidas as inscrições dos candidatos listados abaixo, classificados de acordo com as regras do referido edital.
+
+
+**Ampla concorrência**
+
+| Classificação | Inscrição | Atende aos requisitos do Edital? | Justificativa |
+|---------------|-----------|----------------------------------|---------------|
+|1|	1036010716097-5	|sim|
+|2|	1036010712407-2	|sim|
+|3|	1036010721198-1	|sim|
+|4|	1036010718888-1	|sim|
+|5|	1036010671505-1	|não|	Ultrapassa o rendimento bruto máximo definido.
+|6|	1036010725738-4	|sim|
+|7|	1036010662922-2	|não|	Ultrapassa o rendimento bruto máximo definido.
+
+
+**Candidatos autodeclarados negros e pardos e pessoas com deficiência:**
+
+| Classificação | Inscrição | Atende aos requisitos do Edital? | Justificativa |
+|---------------|-----------|----------------------------------|---------------|
+|1|	1036010666204-5	|sim|
+|2|	1036010654722-1	|sim|
+|3|	1036010672728-0	|não|	Ultrapassa o rendimento bruto máximo definido.
+|4|	1036010703684-3	|sim|
+|5|	1036010735332-1	|sim|
+
+A alocação das bolsas vai depender da disponibilidade orçamentária da CAPES.
+
+### Informações complementares - Edital de Seleção 2026 - IC-UFRJ
 
 - Procedimentos para ações afirmativas e compensatórias e cronograma: [Anexo IC-UFRJ](https://drive.google.com/file/d/1h5yfyJCvEzO8MHF_5wYwT5EUaASIXmB8/view?usp=drive_link)
 - Apenas o cronograma UFRJ: [Cronograma IC-UFRJ](https://drive.google.com/file/d/1nok4CZ1rwyBvwfkkeAEX1U3JM7Y189A1/view?usp=drive_link)
