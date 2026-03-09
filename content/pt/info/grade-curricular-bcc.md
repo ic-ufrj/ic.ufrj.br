@@ -5,6 +5,13 @@ draft: false
 description: "Grade curricular do curso conforme dados do SIGA UFRJ."
 ---
 
+## Projeto Pedagógico
+
+A grade curricular do Bacharelado em Ciência da Computação
+está especificada no
+[Projeto Pedagógico do Curso](/graduacao/Projeto-Pedagógico-BCC-2022.pdf).
+As informações lá presentes estão espelhadas nesta página.
+
 ## Matérias Obrigatórias por período
 
 ### 1º Período

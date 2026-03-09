@@ -29,7 +29,7 @@
       children:
         - name: Sobre o Curso
           url: /info/sobre-o-bcc/
-        - name: Grade Curricular
+        - name: Projeto Pedagógico e Grade Curricular
           url: /info/grade-curricular-bcc/
         - name: Normas de Estágio
           url: /info/normas-estagio-bcc/
