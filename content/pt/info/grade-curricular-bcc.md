@@ -1,5 +1,5 @@
 ---
-title: "Grade Curricular do BCC"
+title: "Projeto Pedagógico e Grade Curricular do BCC"
 date: 2025-08-10T18:27:46-03:00
 draft: false
 description: "Grade curricular do curso conforme dados do SIGA UFRJ."
