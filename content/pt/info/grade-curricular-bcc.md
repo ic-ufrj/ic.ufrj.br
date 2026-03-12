@@ -2,15 +2,18 @@
 title: "Projeto Pedagógico e Grade Curricular do BCC"
 date: 2025-08-10T18:27:46-03:00
 draft: false
-description: "Grade curricular do curso conforme dados do SIGA UFRJ."
+description: "Projeto pedagógico e grade curricular do curso conforme dados do SIGA UFRJ."
 ---
 
-## Projeto Pedagógico
-
-A grade curricular do Bacharelado em Ciência da Computação
-está especificada no
+O curso de Bacharelado em Ciência da Computação tem como objetivo a
+formação de pessoal qualificado na área de Ciência da Computação
+para atender às demandas de profissionais de excelência nessa área,
+atualmente estratégica para o mercado, para a ciência e para o governo,
+não apenas do Rio de Janeiro, como do Brasil. O curso visa proporcionar uma
+formação generalista sólida de ampla visão da área, que possa sustentar a
+atuação profissional na prática de mercado, bem como permitir sua posterior
+especialização. Mais informações podem ser encontradas no
 [Projeto Pedagógico do Curso](/graduacao/Projeto-Pedagógico-BCC-2022.pdf).
-As informações lá presentes estão espelhadas nesta página.
 
 ## Matérias Obrigatórias por período
 
