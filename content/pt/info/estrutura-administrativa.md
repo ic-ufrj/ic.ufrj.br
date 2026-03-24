@@ -108,7 +108,6 @@ description: "Organizações e cargos do Instituto de Computação da UFRJ"
 
   {{< grupo "Comissão de Estágio" "estagio" >}}
     <li>{{< nome_completo julianabsf >}}</li>
-    <li>{{< nome_completo paulomann >}}</li>
     <li>{{< nome_completo rafaelmello >}}</li>
     <li>{{< nome_completo valeriab >}}</li>
   {{< /grupo >}}
