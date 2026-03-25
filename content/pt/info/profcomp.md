@@ -44,6 +44,17 @@ Em razão da reclassificação de uma vaga de AÇÃO AFIRMATIVA após procedimen
 
 Informações complementares serão  enviadas por email para o(a) candidato(a) convocado(a).
 
+**4a convocação para preenchimento de vagas remanescentes**.
+
+Em razão da desistência da vaga de AMPLA CONCORRÊNCIA do(a) candidato(a) com número de inscrição 1036010712407-2, convocamos o(a) candidato(a) listado(a) abaixo para manifestação de interesse e apresentação da documentação exigida até o dia **31 de março de 2026**:
+
+| Classificação | Inscrição |
+|---------------|-----------|
+|17 |	1036010732623-7	    |
+
+
+Informações complementares serão  enviadas por email para o(a) candidato(a) convocado(a).
+
 **Resultado Preliminar  - Processo seletivo de bolsistas do curso - turma 2026**.
 
 Seguindo os termos do [Edital 1/2026 - Retificação] (https://www.sbc.org.br/wp-content/uploads/2026/03/Edital-de-Bolsas-PROFCOMP-2026-Ret.pdf), foram recebidas as inscrições dos candidatos listados abaixo, classificados de acordo com as regras do referido edital.
