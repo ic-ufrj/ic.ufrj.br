@@ -23,4 +23,5 @@ O e-mail do setor de internacionalização para intercâmbio internacional é {{
 ATENÇÃO: O IC e a UFRJ só autorizam a mobilidade estudantil para os quais existem acordos vigentes.
 Não serão autorizados intercâmbios de outras formas (conforme Resolução 421 do IC).
 
-(PÁGINA EM CONSTRUÇÃO -- EM BREVE MAIORES INFORMAÇÕES)
+A lista de acordos vigentes pode ser encontrada na página de
+[acordos de intercâmbio](/info/acordos-de-intercambio).
