@@ -4,7 +4,7 @@
 
 A versão mínima recomendada do Hugo é a 0.149.1
 
-### Ubuntu e derivados (Pop! OS, Linux Menta, etc)
+### Ubuntu e derivados (Pop! OS, Linux Mint, etc)
 
 ```bash
 sudo snap install hugo
@@ -39,7 +39,7 @@ Isso vai tornar o site acessível em http://localhost:1313/. O site atualiza soz
 
 ### Testar em um celular
 
-Use `hugo serve --bind 0.0.0.0` em vez de `hugo serve`, isso faz com que o site esteja disponível de fora do `localhost`. Assim, dá para acessar no celular por https://192.168.0.2:1313/ ou https://146.164.41.39:1313/. Para saber o IP do seu computador, use `ip addr` e procure o indereço `inet` da interface de rede principal.
+Use `hugo serve --bind 0.0.0.0` em vez de `hugo serve`, isso faz com que o site esteja disponível de fora do `localhost`. Assim, dá para acessar no celular por https://192.168.0.2:1313/ ou https://146.164.41.39:1313/. Para saber o IP do seu computador, use `ip addr` e procure o endereço `inet` da interface de rede principal.
 
 ## Como criar uma página
 
