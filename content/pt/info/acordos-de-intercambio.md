@@ -1,6 +1,6 @@
 ---
 title: "Acordos de Intercâmbio Internacional"
-date: 2026-03-31T08:00:00-03:00
+date: 2026-03-29T08:00:00-03:00
 draft: false
 description: "Lista de acordos de mobilidade acadêmica internacional"
 ---
