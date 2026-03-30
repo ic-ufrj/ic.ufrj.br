@@ -38,7 +38,7 @@ O CAInfo é composto por alunos voluntários que dedicam seu tempo e esforço pa
 - Cássio Emanuel F. da Silva
 - Cristian Dhas Palhano
 - **Giovana Aguiar Moraes** - Diretora-Tesoureira
-- Giovanna Magalhães Lavouras*
+- Giovanna Magalhães Lavouras
 - Isaac Marconi Pereira Raboeira
 - João Pedro Fernandes dos Santos Tiago
 - João Victor Borges Nascimento - COAA-IC
@@ -70,7 +70,7 @@ Canal com objetivo de divulgar todas as ações e movimentações do Centro Acad
 Nossa sede está localizada no:
 
 - **Endereço:** [Estamos localizados no CCMN - UFRJ](/info/contato)
-  - Estamos especificamente no Bloco F, primeiro andar (F1) do CCMN.*
+  - Estamos especificamente no Bloco F, primeiro andar (F1) do CCMN.
 - **Horário de Funcionamento da Sala:** De 10:00 às 15:00, podendo ter seu horário alterado mediante aviso em nossas mídias sociais.
 
 ## Contato
