@@ -1,6 +1,6 @@
 ---
 title: "Terceira Convocação para Preenchimento de Vagas Remanescentes do PROFCOMP-UFRJ"
-date: 2026-02-09
+date: 2026-02-09T08:00:00-03:00
 draft: false
 # uma breve descrição do artigo, tire o # para habilitar
 #description: ""
@@ -14,5 +14,3 @@ Em razão da reclassificação de uma vaga de AÇÃO AFIRMATIVA após procedimen
 
 
 Informações complementares serão  enviadas por email para o(a) candidato(a) convocado(a).
-
-
