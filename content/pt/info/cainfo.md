@@ -32,7 +32,7 @@ O CAInfo possui um estatuto que norteia nosso funcionamento e princípios, atual
 
 ## Diretores da Gestão Atual
 
-O CAInfo é composto por alunos voluntários que dedicam seu tempo e esforço para a melhoria da vida acadêmica. Conheça a nossa gestão, eleita em **04/09/2024**:
+O CAInfo é composto por alunos voluntários que dedicam seu tempo e esforço para a melhoria da vida acadêmica. Conheça a nossa gestão, eleita em **16/12/2025**:
 
 - **Brenno Alves de Castro** - Diretor-Secretário e COAA-IC
 - Cássio Emanuel F. da Silva
