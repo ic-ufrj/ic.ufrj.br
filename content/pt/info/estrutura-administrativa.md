@@ -173,8 +173,8 @@ Email: {{< email congregacao >}}
 | {{< nome_completo marcosleipnitz >}} | Professores Assistentes | Suplente |
 | {{< nome_completo tiagoms >}} | Técnico-Administrativos | |
 | {{< nome_completo rerison >}} | Técnico-Administrativos | Suplente |
-| Vitor Fernandes de Carvalho Ambrizzi | Discentes | |
-| Izabel Souza Resende | Discentes | Suplente |
+| Matheus do Ó Santos Tiburcio | Discentes | |
+| Pedro Salazar Pessoa Machado | Discentes | Suplente |
 
 -->
 
@@ -198,8 +198,8 @@ Email: {{< email congregacao >}}
     <li>{{< nome_completo marcosleipnitz >}} <span style="color: #606060;"> - Professores Assistentes (Suplente)</span></li>
     <li>{{< nome_completo tiagoms >}} <span style="color: #606060;"> - Técnicos-Administrativos</span></li>
     <li>{{< nome_completo rerison >}} <span style="color: #606060;"> - Técnicos-Administrativos (Suplente)</span></li>
-    <li>Vitor Fernandes de Carvalho Ambrizzi <span style="color: #606060;"> - Discente</span></li>
-    <li>Izabel Sousa Resende <span style="color: #606060;"> - Discentes (Suplente)</span></li>
+    <li>Matheus do Ó Santos Tiburcio <span style="color: #606060;"> - Discentes</span></li>
+    <li>Pedro Salazar Pessoa Machado <span style="color: #606060;"> - Discentes (Suplente)</span></li>
   {{< /grupo >}}
 </ul>
 
