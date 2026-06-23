@@ -130,7 +130,6 @@ description: "Organizações e cargos do Instituto de Computação da UFRJ"
   {{< /grupo >}}
 
   {{< grupo "Comissão de Internacionalização" "intercambio" >}}
-    <li>{{< nome_completo carolina >}}</li>
     <li>{{< nome_completo sadoc >}}</li>
     <li>{{< nome_completo jonice >}}</li>
   {{< /grupo >}}
