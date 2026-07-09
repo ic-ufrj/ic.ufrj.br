@@ -23,9 +23,9 @@ Os autores devem elaborar uma monografia - texto auto contido contendo referênc
 
 ### Banca
 
-Banca: A banca deve ser formada por pelo menos:
-- um orientador docente do Instituto de Computação,
-- dois avaliadores, não orientadores, com nível superior, sendo pelo menos um deles docente permanente do Instituto de Computação.
+Banca: A banca deve ser formada em sua maioria absoluta por docentes permanentes do Instituto de Computação, sendo:
+- apenas um orientador docente do Instituto de Computação,
+- pelo menos dois avaliadores, não orientadores, com nível superior.
 
 ### Marcação de Local para a Defesa
 
