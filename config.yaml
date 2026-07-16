@@ -12,13 +12,13 @@ defaultContentLanguage: pt
 defaultContentLanguageInSubdir: false
 languages:
   pt:
-    languageName: Português
-    languageCode: "pt-BR"
+    label: Português
+    locale: "pt-BR"
     contentDir: content/pt
     weight: 1
   en:
-    languageName: English
-    languageCode: en
+    label: English
+    locale: en
     contentDir: content/en
     weight: 2
 

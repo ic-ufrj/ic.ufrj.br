@@ -1,5 +1,5 @@
 {{- $data := slice -}}
-{{- range $key, $value := .Site.Data.tecnicos -}}
+{{- range $key, $value := hugo.Data.tecnicos -}}
   {{- $item := merge (dict "username" $key) $value -}}
   {{- $data = $data | append $item -}}
 {{- end -}}
@@ -11,7 +11,7 @@
 
     <!-- Acha os grupos em que o tecnico faz parte -->
     {{ $grupos := slice }}
-    {{ range $key, $value := site.Data.grupos }}
+    {{ range $key, $value := hugo.Data.grupos }}
       {{ $item := merge (dict "username" $key) $value }}
       {{ $grupos = $grupos | append $item }}
     {{ end }}

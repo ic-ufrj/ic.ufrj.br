@@ -41,7 +41,7 @@
 </div>
 
 <nav class="menu-footer">
-  {{- $menu := index site.Data.menus (printf "principal.%s" .Site.Language.Lang) -}}
+  {{- $menu := index hugo.Data.menus (printf "principal.%s" .Site.Language.Lang) -}}
   {{- range $menu -}}
     {{- $upper := .name -}}
     {{- range .children -}}
