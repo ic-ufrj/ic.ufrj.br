@@ -2,7 +2,7 @@
 
 ## Como instalar o Hugo
 
-A versão mínima recomendada do Hugo é a 0.149.1
+A versão recomendada do Hugo é a 0.163.3
 
 ### Ubuntu e derivados (Pop! OS, Linux Mint, etc)
 
