@@ -64,7 +64,7 @@ Veja o edital completo no site da SBC:  [www.sbc.org.br/profcomp-sbc/](https://w
 
 ### Informações complementares - Edital de Seleção 2027 - IC-UFRJ
 
-- Procedimentos para **ações afirmativas** e **compensatórias** e **cronograma**: [Anexo IC-UFRJ](https://drive.google.com/file/d/1_3h7-ONCxWQbZszNBN_jGREbYlViMoJj/view?usp=sharing)
+Procedimentos para **ações afirmativas** e **compensatórias** e **cronograma**: [Anexo IC-UFRJ](https://drive.google.com/file/d/1_3h7-ONCxWQbZszNBN_jGREbYlViMoJj/view?usp=sharing)
 
 ### Dias e horários de aulas previstos para 2027
 
