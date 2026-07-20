@@ -12,20 +12,20 @@ O **Mestrado Profissional em Ensino de Computação para Educação Básica (PRO
 O programa é liderado pela **Sociedade Brasileira de Computação (SBC)** e mais outras 16 Instituições Associadas, dentre as quais está a UFRJ, por meio do Instituto de Computação (IC-UFRJ). O curso foi reconhecido pela **PORTARIA MEC Nº 213, de  20 de março de 2025**.
 
 ## Corpo Docente - UFRJ
-|----------------------------------------------|
-|Carla Amor Divino Moreira Delgado (IC-UFRJ)|
-|Carlo Emmanoel Tolla de Oliveira (NCE-UFRJ)|
-|Carlos Bazilio Martins (ID-UFF)|
-|Carlos Eduardo Pantoja (CEFET-RJ)|
-|Claudia Lage Rebello da Motta (NCE-UFRJ)|
-|Graziela Ferreira Guarda (ID-UFF)|
-|João Carlos Pereira da Silva (IC-UFRJ)|
-|Juliana Baptista dos Santos França (IC-UFRJ)|
-|Maria Luiza Campos Machado (IC-UFRJ)|
-|Patrícia Grasel da Silva (IFRJ-Mesquita)|
-|Priscilla Fonseca de Abreu Braz (IME-UERJ)|
-|Roni Costa Ferreira (IFRJ-EPF)|
-|Silvana Rossetto (IC-UFRJ)|
+
+- Carla Amor Divino Moreira Delgado (IC-UFRJ)
+- Carlo Emmanoel Tolla de Oliveira (NCE-UFRJ)
+- Carlos Bazilio Martins (ID-UFF)
+- Carlos Eduardo Pantoja (CEFET-RJ)
+- Claudia Lage Rebello da Motta (NCE-UFRJ)
+- Graziela Ferreira Guarda (ID-UFF)
+- João Carlos Pereira da Silva (IC-UFRJ)
+- Juliana Baptista dos Santos França (IC-UFRJ)
+- Maria Luiza Campos Machado (IC-UFRJ)
+- Patrícia Grasel da Silva (IFRJ-Mesquita)
+- Priscilla Fonseca de Abreu Braz (IME-UERJ)
+- Roni Costa Ferreira (IFRJ-EPF)
+- Silvana Rossetto (IC-UFRJ)
 
 
 ## Corpo Discente - UFRJ - Turma 2026
