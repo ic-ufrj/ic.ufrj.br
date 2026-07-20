@@ -1,8 +1,8 @@
 ---
 title: "ProfComp"
-date: 2025-10-21
+date: 2026-07-20
 draft: false
-description: "Informações sobre o edital de seleção 2026"
+description: "Informações sobre o PROFCOMP"
 ---
 
 ## Apresentação
@@ -11,107 +11,64 @@ O **Mestrado Profissional em Ensino de Computação para Educação Básica (PRO
 
 O programa é liderado pela **Sociedade Brasileira de Computação (SBC)** e mais outras 16 Instituições Associadas, dentre as quais está a UFRJ, por meio do Instituto de Computação (IC-UFRJ). O curso foi reconhecido pela **PORTARIA MEC Nº 213, de  20 de março de 2025**.
 
+## Corpo Docente - UFRJ
+|----------------------------------------------|
+|Carla Amor Divino Moreira Delgado (IC-UFRJ)|
+|Carlo Emmanoel Tolla de Oliveira (NCE-UFRJ)|
+|Carlos Bazilio Martins (ID-UFF)|
+|Carlos Eduardo Pantoja (CEFET-RJ)|
+|Claudia Lage Rebello da Motta (NCE-UFRJ)|
+|Graziela Ferreira Guarda (ID-UFF)|
+|João Carlos Pereira da Silva (IC-UFRJ)|
+|Juliana Baptista dos Santos França (IC-UFRJ)|
+|Maria Luiza Campos Machado (IC-UFRJ)|
+|Patrícia Grasel da Silva (IFRJ-Mesquita)|
+|Priscilla Fonseca de Abreu Braz (IME-UERJ)|
+|Roni Costa Ferreira (IFRJ-EPF)|
+|Silvana Rossetto (IC-UFRJ)|
 
-## Edital de seleção 2026
 
-**Inscrições de 1 a 31 de outubro de 2025**.
+## Corpo Discente - UFRJ - Turma 2026
+| Nome | Atuação |
+|---------------------------|-------------------|
+|Alexandra Pereira Curitiba| EM Comenius e EM Henrique de Magalhães|
+|Ângelo Pereira da Silva| EM Sao Tomas de Aquino|
+|Anne Caroline de Oliveira Barros| Colégio Pedro II|
+|Charles França de Carvalho| CE Professor Carlos Cortes|
+|Cintia Aparecida Basilio Pires Marcelino| EM Paulo Roberto de Moraes Loureiro|
+|Gilmar da Silva Carmo| CIEP Antonio Evaristo de Moraes|
+|Gilvan Sampaio Santos| EM Gonzaga da Gama Filho|
+|Joao Henrique Gomes dos Santos| EM Sergipe|
+|Joao Thiago Sousa da Silva| EM Professora Edna Umbelina de Santanna da Silva|
+|João Victor Teixeira da Silva| EM Fernando Barata Ribeiro|
+|Luciana do Amaral Teixeira| IFRJ e Escola Técnica Estadual de Santa Cruz|
+|Natacha Aquino de Carvalho| EM Rio de Janeiro  e EM Bento Ribeiro|
+|Rodrigo Santos Nepomuceno| EM Azerbaijao|
+|Sergio Damasceno Reis| CE Aydano de Almeida e SENAI Maracanã|
+|Sergio Pizzott Rodrigues dos Santos| EM Maria do Carmo Fadul Ferreira e EM Rosa Carelli da Costa|
+|Sergio Ricardo Vitor| Colégio Pedro II|
+|Symone Soares de Carvalho| Creche Municipal Lea Maria Peixoto|
+|Taiane da Cruz de Moraes De Souza| EM Capitao Fuzileiro Naval Eduardo Gomes de Oliveira|
+|Vernon Chaves Barros| EM Dr Ricardo Augusto de Azeredo Vianna e EM João Brazil|
+
+
+## Regulamento PROFCOMP IC-UFRJ
+Regulamento interno do PROFCOMP: [Regulamento PROFCOMP IC-UFRJ](https://drive.google.com/file/d/1ZqluZ_F6WuMGeTRZjx6oi7xKE9hMyusw/view?usp=drive_link)
+
+## Edital de seleção 2027
+
+**Inscrições a partir de 20 de julho de 2026**.
 
 Veja o edital completo no site da SBC:  [www.sbc.org.br/profcomp-sbc/](https://www.sbc.org.br/profcomp-sbc/)
 
-**Resultado do processo seletivo**.
 
-[Resultado preliminar](/info/profcomp-resultados-2026)
+### Informações complementares - Edital de Seleção 2027 - IC-UFRJ
 
-**2a convocação para preenchimento de vagas remanescentes**.
+- Procedimentos para **ações afirmativas** e **compensatórias** e **cronograma**: [Anexo IC-UFRJ](https://drive.google.com/file/d/1_3h7-ONCxWQbZszNBN_jGREbYlViMoJj/view?usp=sharing)
 
-Em razão da desistência da vaga de AMPLA CONCORRÊNCIA do(a)s candidato(a)s com número de inscrição  1036010734911-3 e 1036010735079-1, convocamos o(a)s candidato(a)s listados abaixo para manifestação de interesse e apresentação da documentação exigida até o dia **12 de fevereiro de 2026**:
+### Dias e horários de aulas previstos para 2027
 
-| Classificação | Inscrição |
-|---------------|-----------|
-|15 |	1036010702981-5	|
-|16 |	1036010662922-2	|
-
-Informações complementares serão  enviadas por email para o(a)s candidato(a)s convocado(a)s.
-
-**3a convocação para preenchimento de vagas remanescentes**.
-
-Em razão da reclassificação de uma vaga de AÇÃO AFIRMATIVA após procedimento de heteroidentificação realizado no dia 5 de fevereiro, convocamos o(a) candidato(a) listado(a) abaixo para manifestação de interesse e apresentação da documentação exigida até o dia **12 de fevereiro de 2026**:
-
-| Classificação | Inscrição |
-|---------------|-----------|
-|6 |	1036010735332-1	    |
-
-
-Informações complementares serão  enviadas por email para o(a) candidato(a) convocado(a).
-
-**4a convocação para preenchimento de vagas remanescentes**.
-
-Em razão da desistência da vaga de AMPLA CONCORRÊNCIA do(a) candidato(a) com número de inscrição 1036010712407-2, convocamos o(a) candidato(a) listado(a) abaixo para manifestação de interesse e apresentação da documentação exigida até o dia **31 de março de 2026**:
-
-| Classificação | Inscrição |
-|---------------|-----------|
-|17 |	1036010732623-7	    |
-
-
-Informações complementares serão  enviadas por email para o(a) candidato(a) convocado(a).
-
-**5a convocação para preenchimento de vagas remanescentes**.
-
-Em razão da desistência da vaga de AMPLA CONCORRÊNCIA do(a) candidato(a) com número de inscrição 1036010732623-7, convocamos o(a) candidato(a) listado(a) abaixo para manifestação de interesse e apresentação da documentação exigida até o dia **8 de abril de 2026**:
-
-| Classificação | Inscrição |
-|---------------|-----------|
-|18 |	1036010670501-3	    |
-
-
-Informações complementares serão  enviadas por email para o(a) candidato(a) convocado(a).
-
-
-**Resultado Preliminar  - Processo seletivo de bolsistas do curso - turma 2026**.
-
-Seguindo os termos do [Edital 1/2026 - Retificação] (https://www.sbc.org.br/wp-content/uploads/2026/03/Edital-de-Bolsas-PROFCOMP-2026-Ret.pdf), foram recebidas as inscrições dos candidatos listados abaixo, classificados de acordo com as regras do referido edital.
-
-
-**Ampla concorrência**
-
-| Classificação | Inscrição | Atende aos requisitos do Edital? | Justificativa |
-|---------------|-----------|----------------------------------|---------------|
-|1|	1036010716097-5	|sim|
-|2|	1036010712407-2	|sim|
-|3|	1036010721198-1	|sim|
-|4|	1036010718888-1	|sim|
-|5|	1036010671505-1	|não|	Ultrapassa o rendimento bruto máximo definido.
-|6|	1036010725738-4	|sim|
-|7|	1036010662922-2	|não|	Ultrapassa o rendimento bruto máximo definido.
-
-
-**Candidatos autodeclarados negros e pardos e pessoas com deficiência:**
-
-| Classificação | Inscrição | Atende aos requisitos do Edital? | Justificativa |
-|---------------|-----------|----------------------------------|---------------|
-|1|	1036010666204-5	|sim|
-|2|	1036010654722-1	|sim|
-|3|	1036010672728-0	|não|	Ultrapassa o rendimento bruto máximo definido.
-|4|	1036010703684-3	|sim|
-|5|	1036010735332-1	|sim|
-
-A alocação das bolsas vai depender da disponibilidade orçamentária da CAPES.
-
-### Informações complementares - Edital de Seleção 2026 - IC-UFRJ
-
-- Procedimentos para ações afirmativas e compensatórias e cronograma: [Anexo IC-UFRJ](https://drive.google.com/file/d/1h5yfyJCvEzO8MHF_5wYwT5EUaASIXmB8/view?usp=drive_link)
-- Apenas o cronograma UFRJ: [Cronograma IC-UFRJ](https://drive.google.com/file/d/1nok4CZ1rwyBvwfkkeAEX1U3JM7Y189A1/view?usp=drive_link)
-
-## Regulamento PROFCOMP IC-UFRJ
-O Regulamento interno do PROFCOMP também está disponível: [Regulamento PROFCOMP IC-UFRJ](https://drive.google.com/file/d/1ZqluZ_F6WuMGeTRZjx6oi7xKE9hMyusw/view?usp=drive_link)
-
-## Dias e horários de aulas previstos para 2026-1
-
-Sexta-feira das 8h às 13h e Sábado das 9h às 13h, Cidade Universitária, Ilha do Fundão
-
-## Fale conosco
-
-Dúvidas e contato: envie mensagem para {{< email "secretaria@profcomp.ic.ufrj.br" >}}.
+**Sexta-feira** das 8h às 17h e **Sábado** das 8h às 17h, Cidade Universitária, Ilha do Fundão
 
 
 ## Disciplinas
@@ -151,4 +108,8 @@ Este grupo de disciplinas desenvolve habilidades relacionadas ao uso de tecnolog
 * Cultura digital (30h)
 * Computação e sociedade (30h)
 * Inteligência artificial e educação (30h)
+
+## Fale conosco
+
+Dúvidas e contato: envie mensagem para {{< email "secretaria@profcomp.ic.ufrj.br" >}}.
 
