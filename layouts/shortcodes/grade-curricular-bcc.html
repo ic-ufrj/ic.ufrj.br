@@ -1,0 +1,722 @@
+{{- $grade := hugo.Data.grade_bcc -}}
+<div class="grade-bcc-wrapper" id="grade-bcc-container">
+  <div class="grade-bcc-toolbar">
+    <div class="grade-bcc-title">
+      <i class="bi bi-diagram-3-fill"></i>
+      <span><strong>Fluxograma de Pré-Requisitos do BCC</strong> (Grade 2022)</span>
+    </div>
+    <div class="grade-bcc-actions">
+      <div class="grade-dre-container" title="Informe seu DRE para identificação na grade exportada">
+        <label for="grade-dre-input"><i class="bi bi-person-badge"></i> DRE:</label>
+        <input type="text" id="grade-dre-input" class="grade-dre-input" placeholder="Ex: 120012345" maxlength="15" autocomplete="off" />
+      </div>
+      <div class="grade-bcc-zoom-controls">
+        <button type="button" class="grade-zoom-btn" id="grade-export-btn" title="Exportar Grade Completa (PNG HD)" aria-label="Exportar Imagem PNG">
+          <i class="bi bi-camera-fill"></i>
+        </button>
+        <span class="toolbar-divider"></span>
+        <button type="button" class="grade-zoom-btn" id="grade-zoom-in" title="Aumentar Zoom" aria-label="Aumentar Zoom"><i class="bi bi-plus-lg"></i></button>
+        <button type="button" class="grade-zoom-btn" id="grade-zoom-reset" title="Restaurar Zoom" aria-label="Restaurar Zoom"><i class="bi bi-aspect-ratio"></i></button>
+        <button type="button" class="grade-zoom-btn" id="grade-zoom-out" title="Diminuir Zoom" aria-label="Diminuir Zoom"><i class="bi bi-dash-lg"></i></button>
+        <button type="button" class="grade-zoom-btn" id="grade-fullscreen-btn" title="Tela Cheia" aria-label="Tela Cheia"><i class="bi bi-arrows-fullscreen"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <div class="grade-bcc-subbar">
+    <span class="grade-bcc-hint-text">
+      <i class="bi bi-info-circle-fill"></i> 
+      <strong>Dica:</strong> Clique no card para ver dependências. Clique no botão de status para alternar: 
+      <span class="subbar-badge"><i class="bi bi-circle"></i> Não Cursada</span> &rarr; 
+      <span class="subbar-badge text-cursando"><i class="bi bi-hourglass-split"></i> Cursando</span> &rarr; 
+      <span class="subbar-badge text-concluida"><i class="bi bi-check-circle-fill"></i> Concluída</span>
+    </span>
+  </div>
+
+  <!-- Painel de Progresso Acadêmico -->
+  <div class="grade-progresso-panel" id="grade-progresso-panel">
+    <div class="grade-progresso-info">
+      <div class="grade-progresso-stats">
+        <span class="progresso-stat-item">
+          <i class="bi bi-check2-all text-success"></i> 
+          <strong>Concluídas:</strong> <span id="stat-concluidas">0 (0 cr)</span>
+        </span>
+        <span class="progresso-stat-item">
+          <i class="bi bi-hourglass-split text-cursando"></i> 
+          <strong>Cursando:</strong> <span id="stat-cursando">0 (0 cr)</span>
+        </span>
+        <span class="progresso-stat-item">
+          <i class="bi bi-mortarboard-fill text-primary"></i> 
+          <strong>Total Concluído:</strong> <span id="stat-creditos">0 / 0 cr</span>
+        </span>
+      </div>
+      <div class="grade-progresso-actions">
+        <button type="button" class="grade-btn-limpar" id="btn-reset-progresso" title="Resetar progresso salvo">
+          <i class="bi bi-arrow-counterclockwise"></i> Resetar Progresso
+        </button>
+      </div>
+    </div>
+    <div class="grade-progresso-bar-wrapper">
+      <div class="grade-progresso-bar" id="progresso-bar" style="width: 0%;">
+        <span class="progresso-bar-label" id="progresso-bar-pct">0%</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="grade-bcc-viewport" id="grade-viewport">
+    <div class="grade-bcc-canvas" id="grade-canvas">
+      <svg class="grade-bcc-svg-overlay" id="grade-svg-lines" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <marker id="arrow-default" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M 0 1 L 8 5 L 0 9 z" fill="#94a3b8" />
+          </marker>
+          <marker id="arrow-active-req" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M 0 1 L 8 5 L 0 9 z" fill="#f59e0b" />
+          </marker>
+          <marker id="arrow-active-destrava" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M 0 1 L 8 5 L 0 9 z" fill="#10b981" />
+          </marker>
+        </defs>
+        <g id="grade-svg-paths"></g>
+      </svg>
+
+      <div class="grade-bcc-grid" id="grade-grid">
+        {{ range $grade.periodos }}
+          <div class="grade-periodo-col grade-col-{{ .cor_id }}" data-periodo-id="{{ .id }}">
+            <div class="grade-periodo-header">
+              <h3>{{ .nome }}</h3>
+              <button type="button" class="grade-periodo-check-all-btn" title="Concluir/Desmarcar todas as matérias do {{ .nome }}" aria-label="Concluir todas do {{ .nome }}">
+                <i class="bi bi-check-all"></i>
+              </button>
+            </div>
+            <div class="grade-periodo-cards">
+              {{ range .disciplinas }}
+                <div class="grade-card{{ if eq .tipo "optativa" }} grade-card-optativa{{ end }}" 
+                     id="disc-{{ .codigo }}" 
+                     data-codigo="{{ .codigo }}" 
+                     data-nome="{{ .nome }}" 
+                     data-creditos="{{ .creditos }}" 
+                     data-ch="{{ .ch }}" 
+                     data-tipo="{{ .tipo | default "obrigatoria" }}"
+                     data-prereqs='{{ .prereqs | jsonify }}'
+                     tabindex="0"
+                     role="button"
+                     aria-label="{{ .codigo }} - {{ .nome }}">
+                  <div class="grade-card-badge-status" style="display: none;"></div>
+                  <div class="grade-card-top">
+                    <span class="grade-card-codigo">{{ .codigo }}</span>
+                    <div class="grade-card-top-right">
+                      <span class="grade-card-ch">{{ .ch }}h</span>
+                      <button type="button" class="grade-card-check-btn" title="Alternar status: Não cursada / Cursando / Concluída" aria-label="Alternar status da disciplina">
+                        <i class="bi bi-circle"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="grade-card-nome" title="{{ .nome }}">{{ .nome }}</div>
+                  <div class="grade-card-bottom">
+                    <span class="grade-card-available-badge" style="display: none;"><i class="bi bi-unlock-fill"></i> Disponível</span>
+                    <span class="grade-card-cursando-badge" style="display: none;"><i class="bi bi-hourglass-split"></i> Cursando</span>
+                    <span class="grade-card-creditos">{{ .creditos }} cr</span>
+                  </div>
+                </div>
+              {{ end }}
+            </div>
+          </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+
+  <div class="grade-bcc-status-bar" id="grade-status-bar">
+    <div class="grade-status-info" id="grade-status-info">
+      <span class="status-badge status-normal"><i class="bi bi-cursor-fill"></i> Passe o mouse ou clique para inspecionar</span>
+    </div>
+    <div class="grade-legenda-inline">
+      <span class="legenda-item"><span class="legenda-dot dot-concluida"></span> Concluída</span>
+      <span class="legenda-item"><span class="legenda-dot dot-cursando"></span> Cursando</span>
+      <span class="legenda-item"><span class="legenda-dot dot-disponivel"></span> Disponível</span>
+      <span class="legenda-item"><span class="legenda-dot dot-focus"></span> Selecionada</span>
+      <span class="legenda-item"><span class="legenda-dot dot-req"></span> Pré-requisito</span>
+      <span class="legenda-item"><span class="legenda-dot dot-destrava"></span> Destrava</span>
+    </div>
+  </div>
+</div>
+
+<script>
+(function() {
+  function initGrade() {
+    const container = document.getElementById('grade-bcc-container');
+    if (!container) return;
+    const viewport = document.getElementById('grade-viewport');
+    const canvas = document.getElementById('grade-canvas');
+    const gradeGrid = document.getElementById('grade-grid');
+    const svgPaths = document.getElementById('grade-svg-paths');
+    const cards = Array.from(container.querySelectorAll('.grade-card'));
+    const periodoCols = Array.from(container.querySelectorAll('.grade-periodo-col'));
+    const statusInfo = document.getElementById('grade-status-info');
+    
+    // Elementos de progresso
+    const statConcluidas = document.getElementById('stat-concluidas');
+    const statCursando = document.getElementById('stat-cursando');
+    const statCreditos = document.getElementById('stat-creditos');
+    const progressoBar = document.getElementById('progresso-bar');
+    const progressoBarPct = document.getElementById('progresso-bar-pct');
+    const btnResetProgresso = document.getElementById('btn-reset-progresso');
+
+    const STORAGE_KEY = 'bcc_grade_status_v2';
+    const OLD_STORAGE_KEY = 'bcc_materias_concluidas_grade2022';
+
+    let currentScale = 1;
+    let selectedCodigo = null;
+    let hoveredCodigo = null;
+    
+    // Mapeamento de status: codigo -> 'concluida' | 'cursando' | 'nao_cursada'
+    let statusMap = {};
+
+    try {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      if (saved) {
+        statusMap = JSON.parse(saved);
+      } else {
+        const oldSaved = localStorage.getItem(OLD_STORAGE_KEY);
+        if (oldSaved) {
+          const oldList = JSON.parse(oldSaved);
+          oldList.forEach(c => { statusMap[c] = 'concluida'; });
+        }
+      }
+    } catch (e) {
+      console.warn('Erro ao carregar progresso:', e);
+    }
+
+    const cardMap = {};
+    const forwardMap = {};
+    let totalMaterias = cards.length;
+    let totalCreditos = 0;
+    let totalCh = 0;
+
+    cards.forEach(card => {
+      const cod = card.dataset.codigo;
+      cardMap[cod] = card;
+      totalCreditos += parseFloat(card.dataset.creditos || 0);
+      totalCh += parseInt(card.dataset.ch || 0, 10);
+
+      const prereqs = JSON.parse(card.dataset.prereqs || '[]');
+      prereqs.forEach(req => {
+        if (!forwardMap[req]) forwardMap[req] = [];
+        forwardMap[req].push(cod);
+      });
+    });
+
+    function saveProgresso() {
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(statusMap));
+      } catch (e) {
+        console.warn('Erro ao salvar progresso:', e);
+      }
+    }
+
+    function updateProgressoUI() {
+      let concMaterias = 0;
+      let concCreditos = 0;
+      let cursandoMaterias = 0;
+      let cursandoCreditos = 0;
+
+      cards.forEach(card => {
+        const cod = card.dataset.codigo;
+        const st = statusMap[cod] || 'nao_cursada';
+        const prereqs = JSON.parse(card.dataset.prereqs || '[]');
+        const checkBtn = card.querySelector('.grade-card-check-btn');
+        const availableBadge = card.querySelector('.grade-card-available-badge');
+        const cursandoBadge = card.querySelector('.grade-card-cursando-badge');
+
+        card.classList.remove('is-completed', 'is-cursando', 'is-available');
+        if (availableBadge) availableBadge.style.display = 'none';
+        if (cursandoBadge) cursandoBadge.style.display = 'none';
+
+        if (st === 'concluida') {
+          card.classList.add('is-completed');
+          concMaterias++;
+          concCreditos += parseFloat(card.dataset.creditos || 0);
+          if (checkBtn) checkBtn.innerHTML = '<i class="bi bi-check-circle-fill text-success"></i>';
+        } else if (st === 'cursando') {
+          card.classList.add('is-cursando');
+          cursandoMaterias++;
+          cursandoCreditos += parseFloat(card.dataset.creditos || 0);
+          if (checkBtn) checkBtn.innerHTML = '<i class="bi bi-hourglass-split text-cursando"></i>';
+          if (cursandoBadge) cursandoBadge.style.display = 'inline-flex';
+        } else {
+          if (checkBtn) checkBtn.innerHTML = '<i class="bi bi-circle"></i>';
+
+          // Checar se pré-requisitos estão cumpridos
+          const todosReqsCumpridos = prereqs.every(req => statusMap[req] === 'concluida');
+          if (todosReqsCumpridos && (concMaterias > 0 || cursandoMaterias > 0)) {
+            card.classList.add('is-available');
+            if (availableBadge) availableBadge.style.display = 'inline-flex';
+          }
+        }
+      });
+
+      // Atualizar estado visual do botão "Concluir Período" de cada coluna
+      periodoCols.forEach(col => {
+        const colCards = Array.from(col.querySelectorAll('.grade-card'));
+        const checkAllBtn = col.querySelector('.grade-periodo-check-all-btn');
+        if (!checkAllBtn || colCards.length === 0) return;
+
+        const allCompleted = colCards.every(c => statusMap[c.dataset.codigo] === 'concluida');
+        if (allCompleted) {
+          checkAllBtn.classList.add('all-done');
+          checkAllBtn.title = 'Desmarcar todas do período';
+          checkAllBtn.innerHTML = '<i class="bi bi-check-all text-success"></i>';
+        } else {
+          checkAllBtn.classList.remove('all-done');
+          checkAllBtn.title = 'Concluir todas as matérias do período';
+          checkAllBtn.innerHTML = '<i class="bi bi-check-all"></i>';
+        }
+      });
+
+      const pct = totalMaterias > 0 ? Math.round((concMaterias / totalMaterias) * 100) : 0;
+
+      if (statConcluidas) statConcluidas.innerText = `${concMaterias} (${concCreditos.toFixed(1)} cr)`;
+      if (statCursando) statCursando.innerText = `${cursandoMaterias} (${cursandoCreditos.toFixed(1)} cr)`;
+      if (statCreditos) statCreditos.innerText = `${concCreditos.toFixed(1)} / ${totalCreditos.toFixed(1)} cr (${pct}%)`;
+      if (progressoBar) progressoBar.style.width = `${pct}%`;
+      if (progressoBarPct) progressoBarPct.innerText = `${pct}%`;
+    }
+
+    function cycleStatus(codigo) {
+      const current = statusMap[codigo] || 'nao_cursada';
+      if (current === 'nao_cursada') {
+        statusMap[codigo] = 'cursando';
+      } else if (current === 'cursando') {
+        statusMap[codigo] = 'concluida';
+      } else {
+        delete statusMap[codigo];
+      }
+      saveProgresso();
+      updateProgressoUI();
+      drawLines();
+    }
+
+    // Alternar todas de um período
+    periodoCols.forEach(col => {
+      const checkAllBtn = col.querySelector('.grade-periodo-check-all-btn');
+      if (!checkAllBtn) return;
+
+      checkAllBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const colCards = Array.from(col.querySelectorAll('.grade-card'));
+        const allCompleted = colCards.every(c => statusMap[c.dataset.codigo] === 'concluida');
+
+        colCards.forEach(c => {
+          const cod = c.dataset.codigo;
+          if (allCompleted) {
+            delete statusMap[cod];
+          } else {
+            statusMap[cod] = 'concluida';
+          }
+        });
+
+        saveProgresso();
+        updateProgressoUI();
+        drawLines();
+      });
+    });
+
+    function drawLines() {
+      if (!svgPaths || !canvas) return;
+      svgPaths.innerHTML = '';
+      
+      const canvasRect = canvas.getBoundingClientRect();
+      const activeCodigo = selectedCodigo || hoveredCodigo;
+
+      cards.forEach(card => {
+        const targetCod = card.dataset.codigo;
+        const prereqs = JSON.parse(card.dataset.prereqs || '[]');
+        
+        prereqs.forEach(sourceCod => {
+          const sourceCard = cardMap[sourceCod];
+          if (!sourceCard) return;
+
+          const sRect = sourceCard.getBoundingClientRect();
+          const tRect = card.getBoundingClientRect();
+
+          const x1 = (sRect.right - canvasRect.left) / currentScale;
+          const y1 = (sRect.top + sRect.height / 2 - canvasRect.top) / currentScale;
+          const x2 = (tRect.left - canvasRect.left) / currentScale;
+          const y2 = (tRect.top + tRect.height / 2 - canvasRect.top) / currentScale;
+
+          const dx = Math.max(30, (x2 - x1) * 0.5);
+          const d = `M ${x1} ${y1} C ${x1 + dx} ${y1}, ${x2 - dx} ${y2}, ${x2} ${y2}`;
+
+          let pathClass = 'grade-line';
+          let markerEnd = 'url(#arrow-default)';
+
+          if (activeCodigo) {
+            if (targetCod === activeCodigo) {
+              pathClass += ' grade-line-req active';
+              markerEnd = 'url(#arrow-active-req)';
+            } else if (sourceCod === activeCodigo) {
+              pathClass += ' grade-line-destrava active';
+              markerEnd = 'url(#arrow-active-destrava)';
+            } else {
+              pathClass += ' grade-line-dimmed';
+            }
+          } else if (statusMap[sourceCod] === 'concluida' && statusMap[targetCod] === 'concluida') {
+            pathClass += ' grade-line-completed';
+          }
+
+          const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+          path.setAttribute('d', d);
+          path.setAttribute('class', pathClass);
+          path.setAttribute('marker-end', markerEnd);
+          svgPaths.appendChild(path);
+        });
+      });
+    }
+
+    function updateHighlight(activeCodigo, isPinned = false) {
+      cards.forEach(c => {
+        c.classList.remove('is-active', 'is-prereq', 'is-destrava', 'is-dimmed');
+        const badge = c.querySelector('.grade-card-badge-status');
+        if (badge) {
+          badge.style.display = 'none';
+          badge.className = 'grade-card-badge-status';
+          badge.innerText = '';
+        }
+      });
+
+      if (!activeCodigo) {
+        statusInfo.innerHTML = '<span class="status-badge status-normal"><i class="bi bi-cursor-fill"></i> Passe o mouse ou clique para inspecionar</span>';
+        drawLines();
+        return;
+      }
+
+      const activeCard = cardMap[activeCodigo];
+      if (!activeCard) return;
+
+      const prereqs = JSON.parse(activeCard.dataset.prereqs || '[]');
+      const destravas = forwardMap[activeCodigo] || [];
+
+      cards.forEach(c => {
+        const cod = c.dataset.codigo;
+        if (cod === activeCodigo) {
+          c.classList.add('is-active');
+          const b = c.querySelector('.grade-card-badge-status');
+          if (b) {
+            b.style.display = 'block';
+            b.classList.add('badge-focus');
+            b.innerText = isPinned ? 'Fixado' : 'Selecionado';
+          }
+        } else if (prereqs.includes(cod)) {
+          c.classList.add('is-prereq');
+          const b = c.querySelector('.grade-card-badge-status');
+          if (b) {
+            b.style.display = 'block';
+            b.classList.add('badge-req');
+            b.innerText = 'Pré-requisito';
+          }
+        } else if (destravas.includes(cod)) {
+          c.classList.add('is-destrava');
+          const b = c.querySelector('.grade-card-badge-status');
+          if (b) {
+            b.style.display = 'block';
+            b.classList.add('badge-destrava');
+            b.innerText = 'Destrava';
+          }
+        } else {
+          c.classList.add('is-dimmed');
+        }
+      });
+
+      const nome = activeCard.dataset.nome;
+      const ch = activeCard.dataset.ch;
+      const cr = activeCard.dataset.creditos;
+      const st = statusMap[activeCodigo] || 'nao_cursada';
+      const reqText = prereqs.length ? prereqs.join(', ') : 'Nenhum';
+      const destrText = destravas.length ? destravas.join(', ') : 'Nenhuma';
+
+      let statusTag = '';
+      if (st === 'concluida') {
+        statusTag = '<span class="status-tag-conc"><i class="bi bi-check-circle-fill"></i> Concluída</span>';
+      } else if (st === 'cursando') {
+        statusTag = '<span class="status-tag-cursando"><i class="bi bi-hourglass-split"></i> Cursando</span>';
+      }
+
+      statusInfo.innerHTML = `
+        <div class="status-active-desc">
+          <strong>${activeCodigo} - ${nome}</strong> (${cr} cr / ${ch}h) 
+          ${statusTag}
+          <span class="status-sub">| <strong>Pré-requisitos:</strong> ${reqText} | <strong>Destrava:</strong> ${destrText}</span>
+        </div>
+      `;
+
+      drawLines();
+    }
+
+    // Eventos nos cards
+    cards.forEach(card => {
+      const cod = card.dataset.codigo;
+      const checkBtn = card.querySelector('.grade-card-check-btn');
+
+      if (checkBtn) {
+        checkBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          cycleStatus(cod);
+        });
+      }
+
+      card.addEventListener('mouseenter', () => {
+        if (!selectedCodigo) {
+          hoveredCodigo = cod;
+          updateHighlight(cod, false);
+        }
+      });
+
+      card.addEventListener('mouseleave', () => {
+        if (!selectedCodigo) {
+          hoveredCodigo = null;
+          updateHighlight(null, false);
+        }
+      });
+
+      card.addEventListener('click', (e) => {
+        if (selectedCodigo === cod) {
+          selectedCodigo = null;
+          updateHighlight(null, false);
+        } else {
+          selectedCodigo = cod;
+          updateHighlight(cod, true);
+        }
+      });
+
+      card.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          card.click();
+        }
+      });
+    });
+
+    if (btnResetProgresso) {
+      btnResetProgresso.addEventListener('click', () => {
+        if (Object.keys(statusMap).length === 0) return;
+        if (confirm('Deseja realmente resetar o status de todas as matérias marcadas?')) {
+          statusMap = {};
+          saveProgresso();
+          updateProgressoUI();
+          drawLines();
+        }
+      });
+    }
+
+    // Clique fora cancela fixação
+    document.addEventListener('click', (e) => {
+      if (!container.contains(e.target)) {
+        if (selectedCodigo) {
+          selectedCodigo = null;
+          updateHighlight(null, false);
+        }
+      }
+    });
+
+    // Controles de zoom
+    function applyZoom(scale) {
+      currentScale = Math.min(Math.max(0.6, scale), 1.5);
+      canvas.style.transform = `scale(${currentScale})`;
+      canvas.style.transformOrigin = 'top left';
+      drawLines();
+    }
+
+    const zoomInBtn = document.getElementById('grade-zoom-in');
+    const zoomOutBtn = document.getElementById('grade-zoom-out');
+    const zoomResetBtn = document.getElementById('grade-zoom-reset');
+    const fsBtn = document.getElementById('grade-fullscreen-btn');
+    const exportBtn = document.getElementById('grade-export-btn');
+
+    if (zoomInBtn) zoomInBtn.addEventListener('click', () => applyZoom(currentScale + 0.15));
+    if (zoomOutBtn) zoomOutBtn.addEventListener('click', () => applyZoom(currentScale - 0.15));
+    if (zoomResetBtn) zoomResetBtn.addEventListener('click', () => applyZoom(1));
+
+    if (fsBtn) {
+      fsBtn.addEventListener('click', () => {
+        if (!document.fullscreenElement) {
+          container.requestFullscreen().catch(() => {});
+        } else {
+          document.exitFullscreen().catch(() => {});
+        }
+      });
+    }
+
+    const dreInput = document.getElementById('grade-dre-input');
+    const DRE_STORAGE_KEY = 'bcc_aluno_dre';
+
+    if (dreInput) {
+      try {
+        const savedDre = localStorage.getItem(DRE_STORAGE_KEY);
+        if (savedDre) dreInput.value = savedDre;
+      } catch (e) {}
+
+      dreInput.addEventListener('input', () => {
+        dreInput.classList.remove('input-invalid');
+        try {
+          localStorage.setItem(DRE_STORAGE_KEY, dreInput.value.trim());
+        } catch (e) {}
+      });
+    }
+
+    // Exportação em Imagem (PNG) capturando o panorama completo com cabeçalho de identificação e estatísticas
+    if (exportBtn) {
+      exportBtn.addEventListener('click', async () => {
+        const dreVal = dreInput ? dreInput.value.trim() : '';
+        if (!dreVal) {
+          if (dreInput) {
+            dreInput.classList.add('input-invalid');
+            dreInput.focus();
+          }
+          alert('Por favor, informe seu DRE para exportar a grade com os seus dados acadêmicos.');
+          return;
+        }
+
+        const originalHtml = exportBtn.innerHTML;
+        exportBtn.innerHTML = '<i class="bi bi-arrow-repeat spin"></i>';
+        exportBtn.disabled = true;
+
+        try {
+          if (!window.html2canvas) {
+            await new Promise((resolve, reject) => {
+              const script = document.createElement('script');
+              script.src = 'https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js';
+              script.onload = resolve;
+              script.onerror = reject;
+              document.head.appendChild(script);
+            });
+          }
+
+          // Salvar estado atual do zoom e scroll
+          const prevScale = currentScale;
+          const prevScrollLeft = viewport.scrollLeft;
+
+          // Resetar zoom para escala 1.0 para captura nítida
+          applyZoom(1);
+          viewport.scrollLeft = 0;
+          await new Promise(r => setTimeout(r, 60));
+
+          // Calcular métricas para o cabeçalho
+          let concMaterias = 0;
+          let concCreditos = 0;
+          let concCh = 0;
+          let cursandoMaterias = 0;
+          let cursandoCreditos = 0;
+          let cursandoCh = 0;
+
+          cards.forEach(card => {
+            const cod = card.dataset.codigo;
+            const st = statusMap[cod] || 'nao_cursada';
+            const cr = parseFloat(card.dataset.creditos || 0);
+            const ch = parseInt(card.dataset.ch || 0, 10);
+            if (st === 'concluida') {
+              concMaterias++;
+              concCreditos += cr;
+              concCh += ch;
+            } else if (st === 'cursando') {
+              cursandoMaterias++;
+              cursandoCreditos += cr;
+              cursandoCh += ch;
+            }
+          });
+
+          const pct = totalMaterias > 0 ? Math.round((concMaterias / totalMaterias) * 100) : 0;
+          const agora = new Date().toLocaleString('pt-BR');
+
+          // Criar cabeçalho institucional temporário para o canvas
+          const headerPanel = document.createElement('div');
+          headerPanel.className = 'grade-export-header';
+          headerPanel.innerHTML = `
+            <div class="grade-export-header-top">
+              <div class="grade-export-header-title">
+                <h2>Instituto de Computação &bull; UFRJ</h2>
+                <p>Grade Curricular do Bacharelado em Ciência da Computação (Estrutura 2022)</p>
+              </div>
+              <div class="grade-export-header-dre">
+                <span class="dre-tag">DRE: ${dreVal}</span>
+                <small>Emitido em: ${agora}</small>
+              </div>
+            </div>
+            <div class="grade-export-stats-grid">
+              <div class="grade-export-stat-box">
+                <span class="stat-lbl">Concluídas</span>
+                <strong class="stat-val text-success">${concMaterias} de ${totalMaterias} (${concCreditos.toFixed(1)} cr)</strong>
+              </div>
+              <div class="grade-export-stat-box">
+                <span class="stat-lbl">Cursando</span>
+                <strong class="stat-val text-cursando">${cursandoMaterias} (${cursandoCreditos.toFixed(1)} cr)</strong>
+              </div>
+              <div class="grade-export-stat-box">
+                <span class="stat-lbl">Carga Horária</span>
+                <strong class="stat-val">${concCh}h de ${totalCh}h</strong>
+              </div>
+              <div class="grade-export-stat-box">
+                <span class="stat-lbl">Progresso Total</span>
+                <strong class="stat-val text-primary">${pct}% Concluído</strong>
+              </div>
+            </div>
+          `;
+
+          // Inserir temporariamente antes do grid e centralizar
+          canvas.insertBefore(headerPanel, canvas.firstChild);
+          headerPanel.style.width = `${gradeGrid ? gradeGrid.offsetWidth : fullWidth}px`;
+          drawLines();
+          await new Promise(r => setTimeout(r, 60));
+
+          const fullWidth = Math.max(canvas.scrollWidth, canvas.offsetWidth, viewport.scrollWidth);
+          const fullHeight = Math.max(canvas.scrollHeight, canvas.offsetHeight, viewport.scrollHeight);
+
+          const canvasImage = await window.html2canvas(canvas, {
+            scale: 2,
+            scrollX: 0,
+            scrollY: 0,
+            width: fullWidth,
+            height: fullHeight,
+            windowWidth: fullWidth + 100,
+            backgroundColor: '#ffffff',
+            useCORS: true,
+            logging: false
+          });
+
+          // Remover cabeçalho temporário e restaurar
+          headerPanel.remove();
+          applyZoom(prevScale);
+          viewport.scrollLeft = prevScrollLeft;
+          drawLines();
+
+          const link = document.createElement('a');
+          link.download = `grade-bcc-ufrj-${dreVal}.png`;
+          link.href = canvasImage.toDataURL('image/png');
+          link.click();
+        } catch (err) {
+          console.error('Erro na exportação:', err);
+          alert('Não foi possível gerar a imagem da grade.');
+        } finally {
+          exportBtn.innerHTML = originalHtml;
+          exportBtn.disabled = false;
+        }
+      });
+    }
+
+    window.addEventListener('resize', () => {
+      drawLines();
+    });
+
+    updateProgressoUI();
+    setTimeout(() => {
+      drawLines();
+    }, 150);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initGrade);
+  } else {
+    initGrade();
+  }
+})();
+</script>
