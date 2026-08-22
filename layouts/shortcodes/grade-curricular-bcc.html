@@ -135,11 +135,13 @@
       <span class="legenda-item"><span class="legenda-dot dot-concluida"></span> Concluída</span>
       <span class="legenda-item"><span class="legenda-dot dot-cursando"></span> Cursando</span>
       <span class="legenda-item"><span class="legenda-dot dot-disponivel"></span> Disponível</span>
-      <span class="legenda-item"><span class="legenda-dot dot-focus"></span> Selecionada</span>
       <span class="legenda-item"><span class="legenda-dot dot-req"></span> Pré-requisito</span>
-      <span class="legenda-item"><span class="legenda-dot dot-destrava"></span> Destrava</span>
     </div>
   </div>
+  <button type="button" class="grade-mobile-fs-exit" id="grade-mobile-fs-exit" title="Sair da Tela Cheia" aria-label="Sair da Tela Cheia">
+    <i class="bi bi-arrow-left"></i>
+    <span>Voltar</span>
+  </button>
 </div>
 
 <script>
@@ -577,11 +579,29 @@
     if (zoomOutBtn) zoomOutBtn.addEventListener('click', () => applyZoom(currentScale - 0.15));
     if (zoomResetBtn) zoomResetBtn.addEventListener('click', () => applyZoom(1));
 
+    function updateFsState() {
+      if (document.fullscreenElement === container) {
+        container.classList.add('is-fullscreen');
+      } else {
+        container.classList.remove('is-fullscreen');
+      }
+    }
+    document.addEventListener('fullscreenchange', updateFsState);
+
     if (fsBtn) {
       fsBtn.addEventListener('click', () => {
         if (!document.fullscreenElement) {
           container.requestFullscreen().catch(() => {});
         } else {
+          document.exitFullscreen().catch(() => {});
+        }
+      });
+    }
+
+    const fsExitBtn = document.getElementById('grade-mobile-fs-exit');
+    if (fsExitBtn) {
+      fsExitBtn.addEventListener('click', () => {
+        if (document.fullscreenElement) {
           document.exitFullscreen().catch(() => {});
         }
       });
@@ -702,7 +722,7 @@
             </div>
           `;
 
-          // Criar rodapé decorativo para a imagem
+          // Criar rodapé com legenda para a imagem
           const footerPanel = document.createElement('div');
           footerPanel.className = 'grade-export-footer';
           footerPanel.innerHTML = `
@@ -711,19 +731,22 @@
               <span class="grade-export-footer-legend-item"><span class="legenda-dot dot-cursando"></span> Cursando</span>
               <span class="grade-export-footer-legend-item"><span class="legenda-dot dot-disponivel"></span> Disponível</span>
               <span class="grade-export-footer-legend-item"><span class="legenda-dot dot-req"></span> Pré-requisito</span>
-              <span class="grade-export-footer-legend-item"><span class="legenda-dot dot-destrava"></span> Destrava</span>
             </div>
             <div class="grade-export-footer-brand">
               <span>Universidade Federal do Rio de Janeiro &bull; CCMN &bull; IC</span>
             </div>
           `;
 
-          // Inserir temporariamente antes e depois do grid e centralizar
-          canvas.insertBefore(headerPanel, canvas.firstChild);
+          // Inserir temporariamente na composição da exportação
+          canvas.insertBefore(headerPanel, gradeGrid);
           canvas.appendChild(footerPanel);
-          const exportTargetWidth = gradeGrid ? gradeGrid.offsetWidth : fullWidth;
+          const exportTargetWidth = gradeGrid ? gradeGrid.offsetWidth : canvas.scrollWidth;
           headerPanel.style.width = `${exportTargetWidth}px`;
           footerPanel.style.width = `${exportTargetWidth}px`;
+          headerPanel.style.position = 'relative';
+          headerPanel.style.zIndex = '20';
+          footerPanel.style.position = 'relative';
+          footerPanel.style.zIndex = '20';
           drawLines();
           await new Promise(r => setTimeout(r, 60));
 

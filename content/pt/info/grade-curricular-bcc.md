@@ -130,6 +130,7 @@ especialização. Mais informações podem ser encontradas no
 
 **Total de Créditos:** 16.0
 
+{{% grade-optativas-grid %}}
 ## Disciplinas Optativas (Escolha Restrita)
 
 
@@ -167,6 +168,7 @@ especialização. Mais informações podem ser encontradas no
 
 **Créditos a cumprir:** 4.0
 
+<!--col-->
 ## Disciplinas Optativas (Escolha Condicionada)
 
 | Código | Nome                           | Créditos | Carga Horária | Requisitos                        |
@@ -254,5 +256,7 @@ especialização. Mais informações podem ser encontradas no
 | LEB599 | Est da Líng Bras de Sinais I | 4.0      | 60            |                                 |
 | MAE993 | Cálculo Int e Diferencial III| 4.0      | 60            | [MAE992](#3º-período)
 | MAE994 | Cálculo Int e Diferencial IV | 4.0      | 60            | [ICP115](#3º-período), [MAE992](#3º-período) |
+
+{{% /grade-optativas-grid %}}
 
 
