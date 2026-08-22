@@ -621,22 +621,53 @@ article code {
 	font-family: monospace;
 }
 
-article table, article pre {
-	display: block;
-	max-width: 100%;
-	/* TODO: testar overflow-x: auto */
-	overflow-x: scroll;
-	overflow-y: hidden;
+article table {
+	width: 100%;
+	display: table;
+	table-layout: fixed;
+	border-collapse: collapse;
+	margin: 20px 0 28px 0;
+	font-size: 14.5px;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+	border-radius: 8px;
+	overflow: hidden;
 }
 
 article table thead {
-	color: var(--cor-accent-artigo);
+	background-color: #f1f5f9;
+	color: var(--cor-ic1);
 	font-weight: 700;
+	font-family: "Montserrat", sans-serif;
+	border-bottom: 2px solid var(--cor-ic1);
 }
 
 article table th, article table td {
-	padding: 5px;
-	border: 1px solid var(--cor-accent-artigo);
+	padding: 9px 12px;
+	border: 1px solid #cbd5e1;
+	vertical-align: middle;
+	word-wrap: break-word;
+}
+
+article table tbody tr:nth-child(even) {
+	background-color: #f8fafc;
+}
+
+article table tbody tr:hover {
+	background-color: #f1f5f9;
+}
+
+/* Larguras padronizadas para as colunas da grade */
+article table th:nth-child(1), article table td:nth-child(1) { width: 14%; font-weight: 700; font-family: "Montserrat", sans-serif; }
+article table th:nth-child(2), article table td:nth-child(2) { width: 44%; }
+article table th:nth-child(3), article table td:nth-child(3) { width: 12%; text-align: center; }
+article table th:nth-child(4), article table td:nth-child(4) { width: 13%; text-align: center; }
+article table th:nth-child(5), article table td:nth-child(5) { width: 17%; font-size: 13.5px; }
+
+article pre {
+	display: block;
+	max-width: 100%;
+	overflow-x: auto;
+	overflow-y: hidden;
 }
 
 article blockquote {
@@ -817,15 +848,50 @@ article > .sumario > h2 {
 
 /* Grade Curricular Interativa do BCC */
 .grade-bcc-wrapper {
-	margin: 30px 0;
+	margin: 30px auto;
+	width: 96vw;
+	max-width: 1750px;
+	position: relative;
+	left: 50%;
+	right: 50%;
+	margin-left: -48vw;
+	margin-right: -48vw;
 	background: #ffffff;
-	border: 1px solid #e2e8f0;
+	border: 1px solid #cbd5e1;
 	border-radius: 12px;
-	box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.025);
+	box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
 	overflow: hidden;
 	display: flex;
 	flex-direction: column;
 	font-family: "Open Sans", sans-serif;
+	box-sizing: border-box;
+}
+
+@media screen and (min-width: 1850px) {
+	.grade-bcc-wrapper {
+		margin-left: calc(-875px);
+		margin-right: calc(-875px);
+		left: 50%;
+		right: auto;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.grade-bcc-wrapper {
+		width: 100vw;
+		margin-left: calc(380px - 50vw);
+		margin-right: 0;
+		left: 0;
+		right: 0;
+		border-radius: 0;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.grade-bcc-wrapper {
+		margin-left: -20px;
+		width: 100vw;
+	}
 }
 
 .grade-bcc-toolbar {
@@ -1071,6 +1137,39 @@ article > .sumario > h2 {
 	color: #0f172a;
 }
 
+/* Rodapé decorativo e legenda para a imagem exportada */
+.grade-export-footer {
+	margin-top: 25px;
+	padding: 12px 18px;
+	background: #f8fafc;
+	border: 1px solid #cbd5e1;
+	border-radius: 8px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-family: "Montserrat", sans-serif;
+	font-size: 12px;
+	color: #334155;
+}
+
+.grade-export-footer-legend {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+}
+
+.grade-export-footer-legend-item {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	font-weight: 600;
+}
+
+.grade-export-footer-brand {
+	font-weight: 700;
+	color: #344563;
+}
+
 .grade-bcc-zoom-controls {
 	display: flex;
 	align-items: center;
@@ -1102,14 +1201,21 @@ article > .sumario > h2 {
 .grade-bcc-viewport {
 	position: relative;
 	width: 100%;
-	min-height: 520px;
-	overflow-x: auto;
-	overflow-y: hidden;
+	max-height: 82vh;
+	min-height: 580px;
+	overflow: auto;
 	background-color: #f8fafc;
 	background-image: radial-gradient(#e2e8f0 1px, transparent 1px);
 	background-size: 20px 20px;
-	padding: 24px 20px;
+	padding: 24px 20px 80px 20px;
 	-webkit-overflow-scrolling: touch;
+	cursor: grab;
+	user-select: none;
+}
+
+.grade-bcc-viewport.is-dragging {
+	cursor: grabbing !important;
+	user-select: none;
 }
 
 .grade-bcc-canvas {
@@ -1117,6 +1223,8 @@ article > .sumario > h2 {
 	display: inline-block;
 	transform-origin: top left;
 	transition: transform 0.2s ease-out;
+	padding-bottom: 60px;
+	min-width: 100%;
 }
 
 .grade-bcc-svg-overlay {

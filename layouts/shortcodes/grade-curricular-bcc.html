@@ -480,6 +480,7 @@
       });
 
       card.addEventListener('click', (e) => {
+        if (hasDragged) return;
         if (selectedCodigo === cod) {
           selectedCodigo = null;
           updateHighlight(null, false);
@@ -509,13 +510,52 @@
       });
     }
 
-    // Clique fora cancela fixação
-    document.addEventListener('click', (e) => {
-      if (!container.contains(e.target)) {
-        if (selectedCodigo) {
-          selectedCodigo = null;
-          updateHighlight(null, false);
-        }
+    // Interação de Clique e Arraste (Pan / Drag to Scroll)
+    let isMouseDown = false;
+    let startX = 0;
+    let startY = 0;
+    let scrollLeftStart = 0;
+    let scrollTopStart = 0;
+    let hasDragged = false;
+
+    viewport.addEventListener('mousedown', (e) => {
+      // Ignorar arraste caso o clique seja em botões interativos
+      if (e.target.closest('button') || e.target.closest('input') || e.target.closest('a')) {
+        return;
+      }
+      isMouseDown = true;
+      hasDragged = false;
+      viewport.classList.add('is-dragging');
+      startX = e.pageX - viewport.offsetLeft;
+      startY = e.pageY - viewport.offsetTop;
+      scrollLeftStart = viewport.scrollLeft;
+      scrollTopStart = viewport.scrollTop;
+    });
+
+    window.addEventListener('mousemove', (e) => {
+      if (!isMouseDown) return;
+      const x = e.pageX - viewport.offsetLeft;
+      const y = e.pageY - viewport.offsetTop;
+      const walkX = (x - startX) * 1.2;
+      const walkY = (y - startY) * 1.2;
+      if (Math.abs(walkX) > 4 || Math.abs(walkY) > 4) {
+        hasDragged = true;
+      }
+      viewport.scrollLeft = scrollLeftStart - walkX;
+      viewport.scrollTop = scrollTopStart - walkY;
+    });
+
+    window.addEventListener('mouseup', () => {
+      if (isMouseDown) {
+        isMouseDown = false;
+        viewport.classList.remove('is-dragging');
+      }
+    });
+
+    viewport.addEventListener('mouseleave', () => {
+      if (isMouseDown) {
+        isMouseDown = false;
+        viewport.classList.remove('is-dragging');
       }
     });
 
@@ -662,9 +702,28 @@
             </div>
           `;
 
-          // Inserir temporariamente antes do grid e centralizar
+          // Criar rodapé decorativo para a imagem
+          const footerPanel = document.createElement('div');
+          footerPanel.className = 'grade-export-footer';
+          footerPanel.innerHTML = `
+            <div class="grade-export-footer-legend">
+              <span class="grade-export-footer-legend-item"><span class="legenda-dot dot-concluida"></span> Concluída</span>
+              <span class="grade-export-footer-legend-item"><span class="legenda-dot dot-cursando"></span> Cursando</span>
+              <span class="grade-export-footer-legend-item"><span class="legenda-dot dot-disponivel"></span> Disponível</span>
+              <span class="grade-export-footer-legend-item"><span class="legenda-dot dot-req"></span> Pré-requisito</span>
+              <span class="grade-export-footer-legend-item"><span class="legenda-dot dot-destrava"></span> Destrava</span>
+            </div>
+            <div class="grade-export-footer-brand">
+              <span>Universidade Federal do Rio de Janeiro &bull; CCMN &bull; IC</span>
+            </div>
+          `;
+
+          // Inserir temporariamente antes e depois do grid e centralizar
           canvas.insertBefore(headerPanel, canvas.firstChild);
-          headerPanel.style.width = `${gradeGrid ? gradeGrid.offsetWidth : fullWidth}px`;
+          canvas.appendChild(footerPanel);
+          const exportTargetWidth = gradeGrid ? gradeGrid.offsetWidth : fullWidth;
+          headerPanel.style.width = `${exportTargetWidth}px`;
+          footerPanel.style.width = `${exportTargetWidth}px`;
           drawLines();
           await new Promise(r => setTimeout(r, 60));
 
@@ -683,8 +742,9 @@
             logging: false
           });
 
-          // Remover cabeçalho temporário e restaurar
+          // Remover cabeçalho/rodapé temporários e restaurar
           headerPanel.remove();
+          footerPanel.remove();
           applyZoom(prevScale);
           viewport.scrollLeft = prevScrollLeft;
           drawLines();
