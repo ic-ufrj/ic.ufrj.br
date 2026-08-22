@@ -1,8 +1,3 @@
 <div class="grade-optativas-grid">
-  {{ $parts := split .Inner "<!--col-->" }}
-  {{ range $parts }}
-    <div class="grade-optativas-col">
-      {{ . | markdownify }}
-    </div>
-  {{ end }}
+  {{ .Inner }}
 </div>
