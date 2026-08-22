@@ -131,47 +131,9 @@ especialização. Mais informações podem ser encontradas no
 **Total de Créditos:** 16.0
 
 {{% grade-optativas-grid %}}
-<div class="grade-optativas-col">
 
-## Disciplinas Optativas (Escolha Restrita)
+{{% grade-optativas-col %}}
 
-
-| Código | Nome                             | Créditos | Carga Horária | Requisitos |
-|--------|----------------------------------|----------|---------------|:-----------|
-| FCF108 | Ética I                          | 4.0      | 60            |            |
-| FCF614 | Ética II                         | 4.0      | 60            |            |
-| FCF615 | Ética III                        | 4.0      | 60            |            |
-| FCF616 | Ética IV                         | 4.0      | 60            |            |
-| NEP101 | Teoria Direitos Fundamentais     | 4.0      | 60            |            |
-| NEP110 | Fund Direitos Humanos            | 4.0      | 60            |            |
-| NEP120 | Fund Polít Públicas Dir Hum      | 4.0      | 60            |            |
-| NEP130 | Tóp Esp Polít Públ Dir Hum I     | 4.0      | 60            |            |
-| NEP140 | Tóp Esp Polít Públ Dir Hum II    | 4.0      | 60            |            |
-| NEP141 | Tóp Esp Polít Públ Dir Hum III   | 4.0      | 60            |            |
-| NEP142 | Tóp Esp Polít Públ Dir Hum IV    | 4.0      | 60            |            |
-| NEP143 | Tóp Esp Polít Públ Dir Hum V     | 4.0      | 60            |            |
-| NEP144 | Tóp Esp Polít Públ Dir Hum VI    | 2.0      | 30            |            |
-| NEP145 | Tóp Esp Polít Públ Dir Hum VII   | 2.0      | 30            |            |
-| NEP146 | Dir Hum, Gênero e Sexualidades   | 4.0      | 60            |            |
-| NEP147 | Dir Hum e Democracia             | 4.0      | 60            |            |
-| NEP148 | Dir Hum, Pens Negro e Racismo    | 4.0      | 60            |            |
-| NEP149 | Dir Hum e Meio Ambiente          | 4.0      | 60            |            |
-| NEP150 | Dir Hum e Saúde                  | 4.0      | 60            |            |
-| NEP151 | Dir Hum e Cultura                | 4.0      | 60            |            |
-| NEP152 | Dir Hum, Conflit e Territórios   | 4.0      | 60            |            |
-| NEP153 | Dir Hum e Trabalho               | 4.0      | 60            |            |
-| NEP154 | Dir Hum e Sistema de Justiça     | 4.0      | 60            |            |
-| NEP155 | Dir Hum e Movimentos Sociais     | 4.0      | 60            |            |
-| NEP156 | Dir Hum, Globalização e Tecnol   | 4.0      | 60            |            |
-| NEP157 | Dir Hum, Violência e Democrac    | 4.0      | 60            |            |
-| NEP158 | Dir Hum e Polít Internacional    | 4.0      | 60            |            |
-| NEP159 | Dir Hum e Desigualdade Sociais   | 4.0      | 60            |            |
-| NEP160 | Dir Hum na América Latina        | 4.0      | 60            |            |
-
-**Créditos a cumprir:** 4.0
-
-</div>
-<div class="grade-optativas-col">
 ## Disciplinas Optativas (Escolha Condicionada)
 
 | Código | Nome                           | Créditos | Carga Horária | Requisitos                        |
@@ -260,7 +222,49 @@ especialização. Mais informações podem ser encontradas no
 | MAE993 | Cálculo Int e Diferencial III| 4.0      | 60            | [MAE992](#3º-período)
 | MAE994 | Cálculo Int e Diferencial IV | 4.0      | 60            | [ICP115](#3º-período), [MAE992](#3º-período) |
 
-</div>
+
+{{% /grade-optativas-col %}}
+
+{{% grade-optativas-col %}}
+
+## Disciplinas Optativas (Escolha Restrita)
+
+
+| Código | Nome                             | Créditos | Carga Horária | Requisitos |
+|--------|----------------------------------|----------|---------------|:-----------|
+| FCF108 | Ética I                          | 4.0      | 60            |            |
+| FCF614 | Ética II                         | 4.0      | 60            |            |
+| FCF615 | Ética III                        | 4.0      | 60            |            |
+| FCF616 | Ética IV                         | 4.0      | 60            |            |
+| NEP101 | Teoria Direitos Fundamentais     | 4.0      | 60            |            |
+| NEP110 | Fund Direitos Humanos            | 4.0      | 60            |            |
+| NEP120 | Fund Polít Públicas Dir Hum      | 4.0      | 60            |            |
+| NEP130 | Tóp Esp Polít Públ Dir Hum I     | 4.0      | 60            |            |
+| NEP140 | Tóp Esp Polít Públ Dir Hum II    | 4.0      | 60            |            |
+| NEP141 | Tóp Esp Polít Públ Dir Hum III   | 4.0      | 60            |            |
+| NEP142 | Tóp Esp Polít Públ Dir Hum IV    | 4.0      | 60            |            |
+| NEP143 | Tóp Esp Polít Públ Dir Hum V     | 4.0      | 60            |            |
+| NEP144 | Tóp Esp Polít Públ Dir Hum VI    | 2.0      | 30            |            |
+| NEP145 | Tóp Esp Polít Públ Dir Hum VII   | 2.0      | 30            |            |
+| NEP146 | Dir Hum, Gênero e Sexualidades   | 4.0      | 60            |            |
+| NEP147 | Dir Hum e Democracia             | 4.0      | 60            |            |
+| NEP148 | Dir Hum, Pens Negro e Racismo    | 4.0      | 60            |            |
+| NEP149 | Dir Hum e Meio Ambiente          | 4.0      | 60            |            |
+| NEP150 | Dir Hum e Saúde                  | 4.0      | 60            |            |
+| NEP151 | Dir Hum e Cultura                | 4.0      | 60            |            |
+| NEP152 | Dir Hum, Conflit e Territórios   | 4.0      | 60            |            |
+| NEP153 | Dir Hum e Trabalho               | 4.0      | 60            |            |
+| NEP154 | Dir Hum e Sistema de Justiça     | 4.0      | 60            |            |
+| NEP155 | Dir Hum e Movimentos Sociais     | 4.0      | 60            |            |
+| NEP156 | Dir Hum, Globalização e Tecnol   | 4.0      | 60            |            |
+| NEP157 | Dir Hum, Violência e Democrac    | 4.0      | 60            |            |
+| NEP158 | Dir Hum e Polít Internacional    | 4.0      | 60            |            |
+| NEP159 | Dir Hum e Desigualdade Sociais   | 4.0      | 60            |            |
+| NEP160 | Dir Hum na América Latina        | 4.0      | 60            |            |
+
+**Créditos a cumprir:** 4.0
+
+{{% /grade-optativas-col %}}
 {{% /grade-optativas-grid %}}
 
 

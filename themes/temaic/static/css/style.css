@@ -1920,32 +1920,22 @@ article > .sumario > h2 {
 /* Grade optativas lado a lado */
 .grade-optativas-grid {
 	display: flex;
-	gap: 24px;
-	flex-wrap: wrap;
+	flex-direction: row;
+	gap: 32px;
 	width: 100%;
+	margin-top: 32px;
 }
 
 .grade-optativas-col {
-	flex: 1 1 450px;
+	flex: 1 1 0;
 	min-width: 0;
 	width: 100%;
 }
 
-.grade-optativas-col h2 {
-	margin-top: 0;
-}
-
-.grade-optativas-col table {
-	width: 100%;
-}
-
-/* Mantém Escolha Condicionada à esquerda e Escolha Restrita à direita */
-.grade-optativas-col:first-child {
-	order: 2;
-}
-
-.grade-optativas-col:nth-child(2) {
-	order: 1;
+@media (max-width: 900px) {
+	.grade-optativas-grid {
+		flex-direction: column;
+	}
 }
 
 /* Estilos de Impressão / PDF */
