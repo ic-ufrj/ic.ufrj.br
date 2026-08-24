@@ -980,11 +980,7 @@
 
 /* Tabelas Markdown da Grade Curricular */
 article table {
-	width: 100% !important;
-	max-width: 100% !important;
-	table-layout: auto !important;
-	display: table !important;
-	overflow-x: hidden !important;
+	width: 100%;
 	border-collapse: collapse;
 	box-sizing: border-box;
 }
@@ -992,18 +988,22 @@ article table {
 article table th,
 article table td {
 	box-sizing: border-box;
-	padding: 6px 8px !important;
+	padding: 6px 8px;
 	vertical-align: middle;
+}
+
+@media screen and (max-width: 768px) {
+	article table {
+		display: block;
+		max-width: 100%;
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+	}
 }
 
 .table-responsive,
 .table-wrapper {
 	overflow-x: auto;
-	scrollbar-width: none;
-}
-
-.table-responsive::-webkit-scrollbar,
-.table-wrapper::-webkit-scrollbar {
-	display: none;
+	-webkit-overflow-scrolling: touch;
 }
 
