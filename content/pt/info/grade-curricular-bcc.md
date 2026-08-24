@@ -116,7 +116,7 @@ especialização. Mais informações podem ser encontradas no
 
 | Código | Nome                            | Créditos | Carga Horária | Requisitos                         |
 |--------|--------------------------------|----------|---------------|:---------------------------------|
-| ICPK01 | Trab Conclusão de Curso Bcc    | 2.0      | 90            | [ICP472](#7º-período)             |
+| ICPK01 / ICPX02 | Trab Conclusão de Curso Bcc    | 2.0      | 90            | [ICP472](#7º-período)             |
 | | Atividades Academicas de Livre Escolha | 8.0 | 120 | |
 | | Atividades Academicas Optativas | 8.0 | 120 | |
 

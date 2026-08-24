@@ -6,20 +6,24 @@
       <i class="bi bi-diagram-3-fill"></i>
       <span><strong>Fluxograma de Pré-Requisitos do BCC</strong> (Grade 2022)</span>
     </div>
+    <div class="grade-bcc-zoom-controls">
+      <button type="button" class="grade-zoom-btn grade-btn-fullscreen" id="grade-fullscreen-btn" title="Tela Cheia" aria-label="Tela Cheia">
+        <i class="bi bi-arrows-fullscreen"></i>
+        <span>Tela cheia</span>
+      </button>
+      <span class="toolbar-divider"></span>
+      <button type="button" class="grade-zoom-btn" id="grade-export-btn" title="Exportar Grade Completa (PNG HD)" aria-label="Exportar Imagem PNG">
+        <i class="bi bi-camera-fill"></i>
+      </button>
+      <span class="toolbar-divider"></span>
+      <button type="button" class="grade-zoom-btn" id="grade-zoom-in" title="Aumentar Zoom" aria-label="Aumentar Zoom"><i class="bi bi-plus-lg"></i></button>
+      <button type="button" class="grade-zoom-btn" id="grade-zoom-reset" title="Restaurar Zoom" aria-label="Restaurar Zoom"><i class="bi bi-aspect-ratio"></i></button>
+      <button type="button" class="grade-zoom-btn" id="grade-zoom-out" title="Diminuir Zoom" aria-label="Diminuir Zoom"><i class="bi bi-dash-lg"></i></button>
+    </div>
     <div class="grade-bcc-actions">
       <div class="grade-dre-container" title="Informe seu DRE para identificação na grade exportada">
         <label for="grade-dre-input"><i class="bi bi-person-badge"></i> DRE:</label>
         <input type="text" id="grade-dre-input" class="grade-dre-input" placeholder="Ex: 120012345" maxlength="15" autocomplete="off" />
-      </div>
-      <div class="grade-bcc-zoom-controls">
-        <button type="button" class="grade-zoom-btn" id="grade-export-btn" title="Exportar Grade Completa (PNG HD)" aria-label="Exportar Imagem PNG">
-          <i class="bi bi-camera-fill"></i>
-        </button>
-        <span class="toolbar-divider"></span>
-        <button type="button" class="grade-zoom-btn" id="grade-zoom-in" title="Aumentar Zoom" aria-label="Aumentar Zoom"><i class="bi bi-plus-lg"></i></button>
-        <button type="button" class="grade-zoom-btn" id="grade-zoom-reset" title="Restaurar Zoom" aria-label="Restaurar Zoom"><i class="bi bi-aspect-ratio"></i></button>
-        <button type="button" class="grade-zoom-btn" id="grade-zoom-out" title="Diminuir Zoom" aria-label="Diminuir Zoom"><i class="bi bi-dash-lg"></i></button>
-        <button type="button" class="grade-zoom-btn" id="grade-fullscreen-btn" title="Tela Cheia" aria-label="Tela Cheia"><i class="bi bi-arrows-fullscreen"></i></button>
       </div>
     </div>
   </div>
@@ -105,7 +109,7 @@
                      aria-label="{{ .codigo }} - {{ .nome }}">
                   <div class="grade-card-badge-status" style="display: none;"></div>
                   <div class="grade-card-top">
-                    <span class="grade-card-codigo">{{ .codigo }}</span>
+                    <span class="grade-card-codigo">{{ .codigo_display | default .codigo }}</span>
                     <div class="grade-card-top-right">
                       <span class="grade-card-ch">{{ .ch }}h</span>
                       <button type="button" class="grade-card-check-btn" title="Alternar status: Não cursada / Cursando / Concluída" aria-label="Alternar status da disciplina">
@@ -169,7 +173,8 @@
     const STORAGE_KEY = 'bcc_grade_status_v2';
     const OLD_STORAGE_KEY = 'bcc_materias_concluidas_grade2022';
 
-    let currentScale = 1;
+    const DEFAULT_EMBED_SCALE = 0.85;
+    let currentScale = DEFAULT_EMBED_SCALE;
     let selectedCodigo = null;
     let hoveredCodigo = null;
     
@@ -578,13 +583,17 @@
 
     if (zoomInBtn) zoomInBtn.addEventListener('click', () => applyZoom(currentScale + 0.15));
     if (zoomOutBtn) zoomOutBtn.addEventListener('click', () => applyZoom(currentScale - 0.15));
-    if (zoomResetBtn) zoomResetBtn.addEventListener('click', () => applyZoom(1));
+    if (zoomResetBtn) zoomResetBtn.addEventListener('click', () => {
+      applyZoom(document.fullscreenElement === container ? 1.0 : DEFAULT_EMBED_SCALE);
+    });
 
     function updateFsState() {
       if (document.fullscreenElement === container) {
         container.classList.add('is-fullscreen');
+        applyZoom(1.0);
       } else {
         container.classList.remove('is-fullscreen');
+        applyZoom(DEFAULT_EMBED_SCALE);
       }
     }
     document.addEventListener('fullscreenchange', updateFsState);
@@ -792,6 +801,7 @@
     });
 
     updateProgressoUI();
+    applyZoom(DEFAULT_EMBED_SCALE);
     setTimeout(() => {
       drawLines();
     }, 150);

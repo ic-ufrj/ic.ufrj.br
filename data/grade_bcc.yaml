@@ -258,6 +258,7 @@ periodos:
     cor_bg: "#fdf2f8"
     disciplinas:
       - codigo: "ICPK01"
+        codigo_display: "ICPK01 / ICPX02"
         nome: "Trab Conclusão de Curso Bcc"
         creditos: 2.0
         ch: 90

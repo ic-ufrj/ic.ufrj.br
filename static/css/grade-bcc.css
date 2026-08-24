@@ -1,14 +1,9 @@
 /* Grade Curricular Interativa do BCC & Tabelas de Optativas */
 
 .grade-bcc-wrapper {
-	margin: 30px auto;
-	width: 96vw;
-	max-width: 1750px;
-	position: relative;
-	left: 50%;
-	right: 50%;
-	margin-left: -48vw;
-	margin-right: -48vw;
+	margin: 24px auto;
+	width: 100%;
+	max-width: 100%;
 	background: #ffffff;
 	border: 1px solid #cbd5e1;
 	border-radius: 12px;
@@ -18,33 +13,6 @@
 	flex-direction: column;
 	font-family: "Open Sans", sans-serif;
 	box-sizing: border-box;
-}
-
-@media screen and (min-width: 1850px) {
-	.grade-bcc-wrapper {
-		margin-left: -875px;
-		margin-right: -875px;
-		left: 50%;
-		right: auto;
-	}
-}
-
-@media screen and (max-width: 1000px) {
-	.grade-bcc-wrapper {
-		width: 100vw;
-		margin-left: calc(380px - 50vw);
-		margin-right: 0;
-		left: 0;
-		right: 0;
-		border-radius: 0;
-	}
-}
-
-@media screen and (max-width: 800px) {
-	.grade-bcc-wrapper {
-		margin-left: -20px;
-		width: 100vw;
-	}
 }
 
 .grade-bcc-toolbar {
@@ -136,6 +104,16 @@
 	justify-content: center;
 	cursor: pointer;
 	transition: background-color 0.2s, transform 0.1s;
+}
+
+.grade-btn-fullscreen {
+	width: auto;
+	padding: 0 10px;
+	gap: 6px;
+	font-family: "Montserrat", sans-serif;
+	font-size: 12px;
+	font-weight: 600;
+	background: rgba(255, 255, 255, 0.22);
 }
 
 .grade-zoom-btn:hover {
@@ -282,8 +260,8 @@
 .grade-bcc-viewport {
 	position: relative;
 	width: 100%;
-	max-height: 82vh;
-	min-height: 580px;
+	height: 520px;
+	max-height: 65vh;
 	overflow: auto;
 	background-color: #f8fafc;
 	background-image: radial-gradient(#e2e8f0 1px, transparent 1px);
@@ -862,6 +840,27 @@
 	font-size: 16px;
 }
 
+/* Modo Tela Cheia */
+.grade-bcc-wrapper:fullscreen,
+.grade-bcc-wrapper.is-fullscreen {
+	display: flex;
+	flex-direction: column;
+	width: 100vw;
+	height: 100vh;
+	max-width: none;
+	border-radius: 0;
+	margin: 0;
+	left: 0;
+	right: 0;
+}
+
+.grade-bcc-wrapper:fullscreen .grade-bcc-viewport,
+.grade-bcc-wrapper.is-fullscreen .grade-bcc-viewport {
+	height: 100%;
+	max-height: 100vh;
+	flex: 1 1 auto;
+}
+
 @media screen and (max-width: 768px) {
 	.grade-bcc-toolbar {
 		flex-direction: column;
@@ -882,30 +881,21 @@
 	.grade-bcc-wrapper.is-fullscreen .grade-bcc-toolbar,
 	.grade-bcc-wrapper.is-fullscreen .grade-bcc-subbar,
 	.grade-bcc-wrapper.is-fullscreen .grade-progresso-panel,
-	.grade-bcc-wrapper.is-fullscreen .grade-bcc-status-bar {
+	.grade-bcc-wrapper.is-fullscreen .grade-bcc-status-bar,
+	.grade-bcc-wrapper:fullscreen .grade-bcc-toolbar,
+	.grade-bcc-wrapper:fullscreen .grade-bcc-subbar,
+	.grade-bcc-wrapper:fullscreen .grade-progresso-panel,
+	.grade-bcc-wrapper:fullscreen .grade-bcc-status-bar {
 		display: none !important;
 	}
 
-	.grade-bcc-wrapper.is-fullscreen {
-		display: flex;
-		flex-direction: column;
-		width: 100vw;
-		height: 100vh;
-		max-width: none;
-		border-radius: 0;
-		margin: 0;
-		left: 0;
-		right: 0;
-	}
-
-	.grade-bcc-wrapper.is-fullscreen .grade-bcc-viewport {
-		max-height: none;
-		height: 100%;
-		flex: 1 1 auto;
+	.grade-bcc-wrapper.is-fullscreen .grade-bcc-viewport,
+	.grade-bcc-wrapper:fullscreen .grade-bcc-viewport {
 		padding: 16px;
 	}
 
-	.grade-bcc-wrapper.is-fullscreen .grade-mobile-fs-exit {
+	.grade-bcc-wrapper.is-fullscreen .grade-mobile-fs-exit,
+	.grade-bcc-wrapper:fullscreen .grade-mobile-fs-exit {
 		display: inline-flex;
 	}
 }
@@ -987,3 +977,33 @@
 		margin: 24px auto;
 	}
 }
+
+/* Tabelas Markdown da Grade Curricular */
+article table {
+	width: 100% !important;
+	max-width: 100% !important;
+	table-layout: auto !important;
+	display: table !important;
+	overflow-x: hidden !important;
+	border-collapse: collapse;
+	box-sizing: border-box;
+}
+
+article table th,
+article table td {
+	box-sizing: border-box;
+	padding: 6px 8px !important;
+	vertical-align: middle;
+}
+
+.table-responsive,
+.table-wrapper {
+	overflow-x: auto;
+	scrollbar-width: none;
+}
+
+.table-responsive::-webkit-scrollbar,
+.table-wrapper::-webkit-scrollbar {
+	display: none;
+}
+
