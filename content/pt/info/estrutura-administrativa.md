@@ -53,13 +53,13 @@ description: "Organizações e cargos do Instituto de Computação da UFRJ"
 
 <ul class="lista-pessoal">
   {{< grupo "Direção do Instituto de Computação" "direcao" >}}
-    {{/* Quando editar aqui, também edite a congregação do IC */}}.
+    <!-- Quando editar aqui, também edite a congregação do IC -->
     <li>{{< nome_completo rincon >}} (Diretora)</li>
     <li>{{< nome_completo giseli >}} (Vice-Diretora)</li>
   {{< /grupo >}}
 
   {{< grupo "Chefe do Departamento de Computação" "chefe" >}}
-    {{/* Quando editar aqui, também edite a congregação do IC */}}.
+    <!-- Quando editar aqui, também edite a congregação do IC -->
     <li>{{< nome_completo hugonobrega >}} (Chefe)</li>
     <li>{{< nome_completo jpaixao >}} (Chefe Substituto)</li>
   {{< /grupo >}}
