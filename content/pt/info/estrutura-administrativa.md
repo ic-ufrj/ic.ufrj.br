@@ -53,11 +53,13 @@ description: "Organizações e cargos do Instituto de Computação da UFRJ"
 
 <ul class="lista-pessoal">
   {{< grupo "Direção do Instituto de Computação" "direcao" >}}
+    {{/* Quando editar aqui, também edite a congregação do IC */}}.
     <li>{{< nome_completo rincon >}} (Diretora)</li>
     <li>{{< nome_completo giseli >}} (Vice-Diretora)</li>
   {{< /grupo >}}
 
   {{< grupo "Chefe do Departamento de Computação" "chefe" >}}
+    {{/* Quando editar aqui, também edite a congregação do IC */}}.
     <li>{{< nome_completo hugonobrega >}} (Chefe)</li>
     <li>{{< nome_completo jpaixao >}} (Chefe Substituto)</li>
   {{< /grupo >}}
@@ -158,8 +160,8 @@ Email: {{< email congregacao >}}
 
 | Membro | Representação | Suplente? |
 |--------|---------------|-----------|
-| {{< nome_completo anamaria >}} | Presidente | |
-| {{< nome_completo carla >}} | Vice-Presidente | |
+| {{< nome_completo rincon >}} | Presidente | |
+| {{< nome_completo giseli >}} | Vice-Presidente | |
 | {{< nome_completo hugonobrega >}} | Chefe do DCC | |
 | {{< nome_completo mitre >}} | Professores Titulares | |
 | {{< nome_completo vigusmao >}} | Professores Associados | |
@@ -183,8 +185,8 @@ Email: {{< email congregacao >}}
 
 <ul class="lista-pessoal">
   {{< grupo "Congregação do Instituto de Computação" "congregacao" "longo" >}}
-    <li>{{< nome_completo anamaria >}} <span style="color: #606060;"> - Presidente</span></li>
-    <li>{{< nome_completo carla >}} <span style="color: #606060;"> - Vice-Presidente</span></li>
+    <li>{{< nome_completo rincon >}} <span style="color: #606060;"> - Presidente</span></li>
+    <li>{{< nome_completo giseli >}} <span style="color: #606060;"> - Vice-Presidente</span></li>
     <li>{{< nome_completo hugonobrega >}} <span style="color: #606060;"> - Chefe do DCC</span></li>
     <li>{{< nome_completo mitre >}} <span style="color: #606060;"> - Professores Titulares</span></li>
     <li>{{< nome_completo vigusmao >}} <span style="color: #606060;"> - Professores Associados</span></li>
