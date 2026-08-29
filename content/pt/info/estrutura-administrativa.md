@@ -49,8 +49,8 @@ description: "Organizações e cargos do Instituto de Computação da UFRJ"
 
 <ul class="lista-pessoal">
   {{< grupo "Direção do Instituto de Computação" "direcao" >}}
-    <li>{{< nome_completo rincon >}} (Diretor)</li>
-    <li>{{< nome_completo giseli >}} (Vice-Diretora)</li>
+    <li>{{< nome_completo anamaria >}} (Diretora)</li>
+    <li>{{< nome_completo carla >}} (Vice-Diretora)</li>
   {{< /grupo >}}
 
   {{< grupo "Chefe do Departamento de Computação" "chefe" >}}
@@ -181,8 +181,8 @@ Email: {{< email congregacao >}}
 
 <ul class="lista-pessoal">
   {{< grupo "Congregação do Instituto de Computação" "congregacao" "longo" >}}
-    <li>{{< nome_completo rincon >}} <span style="color: #606060;"> - Presidente</span></li>
-    <li>{{< nome_completo giseli >}} <span style="color: #606060;"> - Vice-Presidente</span></li>
+    <li>{{< nome_completo anamaria >}} <span style="color: #606060;"> - Presidente</span></li>
+    <li>{{< nome_completo carla >}} <span style="color: #606060;"> - Vice-Presidente</span></li>
     <li>{{< nome_completo hugonobrega >}} <span style="color: #606060;"> - Chefe do DCC</span></li>
     <li>{{< nome_completo mitre >}} <span style="color: #606060;"> - Professores Titulares</span></li>
     <li>{{< nome_completo vigusmao >}} <span style="color: #606060;"> - Professores Associados</span></li>
