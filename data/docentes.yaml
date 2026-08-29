@@ -226,39 +226,42 @@ vivian:
 
 # 2) Professores Substitutos
 
-annarafaela:
-  nome: Anna Rafaela Ferreira
+alan:
+  nome: Alan Costa De Souza
   cargo: substituto
 
-cesarraitz:
-  nome: Larissa Galeno
+andreluis:
+  nome: André Luis Alves Martins
   cargo: substituto
 
-luansimoes:
-  nome: Luan Simões
+arthurms:
+  nome: Arthur Mendonça Sasse
   cargo: substituto
 
-lucenildo:
-  nome: Lucenildo Cerqueira
+franciscosilva:
+  nome: Francisco José Rodrigues da Silva Junior
   cargo: substituto
 
-luizpaulonascimento:
-  nome: Luiz Paulo Nascimento
+gabrieldutra:
+  nome: Gabriel Souto Augusto Dutra
+  cargo: substituto
+
+henriquetavares:
+  nome: Henrique dos Santos Tavares
   cargo: substituto
 
 basiliog:
-  nome: Gabriella Basílio
+  nome: Maria Gabriella Basilio
   cargo: substituto
 
-rogers:
-  nome: Rogers Reiche
+mateusnogueira:
+  nome: Mateus Schulz Nogueira
   cargo: substituto
 
-thiagohenrique:
-  nome: Thiago Henrique
+pablorangel:
+  nome: Pablo Rangel
   cargo: substituto
 
-thiagorocha:
-  nome: Thiago José
+raphael.bernardino:
+  nome: Raphael Bernardino
   cargo: substituto
-
