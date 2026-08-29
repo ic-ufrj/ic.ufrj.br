@@ -1,6 +1,6 @@
 ---
 title: "Estrutura Administrativa"
-date: 2025-06-22T01:08:55-03:00
+date: 2026-08-29T01:08:55-03:00
 draft: false
 description: "Organizações e cargos do Instituto de Computação da UFRJ"
 ---
@@ -13,7 +13,6 @@ description: "Organizações e cargos do Instituto de Computação da UFRJ"
   {{< /grupo >}}
 
   {{< grupo "Secretaria Acadêmica de Graduação" "secgrad" >}}
-    <li>{{< nome_completo fabianarocha >}}</li>
     <li>{{< nome_completo rerison >}}</li>
   {{< /grupo >}}
 
@@ -24,6 +23,11 @@ description: "Organizações e cargos do Instituto de Computação da UFRJ"
   {{< grupo "Secretaria de Gabinete da Direção" "gabinete" >}}
     <li>{{< nome_completo tiagoms >}}</li>
   {{< /grupo >}}
+
+  {{< grupo "Seção de Pessoal" "pessoal" >}}
+    <li>{{< nome_completo emersonlima >}}</li>
+  {{< /grupo >}}
+
 </ul>
 
 
@@ -49,8 +53,8 @@ description: "Organizações e cargos do Instituto de Computação da UFRJ"
 
 <ul class="lista-pessoal">
   {{< grupo "Direção do Instituto de Computação" "direcao" >}}
-    <li>{{< nome_completo anamaria >}} (Diretora)</li>
-    <li>{{< nome_completo carla >}} (Vice-Diretora)</li>
+    <li>{{< nome_completo rincon >}} (Diretora)</li>
+    <li>{{< nome_completo giseli >}} (Vice-Diretora)</li>
   {{< /grupo >}}
 
   {{< grupo "Chefe do Departamento de Computação" "chefe" >}}
@@ -59,11 +63,11 @@ description: "Organizações e cargos do Instituto de Computação da UFRJ"
   {{< /grupo >}}
 
   {{< grupo "Direção Adjunta de Ensino" "ensino" >}}
-    <li>{{< nome_completo silvana >}}</li>
+    <li>{{< nome_completo juvianna >}}</li>
   {{< /grupo >}}
 
   {{< grupo "Direção Adjunta de Pesquisa" "pesquisa" >}}
-    <li>{{< nome_completo avivacqua >}}</li>
+    <li>{{< nome_completo mitre >}}</li>
   {{< /grupo >}}
 
   {{< grupo "Direção Adjunta de Extensão" "extensao" >}}
@@ -93,7 +97,6 @@ description: "Organizações e cargos do Instituto de Computação da UFRJ"
 
   {{< grupo "Comissão de Equivalência de Disciplinas (COMED)" "comissaoequivalencia" >}}
     <li>{{< nome_completo cfb >}}</li>
-    <li>{{< nome_completo hugomg >}}</li>
     <li>{{< nome_completo juvianna >}}</li>
     <li>{{< nome_completo luziane >}}</li>
     <li>{{< nome_completo marcellogt >}}</li>
@@ -113,7 +116,6 @@ description: "Organizações e cargos do Instituto de Computação da UFRJ"
   {{< /grupo >}}
 
   {{< grupo "Comissão de Transferência" "comissaotransferencia" >}}
-    <li>{{< nome_completo hugomg >}}</li>
     <li>{{< nome_completo juvianna >}}</li>
     <li>{{< nome_completo luziane >}}</li>
   {{< /grupo >}}
@@ -168,8 +170,8 @@ Email: {{< email congregacao >}}
 | {{< nome_completo julianabsf >}} | Professores Adjuntos | |
 | {{< nome_completo giseli >}} | Professores Adjuntos | 1º Suplente |
 | {{< nome_completo eldany >}} | Professores Adjuntos | 2º Suplente |
-| {{< nome_completo hugomg >}} | Professores Assistentes | |
-| {{< nome_completo marcosleipnitz >}} | Professores Assistentes | Suplente |
+| {{< nome_completo marcosleipnitz >}} | Professores Assistentes | |
+| {{< nome_completo paulomann >}} | Professores Assistentes | Suplente |
 | {{< nome_completo tiagoms >}} | Técnico-Administrativos | |
 | {{< nome_completo rerison >}} | Técnico-Administrativos | Suplente |
 | Matheus do Ó Santos Tiburcio | Discentes | |
@@ -193,8 +195,8 @@ Email: {{< email congregacao >}}
     <li>{{< nome_completo julianabsf >}} <span style="color: #606060;"> - Professores Adjuntos</span></li>
     <li>{{< nome_completo giseli >}} <span style="color: #606060;"> - Professores Adjuntos (1º Suplente)</span></li>
     <li>{{< nome_completo eldany >}} <span style="color: #606060;"> - Professores Adjuntos (2º Suplente)</span></li>
-    <li>{{< nome_completo hugomg >}} <span style="color: #606060;"> - Professores Assistentes</span></li>
-    <li>{{< nome_completo marcosleipnitz >}} <span style="color: #606060;"> - Professores Assistentes (Suplente)</span></li>
+    <li>{{< nome_completo marcosleipnitz >}} <span style="color: #606060;"> - Professores Assistentes</span></li>
+    <li>{{< nome_completo paulomann >}} <span style="color: #606060;"> - Professores Assistentes (Suplente)</span></li>
     <li>{{< nome_completo tiagoms >}} <span style="color: #606060;"> - Técnicos-Administrativos</span></li>
     <li>{{< nome_completo rerison >}} <span style="color: #606060;"> - Técnicos-Administrativos (Suplente)</span></li>
     <li>Matheus do Ó Santos Tiburcio <span style="color: #606060;"> - Discentes</span></li>

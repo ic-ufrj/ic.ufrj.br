@@ -1,6 +1,7 @@
-# ATENÇÃO: para alterar a secretaria ou diretoria a qual os técnicos fazem parte,
-# favor alterar o arquivo data/grupos.yaml e também modificar o email listado
-# aqui.
+emersonlima:
+  nome: Emerson Narcizo Lima de Deus
+  email: OCULTO
+  cargo: tecnico
 
 patriciawirzmarinhomanede:
   nome: Patrícia Wirz Marinho Mamede
@@ -14,11 +15,6 @@ rodrigomello:
 
 marcusoliveira:
   nome: Marcus Vinicius M. Oliveira
-  email: OCULTO
-  cargo: tecnico
-
-fabianarocha:
-  nome: Fabiana Barbosa Rocha
   email: OCULTO
   cargo: tecnico
 
