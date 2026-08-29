@@ -89,20 +89,17 @@ description: "Organizações e cargos do Instituto de Computação da UFRJ"
   {{< grupo "Comissão de Orientação e Acompanhamento Acadêmico (COAA)" "coaa" >}}
     <li>{{< nome_completo cfb >}}</li>
     <li>{{< nome_completo juvianna >}}</li>
-    <li>{{< nome_completo mhelena >}}</li>
-    <li>{{< nome_completo sergioserra >}}</li>
     <li>{{< nome_completo ronaldsouza >}}</li>
     <li>{{< nome_completo vigusmao >}}</li>
+    <li>{{< nome_completo vivian >}}</li>
     <li>Brenno Alves de Castro (Representante Discente)</li>
     <li>João Victor Borges Nascimento (Representante Discente)</li>
   {{< /grupo >}}
 
   {{< grupo "Comissão de Equivalência de Disciplinas (COMED)" "comissaoequivalencia" >}}
     <li>{{< nome_completo cfb >}}</li>
-    <li>{{< nome_completo juvianna >}}</li>
     <li>{{< nome_completo luziane >}}</li>
-    <li>{{< nome_completo marcellogt >}}</li>
-    <li>{{< nome_completo vigusmao >}}</li>
+    <li>{{< nome_completo paulomann >}}</li>
   {{< /grupo >}}
 
   {{< grupo "Comissão de Atividades Complementares (COAC)" "coac" >}}
@@ -118,8 +115,9 @@ description: "Organizações e cargos do Instituto de Computação da UFRJ"
   {{< /grupo >}}
 
   {{< grupo "Comissão de Transferência" "comissaotransferencia" >}}
-    <li>{{< nome_completo juvianna >}}</li>
+    <li>{{< nome_completo cfb >}}</li>
     <li>{{< nome_completo luziane >}}</li>
+    <li>{{< nome_completo paulomann >}}</li>
   {{< /grupo >}}
 
   {{< grupo "Comissão de Afastamentos" "afastamentos" >}}
