@@ -104,7 +104,7 @@ description: "Organizações e cargos do Instituto de Computação da UFRJ"
 
   {{< grupo "Comissão de Atividades Complementares (COAC)" "coac" >}}
     <li>{{< nome_completo luziane >}}</li>
-    <li>{{< nome_completo vivian >}}</li>
+    <li>{{< nome_completo silaslfilho >}}</li>
   {{< /grupo >}}
 
   {{< grupo "Comissão de Estágio" "estagio" >}}
