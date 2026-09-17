@@ -135,6 +135,16 @@ description: "Organizações e cargos do Instituto de Computação da UFRJ"
     <li>{{< nome_completo sadoc >}}</li>
     <li>{{< nome_completo jonice >}}</li>
   {{< /grupo >}}
+
+  {{< grupo "Supervisão do Laboratório de Computação e Informátic" "supervisao" >}}
+    <li>{{< nome_completo marcosleipnitz >}}</li>
+    <li>{{< nome_completo gabriel >}}</li>
+    <li>{{< nome_completo hugomg >}}</li>
+  {{< /grupo >}}
+
+  {{< grupo "Equipe do Website do Instituto" "equipeweb" >}}
+    <li>{{< nome_completo hugomg >}}</li>
+  {{< /grupo >}}
 </ul>
 
 ## Núcleos Docentes Estruturantes (NDEs)
