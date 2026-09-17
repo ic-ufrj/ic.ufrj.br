@@ -108,10 +108,10 @@ description: "Organizações e cargos do Instituto de Computação da UFRJ"
   {{< /grupo >}}
 
   {{< grupo "Comissão de Estágio" "estagio" >}}
-    <li>{{< nome_completo gabrielaquino >}}</li>
+    <li>{{< nome_completo valeriab >}}</li>
     <li>{{< nome_completo julianabsf >}}</li>
     <li>{{< nome_completo rafaelmello >}}</li>
-    <li>{{< nome_completo valeriab >}}</li>
+    <li>{{< nome_completo gabrielaquino >}}</li>
   {{< /grupo >}}
 
   {{< grupo "Comissão de Transferência" "comissaotransferencia" >}}
