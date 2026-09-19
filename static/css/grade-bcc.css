@@ -615,49 +615,73 @@
 }
 
 /* Painel de Exportação para Imagem PNG */
-.grade-export-header {
-	background: #f8fafc;
-	border: 2px solid #344563;
-	border-radius: 8px;
-	padding: 16px 20px;
-	margin: 0 auto 25px auto;
+.grade-export-title {
+	margin: 0 auto 20px auto;
 	width: 100%;
 	box-sizing: border-box;
 	font-family: "Montserrat", sans-serif;
-	color: #0f172a;
+	text-align: center;
 }
 
-.grade-export-header-top {
+.grade-export-title h2 {
+	margin: 0;
+	font-size: 26px;
+	font-weight: 800;
+	letter-spacing: 1.5px;
+	color: #1e293b;
+	text-transform: uppercase;
+}
+
+.grade-export-summary {
+	position: absolute;
+	background: #f8fafc;
+	border: 2px solid #344563;
+	border-radius: 12px;
+	padding: 18px 22px;
+	box-sizing: border-box;
+	font-family: "Montserrat", sans-serif;
+	color: #0f172a;
+	display: flex;
+	flex-direction: column;
+	gap: 14px;
+	z-index: 20;
+	overflow: hidden;
+}
+
+.grade-export-summary-main {
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-start;
-	border-bottom: 1.5px solid #cbd5e1;
-	padding-bottom: 10px;
-	margin-bottom: 12px;
+	gap: 20px;
+	flex-wrap: wrap;
 }
 
-.grade-export-header-title h2 {
+.grade-export-summary-id h2 {
 	margin: 0 0 4px 0;
 	font-size: 18px;
 	font-weight: 800;
 	color: #1e293b;
 }
 
-.grade-export-header-title p {
-	margin: 0;
+.grade-export-summary-id p {
+	margin: 0 0 10px 0;
 	font-size: 13px;
 	color: #475569;
 }
 
-.grade-export-header-dre {
-	text-align: right;
+.grade-export-summary-tags {
 	display: flex;
-	flex-direction: column;
-	align-items: flex-end;
-	gap: 4px;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 8px;
 }
 
-.grade-export-header-dre .dre-tag {
+.grade-export-summary-tags small {
+	color: #64748b;
+	font-size: 11px;
+}
+
+.dre-tag {
 	display: inline-block;
 	background: #344563;
 	color: #ffffff;
@@ -668,13 +692,6 @@
 	letter-spacing: 0.5px;
 }
 
-.grade-export-header-dre small {
-	display: block;
-	margin-top: 4px;
-	color: #64748b;
-	font-size: 11px;
-}
-
 .grade-export-stats-grid {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
@@ -683,6 +700,7 @@
 	border: 1px solid #e2e8f0;
 	border-radius: 6px;
 	padding: 10px 14px;
+	flex: 1 1 480px;
 }
 
 .grade-export-stat-box {
@@ -704,34 +722,34 @@
 	color: #0f172a;
 }
 
-.grade-export-footer {
-	margin-top: 25px;
-	padding: 12px 18px;
-	background: #f8fafc;
-	border: 1px solid #cbd5e1;
-	border-radius: 8px;
+.grade-export-summary-legend {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	font-family: "Montserrat", sans-serif;
+	flex-wrap: wrap;
+	gap: 10px;
+	border-top: 1.5px solid #cbd5e1;
+	padding-top: 10px;
+	margin-top: auto;
 	font-size: 12px;
 	color: #334155;
 }
 
-.grade-export-footer-legend {
+.grade-export-summary-legend-items {
 	display: flex;
 	align-items: center;
 	gap: 16px;
+	flex-wrap: wrap;
 }
 
-.grade-export-footer-legend-item {
+.grade-export-summary-legend-item {
 	display: flex;
 	align-items: center;
 	gap: 6px;
 	font-weight: 600;
 }
 
-.grade-export-footer-brand {
+.grade-export-summary-brand {
 	font-weight: 700;
 	color: #344563;
 }

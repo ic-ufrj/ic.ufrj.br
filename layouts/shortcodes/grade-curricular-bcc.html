@@ -649,65 +649,79 @@
         if (nomeVal) identHtml += `<span class="dre-tag">${escapeHtml(nomeVal)}</span>`;
         if (dreVal) identHtml += `<span class="dre-tag">DRE: ${escapeHtml(dreVal)}</span>`;
 
-        // Criar cabeçalho institucional temporário para o canvas
-        const headerPanel = document.createElement('div');
-        headerPanel.className = 'grade-export-header';
-        headerPanel.innerHTML = `
-          <div class="grade-export-header-top">
-            <div class="grade-export-header-title">
+        // Título limpo no topo da imagem
+        const titlePanel = document.createElement('div');
+        titlePanel.className = 'grade-export-title';
+        titlePanel.innerHTML = '<h2>FLUXOGRAMA BCC (Grade 2022)</h2>';
+
+        // Painel de resumo institucional: identificação, métricas e legenda
+        const summaryPanel = document.createElement('div');
+        summaryPanel.className = 'grade-export-summary';
+        summaryPanel.innerHTML = `
+          <div class="grade-export-summary-main">
+            <div class="grade-export-summary-id">
               <h2>Instituto de Computação &bull; UFRJ</h2>
               <p>Grade Curricular do Bacharelado em Ciência da Computação (Estrutura 2022)</p>
+              <div class="grade-export-summary-tags">
+                ${identHtml}
+                <small>Emitido em: ${agora}</small>
+              </div>
             </div>
-            <div class="grade-export-header-dre">
-              ${identHtml}
-              <small>Emitido em: ${agora}</small>
+            <div class="grade-export-stats-grid">
+              <div class="grade-export-stat-box">
+                <span class="stat-lbl">Concluídas</span>
+                <strong class="stat-val text-success">${concMaterias} de ${totalMaterias} (${concCreditos.toFixed(1)} cr)</strong>
+              </div>
+              <div class="grade-export-stat-box">
+                <span class="stat-lbl">Cursando</span>
+                <strong class="stat-val text-cursando">${cursandoMaterias} (${cursandoCreditos.toFixed(1)} cr)</strong>
+              </div>
+              <div class="grade-export-stat-box">
+                <span class="stat-lbl">Carga Horária</span>
+                <strong class="stat-val">${concCh}h de ${totalCh}h</strong>
+              </div>
+              <div class="grade-export-stat-box">
+                <span class="stat-lbl">Progresso Total</span>
+                <strong class="stat-val text-primary">${pct}% Concluído</strong>
+              </div>
             </div>
           </div>
-          <div class="grade-export-stats-grid">
-            <div class="grade-export-stat-box">
-              <span class="stat-lbl">Concluídas</span>
-              <strong class="stat-val text-success">${concMaterias} de ${totalMaterias} (${concCreditos.toFixed(1)} cr)</strong>
+          <div class="grade-export-summary-legend">
+            <div class="grade-export-summary-legend-items">
+              <span class="grade-export-summary-legend-item"><span class="legenda-dot dot-concluida"></span> Concluída</span>
+              <span class="grade-export-summary-legend-item"><span class="legenda-dot dot-cursando"></span> Cursando</span>
+              <span class="grade-export-summary-legend-item"><span class="legenda-dot dot-disponivel"></span> Disponível</span>
+              <span class="grade-export-summary-legend-item"><span class="legenda-dot dot-req"></span> Pré-requisito</span>
             </div>
-            <div class="grade-export-stat-box">
-              <span class="stat-lbl">Cursando</span>
-              <strong class="stat-val text-cursando">${cursandoMaterias} (${cursandoCreditos.toFixed(1)} cr)</strong>
-            </div>
-            <div class="grade-export-stat-box">
-              <span class="stat-lbl">Carga Horária</span>
-              <strong class="stat-val">${concCh}h de ${totalCh}h</strong>
-            </div>
-            <div class="grade-export-stat-box">
-              <span class="stat-lbl">Progresso Total</span>
-              <strong class="stat-val text-primary">${pct}% Concluído</strong>
-            </div>
-          </div>
-        `;
-
-        // Criar rodapé com legenda para a imagem
-        const footerPanel = document.createElement('div');
-        footerPanel.className = 'grade-export-footer';
-        footerPanel.innerHTML = `
-          <div class="grade-export-footer-legend">
-            <span class="grade-export-footer-legend-item"><span class="legenda-dot dot-concluida"></span> Concluída</span>
-            <span class="grade-export-footer-legend-item"><span class="legenda-dot dot-cursando"></span> Cursando</span>
-            <span class="grade-export-footer-legend-item"><span class="legenda-dot dot-disponivel"></span> Disponível</span>
-            <span class="grade-export-footer-legend-item"><span class="legenda-dot dot-req"></span> Pré-requisito</span>
-          </div>
-          <div class="grade-export-footer-brand">
-            <span>Universidade Federal do Rio de Janeiro &bull; CCMN &bull; IC</span>
+            <span class="grade-export-summary-brand">Universidade Federal do Rio de Janeiro &bull; CCMN &bull; IC</span>
           </div>
         `;
 
         // Inserir temporariamente na composição da exportação
-        canvas.insertBefore(headerPanel, gradeGrid);
-        canvas.appendChild(footerPanel);
+        canvas.insertBefore(titlePanel, gradeGrid);
+        canvas.appendChild(summaryPanel);
         const exportTargetWidth = gradeGrid ? gradeGrid.offsetWidth : canvas.scrollWidth;
-        headerPanel.style.width = `${exportTargetWidth}px`;
-        footerPanel.style.width = `${exportTargetWidth}px`;
-        headerPanel.style.position = 'relative';
-        headerPanel.style.zIndex = '20';
-        footerPanel.style.position = 'relative';
-        footerPanel.style.zIndex = '20';
+        titlePanel.style.width = `${exportTargetWidth}px`;
+
+        // Posicionar o resumo no espaço vazio abaixo dos períodos intermediários/finais (4º ao 9º),
+        // à direita das colunas mais altas (1º ao 3º período)
+        const exportCols = Array.from(gradeGrid.querySelectorAll('.grade-periodo-col'));
+        const anchorCol = exportCols[3];
+        const maxLaterBottom = anchorCol
+          ? Math.max(...exportCols.slice(3).map(c => c.offsetTop + c.offsetHeight))
+          : 0;
+        const panelTop = maxLaterBottom + 16;
+        const availHeight = gradeGrid.offsetHeight - panelTop - 8;
+        if (anchorCol && availHeight >= 150) {
+          summaryPanel.style.left = `${gradeGrid.offsetLeft + anchorCol.offsetLeft}px`;
+          summaryPanel.style.top = `${gradeGrid.offsetTop + panelTop}px`;
+          summaryPanel.style.width = `${exportTargetWidth - anchorCol.offsetLeft}px`;
+          summaryPanel.style.height = `${availHeight}px`;
+        } else {
+          summaryPanel.style.position = 'static';
+          summaryPanel.style.width = `${exportTargetWidth}px`;
+          summaryPanel.style.margin = '20px auto 0 auto';
+        }
         await new Promise(r => setTimeout(r, 60));
 
         const fullWidth = Math.max(canvas.scrollWidth, canvas.offsetWidth, viewport.scrollWidth);
@@ -725,9 +739,9 @@
           logging: false
         });
 
-        // Remover cabeçalho/rodapé temporários e restaurar
-        headerPanel.remove();
-        footerPanel.remove();
+        // Remover título/resumo temporários e restaurar
+        titlePanel.remove();
+        summaryPanel.remove();
         viewport.scrollLeft = prevScrollLeft;
 
         const link = document.createElement('a');
