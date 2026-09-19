@@ -234,6 +234,13 @@
 	min-width: 100%;
 }
 
+.grade-bcc-canvas.is-exporting {
+	display: block;
+	min-width: 0;
+	padding: 4px 10px 10px 10px;
+	box-sizing: border-box;
+}
+
 .grade-bcc-grid {
 	display: flex;
 	gap: 16px;
@@ -700,7 +707,7 @@
 
 .grade-export-stats-grid {
 	display: grid;
-	grid-template-columns: repeat(4, 1fr);
+	grid-template-columns: repeat(3, 1fr);
 	gap: 12px;
 	background: #ffffff;
 	border: 1px solid #e2e8f0;

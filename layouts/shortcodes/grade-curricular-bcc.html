@@ -627,6 +627,9 @@
     async function exportarGrade(nomeVal, dreVal) {
       if (!exportBtn) return;
       const originalHtml = exportBtn.innerHTML;
+      const originalCanvasHeight = canvas.style.height;
+      const originalCanvasWidth = canvas.style.width;
+      const prevScrollLeft = viewport.scrollLeft;
       exportBtn.innerHTML = '<i class="bi bi-arrow-repeat spin"></i>';
       exportBtn.disabled = true;
 
@@ -641,13 +644,16 @@
           });
         }
 
-        // Salvar estado atual do scroll
-        const prevScrollLeft = viewport.scrollLeft;
+        // Salvar estado atual do scroll e preparar margens exatas da composição
         viewport.scrollLeft = 0;
+        canvas.classList.add('is-exporting');
         await new Promise(r => setTimeout(r, 60));
 
         // Calcular métricas por tipo para o resumo
         let concMaterias = 0;
+        let concCreditos = 0;
+        let cursandoMaterias = 0;
+        let cursandoCreditos = 0;
         let concObrigatorias = 0;
         let totalObrigatorias = 0;
         let concOptativas = 0;
@@ -658,6 +664,7 @@
           const cod = card.dataset.codigo;
           const st = statusMap[cod] || 'nao_cursada';
           const isOptativa = card.dataset.tipo === 'optativa';
+          const creditos = parseFloat(card.dataset.creditos || 0);
           const ch = parseInt(card.dataset.ch || 0, 10);
           if (isOptativa) {
             totalOptativas++;
@@ -666,12 +673,16 @@
           }
           if (st === 'concluida') {
             concMaterias++;
+            concCreditos += creditos;
             concCh += ch;
             if (isOptativa) {
               concOptativas++;
             } else {
               concObrigatorias++;
             }
+          } else if (st === 'cursando') {
+            cursandoMaterias++;
+            cursandoCreditos += creditos;
           }
         });
 
@@ -705,19 +716,27 @@
             </div>
             <div class="grade-export-stats-grid">
               <div class="grade-export-stat-box">
-                <span class="stat-lbl">Obrigatórias Concluídas</span>
-                <strong class="stat-val text-success">${pctObrigatorias}%</strong>
+                <span class="stat-lbl">Concluídas</span>
+                <strong class="stat-val text-success">${concMaterias} de ${totalMaterias} (${concCreditos.toFixed(1)} cr)</strong>
               </div>
               <div class="grade-export-stat-box">
-                <span class="stat-lbl">Eletivas/Optativas Concluídas</span>
-                <strong class="stat-val text-primary">${pctOptativas}%</strong>
+                <span class="stat-lbl">Cursando</span>
+                <strong class="stat-val text-cursando">${cursandoMaterias} (${cursandoCreditos.toFixed(1)} cr)</strong>
+              </div>
+              <div class="grade-export-stat-box">
+                <span class="stat-lbl">Obrigatórias</span>
+                <strong class="stat-val text-success">${pctObrigatorias}% concluída</strong>
+              </div>
+              <div class="grade-export-stat-box">
+                <span class="stat-lbl">Eletivas/Optativas</span>
+                <strong class="stat-val text-primary">${pctOptativas}% concluída</strong>
               </div>
               <div class="grade-export-stat-box">
                 <span class="stat-lbl">Progresso Total</span>
-                <strong class="stat-val text-primary">${pctTotal}%</strong>
+                <strong class="stat-val text-primary">${pctTotal}% concluído</strong>
               </div>
               <div class="grade-export-stat-box">
-                <span class="stat-lbl">Carga Horária Total</span>
+                <span class="stat-lbl">Carga Horária</span>
                 <strong class="stat-val">${concCh}h de ${totalCh}h</strong>
               </div>
             </div>
@@ -737,19 +756,19 @@
         canvas.insertBefore(titlePanel, gradeGrid);
         canvas.appendChild(summaryPanel);
         const exportTargetWidth = gradeGrid ? gradeGrid.offsetWidth : canvas.scrollWidth;
+        canvas.style.width = `${exportTargetWidth + 20}px`;
         titlePanel.style.width = `${exportTargetWidth}px`;
 
-        // Posicionar o resumo no espaço vazio abaixo dos períodos intermediários/finais (4º ao 9º),
-        // à direita das colunas mais altas (1º ao 3º período)
+        // Ancorar o resumo na borda inferior direita, cobrindo apenas a base do 6º ao 9º período
         const exportCols = Array.from(gradeGrid.querySelectorAll('.grade-periodo-col'));
-        const anchorCol = exportCols[3];
+        const anchorCol = exportCols[5];
         const maxLaterBottom = anchorCol
-          ? Math.max(...exportCols.slice(3).map(c => c.offsetTop + c.offsetHeight))
+          ? Math.max(...exportCols.slice(5).map(c => c.offsetTop + c.offsetHeight))
           : 0;
-        const panelTop = maxLaterBottom + 16;
+        const minimumSummaryTop = maxLaterBottom + 16;
         if (anchorCol) {
-          summaryPanel.style.left = `${gradeGrid.offsetLeft + anchorCol.offsetLeft}px`;
-          summaryPanel.style.top = `${gradeGrid.offsetTop + panelTop}px`;
+          summaryPanel.style.right = '10px';
+          summaryPanel.style.bottom = '10px';
           summaryPanel.style.width = `${exportTargetWidth - anchorCol.offsetLeft}px`;
         } else {
           summaryPanel.style.position = 'static';
@@ -758,8 +777,11 @@
         }
         await new Promise(r => setTimeout(r, 60));
 
-        const fullWidth = Math.max(canvas.scrollWidth, canvas.offsetWidth, viewport.scrollWidth);
-        const fullHeight = Math.max(canvas.scrollHeight, canvas.offsetHeight, viewport.scrollHeight);
+        const gridBottom = gradeGrid.offsetTop + gradeGrid.offsetHeight;
+        const minimumSummaryBottom = gradeGrid.offsetTop + minimumSummaryTop + summaryPanel.offsetHeight;
+        canvas.style.height = `${Math.max(gridBottom, minimumSummaryBottom) + 10}px`;
+        const fullWidth = canvas.offsetWidth;
+        const fullHeight = canvas.offsetHeight;
 
         const canvasImage = await window.html2canvas(canvas, {
           scale: 2,
@@ -793,6 +815,11 @@
         console.error('Erro na exportação:', err);
         alert('Não foi possível gerar a imagem da grade.');
       } finally {
+        canvas.querySelectorAll('.grade-export-title, .grade-export-summary').forEach(el => el.remove());
+        canvas.classList.remove('is-exporting');
+        canvas.style.width = originalCanvasWidth;
+        canvas.style.height = originalCanvasHeight;
+        viewport.scrollLeft = prevScrollLeft;
         exportBtn.innerHTML = originalHtml;
         exportBtn.disabled = false;
         restoreGradeAfterExport();
