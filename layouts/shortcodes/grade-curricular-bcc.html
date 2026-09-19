@@ -7,9 +7,13 @@
       <span><strong>Fluxograma de Pré-Requisitos do BCC</strong> (Grade 2022)</span>
     </div>
     <div class="grade-bcc-zoom-controls">
-      <button type="button" class="grade-zoom-btn grade-btn-fullscreen" id="grade-fullscreen-btn" title="Tela Cheia" aria-label="Tela Cheia">
+      <button type="button" class="grade-zoom-btn grade-btn-fullscreen" id="grade-fullscreen-btn" title="Expandir visualização" aria-label="Expandir visualização">
         <i class="bi bi-arrows-fullscreen"></i>
-        <span>Tela cheia</span>
+        <span>Expandir</span>
+      </button>
+      <button type="button" class="grade-zoom-btn grade-btn-fullscreen" id="grade-compact-btn" title="Condensar grade" aria-label="Condensar grade" aria-pressed="false">
+        <i class="bi bi-arrows-collapse"></i>
+        <span>Condensar</span>
       </button>
       <span class="toolbar-divider"></span>
       <button type="button" class="grade-zoom-btn" id="grade-export-btn" title="Exportar Grade Completa (PNG HD)" aria-label="Exportar Imagem PNG">
@@ -71,7 +75,7 @@
             </div>
             <div class="grade-periodo-cards">
               {{ range .disciplinas }}
-                <div class="grade-card{{ if eq .tipo "optativa" }} grade-card-optativa{{ end }}" 
+                <div class="grade-card{{ if eq .tipo "optativa" }} grade-card-optativa{{ end }}{{ if or (eq .codigo "ICPX06") (eq .codigo "ICPZ55") }} grade-card-activity{{ end }}"
                      id="disc-{{ .codigo }}" 
                      data-codigo="{{ .codigo }}" 
                      data-nome="{{ .nome }}" 
@@ -100,6 +104,12 @@
                 </div>
               {{ end }}
             </div>
+            {{ if eq .id 1 }}
+              <button type="button" class="grade-activities-toggle" aria-expanded="false">
+                <i class="bi bi-plus-circle"></i>
+                <span>Atividades Complementares / Extensão (2)</span>
+              </button>
+            {{ end }}
           </div>
         {{ end }}
       </div>
@@ -117,9 +127,9 @@
       <span class="legenda-item"><span class="legenda-dot dot-req"></span> Pré-requisito</span>
     </div>
   </div>
-  <button type="button" class="grade-mobile-fs-exit" id="grade-mobile-fs-exit" title="Sair da Tela Cheia" aria-label="Sair da Tela Cheia">
-    <i class="bi bi-arrow-left"></i>
-    <span>Voltar</span>
+  <button type="button" class="grade-mobile-fs-exit" id="grade-mobile-fs-exit" title="Fechar visualização expandida" aria-label="Fechar visualização expandida">
+    <i class="bi bi-x-lg"></i>
+    <span>Fechar</span>
   </button>
 
   <!-- Modal de Identificação para Exportação -->
@@ -514,35 +524,61 @@
     });
 
     const fsBtn = document.getElementById('grade-fullscreen-btn');
+    const compactBtn = document.getElementById('grade-compact-btn');
     const exportBtn = document.getElementById('grade-export-btn');
+    const activitiesToggle = container.querySelector('.grade-activities-toggle');
 
-    function updateFsState() {
-      if (document.fullscreenElement === container) {
-        container.classList.add('is-fullscreen');
-      } else {
-        container.classList.remove('is-fullscreen');
+    if (activitiesToggle) {
+      const activitiesCol = activitiesToggle.closest('.grade-periodo-col');
+      activitiesToggle.addEventListener('click', () => {
+        const expanded = activitiesCol.classList.toggle('activities-expanded');
+        activitiesToggle.setAttribute('aria-expanded', String(expanded));
+        activitiesToggle.innerHTML = expanded
+          ? '<i class="bi bi-dash-circle"></i><span>Ocultar Atividades Complementares / Extensão</span>'
+          : '<i class="bi bi-plus-circle"></i><span>Atividades Complementares / Extensão (2)</span>';
+      });
+    }
+
+    if (compactBtn) {
+      compactBtn.addEventListener('click', () => {
+        const compact = container.classList.toggle('is-compact');
+        compactBtn.setAttribute('aria-pressed', String(compact));
+        compactBtn.title = compact ? 'Restaurar espaçamento' : 'Condensar grade';
+        compactBtn.setAttribute('aria-label', compactBtn.title);
+        compactBtn.innerHTML = compact
+          ? '<i class="bi bi-arrows-expand"></i><span>Normal</span>'
+          : '<i class="bi bi-arrows-collapse"></i><span>Condensar</span>';
+      });
+    }
+
+    function setExpanded(expanded) {
+      container.classList.toggle('grade-bcc-expanded', expanded);
+      document.body.classList.toggle('grade-bcc-body-expanded', expanded);
+      if (fsBtn) {
+        fsBtn.title = expanded ? 'Restaurar visualização' : 'Expandir visualização';
+        fsBtn.setAttribute('aria-label', fsBtn.title);
+        fsBtn.innerHTML = expanded
+          ? '<i class="bi bi-fullscreen-exit"></i><span>Restaurar</span>'
+          : '<i class="bi bi-arrows-fullscreen"></i><span>Expandir</span>';
       }
     }
-    document.addEventListener('fullscreenchange', updateFsState);
 
     if (fsBtn) {
       fsBtn.addEventListener('click', () => {
-        if (!document.fullscreenElement) {
-          container.requestFullscreen().catch(() => {});
-        } else {
-          document.exitFullscreen().catch(() => {});
-        }
+        setExpanded(!container.classList.contains('grade-bcc-expanded'));
       });
     }
 
     const fsExitBtn = document.getElementById('grade-mobile-fs-exit');
     if (fsExitBtn) {
-      fsExitBtn.addEventListener('click', () => {
-        if (document.fullscreenElement) {
-          document.exitFullscreen().catch(() => {});
-        }
-      });
+      fsExitBtn.addEventListener('click', () => setExpanded(false));
     }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && container.classList.contains('grade-bcc-expanded')) {
+        setExpanded(false);
+      }
+    });
 
     // Modal de identificação para exportação (Nome e DRE opcionais, não persistidos)
     const exportModal = document.getElementById('grade-export-modal');
@@ -630,6 +666,7 @@
       const originalCanvasHeight = canvas.style.height;
       const originalCanvasWidth = canvas.style.width;
       const prevScrollLeft = viewport.scrollLeft;
+      const wasCompact = container.classList.contains('is-compact');
       exportBtn.innerHTML = '<i class="bi bi-arrow-repeat spin"></i>';
       exportBtn.disabled = true;
 
@@ -646,6 +683,7 @@
 
         // Salvar estado atual do scroll e preparar margens exatas da composição
         viewport.scrollLeft = 0;
+        container.classList.remove('is-compact');
         canvas.classList.add('is-exporting');
         await new Promise(r => setTimeout(r, 60));
 
@@ -819,6 +857,7 @@
         canvas.classList.remove('is-exporting');
         canvas.style.width = originalCanvasWidth;
         canvas.style.height = originalCanvasHeight;
+        container.classList.toggle('is-compact', wasCompact);
         viewport.scrollLeft = prevScrollLeft;
         exportBtn.innerHTML = originalHtml;
         exportBtn.disabled = false;
