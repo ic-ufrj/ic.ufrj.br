@@ -280,49 +280,8 @@
 .grade-bcc-canvas {
 	position: relative;
 	display: inline-block;
-	transform-origin: top left;
-	transition: transform 0.2s ease-out;
 	padding-bottom: 60px;
 	min-width: 100%;
-}
-
-.grade-bcc-svg-overlay {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	pointer-events: none;
-	z-index: 10;
-}
-
-.grade-line {
-	fill: none;
-	stroke: #cbd5e1;
-	stroke-width: 1.5px;
-	transition: stroke 0.25s, stroke-width 0.25s, opacity 0.25s;
-}
-
-.grade-line-dimmed {
-	opacity: 0.15;
-}
-
-.grade-line-req.active {
-	stroke: #ea580c;
-	stroke-width: 2.5px;
-	opacity: 1;
-}
-
-.grade-line-destrava.active {
-	stroke: #10b981;
-	stroke-width: 2.5px;
-	opacity: 1;
-}
-
-.grade-line-completed {
-	stroke: #16a34a;
-	stroke-width: 2px;
-	stroke-dasharray: 4 2;
 }
 
 .grade-bcc-grid {
@@ -897,84 +856,6 @@
 	.grade-bcc-wrapper.is-fullscreen .grade-mobile-fs-exit,
 	.grade-bcc-wrapper:fullscreen .grade-mobile-fs-exit {
 		display: inline-flex;
-	}
-}
-
-/* Grade de Optativas Lado a Lado */
-.grade-optativas-grid {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	gap: 32px;
-	width: 92vw;
-	max-width: 1360px;
-	position: relative;
-	left: 50%;
-	transform: translateX(-50%);
-	margin: 40px 0;
-	box-sizing: border-box;
-}
-
-.grade-optativas-col {
-	width: 100%;
-	min-width: 0;
-	overflow-x: auto;
-}
-
-.grade-optativas-col h2 {
-	margin-top: 0;
-	margin-bottom: 16px;
-}
-
-.grade-optativas-col table {
-	width: 100%;
-	border-collapse: collapse;
-	table-layout: auto;
-}
-
-.grade-optativas-col th,
-.grade-optativas-col td {
-	padding: 8px 10px;
-	vertical-align: middle;
-}
-
-.grade-optativas-col th:first-child,
-.grade-optativas-col td:first-child {
-	white-space: nowrap;
-	width: 80px;
-	font-weight: 700;
-}
-
-.grade-optativas-col th:nth-child(2),
-.grade-optativas-col td:nth-child(2) {
-	min-width: 180px;
-}
-
-.grade-optativas-col th:nth-child(3),
-.grade-optativas-col td:nth-child(3) {
-	white-space: nowrap;
-	width: 60px;
-	text-align: center;
-}
-
-.grade-optativas-col th:nth-child(4),
-.grade-optativas-col td:nth-child(4) {
-	white-space: nowrap;
-	width: 70px;
-	text-align: center;
-}
-
-.grade-optativas-col th:nth-child(5),
-.grade-optativas-col td:nth-child(5) {
-	min-width: 120px;
-}
-
-@media (max-width: 1080px) {
-	.grade-optativas-grid {
-		grid-template-columns: 1fr;
-		width: 100%;
-		left: 0;
-		transform: none;
-		margin: 24px auto;
 	}
 }
 

@@ -17,7 +17,7 @@ especialização. Mais informações podem ser encontradas no
 
 ## Fluxograma de Pré-Requisitos
 
-💡 **Como usar o fluxograma:** Passe o mouse sobre qualquer matéria para visualizar seus pré-requisitos e destravamentos. Clique no ícone de status de um card para alternar entre **Não cursada**, **Cursando** e **Concluída** (o progresso fica salvo no seu navegador). Use os botões no topo para alternar tela cheia, zoom ou exportar a imagem da sua grade para orientação acadêmica.
+💡 **Como usar o fluxograma:** Passe o mouse sobre qualquer matéria para visualizar seus pré-requisitos e destravamentos. Clique no ícone de status de um card para alternar entre **Não cursada**, **Cursando** e **Concluída** (o progresso fica salvo no seu navegador). Use os botões no topo para alternar tela cheia ou exportar a imagem da sua grade para orientação acadêmica.
 
 {{< grade-curricular-bcc >}}
 
@@ -130,10 +130,6 @@ especialização. Mais informações podem ser encontradas no
 
 **Total de Créditos:** 16.0
 
-{{% grade-optativas-grid %}}
-
-{{% grade-optativas-col %}}
-
 ## Disciplinas Optativas (Escolha Condicionada)
 
 | Código | Nome                           | Créditos | Carga Horária | Requisitos                        |
@@ -223,10 +219,6 @@ especialização. Mais informações podem ser encontradas no
 | MAE994 | Cálculo Int e Diferencial IV | 4.0      | 60            | [ICP115](#3º-período), [MAE992](#3º-período) |
 
 
-{{% /grade-optativas-col %}}
-
-{{% grade-optativas-col %}}
-
 ## Disciplinas Optativas (Escolha Restrita)
 
 
@@ -263,8 +255,5 @@ especialização. Mais informações podem ser encontradas no
 | NEP160 | Dir Hum na América Latina        | 4.0      | 60            |            |
 
 **Créditos a cumprir:** 4.0
-
-{{% /grade-optativas-col %}}
-{{% /grade-optativas-grid %}}
 
 

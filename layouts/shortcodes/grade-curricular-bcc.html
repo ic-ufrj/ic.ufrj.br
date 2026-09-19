@@ -15,10 +15,6 @@
       <button type="button" class="grade-zoom-btn" id="grade-export-btn" title="Exportar Grade Completa (PNG HD)" aria-label="Exportar Imagem PNG">
         <i class="bi bi-camera-fill"></i>
       </button>
-      <span class="toolbar-divider"></span>
-      <button type="button" class="grade-zoom-btn" id="grade-zoom-in" title="Aumentar Zoom" aria-label="Aumentar Zoom"><i class="bi bi-plus-lg"></i></button>
-      <button type="button" class="grade-zoom-btn" id="grade-zoom-reset" title="Restaurar Zoom" aria-label="Restaurar Zoom"><i class="bi bi-aspect-ratio"></i></button>
-      <button type="button" class="grade-zoom-btn" id="grade-zoom-out" title="Diminuir Zoom" aria-label="Diminuir Zoom"><i class="bi bi-dash-lg"></i></button>
     </div>
     <div class="grade-bcc-actions">
       <div class="grade-dre-container" title="Informe seu DRE para identificação na grade exportada">
@@ -70,21 +66,6 @@
 
   <div class="grade-bcc-viewport" id="grade-viewport">
     <div class="grade-bcc-canvas" id="grade-canvas">
-      <svg class="grade-bcc-svg-overlay" id="grade-svg-lines" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <marker id="arrow-default" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-            <path d="M 0 1 L 8 5 L 0 9 z" fill="#94a3b8" />
-          </marker>
-          <marker id="arrow-active-req" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-            <path d="M 0 1 L 8 5 L 0 9 z" fill="#f59e0b" />
-          </marker>
-          <marker id="arrow-active-destrava" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-            <path d="M 0 1 L 8 5 L 0 9 z" fill="#10b981" />
-          </marker>
-        </defs>
-        <g id="grade-svg-paths"></g>
-      </svg>
-
       <div class="grade-bcc-grid" id="grade-grid">
         {{ range $grade.periodos }}
           <div class="grade-periodo-col grade-col-{{ .cor_id }}" data-periodo-id="{{ .id }}">
@@ -157,7 +138,6 @@
     const viewport = document.getElementById('grade-viewport');
     const canvas = document.getElementById('grade-canvas');
     const gradeGrid = document.getElementById('grade-grid');
-    const svgPaths = document.getElementById('grade-svg-paths');
     const cards = Array.from(container.querySelectorAll('.grade-card'));
     const periodoCols = Array.from(container.querySelectorAll('.grade-periodo-col'));
     const statusInfo = document.getElementById('grade-status-info');
@@ -173,8 +153,6 @@
     const STORAGE_KEY = 'bcc_grade_status_v2';
     const OLD_STORAGE_KEY = 'bcc_materias_concluidas_grade2022';
 
-    const DEFAULT_EMBED_SCALE = 0.85;
-    let currentScale = DEFAULT_EMBED_SCALE;
     let selectedCodigo = null;
     let hoveredCodigo = null;
     
@@ -302,7 +280,6 @@
       }
       saveProgresso();
       updateProgressoUI();
-      drawLines();
     }
 
     // Alternar todas de um período
@@ -326,61 +303,8 @@
 
         saveProgresso();
         updateProgressoUI();
-        drawLines();
       });
     });
-
-    function drawLines() {
-      if (!svgPaths || !canvas) return;
-      svgPaths.innerHTML = '';
-      
-      const canvasRect = canvas.getBoundingClientRect();
-      const activeCodigo = selectedCodigo || hoveredCodigo;
-
-      cards.forEach(card => {
-        const targetCod = card.dataset.codigo;
-        const prereqs = JSON.parse(card.dataset.prereqs || '[]');
-        
-        prereqs.forEach(sourceCod => {
-          const sourceCard = cardMap[sourceCod];
-          if (!sourceCard) return;
-
-          const sRect = sourceCard.getBoundingClientRect();
-          const tRect = card.getBoundingClientRect();
-
-          const x1 = (sRect.right - canvasRect.left) / currentScale;
-          const y1 = (sRect.top + sRect.height / 2 - canvasRect.top) / currentScale;
-          const x2 = (tRect.left - canvasRect.left) / currentScale;
-          const y2 = (tRect.top + tRect.height / 2 - canvasRect.top) / currentScale;
-
-          const dx = Math.max(30, (x2 - x1) * 0.5);
-          const d = `M ${x1} ${y1} C ${x1 + dx} ${y1}, ${x2 - dx} ${y2}, ${x2} ${y2}`;
-
-          let pathClass = 'grade-line';
-          let markerEnd = 'url(#arrow-default)';
-
-          if (activeCodigo) {
-            if (targetCod === activeCodigo) {
-              pathClass += ' grade-line-req active';
-              markerEnd = 'url(#arrow-active-req)';
-            } else if (sourceCod === activeCodigo) {
-              pathClass += ' grade-line-destrava active';
-              markerEnd = 'url(#arrow-active-destrava)';
-            } else {
-              pathClass += ' grade-line-dimmed';
-            }
-          } else if (statusMap[sourceCod] === 'concluida' && statusMap[targetCod] === 'concluida') {
-            pathClass += ' grade-line-completed';
-          }
-
-          const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-          path.setAttribute('d', d);
-          path.setAttribute('class', pathClass);
-          path.setAttribute('marker-end', markerEnd);
-          svgPaths.appendChild(path);
-        });
-      });
-    }
 
     function updateHighlight(activeCodigo, isPinned = false) {
       cards.forEach(c => {
@@ -395,7 +319,6 @@
 
       if (!activeCodigo) {
         statusInfo.innerHTML = '<span class="status-badge status-normal"><i class="bi bi-cursor-fill"></i> Passe o mouse ou clique para inspecionar</span>';
-        drawLines();
         return;
       }
 
@@ -457,8 +380,6 @@
           <span class="status-sub">| <strong>Pré-requisitos:</strong> ${reqText} | <strong>Destrava:</strong> ${destrText}</span>
         </div>
       `;
-
-      drawLines();
     }
 
     // Eventos nos cards
@@ -513,7 +434,6 @@
           statusMap = {};
           saveProgresso();
           updateProgressoUI();
-          drawLines();
         }
       });
     }
@@ -567,33 +487,14 @@
       }
     });
 
-    // Controles de zoom
-    function applyZoom(scale) {
-      currentScale = Math.min(Math.max(0.6, scale), 1.5);
-      canvas.style.transform = `scale(${currentScale})`;
-      canvas.style.transformOrigin = 'top left';
-      drawLines();
-    }
-
-    const zoomInBtn = document.getElementById('grade-zoom-in');
-    const zoomOutBtn = document.getElementById('grade-zoom-out');
-    const zoomResetBtn = document.getElementById('grade-zoom-reset');
     const fsBtn = document.getElementById('grade-fullscreen-btn');
     const exportBtn = document.getElementById('grade-export-btn');
-
-    if (zoomInBtn) zoomInBtn.addEventListener('click', () => applyZoom(currentScale + 0.15));
-    if (zoomOutBtn) zoomOutBtn.addEventListener('click', () => applyZoom(currentScale - 0.15));
-    if (zoomResetBtn) zoomResetBtn.addEventListener('click', () => {
-      applyZoom(document.fullscreenElement === container ? 1.0 : DEFAULT_EMBED_SCALE);
-    });
 
     function updateFsState() {
       if (document.fullscreenElement === container) {
         container.classList.add('is-fullscreen');
-        applyZoom(1.0);
       } else {
         container.classList.remove('is-fullscreen');
-        applyZoom(DEFAULT_EMBED_SCALE);
       }
     }
     document.addEventListener('fullscreenchange', updateFsState);
@@ -662,12 +563,8 @@
             });
           }
 
-          // Salvar estado atual do zoom e scroll
-          const prevScale = currentScale;
+          // Salvar estado atual do scroll
           const prevScrollLeft = viewport.scrollLeft;
-
-          // Resetar zoom para escala 1.0 para captura nítida
-          applyZoom(1);
           viewport.scrollLeft = 0;
           await new Promise(r => setTimeout(r, 60));
 
@@ -757,7 +654,6 @@
           headerPanel.style.zIndex = '20';
           footerPanel.style.position = 'relative';
           footerPanel.style.zIndex = '20';
-          drawLines();
           await new Promise(r => setTimeout(r, 60));
 
           const fullWidth = Math.max(canvas.scrollWidth, canvas.offsetWidth, viewport.scrollWidth);
@@ -778,9 +674,7 @@
           // Remover cabeçalho/rodapé temporários e restaurar
           headerPanel.remove();
           footerPanel.remove();
-          applyZoom(prevScale);
           viewport.scrollLeft = prevScrollLeft;
-          drawLines();
 
           const link = document.createElement('a');
           link.download = `grade-bcc-ufrj-${dreVal}.png`;
@@ -796,15 +690,7 @@
       });
     }
 
-    window.addEventListener('resize', () => {
-      drawLines();
-    });
-
     updateProgressoUI();
-    applyZoom(DEFAULT_EMBED_SCALE);
-    setTimeout(() => {
-      drawLines();
-    }, 150);
   }
 
   if (document.readyState === 'loading') {
