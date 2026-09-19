@@ -135,7 +135,7 @@
       <div class="grade-modal-fields">
         <div class="grade-modal-field">
           <label for="grade-modal-nome">Nome <span class="grade-modal-optional">(opcional)</span></label>
-          <input type="text" id="grade-modal-nome" class="grade-modal-input" placeholder="Ex: Maria Silva" maxlength="80" autocomplete="off" />
+          <input type="text" id="grade-modal-nome" class="grade-modal-input" placeholder="Ex: Cainfo da Silva" maxlength="80" autocomplete="off" />
         </div>
         <div class="grade-modal-field">
           <label for="grade-modal-dre">DRE <span class="grade-modal-optional">(opcional)</span></label>
@@ -551,15 +551,44 @@
     const modalConfirmBtn = document.getElementById('grade-modal-confirm-btn');
     const modalCancelBtn = document.getElementById('grade-modal-cancel-btn');
     const modalCloseBtn = document.getElementById('grade-modal-close-btn');
+    let exportUiState = null;
+
+    function neutralizeGradeForExport() {
+      if (!exportUiState) {
+        exportUiState = {
+          selectedCodigo,
+          hoveredCodigo,
+          focusedCard: document.activeElement && document.activeElement.closest
+            ? document.activeElement.closest('.grade-card')
+            : null
+        };
+      }
+      selectedCodigo = null;
+      hoveredCodigo = null;
+      if (document.activeElement && document.activeElement.blur) document.activeElement.blur();
+      updateHighlight(null, false);
+    }
+
+    function restoreGradeAfterExport() {
+      if (!exportUiState) return;
+      selectedCodigo = exportUiState.selectedCodigo;
+      hoveredCodigo = exportUiState.hoveredCodigo;
+      const activeCodigo = selectedCodigo || hoveredCodigo;
+      updateHighlight(activeCodigo, Boolean(selectedCodigo));
+      if (exportUiState.focusedCard) exportUiState.focusedCard.focus();
+      exportUiState = null;
+    }
 
     function openExportModal() {
       if (!exportModal) return;
+      neutralizeGradeForExport();
       exportModal.classList.add('is-open');
       setTimeout(() => { if (modalNomeInput) modalNomeInput.focus(); }, 50);
     }
 
-    function closeExportModal() {
+    function closeExportModal(restoreGrade = true) {
       if (exportModal) exportModal.classList.remove('is-open');
+      if (restoreGrade) restoreGradeAfterExport();
     }
 
     if (exportModal) {
@@ -584,7 +613,7 @@
         modalConfirmBtn.addEventListener('click', () => {
           const nomeVal = modalNomeInput ? modalNomeInput.value.trim() : '';
           const dreVal = modalDreInput ? modalDreInput.value.trim() : '';
-          closeExportModal();
+          closeExportModal(false);
           exportarGrade(nomeVal, dreVal);
         });
       }
@@ -617,31 +646,38 @@
         viewport.scrollLeft = 0;
         await new Promise(r => setTimeout(r, 60));
 
-        // Calcular métricas para o cabeçalho
+        // Calcular métricas por tipo para o resumo
         let concMaterias = 0;
-        let concCreditos = 0;
+        let concObrigatorias = 0;
+        let totalObrigatorias = 0;
+        let concOptativas = 0;
+        let totalOptativas = 0;
         let concCh = 0;
-        let cursandoMaterias = 0;
-        let cursandoCreditos = 0;
-        let cursandoCh = 0;
 
         cards.forEach(card => {
           const cod = card.dataset.codigo;
           const st = statusMap[cod] || 'nao_cursada';
-          const cr = parseFloat(card.dataset.creditos || 0);
+          const isOptativa = card.dataset.tipo === 'optativa';
           const ch = parseInt(card.dataset.ch || 0, 10);
+          if (isOptativa) {
+            totalOptativas++;
+          } else {
+            totalObrigatorias++;
+          }
           if (st === 'concluida') {
             concMaterias++;
-            concCreditos += cr;
             concCh += ch;
-          } else if (st === 'cursando') {
-            cursandoMaterias++;
-            cursandoCreditos += cr;
-            cursandoCh += ch;
+            if (isOptativa) {
+              concOptativas++;
+            } else {
+              concObrigatorias++;
+            }
           }
         });
 
-        const pct = totalMaterias > 0 ? Math.round((concMaterias / totalMaterias) * 100) : 0;
+        const pctObrigatorias = totalObrigatorias > 0 ? Math.round((concObrigatorias / totalObrigatorias) * 100) : 0;
+        const pctOptativas = totalOptativas > 0 ? Math.round((concOptativas / totalOptativas) * 100) : 0;
+        const pctTotal = totalMaterias > 0 ? Math.round((concMaterias / totalMaterias) * 100) : 0;
         const agora = new Date().toLocaleString('pt-BR');
 
         // Tags de identificação opcionais (Nome e/ou DRE)
@@ -669,20 +705,20 @@
             </div>
             <div class="grade-export-stats-grid">
               <div class="grade-export-stat-box">
-                <span class="stat-lbl">Concluídas</span>
-                <strong class="stat-val text-success">${concMaterias} de ${totalMaterias} (${concCreditos.toFixed(1)} cr)</strong>
+                <span class="stat-lbl">Obrigatórias Concluídas</span>
+                <strong class="stat-val text-success">${pctObrigatorias}%</strong>
               </div>
               <div class="grade-export-stat-box">
-                <span class="stat-lbl">Cursando</span>
-                <strong class="stat-val text-cursando">${cursandoMaterias} (${cursandoCreditos.toFixed(1)} cr)</strong>
-              </div>
-              <div class="grade-export-stat-box">
-                <span class="stat-lbl">Carga Horária</span>
-                <strong class="stat-val">${concCh}h de ${totalCh}h</strong>
+                <span class="stat-lbl">Eletivas/Optativas Concluídas</span>
+                <strong class="stat-val text-primary">${pctOptativas}%</strong>
               </div>
               <div class="grade-export-stat-box">
                 <span class="stat-lbl">Progresso Total</span>
-                <strong class="stat-val text-primary">${pct}% Concluído</strong>
+                <strong class="stat-val text-primary">${pctTotal}%</strong>
+              </div>
+              <div class="grade-export-stat-box">
+                <span class="stat-lbl">Carga Horária Total</span>
+                <strong class="stat-val">${concCh}h de ${totalCh}h</strong>
               </div>
             </div>
           </div>
@@ -711,12 +747,10 @@
           ? Math.max(...exportCols.slice(3).map(c => c.offsetTop + c.offsetHeight))
           : 0;
         const panelTop = maxLaterBottom + 16;
-        const availHeight = gradeGrid.offsetHeight - panelTop - 8;
-        if (anchorCol && availHeight >= 150) {
+        if (anchorCol) {
           summaryPanel.style.left = `${gradeGrid.offsetLeft + anchorCol.offsetLeft}px`;
           summaryPanel.style.top = `${gradeGrid.offsetTop + panelTop}px`;
           summaryPanel.style.width = `${exportTargetWidth - anchorCol.offsetLeft}px`;
-          summaryPanel.style.height = `${availHeight}px`;
         } else {
           summaryPanel.style.position = 'static';
           summaryPanel.style.width = `${exportTargetWidth}px`;
@@ -736,7 +770,14 @@
           windowWidth: fullWidth + 100,
           backgroundColor: '#ffffff',
           useCORS: true,
-          logging: false
+          logging: false,
+          onclone: clonedDocument => {
+            clonedDocument.querySelectorAll('.grade-card').forEach(card => {
+              card.classList.remove('is-active', 'is-prereq', 'is-destrava', 'is-dimmed');
+              const badge = card.querySelector('.grade-card-badge-status');
+              if (badge) badge.style.display = 'none';
+            });
+          }
         });
 
         // Remover título/resumo temporários e restaurar
@@ -754,6 +795,7 @@
       } finally {
         exportBtn.innerHTML = originalHtml;
         exportBtn.disabled = false;
+        restoreGradeAfterExport();
       }
     }
 

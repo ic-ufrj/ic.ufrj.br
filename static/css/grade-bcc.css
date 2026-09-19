@@ -298,16 +298,22 @@
 	color: #16a34a;
 }
 
-/* Cores por período */
-.grade-col-p1 { background-color: #fee2e2; border: 1px solid #fca5a5; }
-.grade-col-p2 { background-color: #fef3c7; border: 1px solid #fde047; }
-.grade-col-p3 { background-color: #dcfce7; border: 1px solid #86efac; }
-.grade-col-p4 { background-color: #ccfbf1; border: 1px solid #5eead4; }
-.grade-col-p5 { background-color: #e0f2fe; border: 1px solid #7dd3fc; }
-.grade-col-p6 { background-color: #dbeafe; border: 1px solid #93c5fd; }
-.grade-col-p7 { background-color: #f3e8ff; border: 1px solid #d8b4fe; }
-.grade-col-p8 { background-color: #fce7f3; border: 1px solid #f9a8d4; }
-.grade-col-p9 { background-color: #ffe4e6; border: 1px solid #fda4af; }
+/* Identificação sutil por período sobre fundo neutro */
+.grade-periodo-col {
+	background-color: #f8fafc;
+	border: 1px solid #e2e8f0;
+	border-top-width: 3px;
+}
+
+.grade-col-p1 { border-top-color: #f87171; }
+.grade-col-p2 { border-top-color: #fbbf24; }
+.grade-col-p3 { border-top-color: #4ade80; }
+.grade-col-p4 { border-top-color: #2dd4bf; }
+.grade-col-p5 { border-top-color: #38bdf8; }
+.grade-col-p6 { border-top-color: #60a5fa; }
+.grade-col-p7 { border-top-color: #c084fc; }
+.grade-col-p8 { border-top-color: #f472b6; }
+.grade-col-p9 { border-top-color: #fb7185; }
 
 .grade-periodo-cards {
 	display: flex;
@@ -644,8 +650,8 @@
 	display: flex;
 	flex-direction: column;
 	gap: 14px;
+	height: auto;
 	z-index: 20;
-	overflow: hidden;
 }
 
 .grade-export-summary-main {
@@ -730,7 +736,6 @@
 	gap: 10px;
 	border-top: 1.5px solid #cbd5e1;
 	padding-top: 10px;
-	margin-top: auto;
 	font-size: 12px;
 	color: #334155;
 }
