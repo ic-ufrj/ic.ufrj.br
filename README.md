@@ -51,6 +51,21 @@ hugo new content/pt/noticias/departamento-de-ciencia-da-computacao-volta-a-fazer
 
 Então, edite o arquivo Markdown que o Hugo criou. Lembre-se de verificar se o título está correto. Apesar dele trocar os hífens por espaços e capitalizar ele não é capaz de colocar os acentos. Abaixo do "cabeçalho", escreva o conteúdo da página em Markdown.
 
+### Page Bundle
+
+Para uma página que tem conteúdo (imagens, etc.), o ideal é usar uma estrutura chamada de page-bundle. Vamos transformar a noticia "profcomp2030" anterior em um page bundle:
+
+```bash
+mkdir content/pt/noticias/profcomp2030
+mv content/pt/noticias/profcomp2030.md content/pt/noticias/profcomp2030/index.md
+```
+
+Agora, podemos ter uma imagem em `/content/pt/noticias/profcomp2030/logo-profcomp.png` e podemos usar ela no Markdown da seguinte forma:
+
+```md
+![Logo do Profcomp](logo-profcomp.png)
+```
+
 ## Documentação em progresso
 
 Mais em breve...
