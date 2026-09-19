@@ -36,56 +36,6 @@
 	min-width: 280px;
 }
 
-.grade-bcc-actions {
-	display: flex;
-	align-items: center;
-	gap: 12px;
-	flex-wrap: wrap;
-}
-
-.grade-dre-container {
-	display: flex;
-	align-items: center;
-	gap: 6px;
-	background: rgba(255, 255, 255, 0.15);
-	border: 1px solid rgba(255, 255, 255, 0.25);
-	padding: 2px 8px;
-	border-radius: 6px;
-}
-
-.grade-dre-container label {
-	font-size: 11.5px;
-	font-weight: 700;
-	color: #e2e8f0;
-	font-family: "Montserrat", sans-serif;
-}
-
-.grade-dre-input {
-	background: rgba(255, 255, 255, 0.95);
-	border: 1px solid #cbd5e1;
-	border-radius: 4px;
-	padding: 3px 6px;
-	font-size: 12px;
-	font-weight: 600;
-	color: #0f172a;
-	width: 105px;
-	font-family: "Montserrat", sans-serif;
-	transition: all 0.2s;
-}
-
-.grade-dre-input:focus {
-	outline: none;
-	background: #ffffff;
-	border-color: #3b82f6;
-	box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
-}
-
-.grade-dre-input.input-invalid {
-	border-color: #ef4444 !important;
-	background-color: #fee2e2 !important;
-	box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.4) !important;
-}
-
 .grade-bcc-zoom-controls {
 	display: flex;
 	align-items: center;
@@ -379,7 +329,6 @@
 }
 
 .grade-card:hover {
-	transform: translateY(-2px);
 	box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 	border-color: #94a3b8;
 }
@@ -431,6 +380,7 @@
 	-webkit-line-clamp: 2;
 	-webkit-box-orient: vertical;
 	overflow: hidden;
+	min-height: 31.2px;
 }
 
 .grade-card-bottom {
@@ -443,24 +393,46 @@
 	font-size: 11px;
 	color: #94a3b8;
 	text-align: right;
+	margin-left: auto;
 }
 
-.grade-card-check-btn {
-	background: transparent;
-	border: none;
-	padding: 0;
-	cursor: pointer;
-	font-size: 14px;
-	color: #94a3b8;
-	display: inline-flex;
+.grade-card-status-pill {
+	display: flex;
 	align-items: center;
 	justify-content: center;
-	transition: color 0.15s, transform 0.15s;
-	border-radius: 50%;
+	gap: 6px;
+	width: 100%;
+	min-height: 36px;
+	margin-top: 6px;
+	padding: 4px 10px;
+	border-radius: 999px;
+	border: 1.5px solid #cbd5e1;
+	background: #f8fafc;
+	color: #64748b;
+	font-size: 11px;
+	font-weight: 700;
+	font-family: "Montserrat", sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 0.3px;
+	cursor: pointer;
+	transition: background-color 0.2s, border-color 0.2s, color 0.2s;
 }
 
-.grade-card-check-btn:hover {
-	transform: scale(1.15);
+.grade-card-status-pill:hover {
+	border-color: #94a3b8;
+	background: #f1f5f9;
+}
+
+.grade-card-status-pill[data-state="cursando"] {
+	background: #3b82f6;
+	border-color: #3b82f6;
+	color: #ffffff;
+}
+
+.grade-card-status-pill[data-state="concluida"] {
+	background: #16a34a;
+	border-color: #16a34a;
+	color: #ffffff;
 }
 
 .grade-card-available-badge {
@@ -477,25 +449,11 @@
 	text-transform: uppercase;
 }
 
-.grade-card-cursando-badge {
-	font-size: 9px;
-	font-weight: 700;
-	color: #1e3a8a;
-	background: #93c5fd;
-	border: 1px solid #60a5fa;
-	padding: 1px 4px;
-	border-radius: 4px;
-	display: inline-flex;
-	align-items: center;
-	gap: 3px;
-	text-transform: uppercase;
-}
-
 /* Status dos cards */
 .grade-card.is-completed {
 	background-color: #bbf7d0 !important;
-	border: 2px solid #22c55e !important;
-	box-shadow: 0 1px 3px rgba(34, 197, 94, 0.2);
+	border-color: #22c55e !important;
+	box-shadow: 0 0 0 1px #22c55e, 0 1px 3px rgba(34, 197, 94, 0.2);
 }
 
 .grade-card.is-completed .grade-card-codigo { color: #14532d !important; }
@@ -505,8 +463,8 @@
 
 .grade-card.is-cursando {
 	background-color: #bfdbfe !important;
-	border: 2px solid #3b82f6 !important;
-	box-shadow: 0 1px 4px rgba(59, 130, 246, 0.25);
+	border-color: #3b82f6 !important;
+	box-shadow: 0 0 0 1px #3b82f6, 0 1px 4px rgba(59, 130, 246, 0.25);
 }
 
 .grade-card.is-cursando .grade-card-codigo { color: #1e3a8a !important; }
@@ -515,31 +473,28 @@
 .grade-card.is-cursando .grade-card-creditos { color: #1d4ed8 !important; font-weight: 600; }
 
 .grade-card.is-available:not(.is-completed):not(.is-cursando) {
-	border: 1.5px dashed #0891b2;
+	border: 1px dashed #0891b2;
 	background-color: #ecfeff;
 }
 
 .grade-card.is-active {
-	border: 2px solid #3b82f6 !important;
-	box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25), 0 8px 12px rgba(0, 0, 0, 0.1);
-	transform: scale(1.03);
+	border-color: #3b82f6 !important;
+	box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.35), 0 8px 12px rgba(0, 0, 0, 0.1);
 	z-index: 30;
 	background: #ffffff;
 }
 
 .grade-card.is-prereq {
-	border: 2px solid #ea580c !important;
+	border-color: #ea580c !important;
 	background-color: #fff7ed !important;
-	box-shadow: 0 0 0 3px rgba(234, 88, 12, 0.25);
-	transform: scale(1.02);
+	box-shadow: 0 0 0 3px rgba(234, 88, 12, 0.3);
 	z-index: 25;
 }
 
 .grade-card.is-destrava {
-	border: 2px solid #10b981 !important;
+	border-color: #10b981 !important;
 	background-color: #ecfdf5 !important;
-	box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.25);
-	transform: scale(1.02);
+	box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.3);
 	z-index: 25;
 }
 
@@ -582,6 +537,9 @@
 .grade-status-info {
 	color: #1e293b;
 	font-size: 13px;
+	min-height: 40px;
+	display: flex;
+	align-items: center;
 }
 
 .status-active-desc {
@@ -693,6 +651,10 @@
 
 .grade-export-header-dre {
 	text-align: right;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	gap: 4px;
 }
 
 .grade-export-header-dre .dre-tag {
@@ -827,11 +789,6 @@
 		gap: 8px;
 	}
 
-	.grade-bcc-actions {
-		width: 100%;
-		justify-content: space-between;
-	}
-
 	.grade-bcc-status-bar {
 		flex-direction: column;
 		align-items: flex-start;
@@ -886,5 +843,158 @@ article table td {
 .table-wrapper {
 	overflow-x: auto;
 	-webkit-overflow-scrolling: touch;
+}
+
+/* Modal de Identificação para Exportação */
+.grade-modal-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(15, 23, 42, 0.55);
+	display: none;
+	align-items: center;
+	justify-content: center;
+	z-index: 10000;
+	padding: 16px;
+	box-sizing: border-box;
+}
+
+.grade-modal-overlay.is-open {
+	display: flex;
+}
+
+.grade-modal-dialog {
+	background: #ffffff;
+	border-radius: 12px;
+	max-width: 420px;
+	width: 100%;
+	padding: 20px 22px;
+	box-shadow: 0 20px 50px -12px rgba(0, 0, 0, 0.35);
+	font-family: "Open Sans", sans-serif;
+	box-sizing: border-box;
+}
+
+.grade-modal-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 8px;
+}
+
+.grade-modal-header h3 {
+	margin: 0;
+	font-size: 16px;
+	font-weight: 700;
+	color: #0f172a;
+	font-family: "Montserrat", sans-serif;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.grade-modal-close {
+	background: transparent;
+	border: none;
+	font-size: 15px;
+	color: #64748b;
+	cursor: pointer;
+	padding: 6px;
+	border-radius: 6px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 36px;
+	min-height: 36px;
+}
+
+.grade-modal-close:hover {
+	color: #0f172a;
+	background: #f1f5f9;
+}
+
+.grade-modal-desc {
+	font-size: 13px;
+	color: #475569;
+	line-height: 1.5;
+	margin: 0 0 14px 0;
+}
+
+.grade-modal-fields {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	margin-bottom: 18px;
+}
+
+.grade-modal-field label {
+	display: block;
+	font-size: 12.5px;
+	font-weight: 700;
+	color: #334155;
+	margin-bottom: 4px;
+	font-family: "Montserrat", sans-serif;
+}
+
+.grade-modal-optional {
+	font-weight: 500;
+	color: #94a3b8;
+}
+
+.grade-modal-input {
+	width: 100%;
+	box-sizing: border-box;
+	padding: 8px 10px;
+	font-size: 13px;
+	border: 1px solid #cbd5e1;
+	border-radius: 6px;
+	color: #0f172a;
+}
+
+.grade-modal-input:focus {
+	outline: none;
+	border-color: #3b82f6;
+	box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
+}
+
+.grade-modal-actions {
+	display: flex;
+	justify-content: flex-end;
+	gap: 10px;
+}
+
+.grade-modal-btn {
+	padding: 8px 16px;
+	min-height: 38px;
+	border-radius: 6px;
+	font-size: 13px;
+	font-weight: 600;
+	cursor: pointer;
+	border: 1px solid transparent;
+	font-family: "Montserrat", sans-serif;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 6px;
+}
+
+.grade-modal-btn-cancel {
+	background: #ffffff;
+	border-color: #cbd5e1;
+	color: #475569;
+}
+
+.grade-modal-btn-cancel:hover {
+	background: #f1f5f9;
+}
+
+.grade-modal-btn-confirm {
+	background: #344563;
+	color: #ffffff;
+}
+
+.grade-modal-btn-confirm:hover {
+	background: #26334a;
 }
 

@@ -16,12 +16,6 @@
         <i class="bi bi-camera-fill"></i>
       </button>
     </div>
-    <div class="grade-bcc-actions">
-      <div class="grade-dre-container" title="Informe seu DRE para identificação na grade exportada">
-        <label for="grade-dre-input"><i class="bi bi-person-badge"></i> DRE:</label>
-        <input type="text" id="grade-dre-input" class="grade-dre-input" placeholder="Ex: 120012345" maxlength="15" autocomplete="off" />
-      </div>
-    </div>
   </div>
 
   <div class="grade-bcc-subbar">
@@ -93,17 +87,16 @@
                     <span class="grade-card-codigo">{{ .codigo_display | default .codigo }}</span>
                     <div class="grade-card-top-right">
                       <span class="grade-card-ch">{{ .ch }}h</span>
-                      <button type="button" class="grade-card-check-btn" title="Alternar status: Não cursada / Cursando / Concluída" aria-label="Alternar status da disciplina">
-                        <i class="bi bi-circle"></i>
-                      </button>
                     </div>
                   </div>
                   <div class="grade-card-nome" title="{{ .nome }}">{{ .nome }}</div>
                   <div class="grade-card-bottom">
                     <span class="grade-card-available-badge" style="display: none;"><i class="bi bi-unlock-fill"></i> Disponível</span>
-                    <span class="grade-card-cursando-badge" style="display: none;"><i class="bi bi-hourglass-split"></i> Cursando</span>
                     <span class="grade-card-creditos">{{ .creditos }} cr</span>
                   </div>
+                  <button type="button" class="grade-card-status-pill" data-state="nao_cursada" title="Alternar status: Não cursada / Cursando / Concluída" aria-label="Alternar status da disciplina">
+                    <i class="bi bi-circle"></i> Não cursada
+                  </button>
                 </div>
               {{ end }}
             </div>
@@ -128,6 +121,35 @@
     <i class="bi bi-arrow-left"></i>
     <span>Voltar</span>
   </button>
+
+  <!-- Modal de Identificação para Exportação -->
+  <div class="grade-modal-overlay" id="grade-export-modal" role="dialog" aria-modal="true" aria-labelledby="grade-export-modal-title">
+    <div class="grade-modal-dialog">
+      <div class="grade-modal-header">
+        <h3 id="grade-export-modal-title"><i class="bi bi-camera-fill"></i> Exportar Grade Curricular</h3>
+        <button type="button" class="grade-modal-close" id="grade-modal-close-btn" aria-label="Fechar">
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </div>
+      <p class="grade-modal-desc">Insira seu Nome e DRE para incluir no cabeçalho da imagem gerada (os dados não são salvos nem consultam o SIGA).</p>
+      <div class="grade-modal-fields">
+        <div class="grade-modal-field">
+          <label for="grade-modal-nome">Nome <span class="grade-modal-optional">(opcional)</span></label>
+          <input type="text" id="grade-modal-nome" class="grade-modal-input" placeholder="Ex: Maria Silva" maxlength="80" autocomplete="off" />
+        </div>
+        <div class="grade-modal-field">
+          <label for="grade-modal-dre">DRE <span class="grade-modal-optional">(opcional)</span></label>
+          <input type="text" id="grade-modal-dre" class="grade-modal-input" placeholder="Ex: 120012345" maxlength="15" autocomplete="off" />
+        </div>
+      </div>
+      <div class="grade-modal-actions">
+        <button type="button" class="grade-modal-btn grade-modal-btn-cancel" id="grade-modal-cancel-btn">Cancelar</button>
+        <button type="button" class="grade-modal-btn grade-modal-btn-confirm" id="grade-modal-confirm-btn">
+          <i class="bi bi-download"></i> Exportar PNG
+        </button>
+      </div>
+    </div>
+  </div>
 </div>
 
 <script>
@@ -211,28 +233,32 @@
         const cod = card.dataset.codigo;
         const st = statusMap[cod] || 'nao_cursada';
         const prereqs = JSON.parse(card.dataset.prereqs || '[]');
-        const checkBtn = card.querySelector('.grade-card-check-btn');
+        const statusPill = card.querySelector('.grade-card-status-pill');
         const availableBadge = card.querySelector('.grade-card-available-badge');
-        const cursandoBadge = card.querySelector('.grade-card-cursando-badge');
 
         card.classList.remove('is-completed', 'is-cursando', 'is-available');
         if (availableBadge) availableBadge.style.display = 'none';
-        if (cursandoBadge) cursandoBadge.style.display = 'none';
+
+        if (statusPill) {
+          statusPill.dataset.state = st;
+          if (st === 'concluida') {
+            statusPill.innerHTML = '<i class="bi bi-check-circle-fill"></i> Concluída';
+          } else if (st === 'cursando') {
+            statusPill.innerHTML = '<i class="bi bi-hourglass-split"></i> Cursando';
+          } else {
+            statusPill.innerHTML = '<i class="bi bi-circle"></i> Não cursada';
+          }
+        }
 
         if (st === 'concluida') {
           card.classList.add('is-completed');
           concMaterias++;
           concCreditos += parseFloat(card.dataset.creditos || 0);
-          if (checkBtn) checkBtn.innerHTML = '<i class="bi bi-check-circle-fill text-success"></i>';
         } else if (st === 'cursando') {
           card.classList.add('is-cursando');
           cursandoMaterias++;
           cursandoCreditos += parseFloat(card.dataset.creditos || 0);
-          if (checkBtn) checkBtn.innerHTML = '<i class="bi bi-hourglass-split text-cursando"></i>';
-          if (cursandoBadge) cursandoBadge.style.display = 'inline-flex';
         } else {
-          if (checkBtn) checkBtn.innerHTML = '<i class="bi bi-circle"></i>';
-
           // Checar se pré-requisitos estão cumpridos
           const todosReqsCumpridos = prereqs.every(req => statusMap[req] === 'concluida');
           if (todosReqsCumpridos && (concMaterias > 0 || cursandoMaterias > 0)) {
@@ -385,10 +411,10 @@
     // Eventos nos cards
     cards.forEach(card => {
       const cod = card.dataset.codigo;
-      const checkBtn = card.querySelector('.grade-card-check-btn');
+      const statusPill = card.querySelector('.grade-card-status-pill');
 
-      if (checkBtn) {
-        checkBtn.addEventListener('click', (e) => {
+      if (statusPill) {
+        statusPill.addEventListener('click', (e) => {
           e.stopPropagation();
           cycleStatus(cod);
         });
@@ -518,176 +544,203 @@
       });
     }
 
-    const dreInput = document.getElementById('grade-dre-input');
-    const DRE_STORAGE_KEY = 'bcc_aluno_dre';
+    // Modal de identificação para exportação (Nome e DRE opcionais, não persistidos)
+    const exportModal = document.getElementById('grade-export-modal');
+    const modalNomeInput = document.getElementById('grade-modal-nome');
+    const modalDreInput = document.getElementById('grade-modal-dre');
+    const modalConfirmBtn = document.getElementById('grade-modal-confirm-btn');
+    const modalCancelBtn = document.getElementById('grade-modal-cancel-btn');
+    const modalCloseBtn = document.getElementById('grade-modal-close-btn');
 
-    if (dreInput) {
-      try {
-        const savedDre = localStorage.getItem(DRE_STORAGE_KEY);
-        if (savedDre) dreInput.value = savedDre;
-      } catch (e) {}
+    function openExportModal() {
+      if (!exportModal) return;
+      exportModal.classList.add('is-open');
+      setTimeout(() => { if (modalNomeInput) modalNomeInput.focus(); }, 50);
+    }
 
-      dreInput.addEventListener('input', () => {
-        dreInput.classList.remove('input-invalid');
-        try {
-          localStorage.setItem(DRE_STORAGE_KEY, dreInput.value.trim());
-        } catch (e) {}
+    function closeExportModal() {
+      if (exportModal) exportModal.classList.remove('is-open');
+    }
+
+    if (exportModal) {
+      if (exportBtn) exportBtn.addEventListener('click', openExportModal);
+      if (modalCancelBtn) modalCancelBtn.addEventListener('click', closeExportModal);
+      if (modalCloseBtn) modalCloseBtn.addEventListener('click', closeExportModal);
+      exportModal.addEventListener('click', (e) => {
+        if (e.target === exportModal) closeExportModal();
       });
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && exportModal.classList.contains('is-open')) {
+          closeExportModal();
+        }
+      });
+      [modalNomeInput, modalDreInput].forEach(input => {
+        if (!input) return;
+        input.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' && modalConfirmBtn) modalConfirmBtn.click();
+        });
+      });
+      if (modalConfirmBtn) {
+        modalConfirmBtn.addEventListener('click', () => {
+          const nomeVal = modalNomeInput ? modalNomeInput.value.trim() : '';
+          const dreVal = modalDreInput ? modalDreInput.value.trim() : '';
+          closeExportModal();
+          exportarGrade(nomeVal, dreVal);
+        });
+      }
+    }
+
+    function escapeHtml(str) {
+      return str.replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
     }
 
     // Exportação em Imagem (PNG) capturando o panorama completo com cabeçalho de identificação e estatísticas
-    if (exportBtn) {
-      exportBtn.addEventListener('click', async () => {
-        const dreVal = dreInput ? dreInput.value.trim() : '';
-        if (!dreVal) {
-          if (dreInput) {
-            dreInput.classList.add('input-invalid');
-            dreInput.focus();
-          }
-          alert('Por favor, informe seu DRE para exportar a grade com os seus dados acadêmicos.');
-          return;
+    async function exportarGrade(nomeVal, dreVal) {
+      if (!exportBtn) return;
+      const originalHtml = exportBtn.innerHTML;
+      exportBtn.innerHTML = '<i class="bi bi-arrow-repeat spin"></i>';
+      exportBtn.disabled = true;
+
+      try {
+        if (!window.html2canvas) {
+          await new Promise((resolve, reject) => {
+            const script = document.createElement('script');
+            script.src = 'https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js';
+            script.onload = resolve;
+            script.onerror = reject;
+            document.head.appendChild(script);
+          });
         }
 
-        const originalHtml = exportBtn.innerHTML;
-        exportBtn.innerHTML = '<i class="bi bi-arrow-repeat spin"></i>';
-        exportBtn.disabled = true;
+        // Salvar estado atual do scroll
+        const prevScrollLeft = viewport.scrollLeft;
+        viewport.scrollLeft = 0;
+        await new Promise(r => setTimeout(r, 60));
 
-        try {
-          if (!window.html2canvas) {
-            await new Promise((resolve, reject) => {
-              const script = document.createElement('script');
-              script.src = 'https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js';
-              script.onload = resolve;
-              script.onerror = reject;
-              document.head.appendChild(script);
-            });
+        // Calcular métricas para o cabeçalho
+        let concMaterias = 0;
+        let concCreditos = 0;
+        let concCh = 0;
+        let cursandoMaterias = 0;
+        let cursandoCreditos = 0;
+        let cursandoCh = 0;
+
+        cards.forEach(card => {
+          const cod = card.dataset.codigo;
+          const st = statusMap[cod] || 'nao_cursada';
+          const cr = parseFloat(card.dataset.creditos || 0);
+          const ch = parseInt(card.dataset.ch || 0, 10);
+          if (st === 'concluida') {
+            concMaterias++;
+            concCreditos += cr;
+            concCh += ch;
+          } else if (st === 'cursando') {
+            cursandoMaterias++;
+            cursandoCreditos += cr;
+            cursandoCh += ch;
           }
+        });
 
-          // Salvar estado atual do scroll
-          const prevScrollLeft = viewport.scrollLeft;
-          viewport.scrollLeft = 0;
-          await new Promise(r => setTimeout(r, 60));
+        const pct = totalMaterias > 0 ? Math.round((concMaterias / totalMaterias) * 100) : 0;
+        const agora = new Date().toLocaleString('pt-BR');
 
-          // Calcular métricas para o cabeçalho
-          let concMaterias = 0;
-          let concCreditos = 0;
-          let concCh = 0;
-          let cursandoMaterias = 0;
-          let cursandoCreditos = 0;
-          let cursandoCh = 0;
+        // Tags de identificação opcionais (Nome e/ou DRE)
+        let identHtml = '';
+        if (nomeVal) identHtml += `<span class="dre-tag">${escapeHtml(nomeVal)}</span>`;
+        if (dreVal) identHtml += `<span class="dre-tag">DRE: ${escapeHtml(dreVal)}</span>`;
 
-          cards.forEach(card => {
-            const cod = card.dataset.codigo;
-            const st = statusMap[cod] || 'nao_cursada';
-            const cr = parseFloat(card.dataset.creditos || 0);
-            const ch = parseInt(card.dataset.ch || 0, 10);
-            if (st === 'concluida') {
-              concMaterias++;
-              concCreditos += cr;
-              concCh += ch;
-            } else if (st === 'cursando') {
-              cursandoMaterias++;
-              cursandoCreditos += cr;
-              cursandoCh += ch;
-            }
-          });
-
-          const pct = totalMaterias > 0 ? Math.round((concMaterias / totalMaterias) * 100) : 0;
-          const agora = new Date().toLocaleString('pt-BR');
-
-          // Criar cabeçalho institucional temporário para o canvas
-          const headerPanel = document.createElement('div');
-          headerPanel.className = 'grade-export-header';
-          headerPanel.innerHTML = `
-            <div class="grade-export-header-top">
-              <div class="grade-export-header-title">
-                <h2>Instituto de Computação &bull; UFRJ</h2>
-                <p>Grade Curricular do Bacharelado em Ciência da Computação (Estrutura 2022)</p>
-              </div>
-              <div class="grade-export-header-dre">
-                <span class="dre-tag">DRE: ${dreVal}</span>
-                <small>Emitido em: ${agora}</small>
-              </div>
+        // Criar cabeçalho institucional temporário para o canvas
+        const headerPanel = document.createElement('div');
+        headerPanel.className = 'grade-export-header';
+        headerPanel.innerHTML = `
+          <div class="grade-export-header-top">
+            <div class="grade-export-header-title">
+              <h2>Instituto de Computação &bull; UFRJ</h2>
+              <p>Grade Curricular do Bacharelado em Ciência da Computação (Estrutura 2022)</p>
             </div>
-            <div class="grade-export-stats-grid">
-              <div class="grade-export-stat-box">
-                <span class="stat-lbl">Concluídas</span>
-                <strong class="stat-val text-success">${concMaterias} de ${totalMaterias} (${concCreditos.toFixed(1)} cr)</strong>
-              </div>
-              <div class="grade-export-stat-box">
-                <span class="stat-lbl">Cursando</span>
-                <strong class="stat-val text-cursando">${cursandoMaterias} (${cursandoCreditos.toFixed(1)} cr)</strong>
-              </div>
-              <div class="grade-export-stat-box">
-                <span class="stat-lbl">Carga Horária</span>
-                <strong class="stat-val">${concCh}h de ${totalCh}h</strong>
-              </div>
-              <div class="grade-export-stat-box">
-                <span class="stat-lbl">Progresso Total</span>
-                <strong class="stat-val text-primary">${pct}% Concluído</strong>
-              </div>
+            <div class="grade-export-header-dre">
+              ${identHtml}
+              <small>Emitido em: ${agora}</small>
             </div>
-          `;
-
-          // Criar rodapé com legenda para a imagem
-          const footerPanel = document.createElement('div');
-          footerPanel.className = 'grade-export-footer';
-          footerPanel.innerHTML = `
-            <div class="grade-export-footer-legend">
-              <span class="grade-export-footer-legend-item"><span class="legenda-dot dot-concluida"></span> Concluída</span>
-              <span class="grade-export-footer-legend-item"><span class="legenda-dot dot-cursando"></span> Cursando</span>
-              <span class="grade-export-footer-legend-item"><span class="legenda-dot dot-disponivel"></span> Disponível</span>
-              <span class="grade-export-footer-legend-item"><span class="legenda-dot dot-req"></span> Pré-requisito</span>
+          </div>
+          <div class="grade-export-stats-grid">
+            <div class="grade-export-stat-box">
+              <span class="stat-lbl">Concluídas</span>
+              <strong class="stat-val text-success">${concMaterias} de ${totalMaterias} (${concCreditos.toFixed(1)} cr)</strong>
             </div>
-            <div class="grade-export-footer-brand">
-              <span>Universidade Federal do Rio de Janeiro &bull; CCMN &bull; IC</span>
+            <div class="grade-export-stat-box">
+              <span class="stat-lbl">Cursando</span>
+              <strong class="stat-val text-cursando">${cursandoMaterias} (${cursandoCreditos.toFixed(1)} cr)</strong>
             </div>
-          `;
+            <div class="grade-export-stat-box">
+              <span class="stat-lbl">Carga Horária</span>
+              <strong class="stat-val">${concCh}h de ${totalCh}h</strong>
+            </div>
+            <div class="grade-export-stat-box">
+              <span class="stat-lbl">Progresso Total</span>
+              <strong class="stat-val text-primary">${pct}% Concluído</strong>
+            </div>
+          </div>
+        `;
 
-          // Inserir temporariamente na composição da exportação
-          canvas.insertBefore(headerPanel, gradeGrid);
-          canvas.appendChild(footerPanel);
-          const exportTargetWidth = gradeGrid ? gradeGrid.offsetWidth : canvas.scrollWidth;
-          headerPanel.style.width = `${exportTargetWidth}px`;
-          footerPanel.style.width = `${exportTargetWidth}px`;
-          headerPanel.style.position = 'relative';
-          headerPanel.style.zIndex = '20';
-          footerPanel.style.position = 'relative';
-          footerPanel.style.zIndex = '20';
-          await new Promise(r => setTimeout(r, 60));
+        // Criar rodapé com legenda para a imagem
+        const footerPanel = document.createElement('div');
+        footerPanel.className = 'grade-export-footer';
+        footerPanel.innerHTML = `
+          <div class="grade-export-footer-legend">
+            <span class="grade-export-footer-legend-item"><span class="legenda-dot dot-concluida"></span> Concluída</span>
+            <span class="grade-export-footer-legend-item"><span class="legenda-dot dot-cursando"></span> Cursando</span>
+            <span class="grade-export-footer-legend-item"><span class="legenda-dot dot-disponivel"></span> Disponível</span>
+            <span class="grade-export-footer-legend-item"><span class="legenda-dot dot-req"></span> Pré-requisito</span>
+          </div>
+          <div class="grade-export-footer-brand">
+            <span>Universidade Federal do Rio de Janeiro &bull; CCMN &bull; IC</span>
+          </div>
+        `;
 
-          const fullWidth = Math.max(canvas.scrollWidth, canvas.offsetWidth, viewport.scrollWidth);
-          const fullHeight = Math.max(canvas.scrollHeight, canvas.offsetHeight, viewport.scrollHeight);
+        // Inserir temporariamente na composição da exportação
+        canvas.insertBefore(headerPanel, gradeGrid);
+        canvas.appendChild(footerPanel);
+        const exportTargetWidth = gradeGrid ? gradeGrid.offsetWidth : canvas.scrollWidth;
+        headerPanel.style.width = `${exportTargetWidth}px`;
+        footerPanel.style.width = `${exportTargetWidth}px`;
+        headerPanel.style.position = 'relative';
+        headerPanel.style.zIndex = '20';
+        footerPanel.style.position = 'relative';
+        footerPanel.style.zIndex = '20';
+        await new Promise(r => setTimeout(r, 60));
 
-          const canvasImage = await window.html2canvas(canvas, {
-            scale: 2,
-            scrollX: 0,
-            scrollY: 0,
-            width: fullWidth,
-            height: fullHeight,
-            windowWidth: fullWidth + 100,
-            backgroundColor: '#ffffff',
-            useCORS: true,
-            logging: false
-          });
+        const fullWidth = Math.max(canvas.scrollWidth, canvas.offsetWidth, viewport.scrollWidth);
+        const fullHeight = Math.max(canvas.scrollHeight, canvas.offsetHeight, viewport.scrollHeight);
 
-          // Remover cabeçalho/rodapé temporários e restaurar
-          headerPanel.remove();
-          footerPanel.remove();
-          viewport.scrollLeft = prevScrollLeft;
+        const canvasImage = await window.html2canvas(canvas, {
+          scale: 2,
+          scrollX: 0,
+          scrollY: 0,
+          width: fullWidth,
+          height: fullHeight,
+          windowWidth: fullWidth + 100,
+          backgroundColor: '#ffffff',
+          useCORS: true,
+          logging: false
+        });
 
-          const link = document.createElement('a');
-          link.download = `grade-bcc-ufrj-${dreVal}.png`;
-          link.href = canvasImage.toDataURL('image/png');
-          link.click();
-        } catch (err) {
-          console.error('Erro na exportação:', err);
-          alert('Não foi possível gerar a imagem da grade.');
-        } finally {
-          exportBtn.innerHTML = originalHtml;
-          exportBtn.disabled = false;
-        }
-      });
+        // Remover cabeçalho/rodapé temporários e restaurar
+        headerPanel.remove();
+        footerPanel.remove();
+        viewport.scrollLeft = prevScrollLeft;
+
+        const link = document.createElement('a');
+        link.download = dreVal ? `grade-bcc-ufrj-${dreVal}.png` : 'grade-bcc-ufrj.png';
+        link.href = canvasImage.toDataURL('image/png');
+        link.click();
+      } catch (err) {
+        console.error('Erro na exportação:', err);
+        alert('Não foi possível gerar a imagem da grade.');
+      } finally {
+        exportBtn.innerHTML = originalHtml;
+        exportBtn.disabled = false;
+      }
     }
 
     updateProgressoUI();
