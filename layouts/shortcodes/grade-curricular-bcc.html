@@ -1,0 +1,877 @@
+{{- $grade := hugo.Data.grade_bcc -}}
+<link rel="stylesheet" href="{{ "css/grade-bcc.css" | relURL }}">
+<div class="grade-bcc-wrapper" id="grade-bcc-container">
+  <div class="grade-bcc-toolbar">
+    <div class="grade-bcc-title">
+      <i class="bi bi-diagram-3-fill"></i>
+      <span><strong>Fluxograma de Pré-Requisitos do BCC</strong> (Grade 2022)</span>
+    </div>
+    <div class="grade-bcc-zoom-controls">
+      <button type="button" class="grade-zoom-btn grade-btn-fullscreen" id="grade-fullscreen-btn" title="Expandir visualização" aria-label="Expandir visualização">
+        <i class="bi bi-arrows-fullscreen"></i>
+        <span>Expandir</span>
+      </button>
+      <button type="button" class="grade-zoom-btn grade-btn-fullscreen" id="grade-compact-btn" title="Condensar grade" aria-label="Condensar grade" aria-pressed="false">
+        <i class="bi bi-arrows-collapse"></i>
+        <span>Condensar</span>
+      </button>
+      <span class="toolbar-divider"></span>
+      <button type="button" class="grade-zoom-btn" id="grade-export-btn" title="Exportar Grade Completa (PNG HD)" aria-label="Exportar Imagem PNG">
+        <i class="bi bi-camera-fill"></i>
+      </button>
+    </div>
+  </div>
+
+  <div class="grade-bcc-subbar">
+    <span class="grade-bcc-hint-text">
+      <i class="bi bi-info-circle-fill"></i> 
+      <strong>Dica:</strong> Clique no card para ver dependências. Clique no botão de status para alternar: 
+      <span class="subbar-badge"><i class="bi bi-circle"></i> Não Cursada</span> &rarr; 
+      <span class="subbar-badge text-cursando"><i class="bi bi-hourglass-split"></i> Cursando</span> &rarr; 
+      <span class="subbar-badge text-concluida"><i class="bi bi-check-circle-fill"></i> Concluída</span>
+    </span>
+  </div>
+
+  <!-- Painel de Progresso Acadêmico -->
+  <div class="grade-progresso-panel" id="grade-progresso-panel">
+    <div class="grade-progresso-info">
+      <div class="grade-progresso-stats">
+        <span class="progresso-stat-item">
+          <i class="bi bi-check2-all text-success"></i> 
+          <strong>Concluídas:</strong> <span id="stat-concluidas">0 (0 cr)</span>
+        </span>
+        <span class="progresso-stat-item">
+          <i class="bi bi-hourglass-split text-cursando"></i> 
+          <strong>Cursando:</strong> <span id="stat-cursando">0 (0 cr)</span>
+        </span>
+        <span class="progresso-stat-item">
+          <i class="bi bi-mortarboard-fill text-primary"></i> 
+          <strong>Total Concluído:</strong> <span id="stat-creditos">0 / 0 cr</span>
+        </span>
+      </div>
+      <div class="grade-progresso-actions">
+        <button type="button" class="grade-btn-limpar" id="btn-reset-progresso" title="Resetar progresso salvo">
+          <i class="bi bi-arrow-counterclockwise"></i> Resetar Progresso
+        </button>
+      </div>
+    </div>
+    <div class="grade-progresso-bar-wrapper">
+      <div class="grade-progresso-bar" id="progresso-bar" style="width: 0%;">
+        <span class="progresso-bar-label" id="progresso-bar-pct">0%</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="grade-bcc-viewport" id="grade-viewport">
+    <div class="grade-bcc-canvas" id="grade-canvas">
+      <div class="grade-bcc-grid" id="grade-grid">
+        {{ range $grade.periodos }}
+          <div class="grade-periodo-col grade-col-{{ .cor_id }}" data-periodo-id="{{ .id }}">
+            <div class="grade-periodo-header">
+              <h3>{{ .nome }}</h3>
+              <button type="button" class="grade-periodo-check-all-btn" title="Concluir/Desmarcar todas as matérias do {{ .nome }}" aria-label="Concluir todas do {{ .nome }}">
+                <i class="bi bi-check-all"></i>
+              </button>
+            </div>
+            <div class="grade-periodo-cards">
+              {{ range .disciplinas }}
+                <div class="grade-card{{ if eq .tipo "optativa" }} grade-card-optativa{{ end }}{{ if or (eq .codigo "ICPX06") (eq .codigo "ICPZ55") }} grade-card-activity{{ end }}"
+                     id="disc-{{ .codigo }}" 
+                     data-codigo="{{ .codigo }}" 
+                     data-nome="{{ .nome }}" 
+                     data-creditos="{{ .creditos }}" 
+                     data-ch="{{ .ch }}" 
+                     data-tipo="{{ .tipo | default "obrigatoria" }}"
+                     data-prereqs='{{ .prereqs | jsonify }}'
+                     tabindex="0"
+                     role="button"
+                     aria-label="{{ .codigo }} - {{ .nome }}">
+                  <div class="grade-card-badge-status" style="display: none;"></div>
+                  <div class="grade-card-top">
+                    <span class="grade-card-codigo">{{ .codigo_display | default .codigo }}</span>
+                    <div class="grade-card-top-right">
+                      <span class="grade-card-ch">{{ .ch }}h</span>
+                    </div>
+                  </div>
+                  <div class="grade-card-nome" title="{{ .nome }}">{{ .nome }}</div>
+                  <div class="grade-card-bottom">
+                    <span class="grade-card-available-badge" style="display: none;"><i class="bi bi-unlock-fill"></i> Disponível</span>
+                    <span class="grade-card-creditos">{{ .creditos }} cr</span>
+                  </div>
+                  <button type="button" class="grade-card-status-pill" data-state="nao_cursada" title="Alternar status: Não cursada / Cursando / Concluída" aria-label="Alternar status da disciplina">
+                    <i class="bi bi-circle"></i> Não cursada
+                  </button>
+                </div>
+              {{ end }}
+            </div>
+            {{ if eq .id 1 }}
+              <button type="button" class="grade-activities-toggle" aria-expanded="false">
+                <i class="bi bi-plus-circle"></i>
+                <span>Atividades Complementares / Extensão (2)</span>
+              </button>
+            {{ end }}
+          </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+
+  <div class="grade-bcc-status-bar" id="grade-status-bar">
+    <div class="grade-status-info" id="grade-status-info">
+      <span class="status-badge status-normal"><i class="bi bi-cursor-fill"></i> Passe o mouse ou clique para inspecionar</span>
+    </div>
+    <div class="grade-legenda-inline">
+      <span class="legenda-item"><span class="legenda-dot dot-concluida"></span> Concluída</span>
+      <span class="legenda-item"><span class="legenda-dot dot-cursando"></span> Cursando</span>
+      <span class="legenda-item"><span class="legenda-dot dot-disponivel"></span> Disponível</span>
+      <span class="legenda-item"><span class="legenda-dot dot-req"></span> Pré-requisito</span>
+    </div>
+  </div>
+  <button type="button" class="grade-mobile-fs-exit" id="grade-mobile-fs-exit" title="Fechar visualização expandida" aria-label="Fechar visualização expandida">
+    <i class="bi bi-x-lg"></i>
+    <span>Fechar</span>
+  </button>
+
+  <!-- Modal de Identificação para Exportação -->
+  <div class="grade-modal-overlay" id="grade-export-modal" role="dialog" aria-modal="true" aria-labelledby="grade-export-modal-title">
+    <div class="grade-modal-dialog">
+      <div class="grade-modal-header">
+        <h3 id="grade-export-modal-title"><i class="bi bi-camera-fill"></i> Exportar Grade Curricular</h3>
+        <button type="button" class="grade-modal-close" id="grade-modal-close-btn" aria-label="Fechar">
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </div>
+      <p class="grade-modal-desc">Insira seu Nome e DRE para incluir no cabeçalho da imagem gerada (os dados não são salvos nem consultam o SIGA).</p>
+      <div class="grade-modal-fields">
+        <div class="grade-modal-field">
+          <label for="grade-modal-nome">Nome <span class="grade-modal-optional">(opcional)</span></label>
+          <input type="text" id="grade-modal-nome" class="grade-modal-input" placeholder="Ex: Cainfo da Silva" maxlength="80" autocomplete="off" />
+        </div>
+        <div class="grade-modal-field">
+          <label for="grade-modal-dre">DRE <span class="grade-modal-optional">(opcional)</span></label>
+          <input type="text" id="grade-modal-dre" class="grade-modal-input" placeholder="Ex: 120012345" maxlength="15" autocomplete="off" />
+        </div>
+      </div>
+      <div class="grade-modal-actions">
+        <button type="button" class="grade-modal-btn grade-modal-btn-cancel" id="grade-modal-cancel-btn">Cancelar</button>
+        <button type="button" class="grade-modal-btn grade-modal-btn-confirm" id="grade-modal-confirm-btn">
+          <i class="bi bi-download"></i> Exportar PNG
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function() {
+  function initGrade() {
+    const container = document.getElementById('grade-bcc-container');
+    if (!container) return;
+    const viewport = document.getElementById('grade-viewport');
+    const canvas = document.getElementById('grade-canvas');
+    const gradeGrid = document.getElementById('grade-grid');
+    const cards = Array.from(container.querySelectorAll('.grade-card'));
+    const periodoCols = Array.from(container.querySelectorAll('.grade-periodo-col'));
+    const statusInfo = document.getElementById('grade-status-info');
+    
+    // Elementos de progresso
+    const statConcluidas = document.getElementById('stat-concluidas');
+    const statCursando = document.getElementById('stat-cursando');
+    const statCreditos = document.getElementById('stat-creditos');
+    const progressoBar = document.getElementById('progresso-bar');
+    const progressoBarPct = document.getElementById('progresso-bar-pct');
+    const btnResetProgresso = document.getElementById('btn-reset-progresso');
+
+    const STORAGE_KEY = 'bcc_grade_status_v2';
+    const OLD_STORAGE_KEY = 'bcc_materias_concluidas_grade2022';
+
+    let selectedCodigo = null;
+    let hoveredCodigo = null;
+    
+    // Mapeamento de status: codigo -> 'concluida' | 'cursando' | 'nao_cursada'
+    let statusMap = {};
+
+    try {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      if (saved) {
+        statusMap = JSON.parse(saved);
+      } else {
+        const oldSaved = localStorage.getItem(OLD_STORAGE_KEY);
+        if (oldSaved) {
+          const oldList = JSON.parse(oldSaved);
+          oldList.forEach(c => { statusMap[c] = 'concluida'; });
+        }
+      }
+    } catch (e) {
+      console.warn('Erro ao carregar progresso:', e);
+    }
+
+    const cardMap = {};
+    const forwardMap = {};
+    let totalMaterias = cards.length;
+    let totalCreditos = 0;
+    let totalCh = 0;
+
+    cards.forEach(card => {
+      const cod = card.dataset.codigo;
+      cardMap[cod] = card;
+      totalCreditos += parseFloat(card.dataset.creditos || 0);
+      totalCh += parseInt(card.dataset.ch || 0, 10);
+
+      const prereqs = JSON.parse(card.dataset.prereqs || '[]');
+      prereqs.forEach(req => {
+        if (!forwardMap[req]) forwardMap[req] = [];
+        forwardMap[req].push(cod);
+      });
+    });
+
+    function saveProgresso() {
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(statusMap));
+      } catch (e) {
+        console.warn('Erro ao salvar progresso:', e);
+      }
+    }
+
+    function updateProgressoUI() {
+      let concMaterias = 0;
+      let concCreditos = 0;
+      let cursandoMaterias = 0;
+      let cursandoCreditos = 0;
+
+      cards.forEach(card => {
+        const cod = card.dataset.codigo;
+        const st = statusMap[cod] || 'nao_cursada';
+        const prereqs = JSON.parse(card.dataset.prereqs || '[]');
+        const statusPill = card.querySelector('.grade-card-status-pill');
+        const availableBadge = card.querySelector('.grade-card-available-badge');
+
+        card.classList.remove('is-completed', 'is-cursando', 'is-available');
+        if (availableBadge) availableBadge.style.display = 'none';
+
+        if (statusPill) {
+          statusPill.dataset.state = st;
+          if (st === 'concluida') {
+            statusPill.innerHTML = '<i class="bi bi-check-circle-fill"></i> Concluída';
+          } else if (st === 'cursando') {
+            statusPill.innerHTML = '<i class="bi bi-hourglass-split"></i> Cursando';
+          } else {
+            statusPill.innerHTML = '<i class="bi bi-circle"></i> Não cursada';
+          }
+        }
+
+        if (st === 'concluida') {
+          card.classList.add('is-completed');
+          concMaterias++;
+          concCreditos += parseFloat(card.dataset.creditos || 0);
+        } else if (st === 'cursando') {
+          card.classList.add('is-cursando');
+          cursandoMaterias++;
+          cursandoCreditos += parseFloat(card.dataset.creditos || 0);
+        } else {
+          // Checar se pré-requisitos estão cumpridos
+          const todosReqsCumpridos = prereqs.every(req => statusMap[req] === 'concluida');
+          if (todosReqsCumpridos && (concMaterias > 0 || cursandoMaterias > 0)) {
+            card.classList.add('is-available');
+            if (availableBadge) availableBadge.style.display = 'inline-flex';
+          }
+        }
+      });
+
+      // Atualizar estado visual do botão "Concluir Período" de cada coluna
+      periodoCols.forEach(col => {
+        const colCards = Array.from(col.querySelectorAll('.grade-card'));
+        const checkAllBtn = col.querySelector('.grade-periodo-check-all-btn');
+        if (!checkAllBtn || colCards.length === 0) return;
+
+        const allCompleted = colCards.every(c => statusMap[c.dataset.codigo] === 'concluida');
+        if (allCompleted) {
+          checkAllBtn.classList.add('all-done');
+          checkAllBtn.title = 'Desmarcar todas do período';
+          checkAllBtn.innerHTML = '<i class="bi bi-check-all text-success"></i>';
+        } else {
+          checkAllBtn.classList.remove('all-done');
+          checkAllBtn.title = 'Concluir todas as matérias do período';
+          checkAllBtn.innerHTML = '<i class="bi bi-check-all"></i>';
+        }
+      });
+
+      const pct = totalMaterias > 0 ? Math.round((concMaterias / totalMaterias) * 100) : 0;
+
+      if (statConcluidas) statConcluidas.innerText = `${concMaterias} (${concCreditos.toFixed(1)} cr)`;
+      if (statCursando) statCursando.innerText = `${cursandoMaterias} (${cursandoCreditos.toFixed(1)} cr)`;
+      if (statCreditos) statCreditos.innerText = `${concCreditos.toFixed(1)} / ${totalCreditos.toFixed(1)} cr (${pct}%)`;
+      if (progressoBar) progressoBar.style.width = `${pct}%`;
+      if (progressoBarPct) progressoBarPct.innerText = `${pct}%`;
+    }
+
+    function cycleStatus(codigo) {
+      const current = statusMap[codigo] || 'nao_cursada';
+      if (current === 'nao_cursada') {
+        statusMap[codigo] = 'cursando';
+      } else if (current === 'cursando') {
+        statusMap[codigo] = 'concluida';
+      } else {
+        delete statusMap[codigo];
+      }
+      saveProgresso();
+      updateProgressoUI();
+    }
+
+    // Alternar todas de um período
+    periodoCols.forEach(col => {
+      const checkAllBtn = col.querySelector('.grade-periodo-check-all-btn');
+      if (!checkAllBtn) return;
+
+      checkAllBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const colCards = Array.from(col.querySelectorAll('.grade-card'));
+        const allCompleted = colCards.every(c => statusMap[c.dataset.codigo] === 'concluida');
+
+        colCards.forEach(c => {
+          const cod = c.dataset.codigo;
+          if (allCompleted) {
+            delete statusMap[cod];
+          } else {
+            statusMap[cod] = 'concluida';
+          }
+        });
+
+        saveProgresso();
+        updateProgressoUI();
+      });
+    });
+
+    function updateHighlight(activeCodigo, isPinned = false) {
+      cards.forEach(c => {
+        c.classList.remove('is-active', 'is-prereq', 'is-destrava', 'is-dimmed');
+        const badge = c.querySelector('.grade-card-badge-status');
+        if (badge) {
+          badge.style.display = 'none';
+          badge.className = 'grade-card-badge-status';
+          badge.innerText = '';
+        }
+      });
+
+      if (!activeCodigo) {
+        statusInfo.innerHTML = '<span class="status-badge status-normal"><i class="bi bi-cursor-fill"></i> Passe o mouse ou clique para inspecionar</span>';
+        return;
+      }
+
+      const activeCard = cardMap[activeCodigo];
+      if (!activeCard) return;
+
+      const prereqs = JSON.parse(activeCard.dataset.prereqs || '[]');
+      const destravas = forwardMap[activeCodigo] || [];
+
+      cards.forEach(c => {
+        const cod = c.dataset.codigo;
+        if (cod === activeCodigo) {
+          c.classList.add('is-active');
+          const b = c.querySelector('.grade-card-badge-status');
+          if (b) {
+            b.style.display = 'block';
+            b.classList.add('badge-focus');
+            b.innerText = isPinned ? 'Fixado' : 'Selecionado';
+          }
+        } else if (prereqs.includes(cod)) {
+          c.classList.add('is-prereq');
+          const b = c.querySelector('.grade-card-badge-status');
+          if (b) {
+            b.style.display = 'block';
+            b.classList.add('badge-req');
+            b.innerText = 'Pré-requisito';
+          }
+        } else if (destravas.includes(cod)) {
+          c.classList.add('is-destrava');
+          const b = c.querySelector('.grade-card-badge-status');
+          if (b) {
+            b.style.display = 'block';
+            b.classList.add('badge-destrava');
+            b.innerText = 'Destrava';
+          }
+        } else {
+          c.classList.add('is-dimmed');
+        }
+      });
+
+      const nome = activeCard.dataset.nome;
+      const ch = activeCard.dataset.ch;
+      const cr = activeCard.dataset.creditos;
+      const st = statusMap[activeCodigo] || 'nao_cursada';
+      const reqText = prereqs.length ? prereqs.join(', ') : 'Nenhum';
+      const destrText = destravas.length ? destravas.join(', ') : 'Nenhuma';
+
+      let statusTag = '';
+      if (st === 'concluida') {
+        statusTag = '<span class="status-tag-conc"><i class="bi bi-check-circle-fill"></i> Concluída</span>';
+      } else if (st === 'cursando') {
+        statusTag = '<span class="status-tag-cursando"><i class="bi bi-hourglass-split"></i> Cursando</span>';
+      }
+
+      statusInfo.innerHTML = `
+        <div class="status-active-desc">
+          <strong>${activeCodigo} - ${nome}</strong> (${cr} cr / ${ch}h) 
+          ${statusTag}
+          <span class="status-sub">| <strong>Pré-requisitos:</strong> ${reqText} | <strong>Destrava:</strong> ${destrText}</span>
+        </div>
+      `;
+    }
+
+    // Eventos nos cards
+    cards.forEach(card => {
+      const cod = card.dataset.codigo;
+      const statusPill = card.querySelector('.grade-card-status-pill');
+
+      if (statusPill) {
+        statusPill.addEventListener('click', (e) => {
+          e.stopPropagation();
+          cycleStatus(cod);
+        });
+      }
+
+      card.addEventListener('mouseenter', () => {
+        if (!selectedCodigo) {
+          hoveredCodigo = cod;
+          updateHighlight(cod, false);
+        }
+      });
+
+      card.addEventListener('mouseleave', () => {
+        if (!selectedCodigo) {
+          hoveredCodigo = null;
+          updateHighlight(null, false);
+        }
+      });
+
+      card.addEventListener('click', (e) => {
+        if (hasDragged) return;
+        if (selectedCodigo === cod) {
+          selectedCodigo = null;
+          updateHighlight(null, false);
+        } else {
+          selectedCodigo = cod;
+          updateHighlight(cod, true);
+        }
+      });
+
+      card.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          card.click();
+        }
+      });
+    });
+
+    if (btnResetProgresso) {
+      btnResetProgresso.addEventListener('click', () => {
+        if (Object.keys(statusMap).length === 0) return;
+        if (confirm('Deseja realmente resetar o status de todas as matérias marcadas?')) {
+          statusMap = {};
+          saveProgresso();
+          updateProgressoUI();
+        }
+      });
+    }
+
+    // Interação de Clique e Arraste (Pan / Drag to Scroll)
+    let isMouseDown = false;
+    let startX = 0;
+    let startY = 0;
+    let scrollLeftStart = 0;
+    let scrollTopStart = 0;
+    let hasDragged = false;
+
+    viewport.addEventListener('mousedown', (e) => {
+      // Ignorar arraste caso o clique seja em botões interativos
+      if (e.target.closest('button') || e.target.closest('input') || e.target.closest('a')) {
+        return;
+      }
+      isMouseDown = true;
+      hasDragged = false;
+      viewport.classList.add('is-dragging');
+      startX = e.pageX - viewport.offsetLeft;
+      startY = e.pageY - viewport.offsetTop;
+      scrollLeftStart = viewport.scrollLeft;
+      scrollTopStart = viewport.scrollTop;
+    });
+
+    window.addEventListener('mousemove', (e) => {
+      if (!isMouseDown) return;
+      const x = e.pageX - viewport.offsetLeft;
+      const y = e.pageY - viewport.offsetTop;
+      const walkX = (x - startX) * 1.2;
+      const walkY = (y - startY) * 1.2;
+      if (Math.abs(walkX) > 4 || Math.abs(walkY) > 4) {
+        hasDragged = true;
+      }
+      viewport.scrollLeft = scrollLeftStart - walkX;
+      viewport.scrollTop = scrollTopStart - walkY;
+    });
+
+    window.addEventListener('mouseup', () => {
+      if (isMouseDown) {
+        isMouseDown = false;
+        viewport.classList.remove('is-dragging');
+      }
+    });
+
+    viewport.addEventListener('mouseleave', () => {
+      if (isMouseDown) {
+        isMouseDown = false;
+        viewport.classList.remove('is-dragging');
+      }
+    });
+
+    const fsBtn = document.getElementById('grade-fullscreen-btn');
+    const compactBtn = document.getElementById('grade-compact-btn');
+    const exportBtn = document.getElementById('grade-export-btn');
+    const activitiesToggle = container.querySelector('.grade-activities-toggle');
+
+    if (activitiesToggle) {
+      const activitiesCol = activitiesToggle.closest('.grade-periodo-col');
+      activitiesToggle.addEventListener('click', () => {
+        const expanded = activitiesCol.classList.toggle('activities-expanded');
+        activitiesToggle.setAttribute('aria-expanded', String(expanded));
+        activitiesToggle.innerHTML = expanded
+          ? '<i class="bi bi-dash-circle"></i><span>Ocultar Atividades Complementares / Extensão</span>'
+          : '<i class="bi bi-plus-circle"></i><span>Atividades Complementares / Extensão (2)</span>';
+      });
+    }
+
+    if (compactBtn) {
+      compactBtn.addEventListener('click', () => {
+        const compact = container.classList.toggle('is-compact');
+        compactBtn.setAttribute('aria-pressed', String(compact));
+        compactBtn.title = compact ? 'Restaurar espaçamento' : 'Condensar grade';
+        compactBtn.setAttribute('aria-label', compactBtn.title);
+        compactBtn.innerHTML = compact
+          ? '<i class="bi bi-arrows-expand"></i><span>Normal</span>'
+          : '<i class="bi bi-arrows-collapse"></i><span>Condensar</span>';
+      });
+    }
+
+    function setExpanded(expanded) {
+      container.classList.toggle('grade-bcc-expanded', expanded);
+      document.body.classList.toggle('grade-bcc-body-expanded', expanded);
+      if (fsBtn) {
+        fsBtn.title = expanded ? 'Restaurar visualização' : 'Expandir visualização';
+        fsBtn.setAttribute('aria-label', fsBtn.title);
+        fsBtn.innerHTML = expanded
+          ? '<i class="bi bi-fullscreen-exit"></i><span>Restaurar</span>'
+          : '<i class="bi bi-arrows-fullscreen"></i><span>Expandir</span>';
+      }
+    }
+
+    if (fsBtn) {
+      fsBtn.addEventListener('click', () => {
+        setExpanded(!container.classList.contains('grade-bcc-expanded'));
+      });
+    }
+
+    const fsExitBtn = document.getElementById('grade-mobile-fs-exit');
+    if (fsExitBtn) {
+      fsExitBtn.addEventListener('click', () => setExpanded(false));
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && container.classList.contains('grade-bcc-expanded')) {
+        setExpanded(false);
+      }
+    });
+
+    // Modal de identificação para exportação (Nome e DRE opcionais, não persistidos)
+    const exportModal = document.getElementById('grade-export-modal');
+    const modalNomeInput = document.getElementById('grade-modal-nome');
+    const modalDreInput = document.getElementById('grade-modal-dre');
+    const modalConfirmBtn = document.getElementById('grade-modal-confirm-btn');
+    const modalCancelBtn = document.getElementById('grade-modal-cancel-btn');
+    const modalCloseBtn = document.getElementById('grade-modal-close-btn');
+    let exportUiState = null;
+
+    function neutralizeGradeForExport() {
+      if (!exportUiState) {
+        exportUiState = {
+          selectedCodigo,
+          hoveredCodigo,
+          focusedCard: document.activeElement && document.activeElement.closest
+            ? document.activeElement.closest('.grade-card')
+            : null
+        };
+      }
+      selectedCodigo = null;
+      hoveredCodigo = null;
+      if (document.activeElement && document.activeElement.blur) document.activeElement.blur();
+      updateHighlight(null, false);
+    }
+
+    function restoreGradeAfterExport() {
+      if (!exportUiState) return;
+      selectedCodigo = exportUiState.selectedCodigo;
+      hoveredCodigo = exportUiState.hoveredCodigo;
+      const activeCodigo = selectedCodigo || hoveredCodigo;
+      updateHighlight(activeCodigo, Boolean(selectedCodigo));
+      if (exportUiState.focusedCard) exportUiState.focusedCard.focus();
+      exportUiState = null;
+    }
+
+    function openExportModal() {
+      if (!exportModal) return;
+      neutralizeGradeForExport();
+      exportModal.classList.add('is-open');
+      setTimeout(() => { if (modalNomeInput) modalNomeInput.focus(); }, 50);
+    }
+
+    function closeExportModal(restoreGrade = true) {
+      if (exportModal) exportModal.classList.remove('is-open');
+      if (restoreGrade) restoreGradeAfterExport();
+    }
+
+    if (exportModal) {
+      if (exportBtn) exportBtn.addEventListener('click', openExportModal);
+      if (modalCancelBtn) modalCancelBtn.addEventListener('click', closeExportModal);
+      if (modalCloseBtn) modalCloseBtn.addEventListener('click', closeExportModal);
+      exportModal.addEventListener('click', (e) => {
+        if (e.target === exportModal) closeExportModal();
+      });
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && exportModal.classList.contains('is-open')) {
+          closeExportModal();
+        }
+      });
+      [modalNomeInput, modalDreInput].forEach(input => {
+        if (!input) return;
+        input.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' && modalConfirmBtn) modalConfirmBtn.click();
+        });
+      });
+      if (modalConfirmBtn) {
+        modalConfirmBtn.addEventListener('click', () => {
+          const nomeVal = modalNomeInput ? modalNomeInput.value.trim() : '';
+          const dreVal = modalDreInput ? modalDreInput.value.trim() : '';
+          closeExportModal(false);
+          exportarGrade(nomeVal, dreVal);
+        });
+      }
+    }
+
+    function escapeHtml(str) {
+      return str.replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+    }
+
+    // Exportação em Imagem (PNG) capturando o panorama completo com cabeçalho de identificação e estatísticas
+    async function exportarGrade(nomeVal, dreVal) {
+      if (!exportBtn) return;
+      const originalHtml = exportBtn.innerHTML;
+      const originalCanvasHeight = canvas.style.height;
+      const originalCanvasWidth = canvas.style.width;
+      const prevScrollLeft = viewport.scrollLeft;
+      const wasCompact = container.classList.contains('is-compact');
+      exportBtn.innerHTML = '<i class="bi bi-arrow-repeat spin"></i>';
+      exportBtn.disabled = true;
+
+      try {
+        if (!window.html2canvas) {
+          await new Promise((resolve, reject) => {
+            const script = document.createElement('script');
+            script.src = 'https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js';
+            script.onload = resolve;
+            script.onerror = reject;
+            document.head.appendChild(script);
+          });
+        }
+
+        // Salvar estado atual do scroll e preparar margens exatas da composição
+        viewport.scrollLeft = 0;
+        container.classList.remove('is-compact');
+        canvas.classList.add('is-exporting');
+        await new Promise(r => setTimeout(r, 60));
+
+        // Calcular métricas por tipo para o resumo
+        let concMaterias = 0;
+        let concCreditos = 0;
+        let cursandoMaterias = 0;
+        let cursandoCreditos = 0;
+        let concObrigatorias = 0;
+        let totalObrigatorias = 0;
+        let concOptativas = 0;
+        let totalOptativas = 0;
+        let concCh = 0;
+
+        cards.forEach(card => {
+          const cod = card.dataset.codigo;
+          const st = statusMap[cod] || 'nao_cursada';
+          const isOptativa = card.dataset.tipo === 'optativa';
+          const creditos = parseFloat(card.dataset.creditos || 0);
+          const ch = parseInt(card.dataset.ch || 0, 10);
+          if (isOptativa) {
+            totalOptativas++;
+          } else {
+            totalObrigatorias++;
+          }
+          if (st === 'concluida') {
+            concMaterias++;
+            concCreditos += creditos;
+            concCh += ch;
+            if (isOptativa) {
+              concOptativas++;
+            } else {
+              concObrigatorias++;
+            }
+          } else if (st === 'cursando') {
+            cursandoMaterias++;
+            cursandoCreditos += creditos;
+          }
+        });
+
+        const pctObrigatorias = totalObrigatorias > 0 ? Math.round((concObrigatorias / totalObrigatorias) * 100) : 0;
+        const pctOptativas = totalOptativas > 0 ? Math.round((concOptativas / totalOptativas) * 100) : 0;
+        const pctTotal = totalMaterias > 0 ? Math.round((concMaterias / totalMaterias) * 100) : 0;
+        const agora = new Date().toLocaleString('pt-BR');
+
+        // Tags de identificação opcionais (Nome e/ou DRE)
+        let identHtml = '';
+        if (nomeVal) identHtml += `<span class="dre-tag">${escapeHtml(nomeVal)}</span>`;
+        if (dreVal) identHtml += `<span class="dre-tag">DRE: ${escapeHtml(dreVal)}</span>`;
+
+        // Título limpo no topo da imagem
+        const titlePanel = document.createElement('div');
+        titlePanel.className = 'grade-export-title';
+        titlePanel.innerHTML = '<h2>FLUXOGRAMA BCC (Grade 2022)</h2>';
+
+        // Painel de resumo institucional: identificação, métricas e legenda
+        const summaryPanel = document.createElement('div');
+        summaryPanel.className = 'grade-export-summary';
+        summaryPanel.innerHTML = `
+          <div class="grade-export-summary-main">
+            <div class="grade-export-summary-id">
+              <h2>Instituto de Computação &bull; UFRJ</h2>
+              <p>Grade Curricular do Bacharelado em Ciência da Computação (Estrutura 2022)</p>
+              <div class="grade-export-summary-tags">
+                ${identHtml}
+                <small>Emitido em: ${agora}</small>
+              </div>
+            </div>
+            <div class="grade-export-stats-grid">
+              <div class="grade-export-stat-box">
+                <span class="stat-lbl">Concluídas</span>
+                <strong class="stat-val text-success">${concMaterias} de ${totalMaterias} (${concCreditos.toFixed(1)} cr)</strong>
+              </div>
+              <div class="grade-export-stat-box">
+                <span class="stat-lbl">Cursando</span>
+                <strong class="stat-val text-cursando">${cursandoMaterias} (${cursandoCreditos.toFixed(1)} cr)</strong>
+              </div>
+              <div class="grade-export-stat-box">
+                <span class="stat-lbl">Obrigatórias</span>
+                <strong class="stat-val text-success">${pctObrigatorias}% concluída</strong>
+              </div>
+              <div class="grade-export-stat-box">
+                <span class="stat-lbl">Eletivas/Optativas</span>
+                <strong class="stat-val text-primary">${pctOptativas}% concluída</strong>
+              </div>
+              <div class="grade-export-stat-box">
+                <span class="stat-lbl">Progresso Total</span>
+                <strong class="stat-val text-primary">${pctTotal}% concluído</strong>
+              </div>
+              <div class="grade-export-stat-box">
+                <span class="stat-lbl">Carga Horária</span>
+                <strong class="stat-val">${concCh}h de ${totalCh}h</strong>
+              </div>
+            </div>
+          </div>
+          <div class="grade-export-summary-legend">
+            <div class="grade-export-summary-legend-items">
+              <span class="grade-export-summary-legend-item"><span class="legenda-dot dot-concluida"></span> Concluída</span>
+              <span class="grade-export-summary-legend-item"><span class="legenda-dot dot-cursando"></span> Cursando</span>
+              <span class="grade-export-summary-legend-item"><span class="legenda-dot dot-disponivel"></span> Disponível</span>
+              <span class="grade-export-summary-legend-item"><span class="legenda-dot dot-req"></span> Pré-requisito</span>
+            </div>
+            <span class="grade-export-summary-brand">Universidade Federal do Rio de Janeiro &bull; CCMN &bull; IC</span>
+          </div>
+        `;
+
+        // Inserir temporariamente na composição da exportação
+        canvas.insertBefore(titlePanel, gradeGrid);
+        canvas.appendChild(summaryPanel);
+        const exportTargetWidth = gradeGrid ? gradeGrid.offsetWidth : canvas.scrollWidth;
+        canvas.style.width = `${exportTargetWidth + 20}px`;
+        titlePanel.style.width = `${exportTargetWidth}px`;
+
+        // Ancorar o resumo na borda inferior direita, cobrindo apenas a base do 6º ao 9º período
+        const exportCols = Array.from(gradeGrid.querySelectorAll('.grade-periodo-col'));
+        const anchorCol = exportCols[5];
+        const maxLaterBottom = anchorCol
+          ? Math.max(...exportCols.slice(5).map(c => c.offsetTop + c.offsetHeight))
+          : 0;
+        const minimumSummaryTop = maxLaterBottom + 16;
+        if (anchorCol) {
+          summaryPanel.style.right = '10px';
+          summaryPanel.style.bottom = '10px';
+          summaryPanel.style.width = `${exportTargetWidth - anchorCol.offsetLeft}px`;
+        } else {
+          summaryPanel.style.position = 'static';
+          summaryPanel.style.width = `${exportTargetWidth}px`;
+          summaryPanel.style.margin = '20px auto 0 auto';
+        }
+        await new Promise(r => setTimeout(r, 60));
+
+        const gridBottom = gradeGrid.offsetTop + gradeGrid.offsetHeight;
+        const minimumSummaryBottom = gradeGrid.offsetTop + minimumSummaryTop + summaryPanel.offsetHeight;
+        canvas.style.height = `${Math.max(gridBottom, minimumSummaryBottom) + 10}px`;
+        const fullWidth = canvas.offsetWidth;
+        const fullHeight = canvas.offsetHeight;
+
+        const canvasImage = await window.html2canvas(canvas, {
+          scale: 2,
+          scrollX: 0,
+          scrollY: 0,
+          width: fullWidth,
+          height: fullHeight,
+          windowWidth: fullWidth + 100,
+          backgroundColor: '#ffffff',
+          useCORS: true,
+          logging: false,
+          onclone: clonedDocument => {
+            clonedDocument.querySelectorAll('.grade-card').forEach(card => {
+              card.classList.remove('is-active', 'is-prereq', 'is-destrava', 'is-dimmed');
+              const badge = card.querySelector('.grade-card-badge-status');
+              if (badge) badge.style.display = 'none';
+            });
+          }
+        });
+
+        // Remover título/resumo temporários e restaurar
+        titlePanel.remove();
+        summaryPanel.remove();
+        viewport.scrollLeft = prevScrollLeft;
+
+        const link = document.createElement('a');
+        link.download = dreVal ? `grade-bcc-ufrj-${dreVal}.png` : 'grade-bcc-ufrj.png';
+        link.href = canvasImage.toDataURL('image/png');
+        link.click();
+      } catch (err) {
+        console.error('Erro na exportação:', err);
+        alert('Não foi possível gerar a imagem da grade.');
+      } finally {
+        canvas.querySelectorAll('.grade-export-title, .grade-export-summary').forEach(el => el.remove());
+        canvas.classList.remove('is-exporting');
+        canvas.style.width = originalCanvasWidth;
+        canvas.style.height = originalCanvasHeight;
+        container.classList.toggle('is-compact', wasCompact);
+        viewport.scrollLeft = prevScrollLeft;
+        exportBtn.innerHTML = originalHtml;
+        exportBtn.disabled = false;
+        restoreGradeAfterExport();
+      }
+    }
+
+    updateProgressoUI();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initGrade);
+  } else {
+    initGrade();
+  }
+})();
+</script>
