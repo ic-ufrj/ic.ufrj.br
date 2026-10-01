@@ -93,7 +93,7 @@ description: "Organizações e cargos do Instituto de Computação da UFRJ"
     <li>{{< nome_completo vigusmao >}}</li>
     <li>{{< nome_completo vivian >}}</li>
     <li>Brenno Alves de Castro (Representante Discente)</li>
-    <li>João Victor Borges Nascimento (Representante Discente)</li>
+    <li>Andressa Pereira de Faria Pintos (Representante Discente)</li>
   {{< /grupo >}}
 
   {{< grupo "Comissão de Equivalência de Disciplinas (COMED)" "comissaoequivalencia" >}}
