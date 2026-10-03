@@ -14,4 +14,4 @@ Gostaríamos de registrar um agradecimento especial aos anfitriões que contribu
 Estendemos também nossos agradecimentos aos colaboradores que contribuíram para a organização e realização da visita: Diretora Adjunta de Extensão Maria Luiza M. Campos, Diretora Adjunta de Ensino Juliana Vianna Valério,  Diretor Adjunto de Gestão e Governança Rodrigo A. de Mello, Servidor Emerson Narcizo Lima de Deus, servidor; e Rerison Wilber Cavalcante Rocha.
 O Instituto de Computação da UFRJ agradece ao IFTM - Campus Paracatu, ao Prof. Alexandre Gama e a todos os participantes pela visita e pela oportunidade de fortalecer os laços entre instituições de ensino, promovendo o intercâmbio de conhecimentos, experiências e iniciativas na área de Computação e Tecnologia.
 
-![Alunos do IFTM Campus Paracatu no Museu da Computação](/img/alunos-iftm-campus-paracatu-no-museu-da-computacao.jpeg)
+![Alunos do IFTM Campus Paracatu no Museu da Computação](alunos-iftm-campus-paracatu-no-museu-da-computacao.jpeg)
