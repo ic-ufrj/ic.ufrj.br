@@ -1,0 +1,1135 @@
+/* Grade Curricular Interativa do BCC & Tabelas de Optativas */
+
+.grade-bcc-wrapper {
+	margin: 24px auto;
+	width: 100%;
+	max-width: 100%;
+	background: #ffffff;
+	border: 1px solid #cbd5e1;
+	border-radius: 12px;
+	box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	font-family: "Open Sans", sans-serif;
+	box-sizing: border-box;
+}
+
+.grade-bcc-toolbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 18px;
+	background-color: var(--cor-ic1, #344563);
+	color: #ffffff;
+	font-family: "Montserrat", sans-serif;
+	flex-wrap: wrap;
+	gap: 12px;
+}
+
+.grade-bcc-title {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	font-size: 15px;
+	flex: 1 1 auto;
+	min-width: 280px;
+}
+
+.grade-bcc-zoom-controls {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+}
+
+.grade-zoom-btn {
+	background: rgba(255, 255, 255, 0.15);
+	border: 1px solid rgba(255, 255, 255, 0.25);
+	color: #ffffff;
+	border-radius: 6px;
+	width: 32px;
+	height: 32px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	transition: background-color 0.2s, transform 0.1s;
+}
+
+.grade-btn-fullscreen {
+	width: auto;
+	padding: 0 10px;
+	gap: 6px;
+	font-family: "Montserrat", sans-serif;
+	font-size: 12px;
+	font-weight: 600;
+	background: rgba(255, 255, 255, 0.22);
+}
+
+.grade-zoom-btn:hover {
+	background: rgba(255, 255, 255, 0.3);
+}
+
+.grade-zoom-btn:active {
+	transform: scale(0.95);
+}
+
+.toolbar-divider {
+	width: 1px;
+	height: 20px;
+	background-color: rgba(255, 255, 255, 0.25);
+	margin: 0 3px;
+	display: inline-block;
+}
+
+.grade-bcc-subbar {
+	background-color: #f1f5f9;
+	border-bottom: 1px solid #cbd5e1;
+	padding: 10px 18px;
+	font-size: 13px;
+	color: #1e293b;
+	font-weight: 500;
+	line-height: 1.5em;
+}
+
+.grade-bcc-hint-text {
+	font-size: 13px;
+	color: #1e293b;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 6px;
+}
+
+.grade-bcc-hint-text i.bi-info-circle-fill {
+	color: var(--cor-ic1, #344563);
+	font-size: 15px;
+}
+
+.subbar-badge {
+	display: inline-flex;
+	align-items: center;
+	gap: 4px;
+	background: #ffffff;
+	border: 1px solid #94a3b8;
+	color: #0f172a;
+	padding: 2px 7px;
+	border-radius: 5px;
+	font-weight: 600;
+	font-size: 11.5px;
+}
+
+/* Painel de Progresso Acadêmico */
+.grade-progresso-panel {
+	background: #f8fafc;
+	border-bottom: 1px solid #cbd5e1;
+	padding: 10px 18px;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.grade-progresso-info {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 12px;
+}
+
+.grade-progresso-stats {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 16px;
+	font-size: 13px;
+	color: #334155;
+}
+
+.progresso-stat-item {
+	display: inline-flex;
+	align-items: center;
+	gap: 5px;
+}
+
+.text-success { color: #16a34a !important; }
+.text-primary { color: #2563eb !important; }
+.text-cursando { color: #2563eb !important; }
+.text-concluida { color: #16a34a !important; }
+
+.grade-btn-limpar {
+	background: #ffffff;
+	border: 1px solid #cbd5e1;
+	color: #64748b;
+	font-size: 12px;
+	padding: 3px 8px;
+	border-radius: 5px;
+	cursor: pointer;
+	font-family: inherit;
+	display: inline-flex;
+	align-items: center;
+	gap: 4px;
+	transition: all 0.2s;
+	white-space: nowrap;
+}
+
+.grade-btn-limpar:hover {
+	background: #fee2e2;
+	color: #dc2626;
+	border-color: #fca5a5;
+}
+
+.grade-progresso-bar-wrapper {
+	width: 100%;
+	height: 14px;
+	background-color: #e2e8f0;
+	border-radius: 10px;
+	overflow: hidden;
+	position: relative;
+}
+
+.grade-progresso-bar {
+	height: 100%;
+	background: linear-gradient(90deg, #3b82f6, #10b981);
+	border-radius: 10px;
+	transition: width 0.35s ease;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	padding-right: 6px;
+}
+
+.progresso-bar-label {
+	font-size: 10px;
+	font-weight: 700;
+	color: #ffffff;
+	text-shadow: 0 1px 2px rgba(0,0,0,0.4);
+}
+
+/* Viewport e Canvas da Grade */
+.grade-bcc-viewport {
+	position: relative;
+	width: 100%;
+	height: 520px;
+	max-height: 65vh;
+	overflow: auto;
+	background-color: #f8fafc;
+	background-image: radial-gradient(#e2e8f0 1px, transparent 1px);
+	background-size: 20px 20px;
+	padding: 24px 20px 80px 20px;
+	-webkit-overflow-scrolling: touch;
+	cursor: grab;
+	user-select: none;
+}
+
+.grade-bcc-viewport.is-dragging {
+	cursor: grabbing !important;
+	user-select: none;
+}
+
+.grade-bcc-canvas {
+	position: relative;
+	display: inline-block;
+	padding-bottom: 60px;
+	min-width: 100%;
+}
+
+.grade-bcc-canvas.is-exporting {
+	display: block;
+	min-width: 0;
+	padding: 4px 10px 10px 10px;
+	box-sizing: border-box;
+}
+
+.grade-bcc-grid {
+	display: flex;
+	gap: 16px;
+	align-items: flex-start;
+	justify-content: center;
+	position: relative;
+	z-index: 20;
+	margin: 0 auto;
+	width: max-content;
+}
+
+/* Colunas dos Períodos */
+.grade-periodo-col {
+	flex: 0 0 165px;
+	width: 165px;
+	border-radius: 12px;
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.grade-periodo-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 6px 8px;
+	border-radius: 8px;
+	background: rgba(255, 255, 255, 0.65);
+}
+
+.grade-periodo-header h3 {
+	margin: 0;
+	font-size: 13.5px;
+	font-weight: 700;
+	color: #334155;
+	font-family: "Montserrat", sans-serif;
+}
+
+.grade-periodo-check-all-btn {
+	background: transparent;
+	border: none;
+	padding: 2px 4px;
+	cursor: pointer;
+	font-size: 16px;
+	color: #64748b;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 4px;
+	transition: all 0.15s;
+}
+
+.grade-periodo-check-all-btn:hover {
+	color: #16a34a;
+	background: rgba(255, 255, 255, 0.9);
+	transform: scale(1.1);
+}
+
+.grade-periodo-check-all-btn.all-done {
+	color: #16a34a;
+}
+
+/* Identificação sutil por período sobre fundo neutro */
+.grade-periodo-col {
+	background-color: #f8fafc;
+	border: 1px solid #e2e8f0;
+	border-top-width: 3px;
+}
+
+.grade-col-p1 { border-top-color: #f87171; }
+.grade-col-p2 { border-top-color: #fbbf24; }
+.grade-col-p3 { border-top-color: #4ade80; }
+.grade-col-p4 { border-top-color: #2dd4bf; }
+.grade-col-p5 { border-top-color: #38bdf8; }
+.grade-col-p6 { border-top-color: #60a5fa; }
+.grade-col-p7 { border-top-color: #c084fc; }
+.grade-col-p8 { border-top-color: #f472b6; }
+.grade-col-p9 { border-top-color: #fb7185; }
+
+.grade-periodo-cards {
+	display: flex;
+	flex-direction: column;
+	gap: 38px;
+}
+
+.grade-card-activity {
+	display: none;
+}
+
+.grade-periodo-col.activities-expanded .grade-card-activity,
+.grade-bcc-canvas.is-exporting .grade-card-activity {
+	display: block;
+}
+
+.grade-activities-toggle {
+	background: transparent;
+	border: 1px dashed #cbd5e1;
+	border-radius: 6px;
+	color: #64748b;
+	cursor: pointer;
+	font-family: "Open Sans", sans-serif;
+	font-size: 10.5px;
+	line-height: 1.25;
+	padding: 6px 8px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 5px;
+	width: 100%;
+}
+
+.grade-activities-toggle:hover {
+	background: #f1f5f9;
+	border-color: #94a3b8;
+	color: #334155;
+}
+
+.grade-bcc-canvas.is-exporting .grade-activities-toggle {
+	display: none;
+}
+
+/* Cards de Disciplina */
+.grade-card {
+	background: #ffffff;
+	border: 1px solid #e2e8f0;
+	border-radius: 8px;
+	padding: 8px 10px;
+	cursor: pointer;
+	position: relative;
+	transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+	user-select: none;
+}
+
+.grade-card:hover {
+	box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+	border-color: #94a3b8;
+}
+
+.grade-card-optativa {
+	border-style: dashed !important;
+	background-color: #fafafa !important;
+}
+
+.grade-card-optativa .grade-card-codigo {
+	color: #6366f1;
+	font-size: 12px;
+}
+
+.grade-card-top {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 3px;
+}
+
+.grade-card-top-right {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+}
+
+.grade-card-codigo {
+	font-weight: 700;
+	font-size: 13px;
+	color: #0f172a;
+	font-family: "Montserrat", sans-serif;
+}
+
+.grade-card-ch {
+	font-size: 11px;
+	color: #64748b;
+	font-weight: 600;
+}
+
+.grade-card-nome {
+	font-size: 12px;
+	line-height: 1.3em;
+	color: #334155;
+	font-weight: 500;
+	margin-bottom: 4px;
+	display: -webkit-box;
+	line-clamp: 2;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	min-height: 31.2px;
+}
+
+.grade-card-bottom {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.grade-card-creditos {
+	font-size: 11px;
+	color: #94a3b8;
+	text-align: right;
+	margin-left: auto;
+}
+
+.grade-card-status-pill {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 6px;
+	width: 100%;
+	min-height: 36px;
+	margin-top: 6px;
+	padding: 4px 10px;
+	border-radius: 999px;
+	border: 1.5px solid #cbd5e1;
+	background: #f8fafc;
+	color: #64748b;
+	font-size: 11px;
+	font-weight: 700;
+	font-family: "Montserrat", sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 0.3px;
+	cursor: pointer;
+	transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.grade-card-status-pill:hover {
+	border-color: #94a3b8;
+	background: #f1f5f9;
+}
+
+.grade-card-status-pill[data-state="cursando"] {
+	background: #3b82f6;
+	border-color: #3b82f6;
+	color: #ffffff;
+}
+
+.grade-card-status-pill[data-state="concluida"] {
+	background: #16a34a;
+	border-color: #16a34a;
+	color: #ffffff;
+}
+
+.grade-bcc-wrapper.is-compact .grade-bcc-subbar {
+	display: none;
+}
+
+.grade-bcc-wrapper.is-compact .grade-bcc-toolbar {
+	padding: 6px 14px;
+	gap: 8px;
+}
+
+.grade-bcc-wrapper.is-compact .grade-progresso-panel {
+	padding: 6px 14px;
+	gap: 4px;
+}
+
+.grade-bcc-wrapper.is-compact .grade-progresso-info {
+	gap: 8px;
+}
+
+.grade-bcc-wrapper.is-compact .grade-bcc-viewport {
+	padding: 12px 16px 40px 16px;
+}
+
+.grade-bcc-wrapper.is-compact .grade-bcc-canvas {
+	transform: scale(0.9);
+	transform-origin: top center;
+}
+
+.grade-bcc-wrapper.is-compact .grade-periodo-col {
+	padding: 7px;
+	gap: 6px;
+}
+
+.grade-bcc-wrapper.is-compact .grade-periodo-header {
+	padding: 4px 6px;
+}
+
+.grade-bcc-wrapper.is-compact .grade-periodo-cards {
+	gap: 14px;
+}
+
+.grade-bcc-wrapper.is-compact .grade-card {
+	padding: 4px 7px;
+}
+
+.grade-bcc-wrapper.is-compact .grade-card-top {
+	margin-bottom: 1px;
+}
+
+.grade-bcc-wrapper.is-compact .grade-card-codigo,
+.grade-bcc-wrapper.is-compact .grade-card-ch {
+	font-size: 11px;
+}
+
+.grade-bcc-wrapper.is-compact .grade-card-nome {
+	font-size: 11px;
+	line-height: 1.2em;
+	margin-bottom: 2px;
+	min-height: 26.4px;
+}
+
+.grade-bcc-wrapper.is-compact .grade-card-status-pill {
+	min-height: 24px;
+	margin-top: 3px;
+	padding: 2px 6px;
+	font-size: 10px;
+}
+
+.grade-bcc-wrapper.is-compact .grade-activities-toggle {
+	padding: 4px 6px;
+}
+
+.grade-card-available-badge {
+	font-size: 9px;
+	font-weight: 700;
+	color: #0e7490;
+	background: #cffafe;
+	border: 1px solid #67e8f9;
+	padding: 1px 4px;
+	border-radius: 4px;
+	display: inline-flex;
+	align-items: center;
+	gap: 3px;
+	text-transform: uppercase;
+}
+
+/* Status dos cards */
+.grade-card.is-completed {
+	background-color: #bbf7d0 !important;
+	border-color: #22c55e !important;
+	box-shadow: 0 0 0 1px #22c55e, 0 1px 3px rgba(34, 197, 94, 0.2);
+}
+
+.grade-card.is-completed .grade-card-codigo { color: #14532d !important; }
+.grade-card.is-completed .grade-card-nome { color: #166534 !important; font-weight: 600; }
+.grade-card.is-completed .grade-card-ch,
+.grade-card.is-completed .grade-card-creditos { color: #15803d !important; font-weight: 600; }
+
+.grade-card.is-cursando {
+	background-color: #bfdbfe !important;
+	border-color: #3b82f6 !important;
+	box-shadow: 0 0 0 1px #3b82f6, 0 1px 4px rgba(59, 130, 246, 0.25);
+}
+
+.grade-card.is-cursando .grade-card-codigo { color: #1e3a8a !important; }
+.grade-card.is-cursando .grade-card-nome { color: #1e40af !important; font-weight: 600; }
+.grade-card.is-cursando .grade-card-ch,
+.grade-card.is-cursando .grade-card-creditos { color: #1d4ed8 !important; font-weight: 600; }
+
+.grade-card.is-available:not(.is-completed):not(.is-cursando) {
+	border: 1px dashed #0891b2;
+	background-color: #ecfeff;
+}
+
+.grade-card.is-active {
+	border-color: #3b82f6 !important;
+	box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.35), 0 8px 12px rgba(0, 0, 0, 0.1);
+	z-index: 30;
+	background: #ffffff;
+}
+
+.grade-card.is-prereq {
+	border-color: #ea580c !important;
+	background-color: #fff7ed !important;
+	box-shadow: 0 0 0 3px rgba(234, 88, 12, 0.3);
+	z-index: 25;
+}
+
+.grade-card.is-destrava {
+	border-color: #10b981 !important;
+	background-color: #ecfdf5 !important;
+	box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.3);
+	z-index: 25;
+}
+
+.grade-card.is-dimmed {
+	opacity: 0.35;
+	filter: grayscale(40%);
+}
+
+.grade-card-badge-status {
+	position: absolute;
+	top: -9px;
+	right: 6px;
+	font-size: 10px;
+	font-weight: 700;
+	padding: 1px 6px;
+	border-radius: 10px;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+	z-index: 5;
+}
+
+.badge-focus { background: #3b82f6; color: #ffffff; }
+.badge-req { background: #ea580c; color: #ffffff; }
+.badge-destrava { background: #10b981; color: #ffffff; }
+
+/* Barra de Status Inferior e Legenda */
+.grade-bcc-status-bar {
+	padding: 10px 18px;
+	background: #f1f5f9;
+	border-top: 1px solid #e2e8f0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 13px;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+
+.grade-status-info {
+	color: #1e293b;
+	font-size: 13px;
+	min-height: 40px;
+	display: flex;
+	align-items: center;
+}
+
+.status-active-desc {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 6px;
+}
+
+.status-sub {
+	color: #475569;
+}
+
+.status-tag-conc {
+	background: #bbf7d0;
+	color: #14532d;
+	font-size: 11px;
+	font-weight: 700;
+	padding: 2px 6px;
+	border-radius: 6px;
+	display: inline-flex;
+	align-items: center;
+	gap: 4px;
+}
+
+.status-tag-cursando {
+	background: #bfdbfe;
+	color: #1e3a8a;
+	font-size: 11px;
+	font-weight: 700;
+	padding: 2px 6px;
+	border-radius: 6px;
+	display: inline-flex;
+	align-items: center;
+	gap: 4px;
+}
+
+.grade-legenda-inline {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	font-size: 12px;
+	color: #475569;
+}
+
+.legenda-item {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+}
+
+.legenda-dot {
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	display: inline-block;
+}
+
+.dot-concluida { background-color: #16a34a; }
+.dot-cursando { background-color: #2563eb; }
+.dot-disponivel { background-color: #0891b2; }
+.dot-focus { background-color: #64748b; }
+.dot-req { background-color: #ea580c; }
+.dot-destrava { background-color: #10b981; }
+
+.spin {
+	animation: spin-anim 1s linear infinite;
+}
+
+@keyframes spin-anim {
+	from { transform: rotate(0deg); }
+	to { transform: rotate(360deg); }
+}
+
+/* Painel de Exportação para Imagem PNG */
+.grade-export-title {
+	margin: 0 auto 20px auto;
+	width: 100%;
+	box-sizing: border-box;
+	font-family: "Montserrat", sans-serif;
+	text-align: center;
+}
+
+.grade-export-title h2 {
+	margin: 0;
+	font-size: 26px;
+	font-weight: 800;
+	letter-spacing: 1.5px;
+	color: #1e293b;
+	text-transform: uppercase;
+}
+
+.grade-export-summary {
+	position: absolute;
+	background: #f8fafc;
+	border: 2px solid #344563;
+	border-radius: 12px;
+	padding: 18px 22px;
+	box-sizing: border-box;
+	font-family: "Montserrat", sans-serif;
+	color: #0f172a;
+	display: flex;
+	flex-direction: column;
+	gap: 14px;
+	height: auto;
+	z-index: 20;
+}
+
+.grade-export-summary-main {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	gap: 20px;
+	flex-wrap: wrap;
+}
+
+.grade-export-summary-id h2 {
+	margin: 0 0 4px 0;
+	font-size: 18px;
+	font-weight: 800;
+	color: #1e293b;
+}
+
+.grade-export-summary-id p {
+	margin: 0 0 10px 0;
+	font-size: 13px;
+	color: #475569;
+}
+
+.grade-export-summary-tags {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 8px;
+}
+
+.grade-export-summary-tags small {
+	color: #64748b;
+	font-size: 11px;
+}
+
+.dre-tag {
+	display: inline-block;
+	background: #344563;
+	color: #ffffff;
+	font-weight: 700;
+	font-size: 14px;
+	padding: 4px 10px;
+	border-radius: 6px;
+	letter-spacing: 0.5px;
+}
+
+.grade-export-stats-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 12px;
+	background: #ffffff;
+	border: 1px solid #e2e8f0;
+	border-radius: 6px;
+	padding: 10px 14px;
+	flex: 1 1 480px;
+}
+
+.grade-export-stat-box {
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+}
+
+.grade-export-stat-box span.stat-lbl {
+	font-size: 11px;
+	color: #64748b;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+.grade-export-stat-box strong.stat-val {
+	font-size: 14px;
+	font-weight: 800;
+	color: #0f172a;
+}
+
+.grade-export-summary-legend {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 10px;
+	border-top: 1.5px solid #cbd5e1;
+	padding-top: 10px;
+	font-size: 12px;
+	color: #334155;
+}
+
+.grade-export-summary-legend-items {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	flex-wrap: wrap;
+}
+
+.grade-export-summary-legend-item {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	font-weight: 600;
+}
+
+.grade-export-summary-brand {
+	font-weight: 700;
+	color: #344563;
+}
+
+/* Botão flutuante do modo expandido mobile */
+.grade-mobile-fs-exit {
+	display: none;
+	position: fixed;
+	top: 12px;
+	left: 12px;
+	z-index: 9999;
+	align-items: center;
+	gap: 6px;
+	padding: 8px 14px;
+	background: rgba(15, 23, 42, 0.9);
+	color: #ffffff;
+	border: none;
+	border-radius: 8px;
+	font-family: "Montserrat", sans-serif;
+	font-size: 14px;
+	font-weight: 600;
+	cursor: pointer;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.grade-mobile-fs-exit i {
+	font-size: 16px;
+}
+
+/* Modo expandido na janela */
+body.grade-bcc-body-expanded {
+	overflow: hidden;
+}
+
+.grade-bcc-wrapper.grade-bcc-expanded {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	max-width: none;
+	z-index: 9999;
+	margin: 0;
+	border-radius: 0;
+	display: flex;
+	flex-direction: column;
+}
+
+.grade-bcc-wrapper.grade-bcc-expanded .grade-bcc-viewport {
+	height: 100%;
+	max-height: 100vh;
+	flex: 1 1 auto;
+}
+
+@media screen and (max-width: 768px) {
+	.grade-bcc-toolbar {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 8px;
+	}
+
+	.grade-bcc-status-bar {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.grade-bcc-wrapper.grade-bcc-expanded .grade-bcc-toolbar,
+	.grade-bcc-wrapper.grade-bcc-expanded .grade-bcc-subbar,
+	.grade-bcc-wrapper.grade-bcc-expanded .grade-progresso-panel,
+	.grade-bcc-wrapper.grade-bcc-expanded .grade-bcc-status-bar {
+		display: none !important;
+	}
+
+	.grade-bcc-wrapper.grade-bcc-expanded .grade-bcc-viewport {
+		padding: 16px;
+	}
+
+	.grade-bcc-wrapper.grade-bcc-expanded .grade-mobile-fs-exit {
+		display: inline-flex;
+	}
+}
+
+/* Tabelas Markdown da Grade Curricular */
+article table {
+	width: 100%;
+	border-collapse: collapse;
+	box-sizing: border-box;
+}
+
+article table th,
+article table td {
+	box-sizing: border-box;
+	padding: 6px 8px;
+	vertical-align: middle;
+}
+
+@media screen and (max-width: 768px) {
+	article table {
+		display: block;
+		max-width: 100%;
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+	}
+}
+
+.table-responsive,
+.table-wrapper {
+	overflow-x: auto;
+	-webkit-overflow-scrolling: touch;
+}
+
+/* Modal de Identificação para Exportação */
+.grade-modal-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(15, 23, 42, 0.55);
+	display: none;
+	align-items: center;
+	justify-content: center;
+	z-index: 10000;
+	padding: 16px;
+	box-sizing: border-box;
+}
+
+.grade-modal-overlay.is-open {
+	display: flex;
+}
+
+.grade-modal-dialog {
+	background: #ffffff;
+	border-radius: 12px;
+	max-width: 420px;
+	width: 100%;
+	padding: 20px 22px;
+	box-shadow: 0 20px 50px -12px rgba(0, 0, 0, 0.35);
+	font-family: "Open Sans", sans-serif;
+	box-sizing: border-box;
+}
+
+.grade-modal-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 8px;
+}
+
+.grade-modal-header h3 {
+	margin: 0;
+	font-size: 16px;
+	font-weight: 700;
+	color: #0f172a;
+	font-family: "Montserrat", sans-serif;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.grade-modal-close {
+	background: transparent;
+	border: none;
+	font-size: 15px;
+	color: #64748b;
+	cursor: pointer;
+	padding: 6px;
+	border-radius: 6px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 36px;
+	min-height: 36px;
+}
+
+.grade-modal-close:hover {
+	color: #0f172a;
+	background: #f1f5f9;
+}
+
+.grade-modal-desc {
+	font-size: 13px;
+	color: #475569;
+	line-height: 1.5;
+	margin: 0 0 14px 0;
+}
+
+.grade-modal-fields {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	margin-bottom: 18px;
+}
+
+.grade-modal-field label {
+	display: block;
+	font-size: 12.5px;
+	font-weight: 700;
+	color: #334155;
+	margin-bottom: 4px;
+	font-family: "Montserrat", sans-serif;
+}
+
+.grade-modal-optional {
+	font-weight: 500;
+	color: #94a3b8;
+}
+
+.grade-modal-input {
+	width: 100%;
+	box-sizing: border-box;
+	padding: 8px 10px;
+	font-size: 13px;
+	border: 1px solid #cbd5e1;
+	border-radius: 6px;
+	color: #0f172a;
+}
+
+.grade-modal-input:focus {
+	outline: none;
+	border-color: #3b82f6;
+	box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
+}
+
+.grade-modal-actions {
+	display: flex;
+	justify-content: flex-end;
+	gap: 10px;
+}
+
+.grade-modal-btn {
+	padding: 8px 16px;
+	min-height: 38px;
+	border-radius: 6px;
+	font-size: 13px;
+	font-weight: 600;
+	cursor: pointer;
+	border: 1px solid transparent;
+	font-family: "Montserrat", sans-serif;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 6px;
+}
+
+.grade-modal-btn-cancel {
+	background: #ffffff;
+	border-color: #cbd5e1;
+	color: #475569;
+}
+
+.grade-modal-btn-cancel:hover {
+	background: #f1f5f9;
+}
+
+.grade-modal-btn-confirm {
+	background: #344563;
+	color: #ffffff;
+}
+
+.grade-modal-btn-confirm:hover {
+	background: #26334a;
+}
+
