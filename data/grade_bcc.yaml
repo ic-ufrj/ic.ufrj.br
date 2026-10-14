@@ -1,0 +1,319 @@
+periodos:
+  - id: 1
+    nome: "1º Período"
+    cor_id: "p1"
+    cor_tema: "#f87171"
+    cor_bg: "#fef2f2"
+    disciplinas:
+      - codigo: "ICP131"
+        nome: "Programação de Computadores I"
+        creditos: 4.0
+        ch: 60
+        prereqs: []
+      - codigo: "ICP132"
+        nome: "Processos de Software"
+        creditos: 4.0
+        ch: 60
+        prereqs: []
+      - codigo: "ICP133"
+        nome: "Fund de Sistemas de Computação"
+        creditos: 4.0
+        ch: 60
+        prereqs: []
+      - codigo: "ICP134"
+        nome: "Números Inteiros Criptografia"
+        creditos: 4.0
+        ch: 60
+        prereqs: []
+      - codigo: "ICP135"
+        nome: "Projeto de Carreira"
+        creditos: 4.0
+        ch: 60
+        prereqs: []
+      - codigo: "ICP136"
+        nome: "Introd Pensamento Dedutivo"
+        creditos: 4.0
+        ch: 60
+        prereqs: []
+      - codigo: "ICPX06"
+        nome: "Atividades Complementares Bcc"
+        creditos: 2.0
+        ch: 90
+        prereqs: []
+      - codigo: "ICPZ55"
+        nome: "Ativ Curricular Extensão - Bcc"
+        creditos: 0.0
+        ch: 320
+        prereqs: []
+
+  - id: 2
+    nome: "2º Período"
+    cor_id: "p2"
+    cor_tema: "#fbbf24"
+    cor_bg: "#fffbeb"
+    disciplinas:
+      - codigo: "ICP141"
+        nome: "Programação de Computadores II"
+        creditos: 4.0
+        ch: 60
+        prereqs: ["ICP131"]
+      - codigo: "ICP142"
+        nome: "Organização de Dados I"
+        creditos: 2.0
+        ch: 30
+        prereqs: []
+      - codigo: "ICP143"
+        nome: "Projeto Prático"
+        creditos: 2.0
+        ch: 30
+        prereqs: ["ICP131", "ICP132", "ICP133"]
+      - codigo: "ICP144"
+        nome: "Matemática Discreta"
+        creditos: 4.0
+        ch: 60
+        prereqs: ["ICP134"]
+      - codigo: "ICP145"
+        nome: "Habilidades Sociais p Trabalho"
+        creditos: 2.0
+        ch: 30
+        prereqs: ["ICP135"]
+      - codigo: "MAE111"
+        nome: "Cálculo Infinitesimal I"
+        creditos: 6.0
+        ch: 90
+        prereqs: []
+
+  - id: 3
+    nome: "3º Período"
+    cor_id: "p3"
+    cor_tema: "#86efac"
+    cor_bg: "#f0fdf4"
+    disciplinas:
+      - codigo: "ICP115"
+        nome: "Álgebra Linear Algorítmica"
+        creditos: 5.0
+        ch: 90
+        prereqs: ["ICP136", "ICP144"]
+      - codigo: "ICP116"
+        nome: "Estrutura dos Dados"
+        creditos: 4.0
+        ch: 60
+        prereqs: ["ICP141"]
+      - codigo: "ICP237"
+        nome: "Introd à Modelagem de Sistemas"
+        creditos: 4.0
+        ch: 60
+        prereqs: ["ICP132", "ICP141"]
+      - codigo: "ICP238"
+        nome: "Introd à Computação Numérica"
+        creditos: 2.0
+        ch: 30
+        prereqs: ["ICP131", "ICP133", "MAE111"]
+      - codigo: "ICP239"
+        nome: "Programação Orientada a Objeto"
+        creditos: 4.0
+        ch: 60
+        prereqs: ["ICP141"]
+      - codigo: "MAE992"
+        nome: "Cálculo Integ e Diferencial II"
+        creditos: 4.0
+        ch: 60
+        prereqs: ["MAE111"]
+
+  - id: 4
+    nome: "4º Período"
+    cor_id: "p4"
+    cor_tema: "#5eead4"
+    cor_bg: "#f0fdfa"
+    disciplinas:
+      - codigo: "ICP246"
+        nome: "Arquitet Comput e Sist Operac"
+        creditos: 4.0
+        ch: 60
+        prereqs: ["ICP133", "ICP141"]
+      - codigo: "ICP248"
+        nome: "Comput Científ e Análise Dados"
+        creditos: 4.0
+        ch: 60
+        prereqs: ["ICP115", "ICP238", "MAE992"]
+      - codigo: "ICP249"
+        nome: "Tecnologia e Sociedade"
+        creditos: 4.0
+        ch: 60
+        prereqs: ["ICP145"]
+      - codigo: "ICP489"
+        nome: "Banco de Dados I"
+        creditos: 4.0
+        ch: 60
+        prereqs: ["ICP116"]
+      - codigo: "MAD243"
+        nome: "Estatística e Probabilidade"
+        creditos: 4.0
+        ch: 60
+        prereqs: []
+
+  - id: 5
+    nome: "5º Período"
+    cor_id: "p5"
+    cor_tema: "#93c5fd"
+    cor_bg: "#eff6ff"
+    disciplinas:
+      - codigo: "ICP123"
+        nome: "Linguagens Formais"
+        creditos: 4.0
+        ch: 60
+        prereqs: ["ICP141", "ICP144"]
+      - codigo: "ICP350"
+        nome: "Modelagem e Aval de Desempenho"
+        creditos: 4.0
+        ch: 60
+        prereqs: ["ICP115", "MAD243"]
+      - codigo: "ICP351"
+        nome: "Model Matemát e Computacional"
+        creditos: 4.0
+        ch: 60
+        prereqs: ["ICP115", "MAE992"]
+      - codigo: "ICP353"
+        nome: "Computadores e Programação"
+        creditos: 4.0
+        ch: 60
+        prereqs: ["ICP246"]
+      - codigo: "ICP368"
+        nome: "Algoritmos e Grafos"
+        creditos: 4.0
+        ch: 60
+        prereqs: ["ICP116", "ICP144"]
+
+  - id: 6
+    nome: "6º Período"
+    cor_id: "p6"
+    cor_tema: "#60a5fa"
+    cor_bg: "#e0f2fe"
+    disciplinas:
+      - codigo: "ICP361"
+        nome: "Programação Concorrente"
+        creditos: 4.0
+        ch: 60
+        prereqs: ["ICP239", "ICP353"]
+      - codigo: "ICP362"
+        nome: "Redes de Computadores I"
+        creditos: 4.0
+        ch: 60
+        prereqs: ["ICP131", "ICP133", "MAD243"]
+      - codigo: "ICP363"
+        nome: "Introd Aprendizado de Máquina"
+        creditos: 4.0
+        ch: 60
+        prereqs: ["ICP248", "MAD243"]
+      - codigo: "ICP365"
+        nome: "Otimização"
+        creditos: 4.0
+        ch: 60
+        prereqs: ["ICP115", "ICP238"]
+      - codigo: "ICP370"
+        nome: "Lógica e Computabilidade"
+        creditos: 4.0
+        ch: 60
+        prereqs: ["ICP123"]
+
+  - id: 7
+    nome: "7º Período"
+    cor_id: "p7"
+    cor_tema: "#c084fc"
+    cor_bg: "#faf5ff"
+    disciplinas:
+      - codigo: "ICP472"
+        nome: "Metodologia da Pesquisa"
+        creditos: 4.0
+        ch: 60
+        prereqs: ["ICP249"]
+      - codigo: "ICP473"
+        nome: "Segurança da Informação"
+        creditos: 4.0
+        ch: 60
+        prereqs: ["ICP353", "ICP362"]
+      - codigo: "OPT-HUM"
+        nome: "Optativa (Humanidades)"
+        tipo: "optativa"
+        creditos: 4.0
+        ch: 60
+        prereqs: []
+      - codigo: "OPT-1"
+        nome: "Optativa Geral 1"
+        tipo: "optativa"
+        creditos: 4.0
+        ch: 60
+        prereqs: []
+      - codigo: "OPT-2"
+        nome: "Optativa Geral 2"
+        tipo: "optativa"
+        creditos: 4.0
+        ch: 60
+        prereqs: []
+
+  - id: 8
+    nome: "8º Período"
+    cor_id: "p8"
+    cor_tema: "#f472b6"
+    cor_bg: "#fdf2f8"
+    disciplinas:
+      - codigo: "ICPK01"
+        nome: "Trab Conclusão de Curso Bcc"
+        creditos: 2.0
+        ch: 90
+        prereqs: ["ICP472"]
+      - codigo: "OPT-3"
+        nome: "Optativa Geral 3"
+        tipo: "optativa"
+        creditos: 4.0
+        ch: 60
+        prereqs: []
+      - codigo: "OPT-4"
+        nome: "Optativa Geral 4"
+        tipo: "optativa"
+        creditos: 4.0
+        ch: 60
+        prereqs: []
+      - codigo: "LIVRE-1"
+        nome: "Livre Escolha 1"
+        tipo: "optativa"
+        creditos: 4.0
+        ch: 60
+        prereqs: []
+      - codigo: "LIVRE-2"
+        nome: "Livre Escolha 2"
+        tipo: "optativa"
+        creditos: 4.0
+        ch: 60
+        prereqs: []
+
+  - id: 9
+    nome: "9º Período"
+    cor_id: "p9"
+    cor_tema: "#fb7185"
+    cor_bg: "#fff1f2"
+    disciplinas:
+      - codigo: "OPT-5"
+        nome: "Optativa Geral 5"
+        tipo: "optativa"
+        creditos: 4.0
+        ch: 60
+        prereqs: []
+      - codigo: "OPT-6"
+        nome: "Optativa Geral 6"
+        tipo: "optativa"
+        creditos: 4.0
+        ch: 60
+        prereqs: []
+      - codigo: "OPT-7"
+        nome: "Optativa Geral 7"
+        tipo: "optativa"
+        creditos: 4.0
+        ch: 60
+        prereqs: []
+      - codigo: "OPT-8"
+        nome: "Optativa Geral 8"
+        tipo: "optativa"
+        creditos: 4.0
+        ch: 60
+        prereqs: []
