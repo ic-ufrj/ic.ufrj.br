@@ -197,24 +197,24 @@ UNIVERSIDADE FEDERAL DO RIO DE JANEIRO (IC-UFRJ)).  A documentação comprobató
 
 #### Ampla Concorrência – Classificados 
 
-| Classificação | Inscrição | Nota Prova Teórico-Objetiva | Nota Área de Formação* | Candidata mãe últimos 5 anos**	| Nota final ENA + Ação Compensatória |	Observação |
-|---------------|-----------|-----------|-----------|-----------|-----------|-----------|
-|1  1119010143576-7	|  84	|  70	|  0	|  83,3	|  |
-|2  1119010135390-6	|  72	|  100	|  0	|  73,4	|  |
-|3  1119010138990-0	|  74	|  0	|  0	|  70,3	|  Diploma não encontrado|
-|4  1119010139998-9	|  56	|  0	|  0	|  53,2	|  |
+| Classificação | Inscrição | Nota Prova Teórico-Objetiva | Nota Área de Formação* | Candidata mãe últimos 5 anos** | Nota final ENA + Ação Compensatória | Observação |
+|---|---|---|---|---|---|---|
+| 1 | 1119010143576-7 | 84 | 70 | 0 | 83,3 | |
+| 2 | 1119010135390-6 | 72 | 100 | 0 | 73,4 | |
+| 3 | 1119010138990-0 | 74 | 0 | 0 | 70,3 | Diploma não encontrado |
+| 4 | 1119010139998-9 | 56 | 0 | 0 | 53,2 | |
 
 #### Pretos, Pardos e Indígenas – Classificados 
 
-| Classificação | Inscrição | Nota Prova Teórico-Objetiva | Nota Área de Formação* | Candidata mãe últimos 5 anos**	| Nota final ENA + Ação Compensatória |	Observação |
-|---------------|-----------|
-|vazio|vazio|
+| Classificação | Inscrição | Nota Prova Teórico-Objetiva | Nota Área de Formação* | Candidata mãe últimos 5 anos** | Nota final ENA + Ação Compensatória | Observação |
+|---|---|---|---|---|---|---|
+| vazio | vazio | vazio | vazio | vazio | vazio | vazio |
 
 #### Pessoas com deficiência – Classificados 
 
-| Classificação | Inscrição | Nota Prova Teórico-Objetiva | Nota Área de Formação* | Candidata mãe últimos 5 anos**	| Nota final ENA + Ação Compensatória |	Observação |
-|---------------|-----------|
-|vazio|vazio|
+| Classificação | Inscrição | Nota Prova Teórico-Objetiva | Nota Área de Formação* | Candidata mãe últimos 5 anos** | Nota final ENA + Ação Compensatória | Observação |
+|---|---|---|---|---|---|---|
+| vazio | vazio | vazio | vazio | vazio | vazio | vazio |
 
 *Nota da Área de Formação: 100: Licenciados em Computação ou equivalente; 70: Demais licenciados; 0: não licenciado ou diploma não encontrado. 
 **Nota Candidata mãe últimos 5 anos: 0,2 sim (fator fixo de correção de 1,20 na nota final do ENA); 0: não. 
