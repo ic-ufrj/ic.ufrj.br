@@ -13,3 +13,7 @@ description: "Lista de docentes do Instituto de Computação da UFRJ"
 
 {{< docentes substitutos >}}
 
+## Professores Aposentados e Eméritos
+
+{{< docentes aposentados >}}
+

@@ -28,6 +28,8 @@ anamaria:
   nome: Anamaria Martins Moreira
   lattes: https://lattes.cnpq.br/2363575151206774
   cargo: titular
+  situacao: aposentado
+  aposentadoria: "2026"
 
 angela:
   nome: Angela Maria Silva Gonçalves
@@ -147,11 +149,43 @@ marcosleipnitz:
   lattes: https://lattes.cnpq.br/2595714723809105
   cargo: assistente
 
-# TODO achar um espaço para os professores aposentados
-#mhelena:
-#  nome: Maria Helena Cautiero Horta Jardim
-#  lattes: https://lattes.cnpq.br/5855175438608498
-#  cargo: adjunto
+mhelena:
+  nome: Maria Helena Cautiero Horta Jardim
+  lattes: https://lattes.cnpq.br/5855175438608498
+  cargo: adjunto
+  situacao: aposentado
+  aposentadoria: "2026-07"
+
+ageupacheco:
+  nome: Ageu Cavalcanti Pacheco Junior
+  situacao: aposentado
+  aposentadoria: "2024-07"
+
+pauloroma:
+  nome: Paulo Roma Cavalcanti
+  situacao: aposentado
+  aposentadoria: "2024-02"
+
+nelsonquilula:
+  nome: Nelson Quilula Vasconcelos
+  situacao: aposentado
+  aposentadoria: "2023-10"
+
+paulobordoni:
+  nome: Paulo Roberto Godoy Bordoni
+  situacao: aposentado
+  aposentadoria: "2023-09"
+
+paulohenrique:
+  nome: Paulo Henrique de Aguiar Rodrigues
+  situacao: aposentado
+  aposentadoria: "2023-04"
+
+marcosborges:
+  nome: Marcos Roberto da Silva Borges
+  situacao: aposentado
+  aposentadoria: "2020"
+  emerito: true
 
 mluiza:
   nome: Maria Luiza Machado Campos

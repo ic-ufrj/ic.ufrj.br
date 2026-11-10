@@ -5,9 +5,19 @@
 {{- end -}}
 
 {{- $data := sort $data "nome" -}}
+{{- $selecionados := slice -}}
+{{- $tipo := .Get 0 | default "permanentes" -}}
+{{- range $data -}}
+  {{- $historico := or (eq .situacao "aposentado") (eq .emerito true) -}}
+  {{- $substituto := and (not $historico) (eq .cargo "substituto") -}}
+  {{- $permanente := and (not $historico) (ne .cargo "substituto") -}}
+  {{- if or (and (eq $tipo "aposentados") $historico) (and (eq $tipo "substitutos") $substituto) (and (eq $tipo "permanentes") $permanente) -}}
+    {{- $selecionados = $selecionados | append . -}}
+  {{- end -}}
+{{- end -}}
 
 <ul class="lista-pessoal">
-  {{ range where $data "cargo" (cond (eq (.Get 0) "substitutos") "==" "!=") "substituto" }}
+  {{ range $selecionados }}
 
     <!-- Acha os grupos em que o docente faz parte -->
     {{ $grupos := slice }}
@@ -24,9 +34,15 @@
           <h3 class="nome" id="cardname-{{ .username }}">{{ .nome }}</h3>
 
           <address>
-            <p>{{ i18n .cargo }}</p>
+            {{ with .cargo }}<p>{{ i18n . }}</p>{{ end }}
+            {{ if eq .situacao "aposentado" }}<p>{{ i18n "aposentado" }}</p>{{ end }}
+            {{ if .emerito }}<p>{{ i18n "emerito" }}</p>{{ end }}
+            {{ with .aposentadoria }}
+              <p>{{ i18n "aposentadoria" }}: {{ if eq (len .) 7 }}{{ substr . 5 2 }}/{{ substr . 0 4 }}{{ else }}{{ . }}{{ end }}</p>
+            {{ end }}
 
-            {{ if ne .email "OCULTO" }}
+            {{ $historico := or (eq .situacao "aposentado") (eq .emerito true) }}
+            {{ if and (ne .email "OCULTO") (or (not $historico) (and .email (strings.Contains .email "@"))) }}
               <p>{{ partial "email.html" (.email | default .username) }}</p>
             {{ end }}
 
@@ -37,6 +53,7 @@
             {{ if .site }}
               <p><a href="{{ .site }}" target="_blank" rel="noopener">{{ i18n "pagina_pessoal" }}</a></p>
             {{ end }}
+          </address>
         </header>
       </article>
     </li>

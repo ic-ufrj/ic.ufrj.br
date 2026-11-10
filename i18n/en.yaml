@@ -43,6 +43,15 @@
 - id: substituto
   translation: "Substitute Professor"
 
+- id: aposentado
+  translation: "Retired Professor"
+
+- id: emerito
+  translation: "Emeritus Professor"
+
+- id: aposentadoria
+  translation: "Retirement"
+
 - id: redes-sociais
   translation: "Social Media"
 
