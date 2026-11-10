@@ -14,5 +14,9 @@ description: "List of professors of the Institute of Computing"
 
 {{< docentes substitutos >}}
 
+## Retired and Emeritus Professors
+
+{{< docentes aposentados >}}
+
 
 
