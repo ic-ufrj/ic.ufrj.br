@@ -93,7 +93,7 @@ description: "Organizações e cargos do Instituto de Computação da UFRJ"
     <li>{{< nome_completo vigusmao >}}</li>
     <li>{{< nome_completo vivian >}}</li>
     <li>Brenno Alves de Castro (Representante Discente)</li>
-    <li>João Victor Borges Nascimento (Representante Discente)</li>
+    <li>Andressa Pereira de Faria Pintos (Representante Discente)</li>
   {{< /grupo >}}
 
   {{< grupo "Comissão de Equivalência de Disciplinas (COMED)" "comissaoequivalencia" >}}
@@ -181,7 +181,6 @@ Email: {{< email congregacao >}}
 | {{< nome_completo giseli >}} | Professores Adjuntos | 1º Suplente |
 | {{< nome_completo eldany >}} | Professores Adjuntos | 2º Suplente |
 | {{< nome_completo marcosleipnitz >}} | Professores Assistentes | |
-| {{< nome_completo paulomann >}} | Professores Assistentes | Suplente |
 | {{< nome_completo tiagoms >}} | Técnico-Administrativos | |
 | {{< nome_completo rerison >}} | Técnico-Administrativos | Suplente |
 | Matheus do Ó Santos Tiburcio | Discentes | |
@@ -206,7 +205,6 @@ Email: {{< email congregacao >}}
     <li>{{< nome_completo giseli >}} <span style="color: #606060;"> - Professores Adjuntos (1º Suplente)</span></li>
     <li>{{< nome_completo eldany >}} <span style="color: #606060;"> - Professores Adjuntos (2º Suplente)</span></li>
     <li>{{< nome_completo marcosleipnitz >}} <span style="color: #606060;"> - Professores Assistentes</span></li>
-    <li>{{< nome_completo paulomann >}} <span style="color: #606060;"> - Professores Assistentes (Suplente)</span></li>
     <li>{{< nome_completo tiagoms >}} <span style="color: #606060;"> - Técnicos-Administrativos</span></li>
     <li>{{< nome_completo rerison >}} <span style="color: #606060;"> - Técnicos-Administrativos (Suplente)</span></li>
     <li>Matheus do Ó Santos Tiburcio <span style="color: #606060;"> - Discentes</span></li>
